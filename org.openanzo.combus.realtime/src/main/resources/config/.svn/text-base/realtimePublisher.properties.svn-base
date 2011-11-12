@@ -1,3 +1,0 @@
-service.pid=org.openanzo.combus.RealtimePublisher
-org.openanzo.combus.updatesQueue=services/serverUpdates
-org.openanzo.services.enabled=true

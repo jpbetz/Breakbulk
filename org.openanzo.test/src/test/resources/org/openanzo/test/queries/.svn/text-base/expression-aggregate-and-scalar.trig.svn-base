@@ -1,6 +1,0 @@
-@prefix : <http://example.org/> .
-
-:expression-aggregate-and-scalar {
-	:s1 :p :w, :y, :z .
-	:s2 :p :w, :y . 
-}

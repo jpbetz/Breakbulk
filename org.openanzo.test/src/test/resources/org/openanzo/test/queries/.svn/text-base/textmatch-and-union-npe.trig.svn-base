@@ -1,7 +1,0 @@
-@prefix : <http://example.org/> .
-
-:textmatch-and-union-npe {
-	:s1 a :type1 ; :txt "query-strng" .
-	:s2 a :type2 ; :txt "this has a query-string inside of it" .
-	:s3 a :type3 ; :txt "i am a query-string that will never see the light of day" .
-}

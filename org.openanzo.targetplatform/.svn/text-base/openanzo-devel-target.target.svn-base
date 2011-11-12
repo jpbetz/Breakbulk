@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<?pde version="3.5"?>
-
-<target name="Openanzo Devel Target">
-<locations>
-<location path="${workspace_loc:/org.openanzo.targetplatform}" type="Profile"/>
-<location path="${workspace_loc:/org.openanzo.targetplatform/src}" type="Directory"/>
-</locations>
-</target>

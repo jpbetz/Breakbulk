@@ -1,8 +1,0 @@
-@prefix clitest: <http://cambridgesemantics.com/cli-tests#> .
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-
-clitest:create {
-        clitest:create
-        	dc:title "Create Command" ;
-        	dc:description "Created by piping rdf into the command" .
-}

@@ -1,6 +1,0 @@
-main is org.openanzo.client.cli.CommandLineInterface from anzo
-
-[anzo]
-	load ${anzo.plugins}/cli/*.jar
-	load ${anzo.plugins}/dependencies/*.jar
-	load ${anzo.plugins}/openanzo/*.jar

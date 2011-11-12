@@ -1,2 +1,0 @@
-service.pid=org.openanzo.execution.java.JavaServiceExecutor
-org.openanzo.services.enabled=true

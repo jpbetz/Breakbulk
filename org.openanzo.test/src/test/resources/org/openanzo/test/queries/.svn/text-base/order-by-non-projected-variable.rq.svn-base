@@ -1,7 +1,0 @@
-PREFIX : <http://example.org/>
-PREFIX dc: <http://purl.org/dc/elements/1.1/>
-
-SELECT ?s
-WHERE { 
-    ?s :p ?v .
-} ORDER BY ?v LIMIT 3

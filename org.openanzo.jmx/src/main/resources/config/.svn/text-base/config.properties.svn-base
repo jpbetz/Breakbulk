@@ -1,3 +1,0 @@
-service.pid=org.openanzo.JMX
-org.openanzo.services.enabled=true
-org.openanzo.jmx.port=9393

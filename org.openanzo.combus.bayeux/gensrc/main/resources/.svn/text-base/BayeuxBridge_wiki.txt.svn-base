@@ -1,6 +1,0 @@
-
-== !BayeuxBridge ==
- Bayeux Bridge Config Properties.
-
-|| Property Name || Description || Example || 
-||org.openanzo.combus.bayeuxBridge.threadPoolSize||Max size of pool to handle bayeux to jms bridging [[BR]] ||

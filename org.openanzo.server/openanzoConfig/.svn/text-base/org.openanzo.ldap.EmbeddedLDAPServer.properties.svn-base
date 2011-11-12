@@ -1,8 +1,0 @@
-service.pid=org.openanzo.ldap.EmbeddedLDAPServer
-org.openanzo.services.enabled=true
-org.openanzo.ldap.searchBaseDN=ou=users,dc=openanzo,dc=org
-org.openanzo.ldap.id=anzo
-org.openanzo.ldap.suffix=dc=openanzo,dc=org
-org.openanzo.ldap.organization=openanzo
-org.openanzo.ldap.initFile=${system.ANZO_HOME}/configuration/anzo.ldif
-

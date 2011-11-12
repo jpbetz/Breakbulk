@@ -1,9 +1,0 @@
-service.pid=org.openanzo.osgi.SystemConfig
-org.openanzo.combus.port=61616
-org.openanzo.combus.host=localhost
-org.openanzo.services.user=sysadmin
-org.openanzo.services.password=123
-org.openanzo.ldap.ldapServerUser=uid=admin,ou=system
-org.openanzo.ldap.ldapServerPassword=secret
-org.openanzo.ldap.host=localhost
-org.openanzo.ldap.port=10389

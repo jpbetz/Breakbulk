@@ -1,8 +1,0 @@
-K 10
-svn:ignore
-V 46
-org.eclipse.wst.*
-
-org.eclipse.jdt.core.prefs
-
-END

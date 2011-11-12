@@ -1,6 +1,0 @@
-service.pid=org.openanzo.servlet.Sparql
-org.openanzo.services.enabled=true
-org.openanzo.servlet.contextPath=/sparql
-org.openanzo.servlet.protectedPathSpec=/*
-org.openanzo.servlet.authorizationType=BASIC
-org.ops4j.pax.web.instanceId=osgi:org.ops4j.pax.web.instance/default

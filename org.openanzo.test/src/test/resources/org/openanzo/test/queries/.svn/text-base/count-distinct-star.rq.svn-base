@@ -1,4 +1,0 @@
-SELECT (COUNT(DISTINCT *) AS ?count) 
-WHERE {
-	?s ?p ?o 
-}

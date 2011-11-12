@@ -1,6 +1,0 @@
-source.. = src/main/java/,\
-           src/main/resources/,\
-           local_test/main/java/
-bin.includes = META-INF/,\
-               .
-output.. = bin/

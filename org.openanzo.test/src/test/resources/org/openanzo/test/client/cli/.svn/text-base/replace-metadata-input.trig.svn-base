@@ -1,7 +1,0 @@
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-@prefix anzo: <http://openanzo.org/ontologies/2008/07/Anzo#> .
-
-<http://openanzo.org/metadataGraphs(http%3A%2F%2Fcambridgesemantics.com%2Fcli-tests%23create-file)> {
-	<http://cambridgesemantics.com/cli-tests#create-file> anzo:canBeReadBy <http://www.example.org/ns#d111> ;
-		anzo:foo <http://www.example.org/ns#d112> .
-}

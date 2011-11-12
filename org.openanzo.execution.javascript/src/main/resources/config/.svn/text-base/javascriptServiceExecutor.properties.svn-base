@@ -1,2 +1,0 @@
-service.pid=org.openanzo.execution.javascript.JavascriptServiceExecutor
-org.openanzo.services.enabled=true

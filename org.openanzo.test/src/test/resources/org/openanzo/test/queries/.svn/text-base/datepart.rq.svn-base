@@ -1,9 +1,0 @@
-PREFIX : <http://example.org/>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX f: <http://openanzo.org/glitter/builtin/functions#>
-
-SELECT (f:datePart(?o) AS ?dp) 
-{
-	[] :p ?o .
-	FILTER(f:datePart(?o) > "1900-01-01"^^xsd:date) .
-}

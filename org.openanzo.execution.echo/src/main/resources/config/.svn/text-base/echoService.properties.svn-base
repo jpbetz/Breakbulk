@@ -1,2 +1,0 @@
-service.pid=org.openanzo.execution.echo.EchoService
-org.openanzo.services.enabled=true

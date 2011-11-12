@@ -1,3 +1,0 @@
-service.pid=org.openanzo.cache.CacheProvider
-org.openanzo.services.enabled=true
-org.openanzo.cache.configFile=${bundleResourcePrefix}config/ehcache.xml

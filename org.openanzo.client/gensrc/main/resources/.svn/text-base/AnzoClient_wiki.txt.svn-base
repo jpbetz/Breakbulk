@@ -1,7 +1,0 @@
-
-== !AnzoClient ==
- Configuration properties for the local client stack.
-
-|| Property Name || Description || Example || 
-||org.openanzo.client.persistence.enabled||This determines if the data retrieved into the local cache and local transactions are persisted to disk [[BR]] If true, the client stack uses a relational database to store statements, as opposed to an in memory store if false. [[BR]] ||
-||org.openanzo.client.quadstore.shared||Is the quad store shared between multiple anzo clients created. [[BR]] ||

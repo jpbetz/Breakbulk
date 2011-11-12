@@ -1,5 +1,0 @@
-PREFIX : <http://example.org/>
-SELECT ?x ?y WHERE { 
-	:s1 :p1 "a" .
-	LET( ?x := "assigned" . ?y := "other" ) .
-}

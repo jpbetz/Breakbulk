@@ -1,2 +1,0 @@
-service.pid=org.openanzo.execution.SemanticExecutionService
-org.openanzo.services.enabled=true

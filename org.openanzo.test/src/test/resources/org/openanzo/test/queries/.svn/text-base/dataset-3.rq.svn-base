@@ -1,3 +1,0 @@
-PREFIX : <http://example.org/>
-SELECT ?target
- WHERE { GRAPH :ng1 { ?s :p1 [] } . GRAPH :ng2 { ?s :p2 ?target } }

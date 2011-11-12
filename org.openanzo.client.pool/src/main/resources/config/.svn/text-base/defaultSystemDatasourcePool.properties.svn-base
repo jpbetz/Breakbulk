@@ -1,7 +1,0 @@
-service.factoryPid=org.openanzo.client.ClientPool
-org.openanzo.client.pool.maxClient=100
-org.openanzo.client.pool.minClient=10
-org.openanzo.client.pool.usesJms=false
-org.openanzo.services.enabled=true
-org.openanzo.services.instanceURI=http://openanzo.org/clientPools/defaultSystemDatasource
-org.openanzo.datasource.datasourceURI=http://openanzo.org/datasource/systemDatasource

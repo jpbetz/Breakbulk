@@ -1,5 +1,0 @@
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix clitest: <http://cambridgesemantics.com/cli-tests#> .
-
-clitest:create dc:description "Created by reading a file" ;
-	dc:title "Create File Command" .

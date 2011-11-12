@@ -1,3 +1,0 @@
-service.pid=org.openanzo.osgi.RegistryProvider
-org.openanzo.services.enabled=true
-org.openanzo.datasource.datasourceURI=http://openanzo.org/datasource/systemDatasource

@@ -1,8 +1,0 @@
-
-== !CombusEndpoint ==
- Bayeux Bridge Config Properties.
-
-|| Property Name || Description || Example || 
-||org.openanzo.combus.endpoint.recorder.enabled||True to enabled analysis recording [[BR]] ||
-||org.openanzo.combus.endpoint.recorder.output||Recorder output file location [[BR]] ||
-||org.openanzo.combus.endpoint.recorder.excludedQueues||Queue names to exclude from recorder [[BR]] ||

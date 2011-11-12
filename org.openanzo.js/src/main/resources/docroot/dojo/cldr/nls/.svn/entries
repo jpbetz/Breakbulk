@@ -1,349 +1,0 @@
-10
-
-dir
-5248
-http://svn.openanzo.org/svn/openanzo/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojo/cldr/nls
-http://svn.openanzo.org/svn/openanzo
-
-
-
-2010-02-25T15:17:21.271425Z
-5186
-jordi
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-0a2a6340-b48a-40e4-9632-36e452a58e02
-
-zh-cn
-dir
-
-da
-dir
-
-it-it
-dir
-
-en-us
-dir
-
-hebrew.js
-file
-
-
-
-
-2011-11-11T22:25:21.000000Z
-4210376353f7036b4aef9e41d55d151d
-2010-02-25T15:17:21.271425Z
-5186
-jordi
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3841
-
-de
-dir
-
-sv
-dir
-
-gregorian.js
-file
-
-
-
-
-2011-11-11T22:25:21.000000Z
-9fe0c7811fa5df1e9ddddf32c80f31ae
-2010-02-25T15:17:21.271425Z
-5186
-jordi
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3919
-
-ja
-dir
-
-he
-dir
-
-islamic.js
-file
-
-
-
-
-2011-11-11T22:25:21.000000Z
-6f4d9aa82d8aa130b230733cdda959b8
-2010-02-25T15:17:21.271425Z
-5186
-jordi
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-3939
-
-fi
-dir
-
-nb
-dir
-
-fr
-dir
-
-nl
-dir
-
-th
-dir
-
-pl
-dir
-
-hu
-dir
-
-es-es
-dir
-
-de-de
-dir
-
-zh
-dir
-
-ko-kr
-dir
-
-ca
-dir
-
-en-ca
-dir
-
-pt
-dir
-
-pt-br
-dir
-
-tr
-dir
-
-ru
-dir
-
-en-gb
-dir
-
-el
-dir
-
-islamic-civil.js
-file
-
-
-
-
-2011-11-11T22:25:21.000000Z
-3be81e0a48d83d0271a1101301b89bb8
-2010-02-25T15:17:21.271425Z
-5186
-jordi
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-5308
-
-ja-jp
-dir
-
-en
-dir
-
-ar
-dir
-
-number.js
-file
-
-
-
-
-2011-11-11T22:25:21.000000Z
-fc33990f816eb1c8258774dc11ac447d
-2010-02-25T15:17:21.271425Z
-5186
-jordi
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-750
-
-pt-pt
-dir
-
-cs
-dir
-
-en-au
-dir
-
-currency.js
-file
-
-
-
-
-2011-11-11T22:25:21.000000Z
-752b72d1e63bbd96de51b9571c02c411
-2010-02-25T15:17:21.271425Z
-5186
-jordi
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-260
-
-es
-dir
-
-ko
-dir
-
-zh-tw
-dir
-
-it
-dir
-
-sk
-dir
-
-sl
-dir
-

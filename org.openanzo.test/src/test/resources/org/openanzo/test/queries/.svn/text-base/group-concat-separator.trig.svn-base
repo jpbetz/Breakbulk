@@ -1,6 +1,0 @@
-@prefix : <http://example.org/> .
-
-:group-concat-separator {
-	:s1 :p "a", "walk", "in", "the", "park" .
-	:s2 :p "hi", 4, "now" .
-}

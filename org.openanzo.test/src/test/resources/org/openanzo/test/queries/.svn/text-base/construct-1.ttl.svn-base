@@ -1,5 +1,0 @@
-@prefix : <http://example.org/> .
-
-:o1 :an :object .
-:o2 :an :object .
-:o3 :an :object .

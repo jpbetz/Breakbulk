@@ -1,6 +1,0 @@
-PREFIX : <http://example.org/>
-SELECT ?s (GROUP_CONCAT(?o SEPARATOR ' ~ ') AS ?phrase) 
-{
-  ?s :p ?o .
-}
-GROUP BY ?s

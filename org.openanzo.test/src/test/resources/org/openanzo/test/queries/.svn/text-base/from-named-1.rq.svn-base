@@ -1,1 +1,0 @@
-SELECT ?g ?s ?p ?o FROM NAMED <http://example.org/from-named-1>  WHERE { GRAPH ?g { ?s ?p ?o . } } 

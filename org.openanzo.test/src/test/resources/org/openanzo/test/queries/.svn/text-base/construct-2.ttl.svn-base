@@ -1,7 +1,0 @@
-@prefix : <http://example.org/> .
-
-:s1 :a :a2 ; :b :b2 ; :c :c2 .
-:s2 :b :b2 .
-:s3 :a :a2 ; :b :b2 .
-:s4 :b :b2 ; :c :c2 .
-

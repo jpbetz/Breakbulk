@@ -1,8 +1,0 @@
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix foaf: <http://xmlns.com/foaf/0.1/> .
-@prefix clitest: <http://cambridgesemantics.com/cli-tests#> .
-
-clitest:create-file {
-	clitest:create dc:description "Created by reading a file" ;
-		foaf:name "Hiro" .
-}

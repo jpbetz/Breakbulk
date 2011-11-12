@@ -1,3 +1,0 @@
-service.pid=org.openanzo.combus.Endpoint
-org.openanzo.services.enabled=true
-org.openanzo.combus.endpoint.recorder.enabled=false

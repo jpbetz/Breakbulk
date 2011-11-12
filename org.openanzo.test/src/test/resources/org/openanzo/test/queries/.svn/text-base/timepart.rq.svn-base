@@ -1,9 +1,0 @@
-PREFIX : <http://example.org/>
-PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
-PREFIX f: <http://openanzo.org/glitter/builtin/functions#>
-
-SELECT (f:timePart(?o) AS ?tp) 
-{
-	[] :p ?o .
-	FILTER(f:timePart(?o) >= "00:00:00Z"^^xsd:time) .
-}

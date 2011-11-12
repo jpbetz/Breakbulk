@@ -1,5 +1,0 @@
-PREFIX : <http://example.org/>
-SELECT ?o WHERE { 
-	:s1 :p1 ?o .
-	LET( ?o := "a" ) .
-}

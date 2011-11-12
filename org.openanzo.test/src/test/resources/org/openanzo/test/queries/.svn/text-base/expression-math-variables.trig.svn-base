@@ -1,5 +1,0 @@
-@prefix : <http://example.org/> .
-
-:expression-math-variables {
-	:s :p 1, 2, 3 .
-}

@@ -1,9 +1,0 @@
-@prefix : <http://example.org/> .
-@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
-
-:textlike-1 {
-  :yes1 rdf:type :type ; :title "On the Road Again" .
-  :yes2 rdf:type :type ; :title "On the River Kwai" .
-  :no1 rdf:type :type .
-  :no2 rdf:type :type ; :title "In the Real World" .
-}

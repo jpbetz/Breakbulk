@@ -1,6 +1,0 @@
-@prefix : <http://example.org/> .
-
-:graph-uri-in-graph-contents-optional {
-	:s :p :o .
-	:graph-uri-in-graph-contents-optional :p2 :s .
-}

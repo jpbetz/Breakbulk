@@ -1,5 +1,0 @@
-@prefix : <http://example.org/> .
-
-:construct-1 {
-	:s :p :o1, :o2, :o3 .
-}

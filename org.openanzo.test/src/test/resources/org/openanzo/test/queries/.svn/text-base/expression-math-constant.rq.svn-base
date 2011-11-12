@@ -1,5 +1,0 @@
-PREFIX : <http://example.org/> 
-SELECT ?s (3 * 2 + 5 AS ?eleven) 
-WHERE {
-  ?s ?p ?o .
-}

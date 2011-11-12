@@ -1,7 +1,0 @@
-
-== !JMX ==
- Base configuration properties that are used by services if there aren't service specific values present.
-
-|| Property Name || Description || Example || 
-||org.openanzo.jmx.host||Host name for server [[BR]] ||localhost or 127.0.0.1 [[BR]] ||
-||org.openanzo.jmx.port||Port for server [[BR]] ||Minimum: 1 [[BR]] Maximum:65536 [[BR]] 8080 [[BR]] ||

@@ -1,2 +1,0 @@
-service.pid=org.openanzo.datasource.DatasourceManager
-org.openanzo.services.enabled=true

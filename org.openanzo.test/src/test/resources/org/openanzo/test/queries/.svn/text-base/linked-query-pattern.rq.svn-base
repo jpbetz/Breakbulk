@@ -1,8 +1,0 @@
-PREFIX : <http://example.org/>
-SELECT ?r ?g WHERE { 
-  GRAPH ?g { 
-    :r1 :p1 ?o .
-    ?o :p2 ?s2 .
-    ?s2 :p3 ?r
-  }
-}

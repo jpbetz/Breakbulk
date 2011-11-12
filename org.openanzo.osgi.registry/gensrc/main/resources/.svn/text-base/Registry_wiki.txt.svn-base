@@ -1,6 +1,0 @@
-
-== !Registry ==
- Base configuration properties that are used by registry provider.
-
-|| Property Name || Description || Example || 
-||org.openanzo.osgi.registry.datasourceURI||URI for datasource which provides source of graphs for registry. [[BR]] ||

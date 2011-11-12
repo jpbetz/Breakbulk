@@ -1,7 +1,0 @@
-@prefix dc: <http://purl.org/dc/elements/1.1/> .
-@prefix clitest: <http://cambridgesemantics.com/cli-tests#> .
-
-clitest:query
-	dc:description "Queries will be run against this data" ;
-	dc:title "Query Command" ;
-	dc:source "The dark side of the moon" .

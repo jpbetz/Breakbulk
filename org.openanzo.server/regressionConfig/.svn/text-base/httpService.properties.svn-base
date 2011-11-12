@@ -1,5 +1,0 @@
-service.factoryPid=org.ops4j.pax.web
-service.ranking=2147483647
-org.openanzo.services.instanceURI=osgi:org.ops4j.pax.web.instance/default
-org.osgi.service.http.enabled=true
-org.osgi.service.http.port=8082
