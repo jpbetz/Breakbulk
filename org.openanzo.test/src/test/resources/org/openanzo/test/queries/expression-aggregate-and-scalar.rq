@@ -1,0 +1,5 @@
+PREFIX : <http://example.org/> 
+SELECT (str(?s) AS ?str) (2 * COUNT(?o) AS ?double)   
+WHERE {
+  ?s :p ?o .
+} GROUP BY ?s 

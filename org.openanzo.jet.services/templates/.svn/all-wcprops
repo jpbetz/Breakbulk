@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.jet.services/templates
+END
+services_combusProxy.javajet
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.jet.services/templates/services_combusProxy.javajet
+END
+services_restHandler.javajet
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/openanzo/!svn/ver/3892/openanzo/trunk/org.openanzo.jet.services/templates/services_restHandler.javajet
+END
+services_wsProxy.javajet
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.jet.services/templates/services_wsProxy.javajet
+END
+services_wsWSDD.javajet
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/openanzo/!svn/ver/3858/openanzo/trunk/org.openanzo.jet.services/templates/services_wsWSDD.javajet
+END
+services_restProxy.javajet
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.jet.services/templates/services_restProxy.javajet
+END
+services_soapconstants.javajet
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/openanzo/!svn/ver/3892/openanzo/trunk/org.openanzo.jet.services/templates/services_soapconstants.javajet
+END
+services_interface.javajet
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/openanzo/!svn/ver/3892/openanzo/trunk/org.openanzo.jet.services/templates/services_interface.javajet
+END
+generator.skeleton
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/openanzo/!svn/ver/3858/openanzo/trunk/org.openanzo.jet.services/templates/generator.skeleton
+END
+services_wiki.javajet
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/openanzo/!svn/ver/3892/openanzo/trunk/org.openanzo.jet.services/templates/services_wiki.javajet
+END
+services_combusHandler.javajet
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/openanzo/!svn/ver/4597/openanzo/trunk/org.openanzo.jet.services/templates/services_combusHandler.javajet
+END
+services_wsHandler.javajet
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.jet.services/templates/services_wsHandler.javajet
+END

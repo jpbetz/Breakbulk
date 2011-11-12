@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/5161/openanzo/trunk/org.openanzo.osgi.bootstrap/src/main/java/org/openanzo/osgi/bootstrap
+END
+ManifestConfigurationListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/openanzo/!svn/ver/5161/openanzo/trunk/org.openanzo.osgi.bootstrap/src/main/java/org/openanzo/osgi/bootstrap/ManifestConfigurationListener.java
+END
+BootstrapActivator.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/4790/openanzo/trunk/org.openanzo.osgi.bootstrap/src/main/java/org/openanzo/osgi/bootstrap/BootstrapActivator.java
+END

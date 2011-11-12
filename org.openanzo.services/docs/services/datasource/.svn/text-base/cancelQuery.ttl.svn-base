@@ -1,0 +1,30 @@
+@prefix format: <http://openanzo.org/service/format/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix system: <http://openanzo.org/ontologies/2008/07/System#> .
+
+
+<http://openanzo.org/service/operation/cancelQuery> system:name "cancel" ;
+	system:requestParameter <http://openanzo.org/service/operation/cancelQuery/parameter/operationId>;
+	system:requestParameter0 <http://openanzo.org/service/operation/cancelQuery/parameter/operationId> ;
+	system:result <http://openanzo.org/service/operation/cancelQuery/result> ;
+	system:sysadminRequired "false" ;
+	system:bypassPool "true";
+	dc:description "Run a Sparql query on the server and return the results in a QueryResult object." ;
+	dc:title "Cancel" ;
+	a system:Operation .
+	
+<http://openanzo.org/service/operation/cancelQuery/parameter/operationId>
+	system:name "operationId" ;
+	system:nullAllowed "false" ;
+	system:type system:string ;
+	system:validFormat <http://openanzo.org/service/format/text/text> ;
+	dc:description "OperationId." ;
+	a system:Parameter .
+	
+<http://openanzo.org/service/operation/cancelQuery/result> system:name "result" ;
+	system:type system:boolean ;
+	system:validFormat <http://openanzo.org/service/format/text/text> ;
+	dc:description "The results of cancelling a querys." ;
+	a system:Parameter .
+
+<http://openanzo.org/service/query> system:operation <http://openanzo.org/service/operation/cancelQuery> .

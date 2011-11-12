@@ -1,0 +1,12 @@
+
+== !Services ==
+ Base configuration properties that are used by services if there aren't service specific values present.
+
+|| Property Name || Description || Example || 
+||org.openanzo.services.enabled||Should service be enabled [[BR]] ||
+||org.openanzo.services.user||Login id for server [[BR]] '''Server''':The login id used by server services to talk to other services. [[BR]] '''Client''':The login id for connecting to the server [[BR]] '''Embedded''':The login id under which all commands are run as.||default [[BR]] ||
+||org.openanzo.services.password||Password for server [[BR]] '''Server''':The password used by server services to talk to other services. [[BR]] '''Client''':The password for connecting to the server [[BR]] '''Embedded''':The password under which all commands are authenticated.||123 [[BR]] ||
+||org.openanzo.services.timeout||Timeout in milliseconds for transport calls [[BR]] '''Server''':When making calls to services, the time to wait on a transport to get a response before reporting a timeout error. [[BR]] '''Client''':When making calls to services, the time to wait on a transport to get a response before reporting a timeout error. [[BR]] '''Embedded''':Not Used||0=Never timeout, 60000=Timeout in 1 minute [[BR]] ||
+||org.openanzo.services.initializationFiles||Configuration file for service. [[BR]] ||
+||org.openanzo.services.instanceURI||URI of instance [[BR]] ||
+||org.openanzo.services.requireSSL||Require SSL for all connections [[BR]] ||

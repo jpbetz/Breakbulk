@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/openanzo/!svn/ver/4194/openanzo/trunk/org.openanzo.jdbc/src/main/resources/nodecentric/mssql/xmlsql
+END
+graph.sql
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/openanzo/!svn/ver/3743/openanzo/trunk/org.openanzo.jdbc/src/main/resources/nodecentric/mssql/xmlsql/graph.sql
+END
+with-sequences.sql
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/openanzo/!svn/ver/3849/openanzo/trunk/org.openanzo.jdbc/src/main/resources/nodecentric/mssql/xmlsql/with-sequences.sql
+END
+node.sql
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/openanzo/!svn/ver/4194/openanzo/trunk/org.openanzo.jdbc/src/main/resources/nodecentric/mssql/xmlsql/node.sql
+END
+base.sql
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/openanzo/!svn/ver/4194/openanzo/trunk/org.openanzo.jdbc/src/main/resources/nodecentric/mssql/xmlsql/base.sql
+END

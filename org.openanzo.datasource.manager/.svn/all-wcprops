@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/openanzo/!svn/ver/5125/openanzo/trunk/org.openanzo.datasource.manager
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/openanzo/!svn/ver/3516/openanzo/trunk/org.openanzo.datasource.manager/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/openanzo/!svn/ver/3138/openanzo/trunk/org.openanzo.datasource.manager/.project
+END
+build.properties
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/openanzo/!svn/ver/3674/openanzo/trunk/org.openanzo.datasource.manager/build.properties
+END
+pom.xml
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/openanzo/!svn/ver/4796/openanzo/trunk/org.openanzo.datasource.manager/pom.xml
+END

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/atom/tests/widget
+END
+test_FeedViewer_bind_sync.html
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/atom/tests/widget/test_FeedViewer_bind_sync.html
+END
+test_FeedViewer_bind_split_declarative.html
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/atom/tests/widget/test_FeedViewer_bind_split_declarative.html
+END
+test_FeedViewer_local.html
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/atom/tests/widget/test_FeedViewer_local.html
+END
+test_FeedViewer_bind.html
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/atom/tests/widget/test_FeedViewer_bind.html
+END
+samplefeed.xml
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/atom/tests/widget/samplefeed.xml
+END
+test_FeedViewer_local_declarative.html
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/atom/tests/widget/test_FeedViewer_local_declarative.html
+END
+samplefeedEdit.xml
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/atom/tests/widget/samplefeedEdit.xml
+END

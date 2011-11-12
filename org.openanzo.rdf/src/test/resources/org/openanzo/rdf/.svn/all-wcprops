@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/test/resources/org/openanzo/rdf
+END
+test-blank-nodes.json
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/test/resources/org/openanzo/rdf/test-blank-nodes.json
+END
+test-rdf.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/test/resources/org/openanzo/rdf/test-rdf.ttl
+END
+test-statements.json
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/test/resources/org/openanzo/rdf/test-statements.json
+END

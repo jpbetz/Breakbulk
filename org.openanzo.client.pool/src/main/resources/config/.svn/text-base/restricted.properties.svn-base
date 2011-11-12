@@ -1,0 +1,6 @@
+service.factoryPid=org.openanzo.client.ClientPool
+org.openanzo.client.pool.maxClient=100
+org.openanzo.client.pool.minClient=10
+org.openanzo.services.enabled=true
+org.openanzo.client.pool.usesJms=true
+org.openanzo.services.instanceURI=http://openanzo.org/clientPools/primaryClientPool

@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojo/cldr/nls
+END
+islamic-civil.js
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojo/cldr/nls/islamic-civil.js
+END
+number.js
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojo/cldr/nls/number.js
+END
+currency.js
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojo/cldr/nls/currency.js
+END
+hebrew.js
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojo/cldr/nls/hebrew.js
+END
+gregorian.js
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojo/cldr/nls/gregorian.js
+END
+islamic.js
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojo/cldr/nls/islamic.js
+END

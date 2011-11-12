@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/openanzo/!svn/ver/5148/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests
+END
+module.js
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/openanzo/!svn/ver/3702/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/module.js
+END
+prepareAnzo.js
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/openanzo/!svn/ver/3713/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/prepareAnzo.js
+END
+anzolog.properties
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/openanzo/!svn/ver/4972/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/anzolog.properties
+END
+dohExtensions.js
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/openanzo/!svn/ver/3596/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/dohExtensions.js
+END
+utilities.js
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/openanzo/!svn/ver/5148/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/utilities.js
+END
+properties.js
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/properties.js
+END
+initialize.json
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/initialize.json
+END
+runTests.html
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/runTests.html
+END
+runTestsRegression.html
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/runTestsRegression.html
+END

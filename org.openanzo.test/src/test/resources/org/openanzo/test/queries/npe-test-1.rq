@@ -1,0 +1,9 @@
+PREFIX : <http://example.org/>
+SELECT ?s ?p ?o
+ WHERE {
+	?s ?p ?o .
+	?s a ?type .
+    FILTER isURI(?s).
+    OPTIONAL {?s :draft ?isDraft.}
+    FILTER (!bound(?isDraft) || !(?isDraft)).
+}

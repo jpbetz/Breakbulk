@@ -1,0 +1,8 @@
+
+== !BinaryStore ==
+ Base configuration properties that are used by services if there aren't service specific values present.
+
+|| Property Name || Description || Example || 
+||org.openanzo.binarystore.serverNode|| [[BR]] ||
+||org.openanzo.binarystore.fileSystemRoot|| [[BR]] ||
+||org.openanzo.binarystore.progressUpdateFrequency|| [[BR]] ||

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/openanzo/!svn/ver/4897/openanzo/trunk/org.openanzo.execution/src/main/java/org/openanzo/execution
+END
+BaseExecutionService.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/4507/openanzo/trunk/org.openanzo.execution/src/main/java/org/openanzo/execution/BaseExecutionService.java
+END
+IExecutionContext.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/openanzo/!svn/ver/3854/openanzo/trunk/org.openanzo.execution/src/main/java/org/openanzo/execution/IExecutionContext.java
+END
+SemanticServiceActivator.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/4737/openanzo/trunk/org.openanzo.execution/src/main/java/org/openanzo/execution/SemanticServiceActivator.java
+END
+BaseExecutorActivator.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/openanzo/!svn/ver/4737/openanzo/trunk/org.openanzo.execution/src/main/java/org/openanzo/execution/BaseExecutorActivator.java
+END
+SemanticServiceExecutionService.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.execution/src/main/java/org/openanzo/execution/SemanticServiceExecutionService.java
+END
+BaseServiceExecutor.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/4897/openanzo/trunk/org.openanzo.execution/src/main/java/org/openanzo/execution/BaseServiceExecutor.java
+END
+ISemanticServiceExecutor.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/3854/openanzo/trunk/org.openanzo.execution/src/main/java/org/openanzo/execution/ISemanticServiceExecutor.java
+END

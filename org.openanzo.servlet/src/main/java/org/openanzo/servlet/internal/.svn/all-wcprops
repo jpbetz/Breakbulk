@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/openanzo/!svn/ver/4817/openanzo/trunk/org.openanzo.servlet/src/main/java/org/openanzo/servlet/internal
+END
+ServletConfigurationListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/openanzo/!svn/ver/4507/openanzo/trunk/org.openanzo.servlet/src/main/java/org/openanzo/servlet/internal/ServletConfigurationListener.java
+END
+BaseServletClassDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.servlet/src/main/java/org/openanzo/servlet/internal/BaseServletClassDef.java
+END
+ServletsActivator.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/openanzo/!svn/ver/4790/openanzo/trunk/org.openanzo.servlet/src/main/java/org/openanzo/servlet/internal/ServletsActivator.java
+END
+StaticResourceFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/4507/openanzo/trunk/org.openanzo.servlet/src/main/java/org/openanzo/servlet/internal/StaticResourceFactory.java
+END
+BundleServletActivator.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/openanzo/!svn/ver/4790/openanzo/trunk/org.openanzo.servlet/src/main/java/org/openanzo/servlet/internal/BundleServletActivator.java
+END

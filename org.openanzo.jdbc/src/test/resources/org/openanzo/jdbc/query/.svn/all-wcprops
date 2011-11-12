@@ -1,0 +1,113 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/openanzo/!svn/ver/3148/openanzo/trunk/org.openanzo.jdbc/src/test/resources/org/openanzo/jdbc/query
+END
+join-multi-binding-match-result.srx
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/openanzo/!svn/ver/3148/openanzo/trunk/org.openanzo.jdbc/src/test/resources/org/openanzo/jdbc/query/join-multi-binding-match-result.srx
+END
+join-full-match-result.srx
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/openanzo/!svn/ver/3148/openanzo/trunk/org.openanzo.jdbc/src/test/resources/org/openanzo/jdbc/query/join-full-match-result.srx
+END
+left-join-multi-binding-match-solution1.srx
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/openanzo/!svn/ver/3148/openanzo/trunk/org.openanzo.jdbc/src/test/resources/org/openanzo/jdbc/query/left-join-multi-binding-match-solution1.srx
+END
+left-join-multi-binding-match-solution2.srx
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/openanzo/!svn/ver/3148/openanzo/trunk/org.openanzo.jdbc/src/test/resources/org/openanzo/jdbc/query/left-join-multi-binding-match-solution2.srx
+END
+join-partial-match-solution1.srx
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/3148/openanzo/trunk/org.openanzo.jdbc/src/test/resources/org/openanzo/jdbc/query/join-partial-match-solution1.srx
+END
+join-non-intersecting-solution1.srx
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/openanzo/!svn/ver/3148/openanzo/trunk/org.openanzo.jdbc/src/test/resources/org/openanzo/jdbc/query/join-non-intersecting-solution1.srx
+END
+join-partial-match-solution2.srx
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/3148/openanzo/trunk/org.openanzo.jdbc/src/test/resources/org/openanzo/jdbc/query/join-partial-match-solution2.srx
+END
+join-non-intersecting-solution2.srx
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/openanzo/!svn/ver/3148/openanzo/trunk/org.openanzo.jdbc/src/test/resources/org/openanzo/jdbc/query/join-non-intersecting-solution2.srx
+END
+join-no-match-result.srx
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/3148/openanzo/trunk/org.openanzo.jdbc/src/test/resources/org/openanzo/jdbc/query/join-no-match-result.srx
+END
+join-multi-binding-match-solution1.srx
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/openanzo/!svn/ver/3148/openanzo/trunk/org.openanzo.jdbc/src/test/resources/org/openanzo/jdbc/query/join-multi-binding-match-solution1.srx
+END
+join-full-match-solution1.srx
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/3148/openanzo/trunk/org.openanzo.jdbc/src/test/resources/org/openanzo/jdbc/query/join-full-match-solution1.srx
+END
+join-multi-binding-match-solution2.srx
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/openanzo/!svn/ver/3148/openanzo/trunk/org.openanzo.jdbc/src/test/resources/org/openanzo/jdbc/query/join-multi-binding-match-solution2.srx
+END
+join-full-match-solution2.srx
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/3148/openanzo/trunk/org.openanzo.jdbc/src/test/resources/org/openanzo/jdbc/query/join-full-match-solution2.srx
+END
+left-join-multi-binding-match-result.srx
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/openanzo/!svn/ver/3148/openanzo/trunk/org.openanzo.jdbc/src/test/resources/org/openanzo/jdbc/query/left-join-multi-binding-match-result.srx
+END
+join-no-match-solution1.srx
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/openanzo/!svn/ver/3148/openanzo/trunk/org.openanzo.jdbc/src/test/resources/org/openanzo/jdbc/query/join-no-match-solution1.srx
+END
+join-partial-match-result.srx
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/3148/openanzo/trunk/org.openanzo.jdbc/src/test/resources/org/openanzo/jdbc/query/join-partial-match-result.srx
+END
+join-non-intersecting-result.srx
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/3148/openanzo/trunk/org.openanzo.jdbc/src/test/resources/org/openanzo/jdbc/query/join-non-intersecting-result.srx
+END
+join-no-match-solution2.srx
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/openanzo/!svn/ver/3148/openanzo/trunk/org.openanzo.jdbc/src/test/resources/org/openanzo/jdbc/query/join-no-match-solution2.srx
+END

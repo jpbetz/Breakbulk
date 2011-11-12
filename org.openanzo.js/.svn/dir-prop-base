@@ -1,0 +1,12 @@
+K 10
+svn:ignore
+V 21
+target
+bin
+.settings
+
+K 13
+svn:mergeinfo
+V 75
+/openanzo/branches/sandbox/dojo-1.3-upgrade-jordi/org.openanzo.js:3925-3971
+END

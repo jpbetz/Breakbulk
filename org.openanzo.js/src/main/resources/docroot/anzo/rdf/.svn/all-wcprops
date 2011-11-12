@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/openanzo/!svn/ver/5146/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/rdf
+END
+Statement.js
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/openanzo/!svn/ver/5146/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/rdf/Statement.js
+END
+Dataset.js
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/rdf/Dataset.js
+END
+NamedGraph.js
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/openanzo/!svn/ver/5009/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/rdf/NamedGraph.js
+END
+QuadStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/openanzo/!svn/ver/5015/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/rdf/QuadStore.js
+END
+AnzoGraph.js
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/rdf/AnzoGraph.js
+END
+GraphResource.js
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/openanzo/!svn/ver/5009/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/rdf/GraphResource.js
+END
+DeltaGraph.js
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/openanzo/!svn/ver/5008/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/rdf/DeltaGraph.js
+END
+IDataset.js
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/rdf/IDataset.js
+END
+INamedGraph.js
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/rdf/INamedGraph.js
+END
+DatasetBase.js
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/openanzo/!svn/ver/5009/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/rdf/DatasetBase.js
+END
+IQuadStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/rdf/IQuadStore.js
+END
+BaseQuadStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/openanzo/!svn/ver/5009/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/rdf/BaseQuadStore.js
+END

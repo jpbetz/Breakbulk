@@ -1,0 +1,17 @@
+<propertyDefinitions>
+	<propertiesGroup packageName="org.openanzo.combus.endpoint" groupPrefix="org.openanzo.combus.endpoint" className="CombusEndpoint">
+		<description>Bayeux Bridge Config Properties.</description>
+		<property name="recorder.enabled" key="KEY_RECORDER_ENABLED" restartRequired="false" passDefault="false" type="Boolean">
+			<description>True to enabled analysis recording</description>
+		</property>
+		<property name="recorder.output" key="KEY_RECORDER_OUTPUT" restartRequired="false" passDefault="false" type="String">
+            <description>Recorder output file location</description>
+        </property>
+        <property name="recorder.excludedQueues" key="KEY_RECORDER_EXCLUDED_QUEUES" restartRequired="false" passDefault="false" type="String">
+            <description>Queue names to exclude from recorder</description>
+        </property>
+	</propertiesGroup>
+	
+	
+</propertyDefinitions>
+	

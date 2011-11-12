@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/openanzo/!svn/ver/5152/openanzo/trunk/org.openanzo.servlet/src/main/java/org/openanzo/servlet
+END
+BasicUserAuthorization.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/openanzo/!svn/ver/4653/openanzo/trunk/org.openanzo.servlet/src/main/java/org/openanzo/servlet/BasicUserAuthorization.java
+END
+BaseServletComponent.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/openanzo/!svn/ver/4917/openanzo/trunk/org.openanzo.servlet/src/main/java/org/openanzo/servlet/BaseServletComponent.java
+END
+IAuthenticatorRealm.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/openanzo/!svn/ver/4653/openanzo/trunk/org.openanzo.servlet/src/main/java/org/openanzo/servlet/IAuthenticatorRealm.java
+END
+WelcomesFilesFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/openanzo/!svn/ver/4653/openanzo/trunk/org.openanzo.servlet/src/main/java/org/openanzo/servlet/WelcomesFilesFilter.java
+END
+PathSpec.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.servlet/src/main/java/org/openanzo/servlet/PathSpec.java
+END
+SecurityConstraint.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/openanzo/!svn/ver/4037/openanzo/trunk/org.openanzo.servlet/src/main/java/org/openanzo/servlet/SecurityConstraint.java
+END
+BasicAuthenticator.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/openanzo/!svn/ver/4826/openanzo/trunk/org.openanzo.servlet/src/main/java/org/openanzo/servlet/BasicAuthenticator.java
+END
+IServletComponent.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/openanzo/!svn/ver/4817/openanzo/trunk/org.openanzo.servlet/src/main/java/org/openanzo/servlet/IServletComponent.java
+END
+ResourceServerServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/openanzo/!svn/ver/4653/openanzo/trunk/org.openanzo.servlet/src/main/java/org/openanzo/servlet/ResourceServerServlet.java
+END
+AuthenticationMode.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/openanzo/!svn/ver/4817/openanzo/trunk/org.openanzo.servlet/src/main/java/org/openanzo/servlet/AuthenticationMode.java
+END
+BasicContext.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/openanzo/!svn/ver/4826/openanzo/trunk/org.openanzo.servlet/src/main/java/org/openanzo/servlet/BasicContext.java
+END
+ServerRealm.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/openanzo/!svn/ver/4653/openanzo/trunk/org.openanzo.servlet/src/main/java/org/openanzo/servlet/ServerRealm.java
+END
+EncryptedTokenAuthenticator.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/openanzo/!svn/ver/5152/openanzo/trunk/org.openanzo.servlet/src/main/java/org/openanzo/servlet/EncryptedTokenAuthenticator.java
+END
+WebcontainerTracker.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/openanzo/!svn/ver/4790/openanzo/trunk/org.openanzo.servlet/src/main/java/org/openanzo/servlet/WebcontainerTracker.java
+END
+BaseServletActivator.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/openanzo/!svn/ver/4737/openanzo/trunk/org.openanzo.servlet/src/main/java/org/openanzo/servlet/BaseServletActivator.java
+END

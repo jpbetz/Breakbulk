@@ -1,0 +1,143 @@
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/openanzo/!svn/ver/5205/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/common/plugins
+END
+org.eclipse.equinox.launcher_1.0.200.v20090520.jar
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/openanzo/!svn/ver/4247/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/common/plugins/org.eclipse.equinox.launcher_1.0.200.v20090520.jar
+END
+org.eclipse.equinox.frameworkadmin_1.0.100.v20090520-1905.jar
+K 25
+svn:wc:ra_dav:version-url
+V 164
+/svn/openanzo/!svn/ver/4247/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/common/plugins/org.eclipse.equinox.frameworkadmin_1.0.100.v20090520-1905.jar
+END
+org.eclipse.equinox.util_1.0.100.v20090520-1800.jar
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/openanzo/!svn/ver/4247/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/common/plugins/org.eclipse.equinox.util_1.0.100.v20090520-1800.jar
+END
+org.eclipse.equinox.registry_3.4.100.v20090520-1800.jar
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/openanzo/!svn/ver/4247/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/common/plugins/org.eclipse.equinox.registry_3.4.100.v20090520-1800.jar
+END
+org.eclipse.equinox.supplement_1.2.0.v20090518.jar
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/openanzo/!svn/ver/4247/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/common/plugins/org.eclipse.equinox.supplement_1.2.0.v20090518.jar
+END
+org.eclipse.equinox.wireadmin_1.0.100.v20090520-1800.jar
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/openanzo/!svn/ver/4247/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/common/plugins/org.eclipse.equinox.wireadmin_1.0.100.v20090520-1800.jar
+END
+org.eclipse.equinox.ds_1.1.0.v20090601.jar
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/openanzo/!svn/ver/4247/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/common/plugins/org.eclipse.equinox.ds_1.1.0.v20090601.jar
+END
+org.eclipse.equinox.concurrent_1.0.0.v20090520-1800.jar
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/openanzo/!svn/ver/4247/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/common/plugins/org.eclipse.equinox.concurrent_1.0.0.v20090520-1800.jar
+END
+org.eclipse.equinox.app_1.2.0.v20090520-1800.jar
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/openanzo/!svn/ver/4247/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/common/plugins/org.eclipse.equinox.app_1.2.0.v20090520-1800.jar
+END
+org.eclipse.equinox.event_1.1.100.v20090520-1800.jar
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/openanzo/!svn/ver/4247/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/common/plugins/org.eclipse.equinox.event_1.1.100.v20090520-1800.jar
+END
+org.apache.felix.shell-1.0.2.jar
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/openanzo/!svn/ver/4136/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/common/plugins/org.apache.felix.shell-1.0.2.jar
+END
+org.eclipse.equinox.useradmin_1.1.100.v20090520-1800.jar
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/openanzo/!svn/ver/4247/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/common/plugins/org.eclipse.equinox.useradmin_1.1.100.v20090520-1800.jar
+END
+org.eclipse.equinox.metatype_1.0.2.v20090520-1800.jar
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/openanzo/!svn/ver/4247/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/common/plugins/org.eclipse.equinox.metatype_1.0.2.v20090520-1800.jar
+END
+org.eclipse.osgi.util_3.2.0.v20090520-1800.jar
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/openanzo/!svn/ver/4247/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/common/plugins/org.eclipse.osgi.util_3.2.0.v20090520-1800.jar
+END
+org.eclipse.osgi_3.5.0.v20090520.jar
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/openanzo/!svn/ver/4247/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/common/plugins/org.eclipse.osgi_3.5.0.v20090520.jar
+END
+org.eclipse.equinox.common_3.5.0.v20090520-1800.jar
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/openanzo/!svn/ver/4247/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/common/plugins/org.eclipse.equinox.common_3.5.0.v20090520-1800.jar
+END
+org.eclipse.equinox.device_1.0.100.v20090520-1800.jar
+K 25
+svn:wc:ra_dav:version-url
+V 156
+/svn/openanzo/!svn/ver/4247/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/common/plugins/org.eclipse.equinox.device_1.0.100.v20090520-1800.jar
+END
+org.eclipse.equinox.cm_1.0.100.v20090520-1800.jar
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/openanzo/!svn/ver/5205/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/common/plugins/org.eclipse.equinox.cm_1.0.100.v20090520-1800.jar
+END
+org.eclipse.osgi.services_3.2.0.v20090520-1800.jar
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/openanzo/!svn/ver/4247/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/common/plugins/org.eclipse.osgi.services_3.2.0.v20090520-1800.jar
+END
+org.eclipse.equinox.frameworkadmin.equinox_1.0.100.v20090520-1905.jar
+K 25
+svn:wc:ra_dav:version-url
+V 172
+/svn/openanzo/!svn/ver/4247/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/common/plugins/org.eclipse.equinox.frameworkadmin.equinox_1.0.100.v20090520-1905.jar
+END
+org.eclipse.equinox.io_1.0.100.v20090520-1800.jar
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/openanzo/!svn/ver/4247/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/common/plugins/org.eclipse.equinox.io_1.0.100.v20090520-1800.jar
+END
+org.eclipse.equinox.preferences_3.2.300.v20090520-1800.jar
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/openanzo/!svn/ver/4247/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/common/plugins/org.eclipse.equinox.preferences_3.2.300.v20090520-1800.jar
+END
+org.eclipse.equinox.ip_1.1.0.v20090520-1800.jar
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/openanzo/!svn/ver/4247/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/common/plugins/org.eclipse.equinox.ip_1.1.0.v20090520-1800.jar
+END

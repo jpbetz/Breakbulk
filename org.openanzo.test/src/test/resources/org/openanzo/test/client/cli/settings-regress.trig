@@ -1,0 +1,29 @@
+### standard prefixes
+@prefix foaf      : <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs      : <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc        : <http://purl.org/dc/elements/1.1/> .
+@prefix xsd       : <http://www.w3.org/2001/XMLSchema#> .
+
+#### anzo prefixes:
+@prefix system     : <http://openanzo.org/ontologies/2008/07/System#> .
+@prefix anzo       : <http://openanzo.org/ontologies/2008/07/Anzo#> .
+@prefix cli		   : <http://openanzo.org/cli/> .
+
+### csi prefixes
+@prefix csi       : <ldap://cambridgesemantics.com/foaf/people#> .
+@prefix clitest   : <http://cambridgesemantics.com/cli-tests#> .
+
+### service prefixes
+@prefix echo            : <http://openanzo.org/semanticServices/echoService#> .
+@prefix lr              : <http://openanzo.org/semanticServices/longRunningService#> .
+@prefix semanticservice : <http://openanzo.org/ontologies/2008/07/SemanticService#SemanticService> .
+
+
+cli:config {
+  cli:config
+	system:user "sysadmin" ;
+	system:password "123" ;
+	system:host "tcp://localhost" ;
+	system:port "61618" ;
+  .
+}

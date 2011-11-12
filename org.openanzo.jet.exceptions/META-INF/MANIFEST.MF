@@ -1,0 +1,17 @@
+Manifest-Version: 1.0
+Export-Package: org.openanzo.jet.exceptions.templates;version="3.2.0",
+ org.openanzo.jet.exceptions;version="3.2.0"
+Bundle-Name: org.openanzo.jet.exceptions
+Bundle-Vendor: Cambridge Semantics Inc.
+Bundle-Version: 3.2.0
+Bundle-ManifestVersion: 2
+Bundle-License: http://www.eclipse.org/legal/epl-v10.html
+Bundle-Description: Openanzo Jet Tasks for Exceptions
+Import-Package: javax.xml.parsers,org.apache.tools.ant;resolution:=opt
+ ional,org.apache.tools.ant.taskdefs;resolution:=optional,org.apache.t
+ ools.ant.types;resolution:=optional,org.openanzo.jet.exceptions;versi
+ on="3.2.0",org.openanzo.jet.exceptions.templates;version="3.2.0",org.
+ xml.sax,org.xml.sax.helpers
+Bundle-SymbolicName: org.openanzo.jet.exceptions
+Bundle-DocURL: http://www.cambridgesemantics.com
+

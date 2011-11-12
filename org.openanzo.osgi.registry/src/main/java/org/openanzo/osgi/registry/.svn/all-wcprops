@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/openanzo/!svn/ver/5125/openanzo/trunk/org.openanzo.osgi.registry/src/main/java/org/openanzo/osgi/registry
+END
+IRegistryProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.osgi.registry/src/main/java/org/openanzo/osgi/registry/IRegistryProvider.java
+END
+RegistryDataset.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/openanzo/!svn/ver/4507/openanzo/trunk/org.openanzo.osgi.registry/src/main/java/org/openanzo/osgi/registry/RegistryDataset.java
+END

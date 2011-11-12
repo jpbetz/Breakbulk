@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/openanzo/!svn/ver/4519/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/templates
+END
+ImplementationTemplate.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/openanzo/!svn/ver/4519/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/templates/ImplementationTemplate.java
+END
+ListenerTemplate.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/openanzo/!svn/ver/4519/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/templates/ListenerTemplate.java
+END
+ListenerAdapterTemplate.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/4519/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/templates/ListenerAdapterTemplate.java
+END
+FactoryTemplate.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/4519/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/templates/FactoryTemplate.java
+END
+JSVocabTemplate.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/4519/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/templates/JSVocabTemplate.java
+END
+InterfaceTemplate.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/openanzo/!svn/ver/4519/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/templates/InterfaceTemplate.java
+END

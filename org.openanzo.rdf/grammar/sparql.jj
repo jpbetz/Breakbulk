@@ -1,0 +1,1519 @@
+options { 	
+	STATIC = false ;
+	DEBUG_PARSER = false ;
+	DEBUG_TOKEN_MANAGER = false ;
+	JAVA_UNICODE_ESCAPE = false ;
+	UNICODE_INPUT = true;
+}
+PARSER_BEGIN(SPARQLParser)
+/******************************************************************************* 
+ * Copyright (c) 2004, 2007-2009 IBM Corporation and Cambridge Semantics Incorporated. 
+ * All rights reserved. This program and the accompanying materials 
+ * are made available under the terms of the Eclipse Public License v1.0 
+ * which accompanies this distribution, and is available at 
+ * http://www.eclipse.org/legal/epl-v10.html 
+ * 
+ * File: $Source: /cvsroot/slrp/glitter/com.ibm.adtech.glitter/grammar/sparql.jj,v $
+ * Created by:  Lee Feigenbaum (<a href="mailto:feigenbl@us.ibm.com">feigenbl@us.ibm.com</a>) 
+ * Created on: 10/23/06
+ * Revision: $Id: sparql.jj 164 2007-07-31 14:11:09Z mroy $ 
+ * 
+ * Contributors: IBM Corporation - initial API and implementation 
+ * Cambridge Semantics Incorporated - Fork to Anzo 
+ *******************************************************************************/
+package org.openanzo.glitter.syntax.concrete;
+import org.openanzo.exceptions.ExceptionConstants;
+import org.openanzo.glitter.exception.GlitterRuntimeException;
+import org.openanzo.glitter.expression.aggregate.Min;
+import org.openanzo.glitter.expression.aggregate.Max;
+import org.openanzo.glitter.expression.aggregate.Count;
+import org.openanzo.glitter.expression.aggregate.Sum;
+import org.openanzo.glitter.expression.aggregate.Average;
+import org.openanzo.glitter.expression.aggregate.Sample;
+import org.openanzo.glitter.expression.aggregate.GroupConcat;
+import org.openanzo.glitter.expression.Function;
+import org.openanzo.glitter.expression.builtin.*;
+import org.openanzo.glitter.util.Constants;
+import org.openanzo.glitter.util.CURIE;
+import org.openanzo.rdf.URI;
+import org.openanzo.rdf.MemVariable;
+import org.openanzo.rdf.Variable;
+import org.openanzo.rdf.Literal;
+import org.openanzo.rdf.TypedLiteral;
+import org.openanzo.rdf.TriplePatternComponent;
+import org.openanzo.glitter.syntax.abstrakt.*;
+import org.openanzo.rdf.BlankNodeManager;
+import org.openanzo.rdf.MemBlankNode;
+import org.openanzo.rdf.datatype.*;
+import org.openanzo.rdf.vocabulary.RDF;
+import org.openanzo.glitter.query.*;
+import java.util.List;
+import java.util.ArrayList;
+import java.util.Set;
+import java.util.HashSet;
+import java.util.HashMap;
+
+
+// JavaCC generates code with compiler warnings that we can't get rid of so we suppress them.
+@SuppressWarnings({"all"})
+public class SPARQLParser extends SPARQLParserBase {
+}
+PARSER_END(SPARQLParser)
+
+void Query() : 
+{
+	GraphPattern pattern = null;
+}
+{
+  Prolog()
+  ( 
+   pattern = SelectQuery(true) | 
+   pattern = ConstructQuery() | 
+   pattern = DescribeQuery() | 
+   pattern = AskQuery() 
+  )
+  { getQueryController().setQueryPattern(pattern); }
+  
+  <EOF>
+}
+
+void Prolog() : {}
+{
+  // Nothing specific to do here.
+  (BaseDecl())?
+  (PrefixDecl())*
+}
+void BaseDecl() :
+{
+	Token t;
+}
+{
+  <BASE>
+  t = <Q_IRI_REF>
+  { getQueryController().setBaseUri(getQueryController().resolveUri(token2uri(t))); }
+}
+void PrefixDecl() :
+{
+	Token t;
+	URI uri;
+	CURIE curie;
+}
+{
+  <PREFIX>
+  t = <QNAME_NS>
+  { curie = new CURIE(t.image); }
+  t = <Q_IRI_REF>
+  { uri = getQueryController().resolveUri(token2uri(t)); }
+  { getQueryController().mapPrefix(curie.getPrefix(), uri); }
+}
+GraphPattern SelectQuery(boolean allowDataset) : 
+{ 
+	Variable v; 
+	Expression e;
+	ArrayList<Variable> groupByVars = new ArrayList<Variable>();
+	GraphPattern pattern;
+	ArrayList<Expression> expressions = new ArrayList<Expression>();
+	ArrayList<Variable> vars = new ArrayList<Variable>(); 
+	boolean distinct = false;
+	boolean reduced = false;
+	boolean selectStar = false;
+	Projection p;
+}
+{
+  // Not sure if this should really be part of an
+  // AST, or whether it would be better as bits of state
+  // instead (for now, it's state)
+  <SELECT>
+  (<DISTINCT> { distinct = true; } )?
+  (<REDUCED> { reduced = true; } )?
+  (
+    (
+      v = Var()
+	  { expressions.add(new SimpleExpression(v)); vars.add(v); }
+	|
+	  <LPAREN>
+	  e = Expression()
+	  <AS>
+	  v = Var()
+	  <RPAREN>
+	  { expressions.add(e); vars.add(v); }
+	)+
+  |
+    <STAR> { selectStar = true; }
+  )
+
+  (DatasetClause() { if (!allowDataset) throw new GlitterRuntimeException(ExceptionConstants.GLITTER.NO_DATASET_IN_SUBQUERY); } )*
+  pattern = WhereClause()
+  (
+  	groupByVars = GroupByClause()
+  )?
+  SolutionModifier()
+  {
+  	// handle SELECT *
+  	if (vars.isEmpty()) {
+  		vars.addAll(pattern.getReferencedVariables());
+  		for (Variable var : vars)
+  			expressions.add(new SimpleExpression(var));
+  	}
+  	p = new Projection(expressions, vars, groupByVars, selectStar, distinct, reduced);
+  	getQueryController().setQueryResultForm(p);
+  	return pattern;
+  }
+  
+}
+GraphPattern ConstructQuery() :
+{
+	GraphPattern pattern;
+	ArrayList<TriplePatternNode> template = new ArrayList<TriplePatternNode>();
+	ArrayList<TriplePatternComponent> templateGraph = new ArrayList<TriplePatternComponent>();
+	Construct c;
+}
+{
+  // TODO
+  <CONSTRUCT>
+  ConstructTemplate(template, templateGraph)
+  (DatasetClause())*
+  pattern = WhereClause()
+  SolutionModifier()
+  { 
+  	c = new Construct(template, templateGraph);
+  	getQueryController().setQueryResultForm(c);
+ 	return pattern; 
+  }
+}
+GraphPattern DescribeQuery() :
+{}
+{
+  // TODO
+  <DESCRIBE>
+  (
+    (VarOrIRIref())+ | <STAR>
+  )
+  (DatasetClause())*
+  (WhereClause())?
+  SolutionModifier()
+  { return null; }
+}
+GraphPattern AskQuery() :
+{
+	GraphPattern pattern;
+}
+{
+  <ASK>
+  (DatasetClause())*
+  pattern = WhereClause()
+  {
+  	getQueryController().setQueryResultForm(new Ask());
+   	return pattern; 
+  }
+}
+void DatasetClause() :
+{}
+{
+  // both of these cases take care of themselves
+  <FROM>
+  (
+    DefaultGraphClause() | NamedGraphClause() | NamedDatasetClause()
+  )
+}
+void DefaultGraphClause() :
+{
+	URI u;
+}
+{
+  u = SourceSelector()
+  { getQueryController().getParsedQueryDataset().getDefaultGraphURIs().add(u); }
+}
+void NamedGraphClause() :
+{
+	URI u;
+}
+{
+  <NAMED>
+  u = SourceSelector()
+  { getQueryController().getParsedQueryDataset().getNamedGraphURIs().add(u); }
+}
+void NamedDatasetClause() :
+{
+	URI u;
+}
+{
+  <DATASET>
+  u = SourceSelector()
+  { getQueryController().getParsedQueryDataset().getNamedDatasetURIs().add(u); }  
+}
+URI SourceSelector() : 
+{
+	URI iri;
+}
+{
+  iri = IRIref()
+  { return iri; }
+}
+GraphPattern WhereClause() : 
+{
+	GraphPattern pattern;
+}
+{
+  (<WHERE>)?
+  pattern = GroupGraphPattern()
+  { return pattern; }
+}
+ArrayList<Variable> GroupByClause() :
+{
+	Variable v; 
+	ArrayList vars = new ArrayList(); 
+}
+{
+	<GROUP>
+	<BY>
+	(
+		v = Var()
+		{ vars.add(v); }
+	)+ 
+	{ return vars; }
+}
+void SolutionModifier() : 
+{ }
+{
+  (OrderClause())?
+  (LimitOffsetClauses())?
+}
+void OrderClause() :
+{
+	OrderingCondition cond;
+	QueryController qe;
+}
+{
+  { qe = getQueryController(); }
+  <ORDER>
+  <BY>
+  (
+    cond = OrderCondition()
+    { qe.addOrderingCondition(cond); }
+  )+
+}
+OrderingCondition OrderCondition() :
+{
+	boolean ascending = true;
+	Expression cond;
+	Variable v;
+}
+{
+  (
+  (
+    (
+      <ASC> 
+      | 
+      <DESC> { ascending = false; }
+    )
+    cond = BrackettedExpression()
+  ) | (
+    cond = FunctionCall() | cond = BuiltInCall() | v = Var() {cond = new SimpleExpression(v);} | cond = BrackettedExpression()
+  )
+  )
+  { 
+  	return new OrderingCondition(cond, ascending);
+  }
+}
+
+void LimitOffsetClauses() :
+{
+}
+{
+	(
+	  LimitClause()
+	  (OffsetClause())?
+	) | (
+	  OffsetClause()
+	  (LimitClause())?
+	)
+}
+
+void LimitClause() :
+{
+	Token t;
+}
+{
+  <LIMIT>
+  t = <INTEGER>
+  { getQueryController().setLimit(Integer.decode(t.image)); }
+}
+void OffsetClause() :
+{
+	Token t;
+}
+{
+  <OFFSET>
+  t = <INTEGER>
+  { getQueryController().setOffset(Integer.decode(t.image)); }
+}
+Group GroupGraphPattern() :
+{
+	Group g;
+}
+{
+  <LCURLY>
+  g = GroupGraphPatternInsideCurlies()
+  <RCURLY>
+  { return g; }
+}
+
+Group GroupGraphPatternInsideCurlies() :
+{
+	Group g;
+}
+{
+  { enterGroupScope(); }
+  g = GroupElement(null)
+  { exitGroupScope(); }
+  { return g; }
+}
+
+
+GraphPattern GroupOrSubqueryGraphPattern() :
+{
+	GraphPattern gp;
+}
+{
+	<LCURLY>
+	(
+		gp = SelectSubqueryGraphPattern()
+	  |
+		gp = GroupGraphPatternInsideCurlies()
+	)
+	<RCURLY>
+	{ return gp; }
+}
+
+Subquery SelectSubqueryGraphPattern() :
+{
+	GraphPattern pattern;
+	SubqueryController sqc;
+}
+{
+	{ sqc = enterSubquery(); }
+	pattern = SelectQuery(false)
+	{ sqc.setQueryPattern(pattern); }
+	{ exitSubquery(); }
+	{ return new Subquery(sqc); }
+}
+
+Group GroupElement(Group g) :
+{
+	Group ggp;
+}
+{
+  { if (g == null) g = new Group(); }
+  // GraphPattern doesn't return anything; it just adds patterns to our group
+  GraphPattern(g)
+  (
+    ggp = OptionalGraphPattern() { g.replaceCurrentContentsWithOptional(ggp); }
+    (<DOT>)?
+    // we ignore the return group here, since we're combining its patterns 
+    // with our own
+    GroupElement(g)    
+  )?
+  { return g; }
+}
+
+// this returns void because all patterns reached from this point
+// are added to the arraylist (which usually percolates up to
+// GroupElement)
+void GraphPattern(Group g) :
+{
+	GraphPattern gp;
+	//Iterator<GraphPattern> it;
+}
+{
+  (
+    gp = BasicGraphPattern() { if (gp != null) g.addGraphPattern(gp); }
+  )?
+  (
+    gp = GraphPatternNotTriples(g) { if (gp != null) g.addGraphPattern(gp); }
+    (<DOT>)?
+    GraphPattern(g)
+  )?
+}
+BGP BasicGraphPattern() :
+{
+	BGP bgp = null;
+}
+{
+  bgp = BlockOfTriples()
+  { return bgp; }
+  {
+  	// TODO Let Andy know that BasicGraphPattern is superfluous now.
+  }
+}
+BGP BlockOfTriples() :
+{
+	ArrayList<TriplePatternNode> triples = new ArrayList<TriplePatternNode>();
+}
+{
+  TriplesSameSubject(triples)
+  (
+    <DOT>
+    (TriplesSameSubject(triples))?
+  )*
+  { return new BGP(triples); }
+}
+// The return value can be null if this only matches a constraint
+GraphPattern GraphPatternNotTriples(Group g) :
+{
+	GraphPattern gp;
+	Expression e;
+}
+{
+    gp = GroupOrUnionGraphPattern() {return gp;} 
+  | 
+    gp = GraphGraphPattern() {return gp;}
+  |
+    e = Constraint() {g.addFilter(e); return null;}
+  |
+    LetGraphPattern(g) {return null;}
+}
+
+void LetGraphPattern(Group g) :
+{}
+{
+	<LET>
+	<LPAREN>
+	Assignment(g)
+	(
+		<DOT>
+		Assignment(g)
+	)*
+	<RPAREN>	
+}
+
+void Assignment(Group g) :
+{
+	Variable v;
+	Expression e;
+}
+{
+	(
+		v = Var()
+		<ASSIGN>
+		e = Expression()
+	) { g.addAssignment(v, e); }
+}
+
+Group OptionalGraphPattern() :
+{
+	Group g;
+}
+{
+  // the caller of OptionalGraphPattern is responsible for
+  // actually constructing the Optional node since it knows
+  // what the first operand should be
+  <OPTIONAL>
+  g = GroupGraphPattern()
+  { return g; }
+}
+Graph GraphGraphPattern() :
+{
+	TriplePatternComponent g;
+	GraphPattern gp;
+}
+{
+  <GRAPH>
+  g = VarOrIRIref()
+  gp = GroupGraphPattern()
+  { return new Graph(g, gp); }
+}
+GraphPattern GroupOrUnionGraphPattern() :
+{
+	GraphPattern lhs, rhs;
+}
+{
+  lhs = GroupOrSubqueryGraphPattern()
+  (
+    <UNION>
+    rhs = GroupOrSubqueryGraphPattern()
+    { lhs = new Union(lhs, rhs); }
+  )*
+  { return lhs; }
+}
+Expression Constraint() :
+{
+	Expression e;
+}
+{
+  <FILTER>
+  (
+    e = BrackettedExpression() |
+    e = BuiltInCall() |
+    e = FunctionCall() 
+  )
+  { return e; }
+}
+
+Expression FunctionCall() :
+{
+	URI u;
+	List<Expression> args;
+	boolean distinct = false;
+	boolean star = false;
+}
+{
+  u = IRIref()
+  ( 
+    <NIL> { args = new ArrayList<Expression>(); } 
+    | 
+    <LPAREN>
+    ( <DISTINCT> { distinct = true; } )?
+    (
+      <STAR> { star = true; args = new ArrayList<Expression>(); } | args = ArgList()
+    )
+    <RPAREN>
+  )
+  {
+  	return new FunctionCall(u, args, star, distinct); // can throw UnknownFunctionException
+  }
+}
+List<Expression> ArgList() :
+{
+	ArrayList<Expression> args = new ArrayList<Expression>();
+	Expression e;
+}
+{
+  (
+	e = Expression() { args.add(e); }
+	(
+	  <COMMA>
+	  e = Expression() { args.add(e); }
+	)*
+  )
+  { return args; }
+}
+void ConstructTemplate(ArrayList<TriplePatternNode> triples, ArrayList<TriplePatternComponent> quadComponent) :
+{}
+{
+  <LCURLY>
+  ConstructTemplateContents(triples, quadComponent)
+  <RCURLY>
+}
+void ConstructTemplateContents(ArrayList<TriplePatternNode> triples, ArrayList<TriplePatternComponent> quadComponent) :
+{}
+{
+  (
+    ConstructGraphTriples(triples, quadComponent)
+    ConstructTemplateContents(triples, quadComponent)
+  ) | (
+    ConstructTriples(triples, quadComponent, null)
+    (
+      <DOT>
+      ConstructTemplateContents(triples, quadComponent)
+    )?
+  ) 
+}
+void ConstructTriples(ArrayList<TriplePatternNode> triples, ArrayList<TriplePatternComponent> quadComponent, TriplePatternComponent graph) :
+{
+	int beginSize = triples.size();
+}
+{
+    (TriplesSameSubject(triples))?
+  { 
+  	// mark down that all these new triples we just collected belong to the given graph component
+    for (int i = beginSize; i < triples.size(); i++) {
+    	quadComponent.add(graph);
+    }
+  }
+}
+void ConstructGraphTriples(ArrayList<TriplePatternNode> triples, ArrayList<TriplePatternComponent> quadComponent) :
+{
+	TriplePatternComponent g;
+}
+{
+  <GRAPH>
+  g = VarOrIRIref()
+  <LCURLY>
+  ConstructTriples(triples, quadComponent, g)
+  (
+  	<DOT>
+  	ConstructTriples(triples, quadComponent, g)
+   )*
+  <RCURLY>
+}
+
+void TriplesSameSubject(ArrayList<TriplePatternNode> accumulatedTriples) :
+{
+	TriplePatternComponent s;
+}
+{
+  s = VarOrTerm()
+  PropertyListNotEmpty(s, accumulatedTriples) 
+    |
+  s = TriplesNode(accumulatedTriples)
+  PropertyList(s, accumulatedTriples)
+}
+void PropertyList(TriplePatternComponent s, ArrayList<TriplePatternNode> accumulatedTriples) :
+{}
+{
+  (PropertyListNotEmpty(s, accumulatedTriples))?
+}
+void PropertyListNotEmpty(TriplePatternComponent s, ArrayList<TriplePatternNode>  accumulatedTriples) :
+{
+	TriplePatternComponent p;
+}
+{
+  p = Verb()
+  ObjectList(s, p, accumulatedTriples)
+  (
+    <SEMIC>
+    PropertyList(s, accumulatedTriples)
+  )?
+}
+void ObjectList(TriplePatternComponent s, TriplePatternComponent p, ArrayList<TriplePatternNode> accumulatedTriples) :
+{
+	TriplePatternComponent o;
+}
+{
+  o = GraphNode(accumulatedTriples)
+  { accumulatedTriples.add(new TriplePatternNode(s, p, o)); }
+  (
+    <COMMA>
+    ObjectList(s, p, accumulatedTriples)
+  )?
+}
+TriplePatternComponent Verb() :
+{
+	TriplePatternComponent node;
+}
+{
+  node = VarOrIRIref() { return node; }
+    |
+  <A> { return RDF.TYPE; }
+}
+TriplePatternComponent TriplesNode(ArrayList<TriplePatternNode> accumulatedTriples) :
+{
+	TriplePatternComponent node;	
+}
+{
+  node = Collection(accumulatedTriples) { return node; }
+    |
+  node = BlankNodePropertyList(accumulatedTriples) { return node; }
+}
+TriplePatternComponent BlankNodePropertyList(ArrayList<TriplePatternNode> accumulatedTriples) :
+{
+	org.openanzo.rdf.BlankNode bnode;
+}
+{
+  { bnode = getBlankNodeManager().getBlankNode(); }
+  <LBRACKET>
+  PropertyListNotEmpty(bnode, accumulatedTriples)
+  <RBRACKET>
+  { return bnode; }
+}
+TriplePatternComponent Collection(ArrayList<TriplePatternNode> accumulatedTriples) :
+{
+	ArrayList<TriplePatternComponent> listNodes = new ArrayList<TriplePatternComponent>();
+	TriplePatternComponent node;
+}
+{
+  <LPAREN>
+  (
+    node = GraphNode(accumulatedTriples) { listNodes.add(node); }
+  )+
+  <RPAREN>
+  {
+  	return nodes2collection(listNodes, accumulatedTriples);
+  }
+}
+TriplePatternComponent GraphNode(ArrayList<TriplePatternNode> accumulatedTriples) :
+{
+	TriplePatternComponent node;
+}
+{
+  node = VarOrTerm() { return node; } 
+    |
+  node = TriplesNode(accumulatedTriples) { return node; }
+}
+TriplePatternComponent VarOrTerm() :
+{
+	TriplePatternComponent node;
+}
+{
+  node = Var() { return node; } 
+    |
+  node = GraphTerm() { return node; }
+}
+TriplePatternComponent VarOrIRIref() :
+{
+	Variable v;
+	URI u;
+}
+{
+  v = Var() 			{ return v; } |
+  u = IRIref()			{ return u; } 
+}
+TriplePatternComponent VarOrBlankNodeOrIRIref() :
+{
+	Variable v;
+	org.openanzo.rdf.BlankNode bnode;
+	URI u;
+}
+{
+  v = Var() 			{ return v; } |
+  bnode = BlankNode() 	{ return bnode; } |
+  u = IRIref()			{ return u; } 
+}
+Variable Var() :
+{
+	Token t;
+}
+{
+  ( t = <VAR1> | t = <VAR2> )
+  { return getVariable(t.image.substring(1)); }
+}
+TriplePatternComponent GraphTerm() :
+{
+	//TriplePatternComponent n;
+	URI u;
+	TypedLiteral tl;
+	Literal lit;
+	org.openanzo.rdf.BlankNode bnode;
+	Token t = null;
+}
+{
+  u = IRIref() { return u; } 
+    |
+  lit = RDFLiteral() { return lit; }
+    |
+  (
+    t = <MINUS> | t = <PLUS>
+  )?
+  tl = NumericLiteral(t != null ? t.image : "")
+  {
+	return tl;
+  }
+    |
+  tl = BooleanLiteral() { return tl; }
+    |
+  bnode = BlankNode() { return bnode; }
+    |
+  <NIL> { return nodes2collection(new ArrayList<TriplePatternComponent>()); }
+}
+Expression Expression() :
+{
+  Expression e;
+}
+{
+  e = ConditionalOrExpression()
+  { return e; }
+}
+Expression ConditionalOrExpression() :
+{
+  Expression arg1, arg2;
+  ArrayList<Expression> args;
+}
+{
+  arg1 = ConditionalAndExpression()
+  (
+    <OR>
+    arg2 = ConditionalAndExpression()
+    { 
+      args = new ArrayList<Expression>();
+      args.add(arg1);
+      args.add(arg2);
+      arg1 = new FunctionCall(new LogicalOr(), args);
+    }
+  )*
+  { return arg1; } 
+}
+Expression ConditionalAndExpression() :
+{
+  Expression arg1, arg2;
+  ArrayList<Expression> args;
+}
+{
+  arg1 = ValueLogical()
+  (
+    <AND>
+    arg2 = ValueLogical()
+    { 
+      args = new ArrayList<Expression>();
+      args.add(arg1);
+      args.add(arg2);
+      arg1 = new FunctionCall(new LogicalAnd(), args);
+    }
+  )*
+  { return arg1; }
+}
+Expression ValueLogical() :
+{
+  Expression e;
+}
+{
+  e = RelationalExpression()
+  { return e; }
+}
+
+Expression RelationalExpression() :
+{
+  Expression arg1, arg2 = null;
+  Function f = null;
+  ArrayList<Expression> args = new ArrayList<Expression>();
+}
+{
+  arg1 = NumericExpression()
+  (
+    <EQ> arg2 = NumericExpression() { f = new PolymorphicEq(); } |
+    <NE> arg2 = NumericExpression() { f = new PolymorphicNe(); } |
+    <LT> arg2 = NumericExpression() { f = new PolymorphicLt(); } |
+    <GT> arg2 = NumericExpression() { f = new PolymorphicGt(); } |
+    <LE> arg2 = NumericExpression() { f = new PolymorphicLe(); } |
+    <GE> arg2 = NumericExpression() { f = new PolymorphicGe(); } |
+    (
+		<IN> { args.add(arg1); }
+		<LPAREN>
+		arg2 = PrimaryExpression() { args.add(arg2); }
+		(
+		  <COMMA>
+		  arg2 = PrimaryExpression() { args.add(arg2); }
+		)*
+		<RPAREN>
+		{return new FunctionCall(new In(),args);}  )?
+	)
+  {
+  	if (arg2 == null) return arg1;
+  	args.add(arg1);
+  	args.add(arg2);
+  	return new FunctionCall(f, args);
+  }
+}
+Expression NumericExpression() :
+{
+  Expression e;
+}
+{
+  e = AdditiveExpression()
+  { return e; }
+}
+Expression AdditiveExpression() :
+{
+	Expression arg1, arg2;
+	ArrayList<Expression> args;//
+	Function f;
+}
+{
+  arg1 = MultiplicativeExpression()
+  (
+   (
+    <PLUS> arg2 = MultiplicativeExpression() { f = new PolymorphicAdd(); }
+   |
+    <MINUS> arg2 = MultiplicativeExpression() { f = new PolymorphicSubtract(); }
+   )
+   {
+   	 args = new ArrayList<Expression>();
+   	 args.add(arg1);
+   	 args.add(arg2);
+     arg1 = new FunctionCall(f, args);
+   }
+  )*
+  { return arg1; }
+}
+Expression MultiplicativeExpression() :
+{
+	Expression arg1, arg2;
+	ArrayList<Expression> args;//
+	Function f;
+}
+{
+  arg1 = UnaryExpression()
+  (
+   (
+    <STAR> arg2 = UnaryExpression() { f = new NumericMultiply(); }
+   |
+    <SLASH> arg2 = UnaryExpression() { f = new NumericDivide(); }
+   )
+   {
+   	 args = new ArrayList<Expression>();
+   	 args.add(arg1);
+   	 args.add(arg2);
+     arg1 = new FunctionCall(f, args);
+   }
+  )*
+  { return arg1; }
+}
+
+Expression UnaryExpression() :
+{
+	Expression e;
+	ArrayList<Expression> args = new ArrayList<Expression>();
+}
+{
+  	<NOT> e = PrimaryExpression() { args.add(e); return new FunctionCall(new Not(), args); }
+  |
+  	<PLUS> e = PrimaryExpression() { args.add(e); return new FunctionCall(new UnaryPlus(), args); }
+  |
+  	<MINUS> e = PrimaryExpression() { args.add(e); return new FunctionCall(new UnaryMinus(), args); }
+  |
+  	e = PrimaryExpression() { return e; }
+}
+Expression PrimaryExpression() :
+{
+  Expression e = null;
+  TriplePatternComponent tpc = null;
+}
+{
+ (
+  e = BrackettedExpression() |
+  e = BuiltInCall() |
+  e = IRIrefOrFunction() |
+  tpc = RDFLiteral() |
+  tpc = NumericLiteral("") |
+  tpc = BooleanLiteral() |
+  tpc = Var()
+ )
+ { 
+ 	if (e == null) e = new SimpleExpression(tpc);
+ 	return e;
+ }
+}
+Expression BrackettedExpression() :
+{
+  Expression e;
+}
+{
+  <LPAREN>
+  e = Expression()
+  <RPAREN>
+  { return e; }
+}
+FunctionCall BuiltInCall() :
+{
+	Variable v;
+	Expression e;
+	ArrayList<Expression> args = new ArrayList<Expression>();
+	FunctionCall fc;
+	boolean distinct = false;
+	boolean star = false;
+	HashMap<String, Object> attributes;
+	String s;
+}
+{
+  (
+  	  <SAMETERM>
+	  <LPAREN>
+	  e = Expression() { args.add(e); }
+	  <COMMA>
+	  e = Expression() { args.add(e); }
+	  <RPAREN>
+	  { return new FunctionCall(new SameTerm(), args); }
+  )
+ |  	  
+  (
+	  <STR>
+	  <LPAREN>
+	  e = Expression() { args.add(e); }
+	  <RPAREN>
+	  { return new FunctionCall(new Str(), args); }
+  )
+ |
+  (
+	  <LANG>
+	  <LPAREN>
+	  e = Expression() { args.add(e); }
+	  <RPAREN>
+	  { return new FunctionCall(new Lang(), args); }
+  )
+ |
+  (
+	  <LANGMATCHES>
+	  <LPAREN>
+	  e = Expression() { args.add(e); }
+	  <COMMA>
+	  e = Expression() { args.add(e); }
+	  <RPAREN>
+	  { return new FunctionCall(new LangMatches(), args); }
+  )
+ |
+  (
+	  <DATATYPE>
+	  <LPAREN>
+	  e = Expression() { args.add(e); }
+	  <RPAREN>
+	  { return new FunctionCall(new Datatype(), args); }
+  )
+ |
+  (
+	  <BOUND>
+	  <LPAREN>
+	  v = Var() { args.add(new SimpleExpression(v)); }
+	  <RPAREN>
+	  { return new FunctionCall(new Bound(), args); }
+  )
+ |
+  (
+	  <ISIRI>
+	  <LPAREN>
+	  e = Expression() { args.add(e); }
+	  <RPAREN>
+	  { return new FunctionCall(new IsIRI(), args); }
+  )
+ |
+  (
+	  <ISURI>
+	  <LPAREN>
+	  e = Expression() { args.add(e); }
+	  <RPAREN>
+  	  { return new FunctionCall(new IsIRI(), args); }
+  )
+ |
+  (
+	  <ISBLANK>
+	  <LPAREN>
+	  e = Expression() { args.add(e); }
+	  <RPAREN>
+	  { return new FunctionCall(new IsBlank(), args); }
+  )
+ |
+  (
+	  <ISLITERAL>
+	  <LPAREN>
+	  e = Expression() { args.add(e); }
+	  <RPAREN>
+	  { return new FunctionCall(new IsLiteral(), args); }
+  )
+  |
+  (
+  	fc = RegexExpression()
+  	{ return fc; }
+  )
+ // aggregates
+ |
+  (
+    <COUNT>
+    <LPAREN>
+    ( <DISTINCT> { distinct = true; } )?
+    (
+      <STAR> { star = true; } 
+     |
+      (
+	    v = Var() { args.add(new SimpleExpression(v)); } 
+	    (
+	      <COMMA>
+	      v = Var() { args.add(new SimpleExpression(v)); }
+	    )*
+	  )
+    )
+    <RPAREN>
+    { return new FunctionCall(new Count(), args, star, distinct); }
+  )
+ |
+  (
+    <SUM>
+    <LPAREN>
+    ( <DISTINCT> { distinct = true; } )?
+    (
+      <STAR> { star = true; } 
+     |
+      (
+	    v = Var() { args.add(new SimpleExpression(v)); } 
+	    (
+	      <COMMA>
+	      v = Var() { args.add(new SimpleExpression(v)); }
+	    )*
+	  )
+    )
+    <RPAREN>
+    { return new FunctionCall(new Sum(), args, star, distinct); }
+  )
+ |
+  (
+    <AVG>
+    <LPAREN>
+    ( <DISTINCT> { distinct = true; } )?
+    v = Var() { args.add(new SimpleExpression(v)); } 
+    <RPAREN>
+    { return new FunctionCall(new Average(), args, star, distinct); }
+  )
+ |
+  (
+    <SAMPLE>
+    <LPAREN>
+    ( <DISTINCT> { distinct = true; } )?
+    v = Var() { args.add(new SimpleExpression(v)); } 
+    <RPAREN>
+    { return new FunctionCall(new Sample(), args, star, distinct); }
+  )
+ |
+  (
+    <MIN>
+    <LPAREN>
+    ( <DISTINCT> { distinct = true; } )?
+    (
+      <STAR> { star = true; } 
+     |
+      (
+	    v = Var() { args.add(new SimpleExpression(v)); } 
+	    (
+	      <COMMA>
+	      v = Var() { args.add(new SimpleExpression(v)); }
+	    )*
+	  )
+    )
+    <RPAREN>
+    { return new FunctionCall(new Min(), args, star, distinct); }
+  )
+ |
+  (
+    <MAX>
+    <LPAREN>
+    ( <DISTINCT> { distinct = true; } )?
+    (
+      <STAR> { star = true; } 
+     |
+      (
+	    v = Var() { args.add(new SimpleExpression(v)); } 
+	    (
+	      <COMMA>
+	      v = Var() { args.add(new SimpleExpression(v)); }
+	    )*
+	  )
+    )
+    <RPAREN>
+    { return new FunctionCall(new Max(), args, star, distinct); }
+  )
+ |
+  (
+    <GROUP_CONCAT> { attributes = new HashMap<String, Object>(); }
+    <LPAREN>
+    ( <DISTINCT> { distinct = true; } )?
+    (
+      <STAR> { star = true; } 
+     |
+      (
+	    v = Var() { args.add(new SimpleExpression(v)); } 
+	    (
+	      <COMMA>
+	      v = Var() { args.add(new SimpleExpression(v)); }
+	    )*
+	  )
+    )
+    ( <SEPARATOR> s = String() { attributes.put(GroupConcat.ATTRIBUTE_SEPARATOR, s); } )?
+    <RPAREN>
+    { return new FunctionCall(new GroupConcat(), args, star, distinct, attributes); }
+  )
+}
+FunctionCall RegexExpression() :
+{
+	ArrayList<Expression> args = new ArrayList<Expression>();
+	Expression e;
+}
+{
+  <REGEX>
+  <LPAREN>
+  e = Expression() { args.add(e); }
+  <COMMA>
+  e = Expression() { args.add(e); }
+  (
+    <COMMA>
+    e = Expression() { args.add(e); }
+  )?
+  <RPAREN>
+  {	return new FunctionCall(new RegEx(), args); }
+}
+Expression IRIrefOrFunction() :
+{
+	URI u;
+	List<Expression> args = null;
+	boolean distinct = false;
+	boolean star = false;
+}
+{
+	// TODO - an IRI ref. in an expression can either be the name of
+	// a function or just a simple value
+  u = IRIref()
+  (
+    <NIL> { args = new ArrayList<Expression>(); }
+    |
+    <LPAREN>
+    ( <DISTINCT> { distinct = true; } )?
+    ( 
+      <STAR> { star = true; args = new ArrayList<Expression>(); } 
+      |
+      args = ArgList()
+    )
+    <RPAREN>
+  )?
+  {
+  	if (args == null) 
+  		return new SimpleExpression(u); 
+  	else
+  		return new FunctionCall(u, args, star, distinct);
+  }
+  
+}
+org.openanzo.rdf.Literal RDFLiteral() :
+{
+	String lexicalValue;
+	Token t;
+	URI dt;
+}
+{
+  lexicalValue = String()
+  (
+    t = <LANGTAG> { return org.openanzo.rdf.MemPlainLiteral.create(lexicalValue, t.image.substring(1)); }
+      |
+    (
+      <DATATYPEMARKER>
+      dt = IRIref()
+      { return org.openanzo.rdf.MemTypedLiteral.create(lexicalValue, dt); }
+    )
+  )?
+  { return org.openanzo.rdf.MemPlainLiteral.create(lexicalValue); }
+}
+org.openanzo.rdf.TypedLiteral NumericLiteral(String prefix) :
+{
+	Token t;
+	String xsdType;
+}
+{
+ (
+  t = <INTEGER> { xsdType = "integer"; }
+    |
+  t = <DECIMAL> { xsdType = "decimal"; }
+    |
+  t = <DOUBLE>  { xsdType = "double"; }
+ )
+  { return org.openanzo.rdf.MemTypedLiteral.create(prefix + t.image, createUri(TypeMaps.xsd(xsdType))); }
+}
+org.openanzo.rdf.TypedLiteral BooleanLiteral() :
+{}
+{
+  <TRUE> { return org.openanzo.rdf.MemTypedLiteral.create("true", createUri(TypeMaps.xsd("boolean"))); }
+  	|
+  <FALSE> { return org.openanzo.rdf.MemTypedLiteral.create("false", createUri(TypeMaps.xsd("boolean"))); } 
+}
+String String() :
+{
+	Token t;
+}
+{
+  (
+	  t = <STRING_LITERAL1> |
+	  t = <STRING_LITERAL2> |
+	  t = <STRING_LITERAL_LONG1> |
+	  t = <STRING_LITERAL_LONG2>
+	)
+	{ return evaluateStringLiteral(t.image); }
+}
+URI IRIref() :
+{
+	Token t;
+	URI u;
+}
+{
+  t = <Q_IRI_REF> 
+  { return getQueryController().resolveUri(token2uri(t)); }
+  |
+  u = QName() { return u; }
+}
+
+URI QName() :
+{
+	// TODO -- QName's, IRIRef's, variable names all allow
+	// escapes -- but only for valid characters -- not sure
+	// where to handle that
+	Token t;
+	//String qname, prefix, local;
+	CURIE curie;
+	//int colon;
+}
+{
+  (t = <QNAME> | t = <QNAME_NS>)
+  {
+  	curie = new CURIE(t.image);
+  	return getQueryController().resolveQName(curie.getPrefix(), curie.getLocal());
+  }
+}
+
+org.openanzo.rdf.BlankNode BlankNode() : 
+{
+	Token t;
+	BlankNodeManager bnm = getBlankNodeManager();
+	org.openanzo.rdf.BlankNode bnode;
+}
+{
+	(
+		t = <BLANK_NODE_LABEL> 
+		{ bnode = bnm.getBlankNode(t.image); }
+	  |
+		<ANON>
+		{ bnode = bnm.getBlankNode(); }
+	)
+	{ return bnode; }
+}
+
+// Lexer
+
+SKIP: { 
+	" " | 
+	"\t" | 
+	"\f" |
+	"\r" | 
+	"\n"
+}
+
+SPECIAL_TOKEN:
+	{ <COMMENT: "#" (~["\r","\n"])*("\r"|"\n"|"\r\n")?> }
+
+// keywords (except for "a") need to be matched in a case-insensitive manner
+// so we pull them out of the grammar and into the lexer
+
+TOKEN [IGNORE_CASE] :
+{
+	<BASE: "base">
+|	<PREFIX: "prefix">
+|	<SELECT: "select">
+|	<DISTINCT: "distinct">
+|	<REDUCED: "reduced">
+|	<COUNT: "count">
+|   <AVG: "avg">
+|	<SAMPLE: "sample">
+|	<SUM: "sum">
+|   <MIN: "min">
+|   <MAX: "max">
+|	<GROUP_CONCAT: "group_concat">
+|	<SEPARATOR: "separator">
+|	<CONSTRUCT: "construct">
+|	<ASK: "ask">
+|	<DESCRIBE: "describe">
+|	<FROM: "from">
+|	<NAMED: "named">
+|	<DATASET: "dataset">
+|	<WHERE: "where">
+|	<ORDER: "order">
+|	<BY: "by">
+|	<ASC: "asc">
+|	<DESC: "desc">
+|	<LIMIT: "limit">
+|	<OFFSET: "offset">
+|	<OPTIONAL: "optional">
+|	<GRAPH: "graph">
+|	<UNION: "union">
+|	<FILTER: "filter">
+|	<LET: "let">
+|	<GROUP: "group">
+
+|   <SAMETERM: "sameterm">
+|	<STR: "str">
+|	<LANG: "lang">
+|	<LANGMATCHES: "langmatches">
+|	<DATATYPE: "datatype">
+|	<BOUND: "bound">
+|	<ISIRI: "isiri">
+|	<ISURI: "isuri">
+|	<ISBLANK: "isblank">
+|	<ISLITERAL: "isliteral">
+|	<REGEX: "regex">
+|   <IN: "in">
+
+|	<TRUE: "true">
+|	<FALSE: "false">
+
+|	<AS: "as">
+}
+
+TOKEN : { <A: "a"> }
+
+TOKEN :
+{
+	<STAR: "*">
+|	<DOT: ".">
+|	<LCURLY: "{">
+|	<RCURLY: "}">
+|	<LBRACKET: "[">
+|	<RBRACKET: "]">
+|	<LPAREN: "(">
+|	<RPAREN: ")">
+|	<SEMIC: ";">
+|	<COMMA: ",">
+|	<PLUS: "+">
+|	<MINUS: "-">
+|	<OR: "||">
+|	<AND: "&&">
+|	<EQ: "=">
+|	<NE: "!=">
+|	<LT: "<">
+|	<LE: "<=">
+|	<GT: ">">
+|	<GE: ">=">
+|	<SLASH: "/">
+|	<NOT: "!">
+|	<DATATYPEMARKER: "^^">
+|	<ASSIGN: ":=">
+}
+
+TOKEN : 
+{ 
+  <Q_IRI_REF: "<" (~["<",">","'","{","}","|","^","`","\u0000"-"\u0020"])* ">"  >
+| <QNAME_NS: (<NCNAME_PREFIX>)? ":"  >
+| <QNAME: (<NCNAME_PREFIX>)? ":" (<NCNAME>)?  >
+| <BLANK_NODE_LABEL: "_:" <NCNAME>  >
+| <VAR1: "?" <VARNAME>  >
+| <VAR2: "$" <VARNAME>  >
+| <#LCLETTER: ["a"-"z"]>
+| <#UCLETTER: ["A"-"Z"]>
+| <#LETTER: ["a"-"z","A"-"Z"]>
+| <#NUMBER: ["0"-"9"]>
+| <#ALPHANUM: ["a"-"z","A"-"Z","0"-"9"]>
+| <LANGTAG: "@" (<LETTER>)+ ("-" (<ALPHANUM>)+)*  >
+| <INTEGER: (<NUMBER>)+  >
+| <DECIMAL: (<NUMBER>)+ "." (<NUMBER>)* |
+            "." (<NUMBER>)+  >
+| <DOUBLE: (<NUMBER>)+ "." (<NUMBER>)* <EXPONENT> |
+           "." (<NUMBER>)+ <EXPONENT> |
+          (<NUMBER>)+ <EXPONENT>  >
+| <EXPONENT: ["e","E"] (["+","-"])? (<NUMBER>)+  >
+| <STRING_LITERAL1: "'" (
+	(~["'","\\","\n","\r"]) |
+	<ECHAR>
+  )* "'"  >
+| <STRING_LITERAL2: "\"" (
+    (~["\"","\\","\n","\r"]) |
+    <ECHAR>
+  )* "\""  >
+| <STRING_LITERAL_LONG1: "'''" (
+    ( "'" | "''" )?
+    ( ~["'","\\"] | <ECHAR> )
+  )* "'''"  >
+| <STRING_LITERAL_LONG2: "\"\"\"" (
+    ( "\"" | "\"\"" )?
+    ( ~["\"","\\"] | <ECHAR> )
+  )* "\"\"\""  >
+| <ECHAR: "\\" ["t","b","n","r","f","\\","\"","'"]  >
+| <HEX: <NUMBER> | ["A"-"F"] | ["a"-"f"]  >
+| <NIL: "(" (<WS>)* ")"  >
+| <WS: " " | "\t" | "\r" | "\n"  >
+| <ANON: "[" (<WS>)* "]"  >
+| <#NCCHAR1P: 
+    <LETTER> |
+    <NUMBER> |
+    ["\u00C0"-"\u00D6"] |
+    ["\u00D8"-"\u00F6"] |
+    ["\u00F8"-"\u02FF"] |
+    ["\u0370"-"\u037D"] |
+    ["\u037F"-"\u1FFF"] |
+    ["\u200C"-"\u200D"] |
+    ["\u2070"-"\u218F"] |
+    ["\u2C00"-"\u2FEF"] |
+    ["\u3001"-"\uD7FF"] |
+    ["\uF900"-"\uFDCF"] |
+    ["\uFDF0"-"\uFFFD"] >
+    
+    
+// javacc is not happy with the 5 digit unicode characters
+//    ["\u10000"-"\uEFFFF"] |
+| <#NCCHAR1: <NCCHAR1P> | "_"  >
+| <VARNAME: 
+    ( <NCCHAR1> | <NUMBER> )
+    ( <NCCHAR1> | <NUMBER> | "\u00B7" | ["\u0300"-"\u036F"] | ["\u203F"-"\u2040"] )*  >
+| <#NCCHAR: <NCCHAR1> | "-" | <NUMBER> | "\u00B7" | ["\u0300"-"\u036F"] | ["\u203F"-"\u2040"]  >
+| <NCNAME_PREFIX: <NCCHAR1P> ( (<NCCHAR>|".")* <NCCHAR> )?  >
+| <NCNAME: <NCCHAR1> ( (<NCCHAR>|".")* <NCCHAR> )?  >
+}

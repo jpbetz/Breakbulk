@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/openanzo/!svn/ver/3993/openanzo/trunk/org.openanzo.cache/src/main/resources/config
+END
+ehcache.xml
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/openanzo/!svn/ver/3993/openanzo/trunk/org.openanzo.cache/src/main/resources/config/ehcache.xml
+END
+ehcache.xml.sample
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/openanzo/!svn/ver/3630/openanzo/trunk/org.openanzo.cache/src/main/resources/config/ehcache.xml.sample
+END
+cacheProvider.properties
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/3630/openanzo/trunk/org.openanzo.cache/src/main/resources/config/cacheProvider.properties
+END

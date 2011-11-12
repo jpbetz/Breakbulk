@@ -1,0 +1,179 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/openanzo/!svn/ver/5246/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client
+END
+ClientGraph.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/openanzo/!svn/ver/4530/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/ClientGraph.java
+END
+BinaryStoreClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/openanzo/!svn/ver/5152/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/BinaryStoreClient.java
+END
+RealtimeUpdateManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/openanzo/!svn/ver/4852/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/RealtimeUpdateManager.java
+END
+MetadataGraph.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/openanzo/!svn/ver/4530/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/MetadataGraph.java
+END
+IQuadStoreComponent.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/openanzo/!svn/ver/4852/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/IQuadStoreComponent.java
+END
+ITransactionListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/openanzo/!svn/ver/3852/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/ITransactionListener.java
+END
+AnzoTrustManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/openanzo/!svn/ver/5237/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/AnzoTrustManager.java
+END
+NamedGraphUpdateManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/openanzo/!svn/ver/4893/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/NamedGraphUpdateManager.java
+END
+ReplicaUpdater.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/openanzo/!svn/ver/4633/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/ReplicaUpdater.java
+END
+Replicator.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/4890/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/Replicator.java
+END
+IAnzoClientConnectionListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/openanzo/!svn/ver/3852/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/IAnzoClientConnectionListener.java
+END
+IStatementChannel.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/openanzo/!svn/ver/3852/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/IStatementChannel.java
+END
+AnzoClient.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/5184/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/AnzoClient.java
+END
+GraphTable.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/4852/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/GraphTable.java
+END
+IStatementChannelListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/3852/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/IStatementChannelListener.java
+END
+AnzoClientDataset.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/openanzo/!svn/ver/4897/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/AnzoClientDataset.java
+END
+PersistedQuadStoreComponent.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/PersistedQuadStoreComponent.java
+END
+AnzoClientDatasource.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/openanzo/!svn/ver/5125/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/AnzoClientDatasource.java
+END
+INamedGraphInitializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/openanzo/!svn/ver/3852/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/INamedGraphInitializer.java
+END
+ClientPersistence.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/ClientPersistence.java
+END
+IBinaryStoreItemProgressListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/3852/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/IBinaryStoreItemProgressListener.java
+END
+Transaction.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/openanzo/!svn/ver/4131/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/Transaction.java
+END
+AnzoClientConfigurationFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/4037/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/AnzoClientConfigurationFactory.java
+END
+TransactionProxy.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/openanzo/!svn/ver/5031/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/TransactionProxy.java
+END
+MemQuadStoreComponent.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/openanzo/!svn/ver/3852/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/MemQuadStoreComponent.java
+END
+TransactionPersistence.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/openanzo/!svn/ver/4852/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/TransactionPersistence.java
+END
+TransactionQueue.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/openanzo/!svn/ver/4852/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/TransactionQueue.java
+END
+StatementChannel.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/openanzo/!svn/ver/4530/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/StatementChannel.java
+END
+ServerQuadStore.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/openanzo/!svn/ver/4530/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/ServerQuadStore.java
+END

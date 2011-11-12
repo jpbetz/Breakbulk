@@ -1,0 +1,179 @@
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/openanzo/!svn/ver/5246/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization
+END
+IValueSetHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/4507/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/IValueSetHandler.java
+END
+Writers.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/3783/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/Writers.java
+END
+JSONReplicationWriter.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/JSONReplicationWriter.java
+END
+XMLNamedGraphUpdatesReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/XMLNamedGraphUpdatesReader.java
+END
+IUpdatesReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/IUpdatesReader.java
+END
+WriterURIValueSetHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/openanzo/!svn/ver/3783/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/WriterURIValueSetHandler.java
+END
+XMLGraphBackupWriter.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/XMLGraphBackupWriter.java
+END
+ReplicationHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/openanzo/!svn/ver/4599/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/ReplicationHandler.java
+END
+CommonSerializationUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/openanzo/!svn/ver/5246/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/CommonSerializationUtils.java
+END
+NamedGraphUpdate.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/5035/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/NamedGraphUpdate.java
+END
+XMLBackupReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/XMLBackupReader.java
+END
+XMLUpdatesReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/XMLUpdatesReader.java
+END
+WriterStringValueSetHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/openanzo/!svn/ver/3783/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/WriterStringValueSetHandler.java
+END
+XMLNamedGraphUpdatesWriter.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/openanzo/!svn/ver/3769/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/XMLNamedGraphUpdatesWriter.java
+END
+IUpdatesHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/IUpdatesHandler.java
+END
+IBackupHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/IBackupHandler.java
+END
+UpdatesCollector.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/UpdatesCollector.java
+END
+IReplicationHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/IReplicationHandler.java
+END
+INamedGraphUpdateHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/INamedGraphUpdateHandler.java
+END
+XMLFactoryFinder.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/XMLFactoryFinder.java
+END
+JSONUpdatesReader.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/JSONUpdatesReader.java
+END
+JSONNamedGraphUpdatesWriter.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/JSONNamedGraphUpdatesWriter.java
+END
+XMLUpdatesWriter.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/3769/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/XMLUpdatesWriter.java
+END
+BackupRevision.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/BackupRevision.java
+END
+XMLWritingUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/openanzo/!svn/ver/5202/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/XMLWritingUtils.java
+END
+XMLReplicationWriter.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/XMLReplicationWriter.java
+END
+JSONUpdatesWriter.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/JSONUpdatesWriter.java
+END
+JSONWritingUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/JSONWritingUtils.java
+END
+IQueryResultsHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/openanzo/!svn/ver/4370/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/IQueryResultsHandler.java
+END

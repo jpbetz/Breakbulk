@@ -1,0 +1,209 @@
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/openanzo/!svn/ver/5225/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin
+END
+Not.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/openanzo/!svn/ver/3802/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/Not.java
+END
+NumericMultiply.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/3802/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/NumericMultiply.java
+END
+UnaryPlus.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/3802/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/UnaryPlus.java
+END
+In.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/openanzo/!svn/ver/5225/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/In.java
+END
+RegEx.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/openanzo/!svn/ver/3802/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/RegEx.java
+END
+Datatype.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/5202/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/Datatype.java
+END
+LogicalOr.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/3802/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/LogicalOr.java
+END
+PolymorphicAdd.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/4205/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/PolymorphicAdd.java
+END
+Coalesce.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/5199/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/Coalesce.java
+END
+IsIRI.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/openanzo/!svn/ver/3802/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/IsIRI.java
+END
+Lang.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/openanzo/!svn/ver/3802/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/Lang.java
+END
+IsBlank.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/openanzo/!svn/ver/3802/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/IsBlank.java
+END
+RDFTermNe.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/3802/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/RDFTermNe.java
+END
+LangMatches.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/openanzo/!svn/ver/3802/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/LangMatches.java
+END
+NumericDivide.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/3802/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/NumericDivide.java
+END
+RDFTermEq.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/3908/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/RDFTermEq.java
+END
+LogicalAnd.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/openanzo/!svn/ver/3802/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/LogicalAnd.java
+END
+PolymorphicGt.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/3617/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/PolymorphicGt.java
+END
+DateTimeSubtract.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/openanzo/!svn/ver/4813/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/DateTimeSubtract.java
+END
+PolymorphicLt.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/3617/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/PolymorphicLt.java
+END
+DateTimeAdd.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/openanzo/!svn/ver/4205/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/DateTimeAdd.java
+END
+Bound.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/openanzo/!svn/ver/4440/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/Bound.java
+END
+Str.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/openanzo/!svn/ver/3802/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/Str.java
+END
+NumericSubtract.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/3802/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/NumericSubtract.java
+END
+UnaryMinus.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/openanzo/!svn/ver/3802/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/UnaryMinus.java
+END
+NumericAdd.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/openanzo/!svn/ver/3802/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/NumericAdd.java
+END
+SameTerm.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/3802/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/SameTerm.java
+END
+PolymorphicSubtract.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/openanzo/!svn/ver/4813/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/PolymorphicSubtract.java
+END
+PolymorphicGe.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/3617/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/PolymorphicGe.java
+END
+PolymorphicLe.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/3617/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/PolymorphicLe.java
+END
+IsLiteral.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/3802/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/IsLiteral.java
+END
+PolymorphicNe.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/5199/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/PolymorphicNe.java
+END
+PolymorphicEq.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/5199/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/PolymorphicEq.java
+END
+If.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/openanzo/!svn/ver/4813/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/builtin/If.java
+END

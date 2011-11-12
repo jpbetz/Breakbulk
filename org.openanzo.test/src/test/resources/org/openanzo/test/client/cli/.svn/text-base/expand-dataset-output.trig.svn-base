@@ -1,0 +1,25 @@
+@prefix anzo: <http://openanzo.org/ontologies/2008/07/Anzo#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix anzotype: <http://openanzo.org/ontologies/2008/07/Anzo#> .
+@prefix clitest: <http://cambridgesemantics.com/cli-tests#> .
+
+{
+	clitest:s1 clitest:p1 clitest:o1 .
+	clitest:s2 clitest:p2 clitest:o2 .
+	clitest:s3_1 clitest:p3_1 clitest:o3_1 .
+	clitest:s3_2 clitest:p3_2 clitest:o3_2 .
+	clitest:s3_3 clitest:p3_3 clitest:o3_3 .
+}
+
+clitest:g4 {
+	clitest:s4 clitest:p4 clitest:o4 .
+}
+
+clitest:g5 {
+	clitest:s5 clitest:p5 clitest:o5 .
+}
+
+clitest:g6 {
+	clitest:s6_1 clitest:p6_1 clitest:o6_1 .
+	clitest:s6_2 clitest:p6_2 clitest:o6_2 .
+}

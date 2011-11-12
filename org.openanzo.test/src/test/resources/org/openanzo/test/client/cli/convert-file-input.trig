@@ -1,0 +1,6 @@
+@prefix clitest: <http://cambridgesemantics.com/cli-tests#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+clitest:g2 {
+        clitest:g2 dc:title "From a file" .
+}

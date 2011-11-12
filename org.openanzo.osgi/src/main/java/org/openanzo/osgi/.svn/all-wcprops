@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/openanzo/!svn/ver/5125/openanzo/trunk/org.openanzo.osgi/src/main/java/org/openanzo/osgi
+END
+XMLTransformerActivator.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/openanzo/!svn/ver/4302/openanzo/trunk/org.openanzo.osgi/src/main/java/org/openanzo/osgi/XMLTransformerActivator.java
+END
+ServiceLifecycleState.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/openanzo/!svn/ver/4263/openanzo/trunk/org.openanzo.osgi/src/main/java/org/openanzo/osgi/ServiceLifecycleState.java
+END
+ConfiguredServiceActivator.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/openanzo/!svn/ver/5125/openanzo/trunk/org.openanzo.osgi/src/main/java/org/openanzo/osgi/ConfiguredServiceActivator.java
+END
+ISystemConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/openanzo/!svn/ver/3557/openanzo/trunk/org.openanzo.osgi/src/main/java/org/openanzo/osgi/ISystemConfig.java
+END
+AnzoAttributeDefinition.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/openanzo/!svn/ver/3953/openanzo/trunk/org.openanzo.osgi/src/main/java/org/openanzo/osgi/AnzoAttributeDefinition.java
+END
+IStatusProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.osgi/src/main/java/org/openanzo/osgi/IStatusProvider.java
+END
+GenericObjectClassDef.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/openanzo/!svn/ver/4693/openanzo/trunk/org.openanzo.osgi/src/main/java/org/openanzo/osgi/GenericObjectClassDef.java
+END
+XMLStreamActivator.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/openanzo/!svn/ver/4302/openanzo/trunk/org.openanzo.osgi/src/main/java/org/openanzo/osgi/XMLStreamActivator.java
+END
+OsgiConfigurationUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/openanzo/!svn/ver/5065/openanzo/trunk/org.openanzo.osgi/src/main/java/org/openanzo/osgi/OsgiConfigurationUtils.java
+END
+IServiceTrackerListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.osgi/src/main/java/org/openanzo/osgi/IServiceTrackerListener.java
+END
+ServiceActivator.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/openanzo/!svn/ver/5125/openanzo/trunk/org.openanzo.osgi/src/main/java/org/openanzo/osgi/ServiceActivator.java
+END
+OsgiServiceTracker.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.osgi/src/main/java/org/openanzo/osgi/OsgiServiceTracker.java
+END

@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/openanzo/!svn/ver/4391/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/resources/nodecentric/postgres/xmlsql
+END
+NamedGraph.sql
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/openanzo/!svn/ver/4284/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/resources/nodecentric/postgres/xmlsql/NamedGraph.sql
+END
+Server.sql
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/3139/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/resources/nodecentric/postgres/xmlsql/Server.sql
+END
+LastTransaction.sql
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/openanzo/!svn/ver/3139/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/resources/nodecentric/postgres/xmlsql/LastTransaction.sql
+END
+InsertStatements.sql
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/openanzo/!svn/ver/4391/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/resources/nodecentric/postgres/xmlsql/InsertStatements.sql
+END

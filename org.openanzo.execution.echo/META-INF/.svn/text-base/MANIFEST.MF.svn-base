@@ -1,0 +1,21 @@
+Manifest-Version: 1.0
+Export-Package: org.openanzo.execution.echo;version="3.2.0"
+Private-Package: config;version="3.2.0"
+Bundle-Name: org.openanzo.execution.echo
+Configuration-Properties: ${bundleResourcePrefix}config/
+Bundle-Vendor: Cambridge Semantics Inc.
+Bundle-Version: 3.2.0
+Bundle-Activator: org.openanzo.execution.echo.EchoServiceActivator
+Bundle-ManifestVersion: 2
+Bundle-License: http://www.eclipse.org/legal/epl-v10.html
+Bundle-Description: Openanzo Execution Echo Service
+Import-Package: org.openanzo.client;version="3.2.0",org.openanzo.excep
+ tions;version="3.2.0",org.openanzo.execution;version="3.2.0",org.open
+ anzo.execution.echo;version="3.2.0",org.openanzo.execution.java;versi
+ on="3.2.0",org.openanzo.ontologies.execution;version="3.2.0",org.open
+ anzo.osgi;version="3.2.0",org.openanzo.rdf;version="3.2.0",org.openan
+ zo.services;version="3.2.0",org.osgi.framework;version="1.5",org.osgi
+ .service.metatype;version="1.1",org.slf4j;version="1.5"
+Bundle-SymbolicName: org.openanzo.execution.echo
+Bundle-DocURL: http://www.cambridgesemantics.com
+

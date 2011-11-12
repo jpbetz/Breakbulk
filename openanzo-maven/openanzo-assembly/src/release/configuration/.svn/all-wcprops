@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/openanzo/!svn/ver/5216/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/configuration
+END
+config.ini
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/5206/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/configuration/config.ini
+END
+anzo.ldif
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/openanzo/!svn/ver/5216/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/configuration/anzo.ldif
+END

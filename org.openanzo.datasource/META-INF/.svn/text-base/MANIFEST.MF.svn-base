@@ -1,0 +1,48 @@
+Manifest-Version: 1.0
+Export-Package: org.openanzo.datasource.update;version="3.2.0",org.ope
+ nanzo.datasource.services;version="3.2.0",org.openanzo.datasource.att
+ ributes;version="3.2.0",org.openanzo.datasource;version="3.2.0"
+Bundle-Name: Anzo Datasource API
+Bundle-Vendor: Cambridge Semantics Inc.
+Bundle-Version: 3.2.0
+Bundle-ManifestVersion: 2
+Bundle-License: http://www.eclipse.org/legal/epl-v10.html
+Bundle-Description: Anzo Datasource API
+Import-Package: javax.management.j2ee.statistics;version="1.1",
+ javax.xml.datatype,
+ org.apache.activemq.management;version="5.3",
+ org.apache.commons.collections15;version="4.01",
+ org.apache.commons.collections15.multimap;version="4.01",
+ org.apache.commons.lang;version="2.4",
+ org.openanzo.analysis;version="3.2",
+ org.openanzo.cache;version="3.2",
+ org.openanzo.datasource;version="3.2.0",
+ org.openanzo.datasource.attributes;version="3.2.0",
+ org.openanzo.datasource.services;version="3.2.0",
+ org.openanzo.datasource.update;version="3.2.0",
+ org.openanzo.exceptions;version="3.2",
+ org.openanzo.glitter;version="3.2",
+ org.openanzo.glitter.dataset;version="3.2.0",
+ org.openanzo.glitter.exception;version="3.2",
+ org.openanzo.glitter.query;version="3.2",
+ org.openanzo.glitter.syntax.concrete;version="3.2",
+ org.openanzo.ontologies.openanzo;version="3.2",
+ org.openanzo.ontologies.system;version="3.2",
+ org.openanzo.osgi;version="3.2",
+ org.openanzo.rdf;version="3.2",
+ org.openanzo.rdf.datatype;version="3.2",
+ org.openanzo.rdf.utils;version="3.2",
+ org.openanzo.rdf.vocabulary;version="3.2",
+ org.openanzo.services;version="3.2",
+ org.openanzo.services.impl;version="3.2",
+ org.openanzo.services.serialization;version="3.2",
+ org.openanzo.services.serialization.handlers;version="3.2",
+ org.openanzo.services.serialization.transport;version="3.2",
+ org.osgi.framework,
+ org.osgi.service.event,
+ org.osgi.service.metatype;version="1.1",
+ org.osgi.util.tracker,
+ org.slf4j;version="1.5"
+Bundle-SymbolicName: org.openanzo.datasource
+Bundle-DocURL: http://www.cambridgesemantics.com
+

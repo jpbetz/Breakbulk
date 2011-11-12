@@ -1,0 +1,80 @@
+<project name="glitter" default="compile-parser" basedir=".">
+<!--
+	/******************************************************************************* 
+	 * Copyright (c) 2004, 2006 IBM Corporation. 
+	 * All rights reserved. This program and the accompanying materials 
+	 * are made available under the terms of the Eclipse Public License v1.0 
+	 * which accompanies this distribution, and is available at 
+	 * http://www.eclipse.org/legal/epl-v10.html 
+	 * 
+	 * File: $$Source: /cvsroot/slrp/glitter/com.ibm.adtech.glitter/build.xml,v $$ 
+	 * Created by:  Lee Feigenbaum (<a href="mailto:feigenbl@us.ibm.com">feigenbl@us.ibm.com</a>) 
+	 * Created on: ${date} 
+	 * Revision: $$Id: build.xml,v 1.7 2006/10/23 22:05:06 feigenbl Exp $$ 
+	 * 
+	 * Contributors: IBM Corporation - initial API and implementation 
+	 *******************************************************************************/
+-->
+	
+	<description>
+        Builds the components of the Glitter SPARQL engine
+    </description>
+	
+	<!-- set global properties for this build -->
+
+	<!-- 
+		Look in the JAVACC_HOME environment for finding the JavaCC jars, or use a default path.
+		There are different distros of JavaCC like the zip file or the eclipse plugin, we'll
+		try to find it in any of the places it might live.
+	-->
+	<property environment="env"/>
+	<available property="javacchome" value="${env.JAVACC_HOME}" file="${env.JAVACC_HOME}/javacc.jar"/>
+	<available property="javacchome" value="${env.JAVACC_HOME}/lib" file="${env.JAVACC_HOME}/lib/javacc.jar"/>
+	<available property="javacchome" value="${env.JAVACC_HOME}/bin/lib" file="${env.JAVACC_HOME}/bin/lib/javacc.jar"/>
+	<condition property="javacchome" value="/opt/javacc-4.2">
+		<not>
+			<isset property="javacchome"/>
+		</not>
+	</condition>
+    <echo message="Using JavaCC at: ${javacchome}."/>
+	
+	<path id="base.path">
+		<pathelement path="${classpath}" />
+	</path>
+
+	<path id="glitter.ant.path">
+		<path location="bin" />
+		<path location="../org.json/bin" />
+	</path>
+	
+	<target name="build-all" depends="" >
+	</target>
+
+	<target name="clean-parser" depends="">
+		<delete>
+			<fileset dir="gensrc/main/java">
+				<include name="**/*" />
+			</fileset>
+		</delete>
+	</target>
+	
+	<target name="compile-parser" depends="clean-parser" >
+		<mkdir dir="gensrc/main/java/org/openanzo/glitter/syntax/concrete"/>
+		<javacc target="grammar/sparql.jj"
+				outputdirectory="gensrc/main/java/org/openanzo/glitter/syntax/concrete"
+				javacchome="${javacchome}"
+				jdkversion="5.0"
+		/>
+		
+		<!-- remove warnings by patching javacc files with java @suppress annotations -->
+		<property name="patch-dir" value="gensrc/main/resources"/>
+		<property name="src-dir" value="gensrc/main/java/org/openanzo/glitter/syntax/concrete"/>
+		<echo message="removing warnings from javacc files by applying patches to add @suppress annotations:"/>
+		<patch patchfile="${patch-dir}/ParseException.java.patch" originalfile="${src-dir}/ParseException.java"/>
+		<patch patchfile="${patch-dir}/SPARQLParserTokenManager.java.patch"	originalfile="${src-dir}/SPARQLParserTokenManager.java"/>
+		<patch patchfile="${patch-dir}/SimpleCharStream.java.patch" originalfile="${src-dir}/SimpleCharStream.java"/>
+		<patch patchfile="${patch-dir}/Token.java.patch" originalfile="${src-dir}/Token.java"/>
+		<patch patchfile="${patch-dir}/TokenMgrError.java.patch" originalfile="${src-dir}/TokenMgrError.java"/>
+	</target>
+	
+</project>

@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/openanzo/!svn/ver/5228/openanzo/trunk/org.openanzo.rdf/gensrc/main/java/org/openanzo/glitter/syntax/concrete
+END
+SPARQLParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/openanzo/!svn/ver/5228/openanzo/trunk/org.openanzo.rdf/gensrc/main/java/org/openanzo/glitter/syntax/concrete/SPARQLParser.java
+END
+Token.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/openanzo/!svn/ver/5228/openanzo/trunk/org.openanzo.rdf/gensrc/main/java/org/openanzo/glitter/syntax/concrete/Token.java
+END
+TokenMgrError.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/5228/openanzo/trunk/org.openanzo.rdf/gensrc/main/java/org/openanzo/glitter/syntax/concrete/TokenMgrError.java
+END
+SimpleCharStream.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/openanzo/!svn/ver/5228/openanzo/trunk/org.openanzo.rdf/gensrc/main/java/org/openanzo/glitter/syntax/concrete/SimpleCharStream.java
+END
+ParseException.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/5228/openanzo/trunk/org.openanzo.rdf/gensrc/main/java/org/openanzo/glitter/syntax/concrete/ParseException.java
+END
+SPARQLParserTokenManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/openanzo/!svn/ver/5228/openanzo/trunk/org.openanzo.rdf/gensrc/main/java/org/openanzo/glitter/syntax/concrete/SPARQLParserTokenManager.java
+END
+SPARQLParserConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/openanzo/!svn/ver/5228/openanzo/trunk/org.openanzo.rdf/gensrc/main/java/org/openanzo/glitter/syntax/concrete/SPARQLParserConstants.java
+END

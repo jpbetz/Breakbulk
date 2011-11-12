@@ -1,0 +1,37 @@
+10
+
+dir
+5248
+http://svn.openanzo.org/svn/openanzo/openanzo/trunk/org.openanzo.jdbc/src/main/resources/nodecentric/postgres
+http://svn.openanzo.org/svn/openanzo
+
+
+
+2009-08-06T02:41:22.527246Z
+4382
+mroy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0a2a6340-b48a-40e4-9632-36e452a58e02
+
+xmlsql
+dir
+
+createTemporaryTables
+dir
+
+initDBtables
+dir
+

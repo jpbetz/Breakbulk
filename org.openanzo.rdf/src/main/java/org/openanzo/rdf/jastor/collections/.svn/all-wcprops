@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/openanzo/!svn/ver/4302/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/collections
+END
+ItemImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/collections/ItemImpl.java
+END
+OrderedCollection.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/collections/OrderedCollection.java
+END
+OrderedCollectionImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/collections/OrderedCollectionImpl.java
+END
+OrderedItem.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/collections/OrderedItem.java
+END
+OrderedItemImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/collections/OrderedItemImpl.java
+END
+CollectionsFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/collections/CollectionsFactory.java
+END
+ResourceItem.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/collections/ResourceItem.java
+END
+ResourceItemImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/collections/ResourceItemImpl.java
+END
+Collection.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/collections/Collection.java
+END
+LiteralItem.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/collections/LiteralItem.java
+END
+CollectionImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/collections/CollectionImpl.java
+END
+LiteralItemImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/collections/LiteralItemImpl.java
+END
+Item.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/collections/Item.java
+END

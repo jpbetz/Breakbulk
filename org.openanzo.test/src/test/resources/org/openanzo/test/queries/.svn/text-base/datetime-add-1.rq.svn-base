@@ -1,0 +1,7 @@
+prefix : <http://example.org/> 
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>  
+prefix f: <http://openanzo.org/glitter/builtin/functions#>
+SELECT (?when + ?duration as ?end) 
+{
+	?s :dt ?when ; :dur ?duration
+}

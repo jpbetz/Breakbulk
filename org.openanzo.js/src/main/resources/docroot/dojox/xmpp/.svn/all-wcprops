@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/xmpp
+END
+PresenceService.js
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/xmpp/PresenceService.js
+END
+xmppSession.js
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/xmpp/xmppSession.js
+END
+bosh.js
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/xmpp/bosh.js
+END
+util.js
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/xmpp/util.js
+END
+RosterService.js
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/xmpp/RosterService.js
+END
+UserService.js
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/xmpp/UserService.js
+END
+ChatService.js
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/xmpp/ChatService.js
+END
+TransportSession.js
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/xmpp/TransportSession.js
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/xmpp/README
+END
+sasl.js
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/xmpp/sasl.js
+END

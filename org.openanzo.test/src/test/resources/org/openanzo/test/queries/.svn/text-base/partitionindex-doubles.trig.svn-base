@@ -1,0 +1,7 @@
+@prefix : <http://example.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+
+:partitionindex-doubles {
+	:s :p
+	   3.14159e0, 0.2e1, 0.5e0 .		
+}

@@ -1,0 +1,22 @@
+Manifest-Version: 1.0
+Export-Package: org.openanzo.ontologies.system;version="3.2.0",org.ope
+ nanzo.ontologies.execution;version="3.2.0",org.openanzo.ontologies.pe
+ rsistence;version="3.2.0",org.openanzo.ontologies.openanzo;version="3
+ .2.0",org.openanzo.ontologies.command;version="3.2.0",org.openanzo.on
+ tologies.foaf;version="3.2.0"
+Bundle-Name: org.openanzo.ontologies
+Bundle-Vendor: Cambridge Semantics Inc.
+Bundle-Version: 3.2.0
+Bundle-ManifestVersion: 2
+Bundle-License: http://www.eclipse.org/legal/epl-v10.html
+Bundle-Description: Openanzo Ontoloties
+Import-Package: javax.xml.datatype,org.openanzo.ontologies.command;ver
+ sion="3.2.0",org.openanzo.ontologies.execution;version="3.2.0",org.op
+ enanzo.ontologies.foaf;version="3.2.0",org.openanzo.ontologies.openan
+ zo;version="3.2.0",org.openanzo.ontologies.persistence;version="3.2.0
+ ",org.openanzo.ontologies.system;version="3.2.0",org.openanzo.rdf;ver
+ sion="3.2",org.openanzo.rdf.jastor;version="3.2",org.openanzo.rdf.uti
+ ls;version="3.2",org.openanzo.rdf.vocabulary;version="3.2"
+Bundle-SymbolicName: org.openanzo.ontologies
+Bundle-DocURL: http://www.cambridgesemantics.com
+

@@ -1,0 +1,65 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix jastor: <http://openanzo.org/jastor/#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix cp: <http://openanzo.org/ontologies/2008/07/ClientPersistence#> .
+@prefix ont: <http://openanzo.org/ontologies/2008/07/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+
+ont:ClientPersistence {
+	ont:ClientPersistence dc:creator "Joe Betz" ;
+		a owl:Ontology ;
+		rdfs:label "Anzo Client Persistence Ontology" ;
+		owl:versionInfo "0.1" .
+	
+	cp:ClientPersistenceRoot a owl:Class ;
+		rdfs:comment "Anzo Client Persistence" ;
+		rdfs:subClassOf [a owl:Restriction ;	owl:maxCardinality "1" ;owl:minCardinality "0" ;owl:onProperty cp:committedTransactions] .
+	
+	cp:PersistedPrecondition a owl:Class ;
+		rdfs:subClassOf 
+		[a owl:Restriction ;	owl:cardinality "1" ;	owl:onProperty cp:askResult , cp:queryString] ,
+		[a owl:Restriction ;	owl:minCardinality "0" ;owl:onProperty cp:preconditionDefaultUri , cp:preconditionNamedGraphUri] .
+	
+	cp:PersistedTransaction a owl:Class ;
+		rdfs:subClassOf 
+		[a owl:Restriction ;	owl:cardinality "1" 	;owl:onProperty cp:additionsStore , cp:deletionsStore , cp:next , cp:transactionContext , cp:transactionUri], 
+		[a owl:Restriction ;	owl:maxCardinality "1" 	;owl:onProperty cp:childTransaction , cp:nextTransaction , cp:parentTransaction , cp:previousTransaction], 
+		[a owl:Restriction ;	owl:minCardinality "0" 	;owl:onProperty cp:preconditions] .
+	
+	cp:ReferencedNamedGraph a owl:Class ;
+		rdfs:subClassOf [a owl:Restriction ;	owl:cardinality "1" ;	owl:onProperty cp:graphUri , cp:referenceUri] .
+	
+	cp:ReferencedQuadStore a owl:Class ;
+		rdfs:subClassOf [a owl:Restriction ;	owl:minCardinality "0" ;owl:onProperty cp:namedGraph] .
+	
+	
+	
+	cp:additionsStore a owl:ObjectProperty ;	rdfs:domain cp:PersistedTransaction ; 	rdfs:range cp:ReferencedQuadStore ;	rdfs:comment "The additions uri".
+	cp:askResult a owl:DatatypeProperty ;		rdfs:domain cp:PersistedPrecondition ;	rdfs:range xsd:boolean ;			rdfs:comment "The sparql query to run for the precondition".
+	cp:childTransaction a owl:ObjectProperty ;	rdfs:domain cp:PersistedTransaction ;	rdfs:range cp:PersistedTransaction ;rdfs:comment "The additions uri" .
+	cp:deletionsStore a owl:ObjectProperty ;	rdfs:domain cp:PersistedTransaction ;	rdfs:range cp:ReferencedQuadStore ;	rdfs:comment "The deletions uri" .
+	cp:next a owl:ObjectProperty ;				rdfs:domain cp:PersistedTransaction ;	rdfs:range cp:PersistedTransaction ;rdfs:comment "The transactions" .
+	cp:nextTransaction a owl:ObjectProperty ;	rdfs:domain cp:PersistedTransaction ;	rdfs:range cp:PersistedTransaction ;rdfs:comment "The additions uri" .
+	cp:parentTransaction a owl:ObjectProperty ;	rdfs:domain cp:PersistedTransaction ;	rdfs:range cp:PersistedTransaction ;rdfs:comment "The additions uri" .
+	cp:preconditions a owl:ObjectProperty ;		rdfs:domain cp:PersistedTransaction ;	rdfs:range cp:PersistedPrecondition ;rdfs:comment "The preconditions for the transaction" .
+	cp:previousTransaction a owl:ObjectProperty ;	rdfs:domain cp:PersistedTransaction ;rdfs:range cp:PersistedTransaction ;rdfs:comment "The additions uri" .
+	cp:transactionContext a owl:DatatypeProperty ;	rdfs:domain cp:PersistedTransaction ;rdfs:range xsd:string ;			rdfs:comment "The serialized transaction context" .
+	cp:transactionUri a owl:ObjectProperty ;	rdfs:domain cp:PersistedTransaction ;	 rdfs:range rdfs:Resource ;			rdfs:comment "The transaction URI" .
+	
+	cp:committedTransactions a owl:ObjectProperty ;	rdfs:domain cp:ClientPersistenceRoot ;	rdfs:range cp:PersistedTransaction ;	rdfs:comment "The transaction list" .
+	
+	cp:graphUri a owl:ObjectProperty ;			rdfs:domain cp:ReferencedNamedGraph ;		rdfs:comment "named graph uri for a  reference quad store" .	
+	cp:referenceUri a owl:ObjectProperty ;		rdfs:domain cp:ReferencedNamedGraph ;		rdfs:comment "unique uri for named graph in the actual quad store" .
+	
+	cp:namedGraph a owl:ObjectProperty ;		rdfs:domain cp:ReferencedQuadStore ;		rdfs:range cp:ReferencedNamedGraph ;		rdfs:comment "named graph uri for a  referenced quad store" .	
+	
+	cp:preconditionDefaultUri a owl:ObjectProperty ;	rdfs:domain cp:PersistedPrecondition ;		rdfs:comment "default uri to include in the precondition sparql query" .
+	cp:preconditionNamedGraphUri a owl:ObjectProperty ;	rdfs:domain cp:PersistedPrecondition ;		rdfs:comment "named graph uri to include in the precondition sparql query" .
+	cp:queryString a owl:DatatypeProperty ;				rdfs:domain cp:PersistedPrecondition ;		rdfs:range xsd:string ; rdfs:comment "The sparql query to run for the precondition" .
+	
+	
+	
+	}

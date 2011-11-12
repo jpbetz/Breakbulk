@@ -1,0 +1,9 @@
+@prefix clitest: <http://cambridgesemantics.com/cli-tests#> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+
+clitest:union {
+        clitest:union
+        	dc:title "Union Command" ;
+        	dc:description "This will get unioned." ;
+        .
+}

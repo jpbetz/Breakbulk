@@ -1,0 +1,7 @@
+@prefix : <http://example.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+
+:partitionindex-mixed {
+	:s :p
+	   1, 2.0, 2.5e0, "4"^^xsd:int, "5"^^xsd:long, "5.3"^^xsd:float .		
+}

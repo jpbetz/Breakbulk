@@ -1,0 +1,13 @@
+
+== !Datasource ==
+ Base configuration properties that are used by datasources.
+
+|| Property Name || Description || Example || 
+||org.openanzo.datasource.isPrimary||Is this the primary datasource [[BR]] ||
+||org.openanzo.datasource.initFiles||Init files for datasource initialization and reset [[BR]] ||
+||org.openanzo.datasource.datasourceURI||URI for datasource [[BR]] ||
+||org.openanzo.datasource.uriPatterns||URI patterns for datasource [[BR]] ||
+||org.openanzo.datasource.enableCaching||Enable Caching [[BR]] ||
+||org.openanzo.datasource.resetEnabled||Enable Reset [[BR]] ||
+||org.openanzo.datasource.maxWriteConnections||Maximum number of write connections. [[BR]] ||Minimum: 0 [[BR]] Maximum:1600 [[BR]]  [[BR]] ||
+||org.openanzo.datasource.maxQueryConnections||Maximum number of query connections. [[BR]] ||Minimum: 0 [[BR]] Maximum:1600 [[BR]]  [[BR]] ||

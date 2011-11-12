@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/4382/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/resources/nodecentric/h2/createTemporaryTables
+END
+queryTempTables.ddl
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/openanzo/!svn/ver/4284/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/resources/nodecentric/h2/createTemporaryTables/queryTempTables.ddl
+END
+ReplicationTemporaryTables.ddl
+K 25
+svn:wc:ra_dav:version-url
+V 165
+/svn/openanzo/!svn/ver/4194/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/resources/nodecentric/h2/createTemporaryTables/ReplicationTemporaryTables.ddl
+END
+GlitterTemporaryTables.ddl
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/openanzo/!svn/ver/4382/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/resources/nodecentric/h2/createTemporaryTables/GlitterTemporaryTables.ddl
+END

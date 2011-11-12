@@ -1,0 +1,7 @@
+Unix:
+	run build.sh
+Windows
+	run build.bat 
+
+Build will create a openanzo-dist.tar.gz and openanzo-dist.zip inside openanzo-maven/openanzo-assembly/target.
+Either of those can be installed into the directory of your choice.

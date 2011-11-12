@@ -1,0 +1,89 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ont: <http://openanzo.org/ontologies/2008/07/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix ss: <http://openanzo.org/ontologies/2008/07/SemanticService#> .
+
+
+ont:SemanticService {
+	
+	ont:SemanticService a owl:Ontology ;
+		rdfs:comment "Semantic Service Execution" ;
+		rdfs:label "Semantic Service Execution" .
+	
+	ss:ConnectionStyle a owl:Thing .
+	
+	ss:JavaSemanticService a owl:Class ;
+		rdfs:comment "Java Semantic Service" ;
+		rdfs:subClassOf [a owl:Restriction ;	owl:maxCardinality "1" ;owl:minCardinality "0" ;owl:onProperty ss:serviceFactoryPid] , ss:SemanticService .
+	
+	ss:JavascriptSemanticService a owl:Class ;
+		rdfs:comment "Javascript Semantic Service" ;
+		rdfs:subClassOf 
+		[a owl:Restriction ;	owl:maxCardinality "1" ;owl:minCardinality "0" ;owl:onProperty ss:scriptResource] , 
+		[a owl:Restriction ;	owl:maxCardinality "1" ;owl:minCardinality "0" ;owl:onProperty ss:scriptLocation] , 
+		ss:SemanticService .
+	
+	ss:LongRunningStyle a owl:Thing .
+	
+	ss:SemanticOperation a owl:Class ;
+		rdfs:comment "Semantic Operation" .
+	
+	ss:SemanticService a owl:Class ;
+		rdfs:comment "Semantic Service" ;
+		rdfs:subClassOf 
+		[a owl:Restriction ;owl:maxCardinality "1" ;owl:minCardinality "0" ;owl:onProperty ss:serviceUser] , 
+		[a owl:Restriction ;owl:minCardinality "0" ;owl:onProperty ss:operation] ,
+		[a owl:Restriction ;owl:maxCardinality "1" ;owl:minCardinality "1" ;owl:onProperty ss:stateStyle ] .
+	
+	ss:StatelessStyle a owl:Thing .
+	
+	ss:operation a owl:ObjectProperty ;
+		rdfs:comment "operations of the service" ;
+		rdfs:domain ss:SemanticService ;
+		rdfs:range ss:SemanticOperation .
+	
+	ss:scriptLocation a owl:ObjectProperty ;
+		rdfs:comment "The URI/namedgraph containing the javascript from the binary store" ;
+		rdfs:domain ss:JavascriptSemanticService .
+	
+	ss:scriptResource a owl:DatatypeProperty ;
+		rdfs:comment "The java resource location of the semantic service javascript file" ;
+		rdfs:domain ss:JavascriptSemanticService ;
+		rdfs:range xsd:string .
+	
+	ss:serviceFactoryPid a owl:DatatypeProperty ;
+		rdfs:comment "The PID of bundle containing the factory for the service" ;
+		rdfs:domain ss:JavaSemanticService ;
+		rdfs:range xsd:string .
+	
+	ss:serviceUser a owl:DatatypeProperty ;
+		rdfs:comment "The username under which the service operates on the repository" ;
+		rdfs:domain ss:SemanticService ;
+		rdfs:range xsd:string .
+	
+	ss:stateStyle a owl:ObjectProperty ;
+		rdfs:comment """Indicates the state requirements of a service.
+							StatelessStyle - no state requirements
+							ConnectionStyle - requests require on-off connection the repository
+											  to perform transactions
+							LongRunningStyle - The service makes use of long-running instances of AnzoClient, answers
+							                   requests using the in-memory replica, reacts to events, etc...""" ;
+		rdfs:domain ss:SemanticService ;
+		rdfs:range 
+		[
+			a owl:Class ; 
+			owl:oneOf [ 
+				rdf:first ss:StatelessStyle ;
+				rdf:rest [ 
+					rdf:first ss:ConnectionStyle ;
+					rdf:rest [ 
+						rdf:first ss:LongRunningStyle ;
+						rdf:rest rdf:nil
+					]
+				]
+			]
+		] .
+}

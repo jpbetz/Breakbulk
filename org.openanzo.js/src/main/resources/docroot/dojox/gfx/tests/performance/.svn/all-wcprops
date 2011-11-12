@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/gfx/tests/performance
+END
+module.js
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/gfx/tests/performance/module.js
+END
+gfx_primitives.html
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/gfx/tests/performance/gfx_primitives.html
+END
+gfx_scenes.html
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/gfx/tests/performance/gfx_scenes.html
+END
+runTests.html
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/gfx/tests/performance/runTests.html
+END
+gfx_fill.html
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/gfx/tests/performance/gfx_fill.html
+END

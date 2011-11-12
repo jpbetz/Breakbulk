@@ -1,0 +1,109 @@
+<!--
+	Copyright (c) 2004, 2007-2008 IBM Corporation and Cambridge Semantics Incorporated.
+	All rights reserved. This program and the accompanying materials
+	are made available under the terms of the Eclipse Public License v1.0
+	which accompanies this distribution, and is available at
+	http://www.eclipse.org/legal/epl-v10.html
+	
+	Created by:  Matthew Roy ( <a href="mailto:mroy@us.ibm.com">mroy@us.ibm.com </a>)
+	
+	Contributors:
+	IBM Corporation - initial API and implementation
+	Cambridge Semantics Incorporated - Fork to Anzo
+-->
+<assembly>
+	<id>client</id>
+	<formats>
+		<format>tar.gz</format>
+		<format>zip</format>
+	</formats>
+	<baseDirectory>openanzo-${project.version}</baseDirectory>
+	<includeBaseDirectory>false</includeBaseDirectory>
+	<tarLongFileMode>gnu</tarLongFileMode>
+	<fileSets>
+		<fileSet>
+			<useStrictFiltering>true</useStrictFiltering>
+			<directory>src/client-release</directory>
+			<outputDirectory>/</outputDirectory>
+			<excludes>
+				<exclude>anzo</exclude>
+			</excludes>
+		</fileSet>
+		
+		<fileSet>
+			<useStrictFiltering>true</useStrictFiltering>
+			<directory>src/client-release</directory>
+			<outputDirectory>/</outputDirectory>
+			<includes>
+				<include>anzo</include>
+			</includes>
+			<fileMode>755</fileMode>
+		</fileSet>
+		
+		<fileSet>
+			<useStrictFiltering>true</useStrictFiltering>
+			<directory>src/release</directory>
+			<outputDirectory>/</outputDirectory>
+			<includes>
+				<include>*.txt</include>
+			</includes>
+		</fileSet>
+		<fileSet>
+			<useStrictFiltering>true</useStrictFiltering>
+			<directory>..</directory>
+			<includes>
+				<include>LICENSE.txt</include>
+				<include>NOTICE.txt</include>
+				<include>VERSION.txt</include>
+			</includes>
+			<outputDirectory>/</outputDirectory>
+		</fileSet>
+		<fileSet>
+			<useStrictFiltering>true</useStrictFiltering>
+			<directory>../../openanzo-sample</directory> 
+			<outputDirectory>examples</outputDirectory>
+			<includes>
+				<include>**/*</include>
+			</includes>
+			<excludes>
+				<exclude>project.xml</exclude>
+				<exclude>**/target/**</exclude>
+				<exclude>**/bin/**</exclude>
+			</excludes>
+		</fileSet>
+		<fileSet>
+			<useStrictFiltering>true</useStrictFiltering>
+			<directory>src/release/lib/legal</directory>
+			<outputDirectory>/doc/legal</outputDirectory>
+			<includes>
+				<include>**/*.*</include>
+			</includes>
+		</fileSet>
+	</fileSets>
+	<dependencySets>
+		<dependencySet>
+			<outputDirectory>lib</outputDirectory>
+			<scope>runtime</scope>
+			<useTransitiveFiltering>true</useTransitiveFiltering>
+			<useStrictFiltering>true</useStrictFiltering>
+			<includes>
+				<include>org.openanzo:org.openanzo.client</include>
+				<include>org.openanzo:org.openanzo.datasource</include>
+                <include>org.openanzo:org.openanzo.exceptions</include>
+				<include>org.openanzo:org.openanzo.rdf</include>
+				<include>org.openanzo:org.openanzo.jdbc</include>
+				<include>org.openanzo:org.openanzo.ontologies</include>
+				<include>org.openanzo:org.openanzo.combus</include>
+				<include>org.openanzo:org.openanzo.services</include>
+                <include>org.apache.geronimo.specs:geronimo-jms_1.1_spec</include>
+                <include>org.slf4j:*</include>
+                <include>classworlds:classworlds</include>
+                <include>log4j:log4j</include>
+                <include>org.apache.activemq:activemq-core</include>
+			</includes>
+            <excludes>
+                <exclude>org.openanzo:org.openanzo.jet.*</exclude>
+            </excludes>
+		</dependencySet>
+	</dependencySets>
+</assembly>

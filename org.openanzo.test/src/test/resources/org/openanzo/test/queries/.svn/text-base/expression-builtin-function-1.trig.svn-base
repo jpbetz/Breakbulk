@@ -1,0 +1,10 @@
+@prefix : <http://example.org/> .
+
+:expression-builtin-function-1 {
+	:s :p
+		"one"@en,
+		"uno"@es,
+		"uno"@it,
+		"un"@fr
+	.
+}

@@ -1,0 +1,22 @@
+@prefix : <http://example.org/> .
+
+:multiple-overlapping-graphs-in-default-graph-1 {
+	:s1 :p1 :o1 .
+	:s2 :p2 :o2 .
+	:s3 :p3 :o3 .
+	:s4 :p4 :o4 .
+}
+
+:multiple-overlapping-graphs-in-default-graph-2 {
+	:s1 :p1 :o1 .
+	:s2 :p2 :o2 .
+	:s3 :p3 :o3 .
+	:s4 :p4 :o4 .
+}
+
+:multiple-overlapping-graphs-in-default-graph-3 {
+	:s1 :p1 :o1 .
+	:s2 :p2 :o2 .
+	:s3 :p3 :o3 .
+	:s4 :p4 :o4 .
+}

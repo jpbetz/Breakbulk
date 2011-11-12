@@ -1,0 +1,10 @@
+<assembly>
+	<id>client</id>
+	<archive>
+            <manifest>
+              <mainClass>org.openanzo.sample.AccessControl</mainClass>
+              <addClasspath>true</addClasspath>
+              <classpathPrefix>../../lib</classpathPrefix>
+            </manifest>
+          </archive>
+</assembly>

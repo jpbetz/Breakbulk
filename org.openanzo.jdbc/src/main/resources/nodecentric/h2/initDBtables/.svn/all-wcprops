@@ -1,0 +1,11 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/openanzo/!svn/ver/3875/openanzo/trunk/org.openanzo.jdbc/src/main/resources/nodecentric/h2/initDBtables
+END
+sequences.ddl
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/openanzo/!svn/ver/3875/openanzo/trunk/org.openanzo.jdbc/src/main/resources/nodecentric/h2/initDBtables/sequences.ddl
+END

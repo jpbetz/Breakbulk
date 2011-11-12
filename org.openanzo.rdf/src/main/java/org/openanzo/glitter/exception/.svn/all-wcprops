@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/exception
+END
+UnknownGraphException.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/exception/UnknownGraphException.java
+END
+StringLiteralException.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/exception/StringLiteralException.java
+END
+QueryRefusedException.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/exception/QueryRefusedException.java
+END
+MalformedLiteralException.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/exception/MalformedLiteralException.java
+END
+UnnamedProjectionException.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/exception/UnnamedProjectionException.java
+END
+ExpressionEvaluationException.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/exception/ExpressionEvaluationException.java
+END
+InvalidAggregateArgumentException.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/exception/InvalidAggregateArgumentException.java
+END
+FeatureNotImplementedException.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/exception/FeatureNotImplementedException.java
+END
+InvalidArgumentCountException.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/exception/InvalidArgumentCountException.java
+END
+InvalidAggregateFunctionException.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/exception/InvalidAggregateFunctionException.java
+END
+InvalidBlankNodeLabelException.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/exception/InvalidBlankNodeLabelException.java
+END
+UnknownFunctionException.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/exception/UnknownFunctionException.java
+END
+GlitterParseException.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/exception/GlitterParseException.java
+END
+ConfigurationException.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/exception/ConfigurationException.java
+END
+IncompatibleTypeException.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/exception/IncompatibleTypeException.java
+END
+GlitterException.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/exception/GlitterException.java
+END
+FunctionalPredicateInvocationException.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/exception/FunctionalPredicateInvocationException.java
+END
+UnknownPrefixException.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/3760/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/exception/UnknownPrefixException.java
+END
+GlitterRuntimeException.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/exception/GlitterRuntimeException.java
+END

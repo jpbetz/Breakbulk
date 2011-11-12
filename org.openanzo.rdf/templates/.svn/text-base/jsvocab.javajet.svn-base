@@ -1,0 +1,64 @@
+<%@ jet package="org.openanzo.rdf.jastor.templates"
+		skeleton="ontology.skeleton"
+		class="JSVocabTemplate"
+		imports="org.openanzo.rdf.jastor.* org.openanzo.rdf.jastor.inference.* org.openanzo.rdf.jastor.jet.*" %>
+<% Ontology pkg = ont; %>
+<% String pkgstr = pkg.getPackage(); %>
+<% JastorContext ctx = pkg.getContext(); %>
+<% if(ctx.isIncludeCopyright()){%>
+/*******************************************************************************
+ * Copyright (c) 2009 IBM Corporation and Cambridge Semantics Incorporated.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * File:        <%="$".toString()%>Source<%="$".toString()%>
+ * Created by:  Generated Source from org.openanzo.jdbc.utils.opgen.jet
+ * Created on:  Generated Source from org.openanzo.jdbc.utils.opgen.jet
+ * Revision:	<%="$".toString()%>Id<%="$".toString()%>
+ * 
+ * Contributors:
+ *	   Cambridge Semantics Incorporated
+ *******************************************************************************/
+<%}%>
+ 
+
+dojo.provide("<%=pkgstr%>.<%=ont.getLocalName()%>");
+
+dojo.require("anzo.rdf.Statement");
+
+anzo.rdf.registerNamespace('<%=ctx.getNamespacePrefix(ont.getURI().toString() + "#")%>',"<%=ont.getURI()%>#");
+
+<%=pkgstr%>.<%=ont.getLocalName()%> = {
+
+// Class URIs
+<%  java.util.Collection<OntologyClass> classes = pkg.getClasses();%>
+<%  java.util.Collection<OntologyProperty> props = pkg.getProperties(true);%>
+<%  java.util.Collection<org.openanzo.rdf.Resource> instances = pkg.getIndividuals();%>
+<%  int i = 0;%>
+<%  for(OntologyClass oc : classes) {%>
+<%    i++;%>
+<%    boolean lastProp = props.isEmpty() && instances.isEmpty() && i == classes.size();%>
+    <%=oc.getLocalName()%> : anzo.createURI("<%=oc.getURI()%>")<%=lastProp ? "" : " ,"%>
+<%  } %>    
+
+// Property URIs
+<%  i = 0;%>
+<%  for (OntologyProperty prop : props) {%>
+<%    i++;%>
+<%    boolean lastProp = instances.isEmpty() && i == props.size();%>
+	<%=prop.getPropertyName()%> : anzo.createURI("<%=prop.getURI()%>")<%=lastProp ? "" : " ,"%>
+<%  } %>
+
+// Instance URIs
+<%  i = 0;%>
+<%  for (org.openanzo.rdf.Resource instance : instances) {%>
+<%    i++;%>
+<%    boolean lastProp = i == instances.size();%>
+<%    if (instance instanceof org.openanzo.rdf.URI) {%> 
+	<%=JavaIdentifierEncoder.encode(((org.openanzo.rdf.URI) instance).getLocalName())%> : anzo.createURI("<%=instance%>")<%=lastProp ? "" : " ,"%>
+<%    }%>
+<%  } %>
+
+}

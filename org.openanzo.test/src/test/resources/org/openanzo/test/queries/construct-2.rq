@@ -1,0 +1,10 @@
+PREFIX : <http://example.org/>
+CONSTRUCT {
+	?s :a ?a .
+	?s :b ?b .
+	?s :c ?c .
+} WHERE {
+	?s :b1 ?b .
+	OPTIONAL { ?s :a1 ?a } .
+	OPTIONAL { ?s :c1 ?c } .
+}

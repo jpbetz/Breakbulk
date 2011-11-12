@@ -1,0 +1,251 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/openanzo/!svn/ver/4458/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli
+END
+query-data.trig
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/query-data.trig
+END
+convert-file-output.trix
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/3783/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/convert-file-output.trix
+END
+convert-input.trig
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/convert-input.trig
+END
+settings-ldap.trig
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/4436/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/settings-ldap.trig
+END
+reset-input.trig
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/reset-input.trig
+END
+replace-file-initial.trig
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/replace-file-initial.trig
+END
+query-arguments.srx
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/query-arguments.srx
+END
+convert-nograph-input.rdf
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/3780/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/convert-nograph-input.rdf
+END
+warn-output.txt
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/openanzo/!svn/ver/4435/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/warn-output.txt
+END
+update-results.trig
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/update-results.trig
+END
+query-from-file.trig
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/query-from-file.trig
+END
+convert-output.rdf
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/convert-output.rdf
+END
+union-input-2.trig
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/union-input-2.trig
+END
+settings-ldap-regress.trig
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/openanzo/!svn/ver/4436/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/settings-ldap-regress.trig
+END
+replace-metadata-output.trig
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/openanzo/!svn/ver/4458/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/replace-metadata-output.trig
+END
+expand-output.txt
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/expand-output.txt
+END
+replace-stdin-input.trig
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/replace-stdin-input.trig
+END
+import-with-base-input.trig
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/import-with-base-input.trig
+END
+expand-dataset-initial.trig
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/expand-dataset-initial.trig
+END
+convert-file-input.trig
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/convert-file-input.trig
+END
+update-additions.trig
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/update-additions.trig
+END
+query-from-file.rq
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/query-from-file.rq
+END
+expand-dataset-output.trig
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/expand-dataset-output.trig
+END
+echo-request.trig
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/echo-request.trig
+END
+empty.txt
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/empty.txt
+END
+update-removals.trig
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/update-removals.trig
+END
+create-file-input.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/create-file-input.ttl
+END
+create-file-output.trig
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/create-file-output.trig
+END
+create-stdin-input.trig
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/create-stdin-input.trig
+END
+create-stdin-output.trig
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/create-stdin-output.trig
+END
+union-input-1.trig
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/union-input-1.trig
+END
+replace-metadata-input.trig
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/4458/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/replace-metadata-input.trig
+END
+convert-nograph-output.nt
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/3780/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/convert-nograph-output.nt
+END
+union-output.trig
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/union-output.trig
+END
+import-with-base-output.trig
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/import-with-base-output.trig
+END
+settings.trig
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/openanzo/!svn/ver/4433/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/settings.trig
+END
+query-data-local.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/query-data-local.ttl
+END
+convert-turtle-file-input.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/convert-turtle-file-input.ttl
+END
+settings-regress.trig
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/settings-regress.trig
+END
+warn-error.txt
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/openanzo/!svn/ver/4436/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/warn-error.txt
+END
+collapse-output.txt
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/3168/openanzo/trunk/org.openanzo.test/src/test/resources/org/openanzo/test/client/cli/collapse-output.txt
+END

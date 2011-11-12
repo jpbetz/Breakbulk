@@ -1,0 +1,39 @@
+@prefix format: <http://openanzo.org/service/format/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix system: <http://openanzo.org/ontologies/2008/07/System#> .
+
+
+<http://openanzo.org/service/authorization> system:operation <http://openanzo.org/service/operation/getRolesForGraph> .
+
+<http://openanzo.org/service/operation/getRolesForGraph> system:name "getRolesForGraph" ;
+	system:requestParameter <http://openanzo.org/service/operation/getRolesForGraph/parameter/namedGraphUri> , <http://openanzo.org/service/operation/getRolesForGraph/parameter/privilege> ;
+	system:requestParameter0 <http://openanzo.org/service/operation/getRolesForGraph/parameter/namedGraphUri> ;
+	system:requestParameter1 <http://openanzo.org/service/operation/getRolesForGraph/parameter/privilege> ;
+	system:restEndpoint "/anzo/namedGraphs(?namedGraphUri)/roles" ;
+	system:restType "GET" ;
+	system:result <http://openanzo.org/service/operation/getRolesForGraph/result> ;
+	system:sysadminRequired "true" ;
+	system:wsOperation "http://openanzo.org/getRolesForGraph" ;
+	dc:description "Get the URIs for the roles that have a given privilege on the graph." ;
+	dc:title "Get Roles For User" ;
+	a system:Operation .
+
+<http://openanzo.org/service/operation/getRolesForGraph/parameter/namedGraphUri> system:name "namedGraphUri" ;
+	system:nullAllowed "false" ;
+	system:type system:uri ;
+	system:validFormat <http://openanzo.org/service/format/text/text> ;
+	dc:description "The URI of the graph for which to retrieve roles." ;
+	a system:Parameter .
+
+<http://openanzo.org/service/operation/getRolesForGraph/parameter/privilege> system:name "privilege" ;
+	system:nullAllowed "false" ;
+	system:type system:privilege ;
+	system:validFormat <http://openanzo.org/service/format/text/text> ;
+	dc:description "Privilege." ;
+	a system:Parameter .
+
+<http://openanzo.org/service/operation/getRolesForGraph/result> system:name "result" ;
+	system:type system:uris ;
+	system:validFormat format:json , <http://openanzo.org/service/format/text/csv> , <http://openanzo.org/service/format/text/text> ;
+	dc:description "Set of URIs for the Roles for which a user is a member." ;
+	a system:Parameter .

@@ -1,0 +1,56 @@
+dn: ou=groups,dc=openanzo,dc=org
+ou: groups
+objectClass: organizationalUnit
+objectClass: top
+
+dn: ou=users,dc=openanzo,dc=org
+ou: users
+objectClass: organizationalUnit
+objectClass: top
+
+dn: cn=sysadmins,ou=groups,dc=openanzo,dc=org
+description: System administrators
+objectClass: groupOfNames
+objectClass: top
+member: uid=antiroot,ou=users,dc=openanzo,dc=org
+cn: sysadmins
+
+dn: cn=users,ou=groups,dc=openanzo,dc=org
+description: Users
+objectClass: groupOfNames
+objectClass: top
+member: uid=default,ou=users,dc=openanzo,dc=org
+cn: users
+
+dn: uid=default,ou=users,dc=openanzo,dc=org
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+objectclass: top
+cn: Default
+description: Default
+sn: Default
+uid: default
+userpassword: 123
+
+dn: uid=antiroot,ou=users,dc=openanzo,dc=org
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+objectclass: top
+cn: antiroot
+description: Anti Root
+sn: antiroot
+uid: antiroot
+userpassword: 4321
+
+dn: uid=defaultNoRights,ou=users,dc=openanzo,dc=org
+objectclass: person
+objectclass: organizationalPerson
+objectclass: inetOrgPerson
+objectclass: top
+cn: defaultNoRights
+description: defaultNoRights
+sn: defaultNoRights
+uid: defaultNoRights
+userpassword: 123

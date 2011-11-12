@@ -1,0 +1,6 @@
+PREFIX : <http://example.org/>
+SELECT ?s
+WHERE {
+  OPTIONAL { ?s :p2 :o2 } .
+  ?s :p1 :o1 .
+}

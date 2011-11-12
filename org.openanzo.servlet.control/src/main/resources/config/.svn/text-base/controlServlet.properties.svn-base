@@ -1,0 +1,7 @@
+service.pid=org.openanzo.servlet.Control
+org.openanzo.services.enabled=true
+org.openanzo.servlet.contextPath=/control
+org.openanzo.servlet.pathSpec=/*
+org.openanzo.servlet.authorizationType=ENCRYPTED_TOKEN
+org.openanzo.servlet.protectedPathSpec=/protected/*
+org.ops4j.pax.web.instanceId=osgi:org.ops4j.pax.web.instance/default

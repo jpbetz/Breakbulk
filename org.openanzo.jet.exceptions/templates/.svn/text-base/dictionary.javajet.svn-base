@@ -1,0 +1,324 @@
+<%@ jet 
+		skeleton="generator.skeleton"
+		package="org.openanzo.jet.exceptions.templates"
+		class="DictionaryDefinitionsTemplate"
+		imports="org.openanzo.jet.exceptions.PropertiesDefinitionParser org.openanzo.jet.exceptions.PropertiesDefinitionParser.Tag org.openanzo.jet.exceptions.PropertiesDefinitionParser.Property org.openanzo.jet.exceptions.PropertiesDefinitionParser.Description org.openanzo.jet.exceptions.PropertiesDefinitionParser.Example"
+%>
+<% PropertiesDefinitionParser.PropertyGroup group = (PropertiesDefinitionParser.PropertyGroup)argument; %>
+/*******************************************************************************
+ * Copyright (c) 2007-2008 Cambridge Semantics Incorporated.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * File:        <%="$".toString()%>Source<%="$".toString()%>
+ * Created by:  Generated Source from org.openanzo.rdf.utils.properties.jet
+ * Created on:  Generated Source from org.openanzo.rdf.utils.properties.jet
+ * Revision:	<%="$".toString()%>Id<%="$".toString()%>
+ * 
+ * Contributors:
+ *     Cambridge Semantics Incorporated - initial API and implementation
+ *******************************************************************************/
+package <%=group.getPackageName() %>;
+import java.util.Dictionary;
+/**
+ *  <% if(group.getDescription()!=null){%> <%=group.getDescription().getValue()%><%}%>
+ *	@author Generated Source from org.openanzo.rdf.utils.properties.jet
+ */
+ 
+ public class <%=group.getClassName()%>Dictionary{
+ 	<% for (Property property:group.getProperties()) { %>
+	/**
+	 * Key for property "<%=group.getPrefix()%>.<%=property.getName() %>"<%if (property.getGeneralDescription()!=null){ for(Description description:property.getGeneralDescription()){%>
+	 * <%=description.getValue()%><%}};if (property.getServerDescription()!=null){ %>
+	 * <li><b>Server:</b><%=property.getServerDescription().getValue()%></li><%};if (property.getClientDescription()!=null){ %>
+	 * <li><b>Client:</b><%=property.getClientDescription().getValue()%></li><%};if (property.getEmbeddedDescription()!=null){ %>
+	 * <li><b>Embedded:</b><%=property.getEmbeddedDescription().getValue()%></li><%};%>
+	 *<%if(property.hasExample()){%>
+	 * Examples:<%if (property.getGeneralExample()!=null){ for(Example example:property.getGeneralExample()){%>
+	 * <%=example.getValue()%><%}};if (property.getServerExample()!=null){%>
+	 * <li><b>Server:</b><%=property.getServerExample().getValue()%></li><%};if (property.getClientExample()!=null){%>
+	 * <li><b>Client:</b><%=property.getClientExample().getValue()%></li><%};if (property.getEmbeddedExample()!=null){%>
+	 * <li><b>Embedded:</b><%=property.getEmbeddedExample().getValue()%></li><%};%><%}%><% for(Tag tag:property.getTags()){%>
+	 * <%=tag.getType()%> <%=tag.getValue()%> <%}%>
+	 */
+	public static final String	<%=property.getKey() %>	= "<%=group.getPrefix()%>.<%=property.getName() %>";
+ 	<%}for (Property property:group.getProperties()) {  if(property.getType().equals(PropertiesDefinitionParser.PropType.STRING)){%>
+ 	/**
+	 * Get {@link #<%=property.getKey() %>} property from properties
+	 * 
+	 * @param properties
+	 *            containing configuration data
+	 * <%if(property.getPassDefault()){%>@param defaultValue defaultValue for <%=property.getName()%><%}%>
+	 * @return value of {@link #<%=property.getKey()%>}<%if(property.getParentProperty()!=null){%>,fallback to {@link <%=property.getParentPropertyLink()%>} if available <%};if(property.getDefaultValue()!=null){%>,or "<%=property.getDefaultValue()%>" <%}else if(property.getPassDefault()){%>or defaultValue<%}%> if not present
+	 */
+	 @SuppressWarnings("unchecked")
+	static public String get<%=PropertiesDefinitionParser.capFirstLetter(property.getName())%>(Dictionary properties<%if(property.getPassDefault()){%>,String defaultValue<%}%>) {
+		Object _prop = properties.get(<%=property.getKey() %>);
+		<%if(property.getParentProperty()!=null){%>
+		if(_prop==null){
+			_prop=properties.get(<%=property.getParentProperty()%>);
+		}
+		<%}%>
+		<%if(property.getDefaultValue()!=null||property.getPassDefault()){%>
+		if(_prop==null){
+			return <%if(property.getDefaultValue()!=null){%><%if(property.getQuoteDefault()){%>"<%}%><%=property.getDefaultValue()%><%if(property.getQuoteDefault()){%>"<%}%><%}else if(property.getPassDefault()){%>defaultValue<%}%>;
+		}else{
+			return _prop.toString();
+		}
+		<%}else{%>		
+		return (_prop!=null)?_prop.toString():null;
+		<%}%>
+	}
+	
+	/**
+	 * Set {@link #<%=property.getKey() %>} property to <%=property.getName() %> in properties
+	 * 
+	 * @param properties
+	 *            containing configuration data
+	 * @param <%=PropertiesDefinitionParser.replaceDots(property.getName()) %>
+	 *            value for <%=property.getName() %>
+	 */
+	 @SuppressWarnings("unchecked")
+	static public void set<%=PropertiesDefinitionParser.capFirstLetter(property.getName())%>(Dictionary properties, String <%=PropertiesDefinitionParser.replaceDots(property.getName()) %>) {
+		if(<%=PropertiesDefinitionParser.replaceDots(property.getName())%>==null){
+			properties.remove(<%=property.getKey() %>);
+		}else{
+			properties.put(<%=property.getKey() %>, <%=PropertiesDefinitionParser.replaceDots(property.getName())%>);
+		}
+	}
+ 	<%}else if(property.getType().equals(PropertiesDefinitionParser.PropType.ENCRYPTED)){%>
+ 	/**
+	 * Get {@link #<%=property.getKey() %>} property from properties
+	 * 
+	 * @param properties
+	 *            containing configuration data
+	 * <%if(property.getPassDefault()){%>@param defaultValue defaultValue for <%=property.getName()%><%}%>
+	 * @return value of {@link #<%=property.getKey()%>}<%if(property.getParentProperty()!=null){%>,fallback to {@link <%=property.getParentPropertyLink()%>} if available <%};if(property.getDefaultValue()!=null){%>,or "<%=property.getDefaultValue()%>" <%}else if(property.getPassDefault()){%>or defaultValue<%}%> if not present
+	 * @throws org.openanzo.exceptions.AnzoException if there is an exception decrypting value
+	 */
+	  @SuppressWarnings("unchecked")
+	static public String get<%=PropertiesDefinitionParser.capFirstLetter(property.getName())%>(Dictionary properties<%if(property.getPassDefault()){%>,String defaultValue<%}%>) throws org.openanzo.exceptions.AnzoException{
+		try{
+		Object _prop = properties.get(<%=property.getKey() %>);
+		<%if(property.getParentProperty()!=null){%>
+		if(_prop==null){
+			_prop=properties.get(<%=property.getParentProperty()%>);
+		}
+		<%}%>
+		<%if(property.getDefaultValue()!=null||property.getPassDefault()){%>
+		if(_prop==null){
+			return <%if(property.getDefaultValue()!=null){%><%if(property.getQuoteDefault()){%>"<%}%><%=property.getDefaultValue()%><%if(property.getQuoteDefault()){%>"<%}%><%}else if(property.getPassDefault()){%>defaultValue<%}%>;
+		}else{
+			if(_prop.toString().startsWith("encrypted:")){
+				_prop=_prop.toString().substring("encrypted:".length());
+				if(_prop.toString().length()>0){
+					return org.openanzo.exceptions.EncryptionUtil.decryptBase64(_prop.toString());
+				}else{
+					return _prop.toString();
+				}
+			}else{
+				return _prop.toString();
+			}
+		}
+		<%}else{%>	
+		if(_prop==null){
+			return null;
+		}else if(_prop.toString().startsWith("encrypted:")){
+			_prop=_prop.toString().substring("encrypted:".length());
+			if(_prop.toString().length()>0){
+				return org.openanzo.exceptions.EncryptionUtil.decryptBase64(_prop.toString());
+			}else{
+				return _prop.toString();
+			}
+		}else{
+			return _prop.toString();
+		}
+		<%}%>
+		}catch(Exception e){
+			 throw new org.openanzo.exceptions.AnzoException( org.openanzo.exceptions.ExceptionConstants.IO.PROPERTIES_ERROR, e);
+		}
+	}
+	
+	/**
+	 * Set {@link #<%=property.getKey() %>} property to <%=property.getName() %> in properties
+	 * 
+	 * @param properties
+	 *            containing configuration data
+	 * @param <%=PropertiesDefinitionParser.replaceDots(property.getName()) %>
+	 *            value for <%=property.getName() %>
+	 * @throws org.openanzo.exceptions.AnzoException if there is an exception encrypting value
+	 */
+	  @SuppressWarnings("unchecked")
+	static public void set<%=PropertiesDefinitionParser.capFirstLetter(property.getName())%>(Dictionary properties, String <%=PropertiesDefinitionParser.replaceDots(property.getName()) %>) throws org.openanzo.exceptions.AnzoException {
+		try{
+			if(<%=PropertiesDefinitionParser.replaceDots(property.getName())%>==null){
+				properties.remove(<%=property.getKey() %>);
+			}else{
+				<%=PropertiesDefinitionParser.replaceDots(property.getName()) %>="encrypted:"+org.openanzo.exceptions.EncryptionUtil.encryptBase64(<%=PropertiesDefinitionParser.replaceDots(property.getName()) %>);
+				properties.put(<%=property.getKey() %>,<%=PropertiesDefinitionParser.replaceDots(property.getName())%>);
+			}
+		}catch(Exception e){
+			 throw new org.openanzo.exceptions.AnzoException( org.openanzo.exceptions.ExceptionConstants.IO.PROPERTIES_ERROR, e);
+		}
+	}
+ 	<%}else if (property.getType().equals(PropertiesDefinitionParser.PropType.BOOLEAN)){%>
+ 	/**
+	 * Get {@link #<%=property.getKey() %>} property from properties
+	 * 
+	 * @param properties
+	 *            containing configuration data
+	 * <%if(property.getPassDefault()){%>@param defaultValue defaultValue for <%=property.getName() %><%}%>
+	 * @return value of {@link #<%=property.getKey() %>}<%if(property.getParentProperty()!=null){%>,fallback to {@link <%=property.getParentPropertyLink()%>} if available <%};if(property.getDefaultValue()!=null){%>,or "<%=property.getDefaultValue()%>" <%}else if(property.getPassDefault()){%>or defaultValue<%}else{%>, or false <%}%> if not present
+	 */
+	 @SuppressWarnings("unchecked")
+	static public Boolean get<%=PropertiesDefinitionParser.capFirstLetter(property.getName())%>(Dictionary properties<%if(property.getPassDefault()){%>,boolean defaultValue<%}%>) {
+		Object _prop=properties.get(<%=property.getKey()%>);
+<%if(property.getParentProperty()!=null){%>
+		if(_prop==null){
+			_prop=properties.get(<%=property.getParentProperty()%>);
+		}
+<%}%>
+<%if(property.getDefaultValue()!=null){%>
+		if(_prop==null){
+			_prop=Boolean.valueOf(<%if(property.getDefaultValue()!=null){%><%if(property.getQuoteDefault()){%>"<%}%><%=property.getDefaultValue()%><%if(property.getQuoteDefault()){%>"<%}%><%}%>);
+		}
+<%}%>
+<%if(property.getPassDefault()){%>
+		return (_prop!=null)?Boolean.valueOf(_prop.toString()):Boolean.valueOf(defaultValue);
+<%}else{%>
+		return (_prop!=null)?Boolean.valueOf(_prop.toString()):null;
+<%}%>
+	}
+
+	/**
+	 * Set {@link #<%=property.getKey()%>} property to <%=property.getName() %> in properties
+	 * 
+	 * @param properties
+	 *            containing configuration data
+	 * @param <%=PropertiesDefinitionParser.replaceDots(property.getName()) %>
+	 *           value for <%=property.getName() %>
+	 */
+	 @SuppressWarnings("unchecked")
+	static public void set<%=PropertiesDefinitionParser.capFirstLetter(property.getName())%>(Dictionary properties, Boolean <%=PropertiesDefinitionParser.replaceDots(property.getName()) %>) {
+		if(<%=PropertiesDefinitionParser.replaceDots(property.getName())%>==null){
+			properties.remove(<%=property.getKey() %>);
+		}else{
+			properties.put(<%=property.getKey()%>, <%=PropertiesDefinitionParser.replaceDots(property.getName()) %>.toString());
+		}
+	}
+ 	<%}else if (property.getType().equals(PropertiesDefinitionParser.PropType.INTEGER)){%>
+ 	/**
+	 * Get {@link #<%=property.getKey() %>} property from properties
+	 * 
+	 * @param properties
+	 *            containing configuration data
+	 * <%if(property.getPassDefault()){%>@param defaultValue defaultValue for <%=property.getName() %><%}%>
+	 * @return value of {@link #<%=property.getKey() %>}<%if(property.getParentProperty()!=null){%>,fallback to {@link <%=property.getParentPropertyLink()%>} if available <%};if(property.getDefaultValue()!=null){%>,or "<%=property.getDefaultValue()%>" <%}else if(property.getPassDefault()){%>or defaultValue<%}%> if not present
+	 */
+	 @SuppressWarnings("unchecked")
+	static public Integer get<%=PropertiesDefinitionParser.capFirstLetter(property.getName())%>(Dictionary properties<%if(property.getPassDefault()){%>,Integer defaultValue<%}%>) {
+		Object _prop= properties.get(<%=property.getKey() %>);
+<%if(property.getParentProperty()!=null){%>
+		if(_prop==null){
+			_prop=properties.get(<%=property.getParentProperty()%>);
+		}
+<%}%>
+<%if(property.getPassDefault()){%>
+		Integer value= (_prop!=null)?Integer.valueOf(_prop.toString()):defaultValue;
+<%}else{%>
+		Integer value= (_prop!=null)?Integer.valueOf(_prop.toString()):<%if(property.getDefaultValue()!=null){%><%if(property.getDefaultValue()!=null){%><%if(property.getQuoteDefault()){%>"<%}%><%=property.getDefaultValue()%><%if(property.getQuoteDefault()){%>"<%}}}else{%>null<%}%>;
+<%}%>
+<%if (property.getMinValue()!=null){%>
+		if(value!=null&&value <= <%=property.getMinValue()%>)
+			throw new org.openanzo.exceptions.AnzoRuntimeException(org.openanzo.exceptions.ExceptionConstants.OSGI.PARAM_GREATER_THAN,"<%=PropertiesDefinitionParser.replaceDots(property.getName()) %>","<%=property.getMinValue()%>");<%}%><%if (property.getMaxValue()!=null){
+		%>
+		if(value!=null&&value >= <%=property.getMaxValue()%>)
+			throw new org.openanzo.exceptions.AnzoRuntimeException(org.openanzo.exceptions.ExceptionConstants.OSGI.PARAM_LESS_THAN,"<%=PropertiesDefinitionParser.replaceDots(property.getName()) %>","<%=property.getMaxValue()%>");<%}%>
+		return value;
+	}
+
+	/**
+	 * Set {@link #<%=property.getKey()%>} property to <%=property.getName() %> in properties
+	 * 
+	 * @param properties
+	 *            containing configuration data
+	 * @param <%=PropertiesDefinitionParser.replaceDots(property.getName()) %>
+	 *           value for <%=property.getName() %>
+	 */
+	 @SuppressWarnings("unchecked")
+	static public void set<%=PropertiesDefinitionParser.capFirstLetter(property.getName())%>(Dictionary properties, Integer <%=PropertiesDefinitionParser.replaceDots(property.getName()) %>) {
+		if(<%=PropertiesDefinitionParser.replaceDots(property.getName())%>==null){
+			properties.remove(<%=property.getKey() %>);
+		}else{<%if (property.getMinValue()!=null){%>
+		if(<%=PropertiesDefinitionParser.replaceDots(property.getName()) %> <= <%=property.getMinValue()%>)
+			throw new org.openanzo.exceptions.AnzoRuntimeException(org.openanzo.exceptions.ExceptionConstants.OSGI.PARAM_GREATER_THAN,"<%=PropertiesDefinitionParser.replaceDots(property.getName()) %>","<%=property.getMinValue()%>");<%}%><%if (property.getMaxValue()!=null){
+		%>
+		if(<%=PropertiesDefinitionParser.replaceDots(property.getName()) %> >= <%=property.getMaxValue()%>)
+			throw new org.openanzo.exceptions.AnzoRuntimeException(org.openanzo.exceptions.ExceptionConstants.OSGI.PARAM_LESS_THAN,"<%=PropertiesDefinitionParser.replaceDots(property.getName()) %>","<%=property.getMaxValue()%>");<%}%>
+		properties.put(<%=property.getKey()%>, Integer.toString(<%=PropertiesDefinitionParser.replaceDots(property.getName()) %>));
+		}
+	}
+ 	<%}else if (property.getType().equals(PropertiesDefinitionParser.PropType.LONG)){%>
+ 	/**
+	 * Get {@link #<%=property.getKey() %>} property from properties
+	 * 
+	 * @param properties
+	 *            containing configuration data
+	 * <%if(property.getPassDefault()){%>@param defaultValue defaultValue for <%=property.getName() %><%}%>
+	 * @return value of {@link #<%=property.getKey() %>}<%if(property.getParentProperty()!=null){%>,fallback to {@link <%=property.getParentPropertyLink()%>} if available <%};if(property.getDefaultValue()!=null){%>,or "<%=property.getDefaultValue()%>" <%}else if(property.getPassDefault()){%>or defaultValue<%}%> if not present
+	 */
+	 @SuppressWarnings("unchecked")
+	static public Long get<%=PropertiesDefinitionParser.capFirstLetter(property.getName())%>(Dictionary properties<%if(property.getPassDefault()){%>,Long defaultValue<%}%>) {
+		Object _prop= properties.get(<%=property.getKey() %>);
+		<%if(property.getParentProperty()!=null){%>
+		if(_prop==null){
+			_prop=properties.get(<%=property.getParentProperty()%>);
+		}
+<%}%>
+<%if(property.getDefaultValue()!=null){%>
+		if(_prop==null){
+			_prop=<%if(property.getDefaultValue()!=null){%><%if(property.getQuoteDefault()){%>"<%}%><%=property.getDefaultValue()%><%if(property.getQuoteDefault()){%>"<%}%><%}%>;
+		}
+	<%}%>
+		
+<%if(property.getPassDefault()){%>
+		Long value= (_prop!=null)?Long.valueOf(_prop.toString()):defaultValue;
+<%}else{%>
+		Long value= (_prop!=null)?Long.valueOf(_prop.toString()):null;
+<%}%>
+		<%if (property.getMinValue()!=null){%>
+		if(value!=null&&value <= <%=property.getMinValue()%>)
+			throw new org.openanzo.exceptions.AnzoRuntimeException(org.openanzo.exceptions.ExceptionConstants.OSGI.PARAM_GREATER_THAN,"<%=PropertiesDefinitionParser.replaceDots(property.getName()) %>","<%=property.getMinValue()%>");<%}%><%if (property.getMaxValue()!=null){
+		%>
+		if(value!=null&&value >= <%=property.getMaxValue()%>)
+			throw new org.openanzo.exceptions.AnzoRuntimeException(org.openanzo.exceptions.ExceptionConstants.OSGI.PARAM_LESS_THAN,"<%=PropertiesDefinitionParser.replaceDots(property.getName()) %>","<%=property.getMaxValue()%>");<%}%>
+		return value;		
+	}
+
+	/**
+	 * Set {@link #<%=property.getKey()%>} property to <%=property.getName() %> in properties
+	 * 
+	 * @param properties
+	 *            containing configuration data
+	 * @param <%=PropertiesDefinitionParser.replaceDots(property.getName()) %>
+	 *           value for <%=property.getName() %>
+	 */
+	 @SuppressWarnings("unchecked")
+	static public void set<%=PropertiesDefinitionParser.capFirstLetter(property.getName())%>(Dictionary properties, Long <%=PropertiesDefinitionParser.replaceDots(property.getName()) %>) {
+		if(<%=PropertiesDefinitionParser.replaceDots(property.getName())%>==null){
+			properties.remove(<%=property.getKey() %>);
+		}else{<%if (property.getMinValue()!=null){%>
+		if(<%=PropertiesDefinitionParser.replaceDots(property.getName()) %> <= <%=property.getMinValue()%>)
+			throw new org.openanzo.exceptions.AnzoRuntimeException(org.openanzo.exceptions.ExceptionConstants.OSGI.PARAM_GREATER_THAN,"<%=PropertiesDefinitionParser.replaceDots(property.getName()) %>","<%=property.getMinValue()%>");<%}%><%if (property.getMaxValue()!=null){
+		%>
+		if(<%=PropertiesDefinitionParser.replaceDots(property.getName()) %> >= <%=property.getMaxValue()%>)	
+			throw new org.openanzo.exceptions.AnzoRuntimeException(org.openanzo.exceptions.ExceptionConstants.OSGI.PARAM_LESS_THAN,"<%=PropertiesDefinitionParser.replaceDots(property.getName()) %>","<%=property.getMaxValue()%>");<%}%>
+		properties.put(<%=property.getKey()%>, Long.toString(<%=PropertiesDefinitionParser.replaceDots(property.getName()) %>));
+		}
+	}
+ 	<%}%>
+ 	<%}%>
+ }
+ 	

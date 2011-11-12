@@ -1,0 +1,12 @@
+<propertyDefinitions>
+	<propertiesGroup packageName="org.openanzo.combus.bayeux" groupPrefix="org.openanzo.combus.bayeuxBridge" className="BayeuxBridge">
+		<description>Bayeux Bridge Config Properties.</description>
+		<property name="threadPoolSize" key="KEY_THREAD_POOL_SIZE" restartRequired="false" passDefault="false" type="Integer">
+			<description>Max size of pool to handle bayeux to jms bridging</description>
+		</property>
+		
+	</propertiesGroup>
+	
+	
+</propertyDefinitions>
+	

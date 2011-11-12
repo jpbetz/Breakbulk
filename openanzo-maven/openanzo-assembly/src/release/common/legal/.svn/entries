@@ -1,0 +1,127 @@
+10
+
+dir
+5248
+http://svn.openanzo.org/svn/openanzo/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/common/legal
+http://svn.openanzo.org/svn/openanzo
+
+
+
+2009-06-08T13:32:41.758926Z
+4143
+mroy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0a2a6340-b48a-40e4-9632-36e452a58e02
+
+stax
+dir
+
+jquery
+dir
+
+woostox
+dir
+
+ant
+dir
+
+eclipse
+dir
+
+tool-man
+dir
+
+jackson
+dir
+
+jetty
+dir
+
+postgres
+dir
+
+felix
+dir
+
+hsql
+dir
+
+json
+dir
+
+activemq
+dir
+
+h2
+dir
+
+lucene
+dir
+
+rhino
+dir
+
+geronimo
+dir
+
+ehcache
+dir
+
+slf4j
+dir
+
+antlr-2.7.5
+dir
+
+saxon
+dir
+
+pax
+dir
+
+ws-jaxme-0.5.2
+dir
+
+dojo
+dir
+
+openrdf
+dir
+
+classworlds
+dir
+
+hibernate
+dir
+
+spring
+dir
+
+jtds
+dir
+
+apacheds
+dir
+
+xmlbeans
+dir
+
+commons
+dir
+
+axiom
+dir
+

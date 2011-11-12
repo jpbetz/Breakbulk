@@ -1,0 +1,76 @@
+<?xml version="1.0"?>
+<ruleset name="Custom ruleset"
+    xmlns="http://pmd.sf.net/ruleset/1.0.0"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://pmd.sf.net/ruleset/1.0.0 http://pmd.sf.net/ruleset_xml_schema.xsd"
+    xsi:noNamespaceSchemaLocation="http://pmd.sf.net/ruleset_xml_schema.xsd">
+
+	<!--
+		Copyright (c) 2007 Cambridge Semantics Incorporated.
+		All rights reserved. This program and the accompanying materials
+		are made available under the terms of the Eclipse Public License v1.0
+		which accompanies this distribution, and is available at
+		http://www.eclipse.org/legal/epl-v10.html
+	-->
+	
+  <description>
+  	Open Anzo PMD rules that are enforced by the regression build
+  </description>
+  
+  <!--
+    Adding a rule:
+    
+    	A rule should not be added to this file until there are zero violations in the build.  Nor
+    	should rules be added at the whim of a single developer please first propose to the rule for 
+    	inclusion (except rules agreed upon in initial design meetings..  they are all far game).
+    	If there is agreement that the rule should be included the following steps are recommended:
+    	
+    	1.  There is consensus the rule should be added.
+    	
+    	1.  If the rule is not already in reported-pmd.xml, add it immediately.
+    	
+    	2.  Mail developers alerting them of the new rule and of your intention to put the rule in forbidden-pmd.xml. 
+    		Ask developers to coordinate with you so multiple developers aren't spending time fixing the same violations.
+    	
+    	3.  Once all violations have been fixed, move the rule from reported-pmd.xml to this file and check in both
+    		files.
+    		
+    Removing rules:
+    	A rule should only be removed if there is consensus the rule should be removed.
+    	
+    	A good reason to remove a rule might be:
+    	
+    	1.	There is a bug in the rule causing it to break the build is a way that is unreasonably cumbersome to work around.
+    	
+    	2.  The rule does not cover some important aspect of the concept it attempts to enforce.  For example, a unused import
+    		rule should realize that javadoc also requires imports, if the rule does not respect this, it should not be in this
+    		file.
+    	
+    	Please consider moving the rule to reported-pmd.xml rather that removing entirely.
+  -->
+  
+  <!-- basic -->
+  <rule ref="rulesets/basic.xml/EmptyCatchBlock"/>
+  <rule ref="rulesets/basic.xml/OverrideBothEqualsAndHashcode"/>
+    
+  <!-- imports -->
+  <rule ref="rulesets/imports.xml/DuplicateImports"/>
+  <rule ref="rulesets/imports.xml/ImportFromSamePackage"/>
+  
+  <!-- unused -->
+  <rule ref="rulesets/unusedcode.xml/UnusedPrivateMethod"/>
+  <rule ref="rulesets/unusedcode.xml/UnusedLocalVariable"/>
+  
+  <!-- naming -->
+  <rule ref="rulesets/naming.xml/MethodWithSameNameAsEnclosingClass"/>
+  <rule ref="rulesets/naming.xml/PackageCase"/>
+  <rule ref="rulesets/naming.xml/NoPackage"/>
+
+  <!-- serial version id -->  
+  <rule ref="rulesets/javabeans.xml/MissingSerialVersionUID"/>
+  
+  <!-- logging -->
+  <rule ref="rulesets/logging-java.xml/LoggerIsNotStaticFinal"/>
+  <rule ref="rulesets/logging-jakarta-commons.xml/ProperLogger"/>
+
+</ruleset>

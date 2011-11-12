@@ -1,0 +1,4 @@
+PREFIX clitest: <http://cambridgesemantics.com/cli-tests#>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+
+CONSTRUCT { clitest:custom dc:title ?o } FROM NAMED clitest:query WHERE {GRAPH clitest:query { clitest:query dc:source ?o }}

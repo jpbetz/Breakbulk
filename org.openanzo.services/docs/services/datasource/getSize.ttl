@@ -1,0 +1,31 @@
+@prefix format: <http://openanzo.org/service/format/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix system: <http://openanzo.org/ontologies/2008/07/System#> .
+
+
+<http://openanzo.org/service/model> system:operation <http://openanzo.org/service/operation/getSize> .
+
+<http://openanzo.org/service/operation/getSize> system:name "getSize" ;
+	system:requestParameter <http://openanzo.org/service/operation/getSize/parameter/namedGraphUri> ;
+	system:requestParameter0 <http://openanzo.org/service/operation/getSize/parameter/namedGraphUri> ;
+	system:restEndpoint "/anzo/namedGraphs(?namedGraphUri)/size" ;
+	system:restType "GET" ;
+	system:result <http://openanzo.org/service/operation/getSize/result> ;
+	system:sysadminRequired "false" ;
+	system:wsOperation "http://openanzo.org/getSize" ;
+	dc:description "Get the size of a NamedGraph." ;
+	dc:title "Get Size" ;
+	a system:Operation .
+
+<http://openanzo.org/service/operation/getSize/parameter/namedGraphUri> system:name "namedGraphUri" ;
+	system:nullAllowed "false" ;
+	system:type system:uri ;
+	system:validFormat <http://openanzo.org/service/format/text/text> ;
+	dc:description "URI of NamedGraph to retrieve" ;
+	a system:Parameter .
+
+<http://openanzo.org/service/operation/getSize/result> system:name "result" ;
+	system:type system:long ;
+	system:validFormat format:json , <http://openanzo.org/service/format/text/text> ;
+	dc:description "Size of NamedGraph." ;
+	a system:Parameter .

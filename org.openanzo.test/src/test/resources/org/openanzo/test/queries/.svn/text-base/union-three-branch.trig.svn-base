@@ -1,0 +1,17 @@
+@prefix : <http://example.org/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix anzo: <http://openanzo.org/ontologies/2008/07/Anzo#> .
+@prefix shape: <http://www.example.org/shape#> .
+
+:union-three-branch {
+	:p1 a foaf:Person ; dc:title "a tiny person" ; foaf:surname "Bush" .
+	:p2 a foaf:Person ; dc:title "a large person" ; foaf:surname "Cheney" .
+	
+	:t1 a shape:Triangle ; dc:title "a small triangle" .
+	:t2 a shape:Triangle ; dc:title "a large triangle" .
+	
+	:c1 a shape:Circle ; dc:title "a small circle" .
+	:c2 a shape:Circle ; dc:title "a large circle" .
+}

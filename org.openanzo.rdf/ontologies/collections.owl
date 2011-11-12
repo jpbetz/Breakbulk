@@ -1,0 +1,121 @@
+<!--
+ * Copyright (c) 2004, 202008/07 IBM Corporation and Cambridge Semantics Incorporated.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * File:        $Source:
+ * Created by:  Ben Szekely (<a href="mailto:ben@cambridgesemantics.com">ben@cambridgesemantics.com</a>)
+ * Created on:  6/1/05
+ * Revision:	$Id: collections.owl $
+ * 
+ * Contributors:
+ *     IBM Corporation - initial API and implementation
+ *     Cambridge Semantics Incorporated - Fork to Anzo
+ -->
+ <!DOCTYPE rdf:RDF [
+  <!ENTITY collections 'http://openanzo.org/ontologies/2008/07/Collections#'>
+  <!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+  <!ENTITY xsd 'http://www.w3.org/2001/XMLSchema#'>
+]>
+<rdf:RDF
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#" 
+	xmlns:owl="http://www.w3.org/2002/07/owl#">
+	
+	<owl:Ontology rdf:about="http://openanzo.org/ontologies/2008/07/Collections">
+		<rdfs:comment rdf:datatype="xsd:string">
+			RDF Collections
+		</rdfs:comment>
+	</owl:Ontology>
+
+	<owl:Class rdf:about="&collections;Collection">
+		<rdfs:subClassOf>
+			<owl:Restriction owl:minCardinality="0">
+				<owl:onProperty>
+					<owl:ObjectProperty rdf:about="&collections;item">
+						<rdfs:domain rdf:resource="&collections;Collection"/>
+						<rdfs:range rdf:resource="&collections;Item"/>
+					</owl:ObjectProperty>
+				</owl:onProperty>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&collections;OrderedCollection">
+		<rdfs:subClassOf rdf:resource="&collections;Collection" />
+		<rdfs:subClassOf>
+			<owl:Restriction owl:cardinality="1">
+				<owl:onProperty>
+					<owl:DatatypeProperty rdf:about="&collections;collectionSize">
+						<rdfs:domain rdf:resource="&collections;OrderedCollection" />
+						<rdfs:range rdf:resource="&xsd;int" />
+					</owl:DatatypeProperty>
+				</owl:onProperty>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+	    <rdfs:subClassOf>
+			<owl:Restriction owl:maxCardinality="1">
+				<owl:onProperty>
+					<owl:ObjectProperty rdf:about="&collections;firstItem">
+					    <rdfs:subPropertyOf rdf:resource="&collections;item" />
+						<rdfs:domain rdf:resource="&collections;OrderedCollection"/>
+						<rdfs:range rdf:resource="&collections;OrderedItem"/>
+					</owl:ObjectProperty>
+				</owl:onProperty>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&collections;Item">
+		
+	</owl:Class>
+	
+	<owl:Class rdf:about="&collections;OrderedItem">
+		<rdfs:subClassOf rdf:resource="&collections;Item" />
+		<rdfs:subClassOf>
+			<owl:Restriction owl:maxCardinality="1">
+				<owl:onProperty>
+					<owl:ObjectProperty rdf:about="&collections;nextItem">
+						<rdfs:domain rdf:resource="&collections;OrderedItem" />
+						<rdfs:range rdf:resource="&collections;OrderedItem" />
+					</owl:ObjectProperty>
+				</owl:onProperty>	
+				<owl:onProperty>
+					<owl:ObjectProperty rdf:about="&collections;previousItem">
+						<rdfs:domain rdf:resource="&collections;OrderedItem" />
+						<rdfs:range rdf:resource="&collections;OrderedItem" />
+					</owl:ObjectProperty>
+				</owl:onProperty>	
+			</owl:Restriction>
+		</rdfs:subClassOf>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&collections;ResourceItem">
+		<rdfs:subClassOf rdf:resource="&collections;Item" />
+		<rdfs:subClassOf>
+			<owl:Restriction owl:cardinality="1">
+				<owl:onProperty>
+					<owl:ObjectProperty rdf:about="&collections;itemObject">
+						<rdfs:domain rdf:resource="&collections;ResourceItem" />
+					</owl:ObjectProperty>
+				</owl:onProperty>
+			</owl:Restriction>	
+		</rdfs:subClassOf>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&collections;LiteralItem">
+		<rdfs:subClassOf rdf:resource="&collections;Item" />
+		<rdfs:subClassOf>
+			<owl:Restriction owl:cardinality="1">
+				<owl:onProperty>
+					<owl:DatatypeProperty rdf:about="&collections;itemData">
+						<rdfs:domain rdf:resource="&collections;LiteralItem" />
+					</owl:DatatypeProperty>
+				</owl:onProperty>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+	</owl:Class>
+</rdf:RDF>

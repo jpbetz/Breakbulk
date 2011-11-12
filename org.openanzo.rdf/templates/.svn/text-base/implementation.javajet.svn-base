@@ -1,0 +1,565 @@
+<%@ jet package="org.openanzo.rdf.jastor.templates"
+		skeleton="ontologyclass.skeleton"
+		class="ImplementationTemplate"
+		imports="java.util.* org.openanzo.rdf.jastor.*  org.openanzo.rdf.jastor.inference.* org.openanzo.rdf.* org.openanzo.rdf.jastor.jet.*" %>
+<% JastorContext ctx = oc.getContext(); %>
+<% if(ctx.isIncludeCopyright()){%>
+/*******************************************************************************
+ * Copyright (c) 2004, 2007-2008 IBM Corporation and Cambridge Semantics Incorporated.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * File:        <%="$".toString()%>Source<%="$".toString()%>
+ * Created by:  Generated Source from org.openanzo.jdbc.utils.opgen.jet
+ * Created on:  Generated Source from org.openanzo.jdbc.utils.opgen.jet
+ * Revision:	<%="$".toString()%>Id<%="$".toString()%>
+ * 
+ * Contributors:
+ *     IBM Corporation - initial API and implementation
+ *	   Cambridge Semantics Incorporated - Fork to Anzo
+ *******************************************************************************/
+ <%}%>
+package <%=oc.getPackageName()%>;
+
+/**
+ * Implementation of {@link <%=oc.getInterfaceFullClassname()%>}
+ * Use the <%=oc.getFactoryFullClassname()%> to create instances of this class.
+ * <p>(URI: <%=ctx.remapUri(oc.getURI()) %>)</p>
+ * <br>
+ */
+public class <%=oc.getImplClassname()%> extends <%=ctx.getThingImpl().getName()%> implements <%=oc.getInterfaceFullClassname()%> {
+<% if (ctx.isGenerateListeners()) { %>
+	private ThingStatementListener _listener = null;
+<% } %>
+
+<% for (OntologyProperty prop:oc.listProperties(true)) {%>
+<% // have to add the properties here to so we have no ambiguity with multiple inheritance %>
+	protected static final org.openanzo.rdf.URI <%=prop.getPropertyName()%>Property = org.openanzo.rdf.jastor.ThingFactory.valueFactory.createURI("<%=ctx.remapUri(prop.getURI())%>");
+<% } %>
+
+	<%=oc.getImplClassname()%>(org.openanzo.rdf.Resource resource,org.openanzo.rdf.URI namedGraphUri, org.openanzo.rdf.IDataset dataset) throws org.openanzo.rdf.jastor.JastorException {
+		super(resource, namedGraphUri, dataset);
+<% if (ctx.isGenerateListeners()) { %>
+		_listener = new ThingStatementListener();
+<% } %>
+	}   
+	
+<% if (oc.isEnumeratedClass()) { %>
+	private static java.util.Set<org.openanzo.rdf.Resource> oneOfClasses = new java.util.HashSet<org.openanzo.rdf.Resource>();
+	static {
+<% java.util.Iterator<org.openanzo.rdf.Resource> oneOfClassesItr = oc.listOneOfClasses().iterator(); %>
+<%   while (oneOfClassesItr.hasNext()) { %>
+<%		org.openanzo.rdf.Resource oneOfClass = oneOfClassesItr.next(); %>
+		oneOfClasses.add(<%=oc.getIndividualIdentifierName(oneOfClass)%>);
+<%   } %>
+	}
+<% } %>   
+    	
+	static <%=oc.getImplClassname()%> get<%=oc.getInterfaceClassname()%>(org.openanzo.rdf.Resource resource,org.openanzo.rdf.URI namedGraphUri, org.openanzo.rdf.IDataset dataset) throws org.openanzo.rdf.jastor.JastorException {
+		if(namedGraphUri==null||!dataset.containsNamedGraph(namedGraphUri) ){
+			namedGraphUri=null;
+			for(org.openanzo.rdf.Statement stmt:dataset.find(resource,  org.openanzo.rdf.vocabulary.RDF.TYPE, <%=oc.getInterfaceClassname()%>.TYPE)){
+				namedGraphUri=stmt.getNamedGraphUri();
+			}
+			if(namedGraphUri==null)return null;
+		}
+<% if (ctx.isUseStrictTypeChecking()) { %>
+		if (!dataset.contains(resource,  org.openanzo.rdf.vocabulary.RDF.TYPE, <%=oc.getInterfaceClassname()%>.TYPE, namedGraphUri))
+			return null;
+<% } %>
+		return new <%=oc.getImplClassname()%>(resource, namedGraphUri, dataset);
+	}
+	    
+	static <%=oc.getImplClassname()%> create<%=oc.getInterfaceClassname()%>(org.openanzo.rdf.Resource resource,org.openanzo.rdf.URI namedGraphUri, org.openanzo.rdf.IDataset dataset) throws org.openanzo.rdf.jastor.JastorException {
+<% if (oc.isEnumeratedClass()) { %>
+		if (!oneOfClasses.contains(resource)) {
+			throw new org.openanzo.rdf.jastor.JastorException("Resource " + resource + " not a member of enumeration class <%=oc.getURI()%>"); 
+		}
+<% } %> 
+		
+		<%=oc.getImplClassname()%> impl = new <%=oc.getImplClassname()%>(resource, namedGraphUri,dataset);
+		if (!impl._dataset.contains(impl._resource,  org.openanzo.rdf.vocabulary.RDF.TYPE, <%=oc.getInterfaceClassname()%>.TYPE, namedGraphUri))
+			impl._dataset.add(impl._resource,  org.openanzo.rdf.vocabulary.RDF.TYPE, <%=oc.getInterfaceClassname()%>.TYPE, namedGraphUri);
+		impl.addSuperTypes();
+		impl.addHasValueValues();
+		return impl;
+	}
+	
+	void addSuperTypes() {
+<%	for (OntologyClass ocl:oc.listAllExtensionClasses()) { %>
+		if (!_dataset.contains(_resource,  org.openanzo.rdf.vocabulary.RDF.TYPE, <%=ocl.getInterfaceFullClassname()%>.TYPE,_graph.getNamedGraphUri()))
+			_dataset.add(_resource,  org.openanzo.rdf.vocabulary.RDF.TYPE, <%=ocl.getInterfaceFullClassname()%>.TYPE,_graph.getNamedGraphUri());     
+<%	} %>
+	}
+   
+	void addHasValueValues() {
+<% for (OntologyProperty prop:oc.listProperties(true)) {%>
+<%			List<Value> list = prop.getHasValueValues(); %>
+<%			for (int i=0;i<list.size();i++) { %>
+<%				Value node = list.get(i); %>
+<%				if (prop.isObjectProperty()) { %>
+		if (!_dataset.contains(_resource, <%=prop.getPropertyName()%>Property, org.openanzo.rdf.jastor.ThingFactory.valueFactory.createResource("<%=node%>"),_graph.getNamedGraphUri()))
+			_dataset.add(_resource, <%=prop.getPropertyName()%>Property, org.openanzo.rdf.jastor.ThingFactory.valueFactory.createResource("<%=node%>"),_graph.getNamedGraphUri());
+<%				} else { %>
+		if (!_dataset.contains(_resource, <%=prop.getPropertyName()%>Property, org.openanzo.rdf.jastor.ThingFactory.valueFactory.createLiteral("<%=((org.openanzo.rdf.Literal)node).getLabel()%>"),_graph.getNamedGraphUri()))
+			_dataset.add(_resource, <%=prop.getPropertyName()%>Property, org.openanzo.rdf.jastor.ThingFactory.valueFactory.createLiteral("<%=((org.openanzo.rdf.Literal)node).getLabel()%>"),_graph.getNamedGraphUri());
+<%				} %>
+<%			} %>
+<%		} %>
+	}
+   
+	public java.util.Collection<org.openanzo.rdf.Statement> listStatements() {
+		java.util.Collection<org.openanzo.rdf.Statement> list = new java.util.HashSet<org.openanzo.rdf.Statement>();
+		
+<% for (OntologyProperty prop:oc.listProperties(true)) {%>
+		list.addAll(_dataset.find(_resource, <%=prop.getPropertyName()%>Property, null, _graph.getNamedGraphUri()));
+		
+<% } %>
+		
+		list.addAll(_dataset.find(_resource,  org.openanzo.rdf.vocabulary.RDF.TYPE, <%=oc.getInterfaceFullClassname()%>.TYPE, _graph.getNamedGraphUri()));
+<%	for (OntologyClass ocl: oc.listAllExtensionClasses()) { %>
+		list.addAll(_dataset.find(_resource,  org.openanzo.rdf.vocabulary.RDF.TYPE, <%=ocl.getInterfaceFullClassname()%>.TYPE, _graph.getNamedGraphUri()));
+<%	} %>
+		return list;
+	}
+
+<% for (OntologyProperty prop: oc.listProperties(true)) {%>
+	/**
+	 * Clears all values for '<%=prop.getPropertyName()%>'. 
+	 * @param 		includeEntireDataset Delete the properties from the entire dataset, and not just the namedgraph
+	 * @throws org.openanzo.rdf.jastor.JastorException
+	 */
+	 @SuppressWarnings("all")
+	public void clear<%=prop.getPropertyCapped()%>(boolean includeEntireDataset) throws org.openanzo.rdf.jastor.JastorException{
+		_dataset.remove(_resource, <%=prop.getPropertyName()%>Property, null,(includeEntireDataset)?null:_graph.getNamedGraphUri());
+	}
+// generating for property: <%=prop.toString()%>
+<%		if (prop.isSingleValued() && prop.isDatatypeProperty()) { %>
+<%			for (Resource res:prop.listAllRanges()) { %>
+	public <%=prop.getReturnType(res)%> get<%=prop.getPropertyCapped(res)%>(boolean includeEntireDataset) throws org.openanzo.rdf.jastor.JastorException {
+
+		java.util.Collection<org.openanzo.rdf.Statement> __valIter =null;
+		__valIter =_dataset.find(includeEntireDataset, _resource, <%=prop.getPropertyName()%>Property, null,_graph.getNamedGraphUri());
+		if(__valIter.isEmpty()) return null;
+		org.openanzo.rdf.Statement statement = __valIter.iterator().next();
+		if (statement == null) return null;
+<%	if(prop.getReturnType(res).equals(org.openanzo.rdf.URI.class.getCanonicalName())){ %>
+		if (!(statement.getObject() instanceof org.openanzo.rdf.URI))
+			throw new org.openanzo.rdf.jastor.InvalidNodeException(uri() + ": <%=prop.getPropertyName(res)%> getProperty() in <%=oc.getInterfaceFullClassname()%> model not URI", statement.getObject());
+		return (org.openanzo.rdf.URI)statement.getObject();
+<%}else{%>		
+		if (!(statement.getObject() instanceof org.openanzo.rdf.Literal))
+			throw new org.openanzo.rdf.jastor.InvalidNodeException(uri() + ": <%=prop.getPropertyName(res)%> getProperty() in <%=oc.getInterfaceFullClassname()%> model not Literal", statement.getObject());
+		org.openanzo.rdf.Literal literal=(org.openanzo.rdf.Literal)statement.getObject();
+<% 			if (prop.getReturnType(res).equals("org.openanzo.rdf.Literal")) { %>
+		return literal;
+<% 			} else { %>
+		Object obj = getLiteralValue(literal, "<%=prop.getRangeURI(res)%>");
+		if (!(obj instanceof <%=prop.getReturnType(res)%>))
+			throw new org.openanzo.rdf.jastor.InvalidLiteralException (this.uri() + ": Literal <%=prop.getPropertyName(res)%> in <%=oc.getInterfaceClassname()%> is not of type <%=prop.getReturnType(res)%>", literal);
+		return (<%=prop.getReturnType(res)%>)obj;
+<% 			}} %>
+		
+	}
+	
+	public <%=prop.getReturnType(res)%> get<%=prop.getPropertyCapped(res)%>() throws org.openanzo.rdf.jastor.JastorException {
+		return get<%=prop.getPropertyCapped(res)%>(false);
+	}
+	
+	public void set<%=prop.getPropertyCapped()%>(<%=prop.getReturnType(res)%> <%=prop.getPropertyName()%>) throws org.openanzo.rdf.jastor.JastorException {
+		_dataset.remove(_resource, <%=prop.getPropertyName()%>Property, null,_graph.getNamedGraphUri());                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              
+		if (<%=prop.getPropertyName()%> != null) {
+	<%	if (prop.getReturnType(res).equals(org.openanzo.rdf.URI.class.getCanonicalName()) || prop.getReturnType(res).equals("org.openanzo.rdf.Literal")) { %>
+			_dataset.add(_resource, <%=prop.getPropertyName()%>Property, <%=prop.getPropertyName()%>,_graph.getNamedGraphUri());
+	<%} else { %>
+			org.openanzo.rdf.Literal _literal = getLiteral(<%=prop.getPropertyName()%>,"<%=prop.getRangeURI(res)%>");
+			_dataset.add(_resource, <%=prop.getPropertyName()%>Property, _literal,_graph.getNamedGraphUri());
+	<%}%>
+		}	
+	}
+<%       } // end allRanges %>
+<%   } // end single-data %>
+
+<%	  if (prop.isMultiValued() && prop.isDatatypeProperty()) { %>
+<%			for (Resource res:prop.listAllRanges()) { %>
+
+	org.openanzo.rdf.jastor.PropertyCollection<<%=prop.getReturnType(res)%>> propertyCollection<%=prop.getPropertyCapped(res)%> = new org.openanzo.rdf.jastor.PropertyCollection<<%=prop.getReturnType(res)%>>() {
+		public <%=prop.getReturnType(res)%> getPropertyValue(org.openanzo.rdf.Value value) {
+		<%	if(prop.getReturnType(res).equals(org.openanzo.rdf.URI.class.getCanonicalName())){ %>
+				if(value instanceof org.openanzo.rdf.URI){ 
+					return (org.openanzo.rdf.URI)value;
+<% 			} else { %>
+				if(value instanceof org.openanzo.rdf.Literal){
+					org.openanzo.rdf.Literal literal = (org.openanzo.rdf.Literal)value;
+	<% 				if (prop.getReturnType(res).equals("org.openanzo.rdf.Literal")) { %>
+						return literal;
+	<%             } else { %>
+						return getLiteralValue(literal, "<%=prop.getRangeURI(res)%>");
+<%					}} %>
+				}else{
+					throw new org.openanzo.rdf.jastor.InvalidNodeException (uri() + ": One of the <%=ctx.remapUri(prop.getURI())%> properties in <%=oc.getInterfaceClassname()%> model not a Literal",value);
+				}
+			}
+	};
+
+	public java.util.Collection<<%=prop.getReturnType(res)%>> get<%=prop.getPropertyCapped(res)%>(boolean includeEntireDataset) throws org.openanzo.rdf.jastor.JastorException {
+		return propertyCollection<%=prop.getPropertyCapped(res)%>.getPropertyCollection(_dataset, _graph, _resource,<%=prop.getPropertyName()%>Property, org.openanzo.rdf.MemURI.create("<%=prop.getRangeURI(res)%>"), includeEntireDataset);
+	}
+	
+	public java.util.Collection<<%=prop.getReturnType(res)%>> get<%=prop.getPropertyCapped(res)%>() throws org.openanzo.rdf.jastor.JastorException {
+		return get<%=prop.getPropertyCapped(res)%>(false);
+	}
+
+	public void add<%=prop.getPropertyCapped()%>(<%=prop.getReturnType(res)%> <%=prop.getPropertyName()%>) throws org.openanzo.rdf.jastor.JastorException {
+	<%	if(prop.getReturnType(res).equals(org.openanzo.rdf.URI.class.getCanonicalName())){ %>
+		//if (_dataset.contains(_resource, <%=prop.getPropertyName()%>Property,<%=prop.getPropertyName()%>,_graph.getNamedGraphUri()))
+		//	return;
+		_dataset.add(_resource, <%=prop.getPropertyName()%>Property, <%=prop.getPropertyName()%>,_graph.getNamedGraphUri());
+	<%             } else { %>
+		org.openanzo.rdf.Literal _literal = getLiteral(<%=prop.getPropertyName()%>,"<%=prop.getRangeURI(res)%>");
+		//if (_dataset.contains(_resource, <%=prop.getPropertyName()%>Property,_literal,_graph.getNamedGraphUri()))
+		//	return;
+	
+		if (<%=prop.getPropertyName()%> != null) {
+			_dataset.add(_resource, <%=prop.getPropertyName()%>Property,_literal,_graph.getNamedGraphUri());
+		}
+	<%}%>
+	}
+	
+	public void remove<%=prop.getPropertyCapped()%>(<%=prop.getReturnType(res)%> <%=prop.getPropertyName()%>) throws org.openanzo.rdf.jastor.JastorException {
+		<%	if(prop.getReturnType(res).equals(org.openanzo.rdf.URI.class.getCanonicalName())){ %>
+		if (!_dataset.contains(_resource, <%=prop.getPropertyName()%>Property, <%=prop.getPropertyName()%>,_graph.getNamedGraphUri()))
+			return;
+		_dataset.remove(_resource, <%=prop.getPropertyName()%>Property, <%=prop.getPropertyName()%>,_graph.getNamedGraphUri());
+		<%             } else { %>
+		org.openanzo.rdf.Literal _literal = getLiteral(<%=prop.getPropertyName()%>,"<%=prop.getRangeURI(res)%>");
+		if (!_dataset.contains(_resource, <%=prop.getPropertyName()%>Property, _literal,_graph.getNamedGraphUri()))
+			return;
+		_dataset.remove(_resource, <%=prop.getPropertyName()%>Property, _literal,_graph.getNamedGraphUri());
+		<%}%>
+	}
+
+<%   		} %>
+<%   } %>
+<%	 if (prop.isSingleValued() && prop.isObjectProperty()) { %>
+<%			for (Resource res:prop.listAllRanges()) { %>
+	public <%=prop.getReturnType(res)%> get<%=prop.getPropertyCapped(res)%>(boolean includeEntireDataset) throws org.openanzo.rdf.jastor.JastorException {
+		java.util.Collection<org.openanzo.rdf.Statement> result = null;
+		result=_dataset.find(includeEntireDataset, _resource, <%=prop.getPropertyName()%>Property, null,_graph.getNamedGraphUri());
+		if(result.isEmpty()) return null;
+		org.openanzo.rdf.Statement statement = result.iterator().next();
+		if (statement == null)
+			return null;
+		if (!((statement.getObject() instanceof org.openanzo.rdf.URI)||(statement.getObject() instanceof org.openanzo.rdf.BlankNode)))
+			throw new org.openanzo.rdf.jastor.InvalidNodeException(uri() + ": <%=prop.getPropertyName(res)%> getProperty() in <%=oc.getInterfaceFullClassname()%> model not Resource", statement.getObject());
+		org.openanzo.rdf.Resource resource = (org.openanzo.rdf.Resource)statement.getObject();
+		return <%=prop.getRangeOntologyClass(res).getFactoryFullClassname()%>.get<%=prop.getRangeOntologyClass(res).getInterfaceClassname()%>(resource,(includeEntireDataset)?null:_graph.getNamedGraphUri(),_dataset);
+		
+	}
+	
+	public <%=prop.getReturnType(res)%> get<%=prop.getPropertyCapped(res)%>() throws org.openanzo.rdf.jastor.JastorException {
+		return get<%=prop.getPropertyCapped(res)%>(false);
+	}
+
+	public void set<%=prop.getPropertyCapped()%>(<%=prop.getReturnType(res)%> <%=prop.getPropertyName()%>) throws org.openanzo.rdf.jastor.JastorException {
+		_dataset.remove(_resource, <%=prop.getPropertyName()%>Property, null,_graph.getNamedGraphUri());
+		if (<%=prop.getPropertyName()%> != null) {
+			_dataset.add(_resource, <%=prop.getPropertyName()%>Property, <%=prop.getPropertyName()%>.resource(),_graph.getNamedGraphUri());
+		}			
+	}
+		
+	public <%=prop.getReturnType(res)%> set<%=prop.getPropertyCapped(res)%>() throws org.openanzo.rdf.jastor.JastorException {
+		_dataset.remove(_resource, <%=prop.getPropertyName()%>Property, null,_graph.getNamedGraphUri());
+		<%=prop.getReturnType(res)%> <%=prop.getPropertyName()%> = <%=prop.getRangeOntologyClass(res).getFactoryFullClassname()%>.create<%=prop.getRangeOntologyClass(res).getInterfaceClassname()%>(org.openanzo.rdf.jastor.ThingFactory.valueFactory.createBNode(),_graph.getNamedGraphUri(),_dataset);
+		_dataset.add(_resource, <%=prop.getPropertyName()%>Property, <%=prop.getPropertyName()%>.resource(),_graph.getNamedGraphUri());
+		return <%=prop.getPropertyName()%>;
+	}
+	
+	public <%=prop.getReturnType(res)%> set<%=prop.getPropertyCapped(res)%>(org.openanzo.rdf.Resource resource) throws org.openanzo.rdf.jastor.JastorException {
+<% 			if (ctx.isUseStrictTypeChecking() && !prop.getRangeOntologyClass(res).getURI().equals(org.openanzo.rdf.vocabulary.RDFS.RESOURCE)) { %>
+		if (!_dataset.contains(resource, org.openanzo.rdf.vocabulary.RDF.TYPE,<%=prop.getRangeOntologyClass(res).getInterfaceFullClassname()%>.TYPE,_graph.getNamedGraphUri())) {
+			throw new org.openanzo.rdf.jastor.JastorException("Resource " + resource + " not of type " + <%=prop.getRangeOntologyClass(res).getInterfaceFullClassname()%>.TYPE);
+		}
+<% 			} %>
+		if (_dataset.contains(_resource, <%=prop.getPropertyName()%>Property, null,_graph.getNamedGraphUri())) {
+			_dataset.remove(_resource, <%=prop.getPropertyName()%>Property, null,_graph.getNamedGraphUri());
+		}
+		<%=prop.getReturnType(res)%> <%=prop.getPropertyName()%> = <%=prop.getRangeOntologyClass(res).getFactoryFullClassname()%>.get<%=prop.getRangeOntologyClass(res).getInterfaceClassname()%>(resource,_graph.getNamedGraphUri(),_dataset);
+		_dataset.add(_resource, <%=prop.getPropertyName()%>Property, <%=prop.getPropertyName()%>.resource(),_graph.getNamedGraphUri());
+		return <%=prop.getPropertyName()%>;
+	}
+	
+<%       } %>
+<%  } %>
+<%	 if (prop.isMultiValued() && prop.isObjectProperty()) { %>
+<%			for (Resource res:prop.listAllRanges()) { %>
+// generating range: <%=res.toString()%>
+
+	org.openanzo.rdf.jastor.PropertyCollection<<%=prop.getReturnType(res)%>> propertyCollection<%=prop.getPropertyCapped(res)%> = new org.openanzo.rdf.jastor.PropertyCollection<<%=prop.getReturnType(res)%>>() {
+		public <%=prop.getReturnType(res)%> getPropertyValue(org.openanzo.rdf.Value resource) {
+			try {
+				return <%=prop.getRangeOntologyClass(res).getFactoryFullClassname()%>.get<%=prop.getRangeOntologyClass(res).getInterfaceClassname()%>((org.openanzo.rdf.Resource)resource,_graph.getNamedGraphUri(),dataset());
+			} catch (org.openanzo.rdf.jastor.JastorException e) {
+				throw new java.util.NoSuchElementException(e.getMessage());
+			}
+		}
+	};
+
+	/**
+	 * 
+	 * @param includeEntireDataset
+	 * @return collection of <%=prop.getReturnType(res)%> 
+	 * @throws org.openanzo.rdf.jastor.JastorException
+	 */
+	public java.util.Collection<<%=prop.getReturnType(res)%>> get<%=prop.getPropertyCapped(res)%>(boolean includeEntireDataset) throws org.openanzo.rdf.jastor.JastorException {
+		return propertyCollection<%=prop.getPropertyCapped(res)%>.getPropertyCollection(_dataset, _graph, _resource,<%=prop.getPropertyName()%>Property, org.openanzo.rdf.MemURI.create("<%=prop.getRangeURI(res)%>"), includeEntireDataset);
+	}
+	
+	/**
+	 * 
+	 * @return collection of <%=prop.getReturnType(res)%>  not including entire dataset during search
+	 * @throws org.openanzo.rdf.jastor.JastorException
+	 */
+	public java.util.Collection<<%=prop.getReturnType(res)%>> get<%=prop.getPropertyCapped(res)%>() throws org.openanzo.rdf.jastor.JastorException {
+		return get<%=prop.getPropertyCapped(res)%>(false);
+	}
+
+/**
+     * 
+     * @param <%=prop.getPropertyName()%> value to add
+     * @throws org.openanzo.rdf.jastor.JastorException
+     */
+	public void add<%=prop.getPropertyCapped()%>(<%=prop.getReturnType(res)%> <%=prop.getPropertyName()%>) throws org.openanzo.rdf.jastor.JastorException {
+		_dataset.add(_resource, <%=prop.getPropertyName()%>Property,<%=prop.getPropertyName()%>.resource(),_graph.getNamedGraphUri());
+	}
+	
+	/**
+     * Add anonymous object
+     * @return generated object
+     * @throws org.openanzo.rdf.jastor.JastorException
+     */	
+	public <%=prop.getReturnType(res)%> add<%=prop.getPropertyCapped(res)%>() throws org.openanzo.rdf.jastor.JastorException {
+		<%=prop.getReturnType(res)%> <%=prop.getPropertyName()%> = <%=prop.getRangeOntologyClass(res).getFactoryFullClassname()%>.create<%=prop.getRangeOntologyClass(res).getInterfaceClassname()%>(org.openanzo.rdf.jastor.ThingFactory.valueFactory.createBNode(),_graph.getNamedGraphUri(),_dataset);
+		_dataset.add(_resource, <%=prop.getPropertyName()%>Property,<%=prop.getPropertyName()%>.resource(),_graph.getNamedGraphUri());
+		return <%=prop.getPropertyName()%>;
+	}
+	
+	 /**
+     * Add resource 
+     * @param resource resource to add
+     * @return jastor object for resource
+     * @throws org.openanzo.rdf.jastor.JastorException
+     */
+	public <%=prop.getReturnType(res)%> add<%=prop.getPropertyCapped(res)%>(org.openanzo.rdf.Resource resource) throws org.openanzo.rdf.jastor.JastorException {
+<% 			if (ctx.isUseStrictTypeChecking() && !prop.getRangeOntologyClass(res).getURI().equals(org.openanzo.rdf.vocabulary.RDFS.RESOURCE)) { %>
+		if (!_dataset.contains(resource, org.openanzo.rdf.vocabulary.RDF.TYPE,<%=prop.getRangeOntologyClass(res).getInterfaceFullClassname()%>.TYPE,_graph.getNamedGraphUri()))
+			throw new org.openanzo.rdf.jastor.JastorException("Resource " + resource + " not of type " + <%=prop.getRangeOntologyClass(res).getInterfaceFullClassname()%>.TYPE);
+<% 			} %>
+		<%=prop.getReturnType(res)%> <%=prop.getPropertyName()%> = <%=prop.getRangeOntologyClass(res).getFactoryFullClassname()%>.get<%=prop.getRangeOntologyClass(res).getInterfaceClassname()%>(resource,_graph.getNamedGraphUri(),_dataset);
+		_dataset.add(_resource, <%=prop.getPropertyName()%>Property,<%=prop.getPropertyName()%>.resource(),_graph.getNamedGraphUri());
+		return <%=prop.getPropertyName()%>;
+	}
+	
+	/**
+	 * Remove object
+	 * @param <%=prop.getPropertyName()%> object to remove
+	 * @throws org.openanzo.rdf.jastor.JastorException
+	 */
+	public void remove<%=prop.getPropertyCapped()%>(<%=prop.getReturnType(res)%> <%=prop.getPropertyName()%>) throws org.openanzo.rdf.jastor.JastorException {
+		if (!_dataset.contains(_resource, <%=prop.getPropertyName()%>Property, <%=prop.getPropertyName()%>.resource(),_graph.getNamedGraphUri()))
+			return;
+		_dataset.remove(_resource, <%=prop.getPropertyName()%>Property, <%=prop.getPropertyName()%>.resource(),_graph.getNamedGraphUri());
+	}
+<%    } // end alt return types %>
+
+	/**
+	 * Remove resource
+	 * @param resource resource to remove
+	 * @throws org.openanzo.rdf.jastor.JastorException
+	 */
+	public void remove<%=prop.getPropertyCapped()%>(org.openanzo.rdf.Resource resource) throws org.openanzo.rdf.jastor.JastorException {
+		if (!_dataset.contains(_resource, <%=prop.getPropertyName()%>Property, resource,_graph.getNamedGraphUri()))
+			return;
+		_dataset.remove(_resource, <%=prop.getPropertyName()%>Property, resource,_graph.getNamedGraphUri());
+	}
+ 
+<%  }  // end mulitvalued-object %>
+<% } // end all props%> 
+
+<% if (ctx.isGenerateListeners()) { %>
+
+	protected java.util.concurrent.CopyOnWriteArraySet<<%=oc.getListenerClassname()%>> listeners = new  java.util.concurrent.CopyOnWriteArraySet<<%=oc.getListenerClassname()%>>();
+	
+	public void registerListener(org.openanzo.rdf.jastor.ThingListener listener) {
+		if (!(listener instanceof <%=oc.getListenerClassname()%>)) {
+			throw new org.openanzo.rdf.jastor.JastorException("Listener class not of proper type");
+		}
+		if(listeners.size()==0){
+    		_dataset.registerListener(_listener);
+    	}
+    	<%=oc.getListenerClassname()%> list = (<%=oc.getListenerClassname()%>)listener;
+		if(!listeners.contains(list)){
+			listeners.add(list);
+		}
+	}
+	
+	public void unregisterListener(org.openanzo.rdf.jastor.ThingListener listener) {
+		if (!(listener instanceof <%=oc.getListenerClassname()%>)) {
+			throw new org.openanzo.rdf.jastor.JastorException("Listener class not of proper type");
+		}
+		<%=oc.getListenerClassname()%> list = (<%=oc.getListenerClassname()%>)listener;
+		if(listeners.contains(list)){
+			listeners.remove(list);
+		}
+		if(listeners.size()==0){	
+    		_dataset.unregisterListener(_listener);
+    	}
+	}
+	
+
+<% } %>
+
+<% if (ctx.isGenerateListeners()) { %>
+
+	protected class ThingStatementListener implements org.openanzo.rdf.IStatementListener<org.openanzo.rdf.IDataset> {
+	
+		public void statementsAdded(org.openanzo.rdf.IDataset dataset, org.openanzo.rdf.Statement...statements) {
+		for(org.openanzo.rdf.Statement statement:statements){
+			if (statement.getSubject().equals(resource())){
+<% 	for (OntologyProperty prop: oc.listProperties(true)) {%>
+			if (statement.getPredicate().equals(<%=prop.getPropertyName()%>Property)) {
+<%			if (prop.isSingleValued() && prop.isDatatypeProperty()) { %>
+<% 			if (!prop.getReturnType().equals("org.openanzo.rdf.URI")){%>				
+				if (!(statement.getObject() instanceof org.openanzo.rdf.Literal))
+					return;		
+<%}%>
+				for(<%=oc.getInterfaceClassname()%>Listener listener : listeners){
+					listener.<%=prop.getPropertyName()%>Changed(<%=oc.getImplFullClassname()%>.this);
+				}
+<%			} %>
+<%			if (prop.isMultiValued() && prop.isDatatypeProperty()) { %>
+<% 			if (!prop.getReturnType().equals("org.openanzo.rdf.URI")){%>				
+				if (!(statement.getObject() instanceof org.openanzo.rdf.Literal))
+					return;		
+
+				org.openanzo.rdf.Literal literal=(org.openanzo.rdf.Literal)statement.getObject();
+
+<%				for (Resource res:prop.listAllRanges()) { %>
+<% 					if (prop.getReturnType(res).equals("org.openanzo.rdf.Literal")) { %>
+				for(<%=oc.getInterfaceClassname()%>Listener listener : listeners){
+					listener.<%=prop.getPropertyName()%>Added(<%=oc.getImplFullClassname()%>.this,literal);
+				}
+<%					}  else {%>
+				Object obj = org.openanzo.rdf.utils.StatementUtils.getNativeValue(literal);
+				if (obj instanceof <%=prop.getReturnType(res)%>) {
+					for(<%=oc.getInterfaceClassname()%>Listener listener : listeners){
+						listener.<%=prop.getPropertyName()%>Added(<%=oc.getImplFullClassname()%>.this,(<%=prop.getReturnType(res)%>)obj);
+					}
+				}
+<%					} %>
+<%				} %>
+<%				}else{%>
+			if (statement.getObject() instanceof org.openanzo.rdf.URI) {
+					for(<%=oc.getInterfaceClassname()%>Listener listener : listeners){
+						listener.<%=prop.getPropertyName()%>Added(<%=oc.getImplFullClassname()%>.this,(org.openanzo.rdf.URI)statement.getObject());
+					}
+				}
+<%			}} %>
+<%			if (prop.isSingleValued() && prop.isObjectProperty()) { %>
+				if (!(statement.getObject() instanceof org.openanzo.rdf.Resource))
+					return;				
+				for(<%=oc.getInterfaceClassname()%>Listener listener : listeners){
+					listener.<%=prop.getPropertyName()%>Changed(<%=oc.getImplFullClassname()%>.this);
+				}
+<%			} %>
+<%			if (prop.isMultiValued() && prop.isObjectProperty()) { %>
+				if (!(statement.getObject() instanceof org.openanzo.rdf.Resource))
+					return;
+				org.openanzo.rdf.Resource resource = (org.openanzo.rdf.Resource)statement.getObject();
+<%				for (Resource res:prop.listAllRanges()) { %>
+				<%=prop.getReturnType(res)%> _<%=prop.getPropertyName(res)%> = <%=prop.getRangeOntologyClass(res).getFactoryFullClassname()%>.get<%=prop.getRangeOntologyClass(res).getInterfaceClassname()%>(resource,_graph.getNamedGraphUri(),dataset());
+				if (_<%=prop.getPropertyName(res)%> != null) {
+					for(<%=oc.getInterfaceClassname()%>Listener listener : listeners){
+						listener.<%=prop.getPropertyName()%>Added(<%=oc.getImplFullClassname()%>.this,_<%=prop.getPropertyName(res)%>);
+					}
+				}
+<%				} %>
+<%			} %>			
+			}
+<%		} %>
+		}}
+		}
+		
+		public void statementsRemoved(org.openanzo.rdf.IDataset dataset, org.openanzo.rdf.Statement...statements) {
+		for(org.openanzo.rdf.Statement statement:statements){
+			if (statement.getSubject().equals(resource())){
+<% 	for (OntologyProperty prop: oc.listProperties(true)) {%>
+			if (statement.getPredicate().equals(<%=prop.getPropertyName()%>Property)) {
+<%			if (prop.isSingleValued() && prop.isDatatypeProperty()) { %>
+<% 			if (!prop.getReturnType().equals("org.openanzo.rdf.URI")){%>				
+				if (!(statement.getObject() instanceof org.openanzo.rdf.Literal))
+					return;		
+<%}%>
+				for(<%=oc.getInterfaceClassname()%>Listener listener : listeners) {
+					listener.<%=prop.getPropertyName()%>Changed(<%=oc.getImplFullClassname()%>.this);
+				}
+<%			} %>
+<%			if (prop.isMultiValued() && prop.isDatatypeProperty()) { %>
+<% 			if (!prop.getReturnType().equals("org.openanzo.rdf.URI")){%>	
+				if (!(statement.getObject() instanceof org.openanzo.rdf.Literal))
+					return;
+				org.openanzo.rdf.Literal literal=(org.openanzo.rdf.Literal)statement.getObject();
+<%				for (Resource res:prop.listAllRanges()) { %>
+<% 					if (prop.getReturnType(res).equals("org.openanzo.rdf.Literal")) { %>
+				for(<%=oc.getInterfaceClassname()%>Listener listener:listeners){
+					listener.<%=prop.getPropertyName()%>Removed(<%=oc.getImplFullClassname()%>.this,literal);
+				}
+<%					}  else {%>
+				Object obj = org.openanzo.rdf.utils.StatementUtils.getNativeValue(literal);
+				if (obj instanceof <%=prop.getReturnType(res)%>) {
+					for(<%=oc.getInterfaceClassname()%>Listener listener : listeners){
+						listener.<%=prop.getPropertyName()%>Removed(<%=oc.getImplFullClassname()%>.this,(<%=prop.getReturnType(res)%>)obj);
+					}
+				}
+<%					} %>
+<%				} %>
+<%			}else{%>
+			if (statement.getObject() instanceof org.openanzo.rdf.URI) {
+					for(<%=oc.getInterfaceClassname()%>Listener listener : listeners){
+						listener.<%=prop.getPropertyName()%>Added(<%=oc.getImplFullClassname()%>.this,(org.openanzo.rdf.URI)statement.getObject());
+					}
+				}
+<%			}} %>
+<%			if (prop.isSingleValued() && prop.isObjectProperty()) { %>
+				if (!(statement.getObject() instanceof org.openanzo.rdf.Resource))
+					return;
+				for(<%=oc.getInterfaceClassname()%>Listener listener : listeners){
+					listener.<%=prop.getPropertyName()%>Changed(<%=oc.getImplFullClassname()%>.this);
+				}
+<%			} %>
+<%			if (prop.isMultiValued() && prop.isObjectProperty()) { %>
+				if (!(statement.getObject() instanceof org.openanzo.rdf.Resource))
+					return;
+				org.openanzo.rdf.Resource resource = (org.openanzo.rdf.Resource)statement.getObject();
+<%				for (Resource res:prop.listAllRanges()) { %>
+				<%=prop.getReturnType(res)%> _<%=prop.getPropertyName(res)%> = <%=prop.getRangeOntologyClass(res).getFactoryFullClassname()%>.get<%=prop.getRangeOntologyClass(res).getInterfaceClassname()%>(resource,_graph.getNamedGraphUri(),dataset());
+				if (_<%=prop.getPropertyName(res)%> != null) {
+					for(<%=oc.getInterfaceClassname()%>Listener listener : listeners){
+						listener.<%=prop.getPropertyName()%>Removed(<%=oc.getImplFullClassname()%>.this,_<%=prop.getPropertyName(res)%>);
+					}
+				}
+<%				} %>
+<%			} %>
+				return;
+			}
+<%		} %>
+		}
+		}}
+	}
+	
+<% } %>
+
+
+}

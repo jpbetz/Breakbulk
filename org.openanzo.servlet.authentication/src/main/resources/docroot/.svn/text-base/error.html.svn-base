@@ -1,0 +1,11 @@
+<html>
+<head>
+<title>Invalid Login Credentials for OpenAnzo 3.1.0 Private Resources</title>
+</head>
+<body>
+Incorrect username or password.
+<p>
+	<a href="login.html">Back to login page</a>.
+</p>
+</body>
+</html>

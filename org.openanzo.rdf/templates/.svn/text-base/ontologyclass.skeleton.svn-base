@@ -1,0 +1,41 @@
+/*******************************************************************************
+ * Copyright (c) 2004, 2009 IBM Corporation and Cambridge Semantics Incorporated.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * File:        $Source: /cvsroot/slrp/boca/com.ibm.adtech.boca.jastor/templates/Attic/ontologyclass.skeleton,v $
+ * Created by:  Generated Source from Jastor
+ * Created on:  7/27/05
+ * Revision:	$Id: ontologyclass.skeleton 172 2007-07-31 14:22:23Z mroy $
+ * 
+ * Contributors:
+ *     IBM Corporation - initial API and implementation
+ *     Cambridge Semantics Incorporated - Fork to Anzo
+ *******************************************************************************/
+@SuppressWarnings("all")
+public class CLASS implements OntologyClassTemplate {
+	
+	OntologyClassFileProvider fileProvider;
+
+	public CLASS(OntologyClassFileProvider fileProvider) {
+		this.fileProvider = fileProvider;
+	}
+	
+	public CLASS() {
+	}
+	
+	public OntologyClassFileProvider getFileProvider() {
+		return fileProvider;
+	}	
+	
+	public void setFileProvider(OntologyClassFileProvider fileProvider) {
+		this.fileProvider = fileProvider;
+	}
+
+	public String generate(OntologyClass oc) {
+		return "";
+	}
+	
+}

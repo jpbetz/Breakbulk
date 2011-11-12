@@ -1,0 +1,5 @@
+PREFIX : <http://example.org/> 
+SELECT (str(?o) AS ?one) (lang(?o) AS ?lang)  
+WHERE {
+  :s :p ?o .
+}

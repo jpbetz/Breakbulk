@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 57
+/svn/openanzo/!svn/ver/5234/openanzo/trunk/openanzo-maven
+END
+regression-build.bat
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/openanzo/!svn/ver/3169/openanzo/trunk/openanzo-maven/regression-build.bat
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/openanzo/!svn/ver/3169/openanzo/trunk/openanzo-maven/.project
+END
+regression-build.sh
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/openanzo/!svn/ver/3169/openanzo/trunk/openanzo-maven/regression-build.sh
+END
+pom.xml
+K 25
+svn:wc:ra_dav:version-url
+V 65
+/svn/openanzo/!svn/ver/5088/openanzo/trunk/openanzo-maven/pom.xml
+END
+Maven - OpenAnzo Compile (Generate Eclipse Project Files).launch
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/3275/openanzo/trunk/openanzo-maven/Maven%20-%20OpenAnzo%20Compile%20(Generate%20Eclipse%20Project%20Files).launch
+END
+Maven - OpenAnzo Verify.launch
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/openanzo/!svn/ver/3557/openanzo/trunk/openanzo-maven/Maven%20-%20OpenAnzo%20Verify.launch
+END
+NOTICE.txt
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/openanzo/!svn/ver/3816/openanzo/trunk/openanzo-maven/NOTICE.txt
+END
+LICENSE.txt
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/openanzo/!svn/ver/3169/openanzo/trunk/openanzo-maven/LICENSE.txt
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/openanzo/!svn/ver/3169/openanzo/trunk/openanzo-maven/.classpath
+END
+VERSION.txt
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/openanzo/!svn/ver/4507/openanzo/trunk/openanzo-maven/VERSION.txt
+END
+build.bat
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/openanzo/!svn/ver/3169/openanzo/trunk/openanzo-maven/build.bat
+END
+Maven - OpenAnzo.launch
+K 25
+svn:wc:ra_dav:version-url
+V 85
+/svn/openanzo/!svn/ver/4507/openanzo/trunk/openanzo-maven/Maven%20-%20OpenAnzo.launch
+END
+build.sh
+K 25
+svn:wc:ra_dav:version-url
+V 66
+/svn/openanzo/!svn/ver/3169/openanzo/trunk/openanzo-maven/build.sh
+END
+Maven - OpenAnzo Clean.launch
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/openanzo/!svn/ver/3275/openanzo/trunk/openanzo-maven/Maven%20-%20OpenAnzo%20Clean.launch
+END
+BUILD.txt
+K 25
+svn:wc:ra_dav:version-url
+V 67
+/svn/openanzo/!svn/ver/3169/openanzo/trunk/openanzo-maven/BUILD.txt
+END

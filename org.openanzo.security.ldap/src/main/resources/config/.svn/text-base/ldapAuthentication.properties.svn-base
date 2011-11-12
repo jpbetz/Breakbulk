@@ -1,0 +1,14 @@
+service.pid=org.openanzo.security.ldap.LdapAuthentication
+org.openanzo.services.enabled=true
+org.openanzo.ldap.host=localhost
+org.openanzo.ldap.port=10389
+org.openanzo.security.ldap.dnToUriTemplate=ldap://{1}
+org.openanzo.security.ldap.roleBaseDN=ou=groups,dc=openanzo,dc=org
+org.openanzo.security.ldap.rolesSearch=(&(member={0})(objectclass=groupOfNames))
+org.openanzo.security.ldap.userBaseDN=ou=users,dc=openanzo,dc=org
+org.openanzo.security.ldap.sysadminRole=ldap://cn=sysadmins,ou=groups,dc=openanzo,dc=org
+org.openanzo.security.ldap.userSearch=(uid={0})
+org.openanzo.security.ldap.userIdAttribute=
+org.openanzo.security.ldap.useEmbeddedServer=true
+org.openanzo.security.ldap.roleObjectClass=groupOfNames
+org.openanzo.security.ldap.userObjectClass=person

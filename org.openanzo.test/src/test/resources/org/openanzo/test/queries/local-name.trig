@@ -1,0 +1,8 @@
+@prefix ex: <http://example.org/> .
+
+ex:local-name {
+    ex:MyObject1 a ex:MyObject .
+    ex:MyObject2 a ex:MyObject .
+    ex:MyObject3 a ex:MyObject .
+    ex:MyObject4 a ex:MyObject .
+}

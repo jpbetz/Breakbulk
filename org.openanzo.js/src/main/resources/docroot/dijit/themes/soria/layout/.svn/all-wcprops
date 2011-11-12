@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dijit/themes/soria/layout
+END
+TabContainer.css
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dijit/themes/soria/layout/TabContainer.css
+END
+TabContainer_rtl.css
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dijit/themes/soria/layout/TabContainer_rtl.css
+END
+ContentPane.css
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dijit/themes/soria/layout/ContentPane.css
+END
+SplitContainer.css
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dijit/themes/soria/layout/SplitContainer.css
+END
+BorderContainer.css
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dijit/themes/soria/layout/BorderContainer.css
+END
+AccordionContainer.css
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dijit/themes/soria/layout/AccordionContainer.css
+END
+AccordionContainer_rtl.css
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dijit/themes/soria/layout/AccordionContainer_rtl.css
+END

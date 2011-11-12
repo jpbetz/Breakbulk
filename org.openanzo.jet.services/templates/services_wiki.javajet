@@ -1,0 +1,102 @@
+<%
+/*******************************************************************************
+ * Copyright (c) 2004, 2007-2008 IBM Corporation and Cambridge Semantics Incorporated.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * 
+ * Contributors:
+ *     IBM Corporation - initial API and implementation
+ *     Cambridge Semantics Incorporated - initial API and implementation     
+ *******************************************************************************/ 
+%>
+<%@ jet
+skeleton="generator.skeleton"
+		package="org.openanzo.jet.services"
+		class="ServicesWikiTemplate"
+		imports="org.openanzo.rdf.jastor.JastorUtils org.openanzo.ontologies.system.* org.openanzo.rdf.INamedGraph org.openanzo.rdf.vocabulary.DC java.util.Iterator org.openanzo.rdf.utils.WikiFormatUtils"%>
+[[PageOutline]]
+<% INamedGraph graph = (INamedGraph)argument; %>
+<% java.util.List<Service> services=SystemFactory.getAllService(graph);%>
+<% Iterator<Service> servicesSorted=JastorUtils.sortByTitle(services).iterator(); %>
+<% while(servicesSorted.hasNext()) {%>
+<% Service service=servicesSorted.next(); %>
+= <% if(service.getPropertyValue(DC.TITLE)!=null){%><%=WikiFormatUtils.formatTitleString(JastorUtils.getStingValue(service.getPropertyValue(DC.TITLE)))%><%}else{%><%=WikiFormatUtils.formatTitleString(service.resource().toString())%><%}%> =
+
+<% if(service.getPropertyValue(DC.DESCRIPTION)!=null){%><%=WikiFormatUtils.formatTitleString(JastorUtils.getStingValue(service.getPropertyValue(DC.DESCRIPTION)))%> [[BR]] [[BR]]<%}%>
+<% if(service.get_interface()!=null){%>'''Java Interface Name''': <%=service.get_interface()%> [[BR]]<%}%>
+<%for(Operation operation:JastorUtils.sortByTitle(service.getOperation())){%>
+<%
+	Parameter result=null;
+	String resultType=null;
+	String resultDescription=null;
+	boolean resultHasDefaultFormat=false;
+	Iterator<Parameter> results=operation.getResult().iterator();
+	if (results.hasNext()){
+		result=results.next();
+		if(result!=null){
+			resultType=(result.getType().getJavaType()!=null)?result.getType().getJavaType():result.getType().resource().toString();
+			resultHasDefaultFormat=result.getType().getDefaultJMSFormat()!=null||result.getType().getDefaultRestFormat()!=null||result.getType().getDefaultWSFormat()!=null;
+			if(result.getPropertyValue(DC.DESCRIPTION)!=null){
+				resultDescription=WikiFormatUtils.formatTitleString(JastorUtils.getStingValue(result.getPropertyValue(DC.DESCRIPTION)));
+			}
+		}
+	}
+%>
+=== '''<% if(operation.getPropertyValue(DC.TITLE)!=null){%><%=WikiFormatUtils.formatTitleString(JastorUtils.getStingValue(operation.getPropertyValue(DC.TITLE)))%><%}else{%><%=WikiFormatUtils.formatTitleString(operation.resource().toString())%> <%}%>''' ===
+
+<% if(operation.getPropertyValue(DC.DESCRIPTION)!=null){%><%=WikiFormatUtils.formatTitleString(JastorUtils.getStingValue(operation.getPropertyValue(DC.DESCRIPTION)))%> [[BR]] [[BR]]<%}%>
+
+<% if(operation.getSysadminRequired()!=null){%>'''User Must be in sysadmin role:''' <%=operation.getSysadminRequired()%> [[BR]]<%}%>
+<% if(operation.getRestEndpoint()!=null){
+%>'''Rest Info'''[[BR]]
+ Rest Endpoint URL: !http://host[:port]<%=operation.getRestEndpoint()%> [[BR]]<%}%>
+<% if(operation.getRestType()!=null){%>
+ Rest Method Type: <%=operation.getRestType()%> [[BR]]<%}%>
+<% if(operation.getWsOperation()!=null){%>
+'''!WebService Info'''[[BR]]
+ !WebService call name: !<%=operation.getWsOperation()%> [[BR]]<%}%>
+<% if(service.getJmsQueueName()!=null){%>
+'''JMS Info'''[[BR]]
+ JMS Queue Name: <%=service.getJmsQueueName()%> [[BR]]
+ JMS Operation Name: <%=operation.getName()%> [[BR]]<%}%>
+<%Iterator<Parameter> parameters=JastorUtils.sortByTitle(operation.getRequestParameter()).iterator();%>
+<%if (parameters.hasNext()||resultHasDefaultFormat){%>
+==== Request Parameters ====
+
+||Paremeter Name||Description||Type||Valid Formats||Default Formats||
+<%while(parameters.hasNext()){%><%Parameter parameter=parameters.next();%>
+<%
+	String location=parameter.getParameterLocation();
+	int propertyLocation=0;
+	if(location==null){
+		propertyLocation=0;
+	}else if("body".equals(location)){
+		propertyLocation=1;
+	}else if("parameter".equals(location)){
+		propertyLocation=0;
+	}else if("transport".equals(location)){
+		propertyLocation=2;
+	}else if("callbackHandler".equals(location)){
+		propertyLocation=-1;
+	}
+
+%>
+||<% if(propertyLocation==1){%>JMS: (body) [[BR]] REST: (body) [[BR]] WS:<%=parameter.getName()%> <%}else{%><%if(parameter.getName()!=null){%><%=parameter.getName()%><%}else{%>!<%=parameter.resource().toString()%> <%}}%>||<% if(parameter.getPropertyValue(DC.DESCRIPTION)!=null){%><%=WikiFormatUtils.formatTitleString(JastorUtils.getStingValue(parameter.getPropertyValue(DC.DESCRIPTION)))%><%}%>||<% if(parameter.getType()!=null){%><%=WikiFormatUtils.formatTitleString(parameter.getType().getName())%><%}%>||<%if(parameter.getType()!=null){Iterator<Format> validFormats=parameter.getType().getValidFormat().iterator();while(validFormats.hasNext()){Format format=validFormats.next();%>[<%=format.getLocation()%> <%=WikiFormatUtils.formatTitleString(JastorUtils.getStingValue(format.getPropertyValue(DC.TITLE)))%>] [[BR]] <%}}%> ||<% if(parameter.getType()!=null){ Format jmsFormat=parameter.getType().getDefaultJMSFormat();if(jmsFormat!=null){Format format=jmsFormat;%>JMS:  [<%=format.getLocation()%> <%=WikiFormatUtils.formatTitleString(JastorUtils.getStingValue(format.getPropertyValue(DC.TITLE)))%>] [[BR]] <%}Format restFormat=parameter.getType().getDefaultRestFormat();if(restFormat!=null){Format format=restFormat;%>Rest:  [<%=format.getLocation()%> <%=WikiFormatUtils.formatTitleString(JastorUtils.getStingValue(format.getPropertyValue(DC.TITLE)))%>] [[BR]] <%}Format wsFormat=parameter.getType().getDefaultWSFormat();if(wsFormat!=null){Format format=wsFormat;%>WS:  [<%=format.getLocation()%> <%=WikiFormatUtils.formatTitleString(JastorUtils.getStingValue(format.getPropertyValue(DC.TITLE)))%>] [[BR]] <%}%>||
+<% if(parameter.getName()!=null&&(parameter.getType().getDefaultJMSFormat()!=null||parameter.getType().getDefaultRestFormat()!=null||parameter.getType().getDefaultWSFormat()!=null)){%>
+||<%=parameter.getName()%>Format|| Serialization format for <%=parameter.getName()%>|| String || || || <%}}}%>
+<%if(resultHasDefaultFormat){%>
+|| resultFormat || Serialization format for response || String || || ||
+<%}}%>
+[[BR]]
+<%if (result!=null){%>
+==== Response Body ====
+||Description||Type||Valid Formats||Default Formats||
+||<%=resultDescription%>||<% if(resultType!=null){%><%=WikiFormatUtils.formatTitleString(resultType)%><%}%>||<%if(resultType!=null){java.util.Iterator<Format> validFormats=result.getType().getValidFormat().iterator();while(validFormats.hasNext()){Format format=validFormats.next();%>[<%=format.getLocation()%> <%=WikiFormatUtils.formatTitleString(JastorUtils.getStingValue(format.getPropertyValue(DC.TITLE)))%>] [[BR]] <%}}%> ||<% if(result.getType()!=null){ Format jmsFormat=result.getType().getDefaultJMSFormat();if(jmsFormat!=null){Format format=jmsFormat;%>JMS:  [<%=format.getLocation()%> <%=WikiFormatUtils.formatTitleString(JastorUtils.getStingValue(format.getPropertyValue(DC.TITLE)))%>] [[BR]] <%}Format restFormat=result.getType().getDefaultRestFormat();if(restFormat!=null){Format format=restFormat;%>Rest:  [<%=format.getLocation()%> <%=WikiFormatUtils.formatTitleString(JastorUtils.getStingValue(format.getPropertyValue(DC.TITLE)))%>] [[BR]] <%}Format wsFormat=result.getType().getDefaultWSFormat();if(wsFormat!=null){Format format=wsFormat;%>WS:  [<%=format.getLocation()%> <%=WikiFormatUtils.formatTitleString(JastorUtils.getStingValue(format.getPropertyValue(DC.TITLE)))%>] [[BR]] <%}%>||
+<%}}%>
+[[BR]]
+<%}%>
+[[BR]]
+ <%}%>

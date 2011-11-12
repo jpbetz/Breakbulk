@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/openanzo/!svn/ver/4440/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/resources/nodecentric/oracle/xmlsql
+END
+Statement.sql
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/openanzo/!svn/ver/3993/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/resources/nodecentric/oracle/xmlsql/Statement.sql
+END
+with-sequences.sql
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/openanzo/!svn/ver/3849/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/resources/nodecentric/oracle/xmlsql/with-sequences.sql
+END
+NamedGraph.sql
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/openanzo/!svn/ver/4440/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/resources/nodecentric/oracle/xmlsql/NamedGraph.sql
+END
+Server.sql
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/3139/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/resources/nodecentric/oracle/xmlsql/Server.sql
+END
+LastTransaction.sql
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/openanzo/!svn/ver/3139/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/resources/nodecentric/oracle/xmlsql/LastTransaction.sql
+END
+Replication.sql
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/openanzo/!svn/ver/4394/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/resources/nodecentric/oracle/xmlsql/Replication.sql
+END
+Glitter.sql
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/openanzo/!svn/ver/4404/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/resources/nodecentric/oracle/xmlsql/Glitter.sql
+END
+InsertStatements.sql
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/openanzo/!svn/ver/4412/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/resources/nodecentric/oracle/xmlsql/InsertStatements.sql
+END

@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 64
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/tools
+END
+asyncTestRunner.js
+K 25
+svn:wc:ra_dav:version-url
+V 83
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/tools/asyncTestRunner.js
+END
+asyncTestRunnerTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/tools/asyncTestRunnerTest.js
+END
+debugTests.sh
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/tools/debugTests.sh
+END
+debuggerAid.html
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/tools/debuggerAid.html
+END
+debugTests.bat
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/tools/debugTests.bat
+END

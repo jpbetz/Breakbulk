@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Export-Package: org.openanzo.jdbc.opgen.jet;version="3.2.0",org.openan
+ zo.jdbc.opgen;version="3.2.0",org.openanzo.jdbc.opgen.ant;version="3.
+ 2.0"
+Bundle-Name: org.openanzo.jdbc.opgen
+Bundle-Vendor: Cambridge Semantics Inc.
+Bundle-Version: 3.2.0
+Bundle-ManifestVersion: 2
+Bundle-License: http://www.eclipse.org/legal/epl-v10.html
+Bundle-Description: Openanzo JDBC Generation Tasks
+Import-Package: javax.xml.parsers,org.apache.commons.lang;version="2.4
+ ",org.apache.tools.ant;resolution:=optional;version="1.7",org.apache.
+ tools.ant.taskdefs;resolution:=optional;version="1.7",org.apache.tool
+ s.ant.types;resolution:=optional;version="1.7",org.openanzo.jdbc.opge
+ n;version="3.2.0",org.openanzo.jdbc.opgen.ant;version="3.2.0",org.ope
+ nanzo.jdbc.opgen.jet;version="3.2.0",org.w3c.dom,org.xml.sax
+Bundle-SymbolicName: org.openanzo.jdbc.opgen
+Bundle-DocURL: http://www.cambridgesemantics.com
+

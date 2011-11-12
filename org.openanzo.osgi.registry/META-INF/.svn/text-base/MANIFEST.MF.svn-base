@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Export-Package: org.openanzo.osgi.registry;version="3.2.0"
+Private-Package: config;version="3.2.0",org.openanzo.osgi.registry.int
+ ernal;version="3.2.0"
+Bundle-Name: Anzo RDF Registry APIs
+Configuration-Properties: ${bundleResourcePrefix}config/
+Bundle-Vendor: Cambridge Semantics Inc.
+Bundle-Version: 3.2.0
+Bundle-Activator: org.openanzo.osgi.registry.internal.RegistryActivato
+ r
+Bundle-ManifestVersion: 2
+Bundle-License: http://www.eclipse.org/legal/epl-v10.html
+Bundle-Description: Anzo RDF Registry APIs
+Import-Package: org.openanzo.client;version="3.2",org.openanzo.client.
+ pool;version="3.2",org.openanzo.datasource;version="3.2",org.openanzo
+ .datasource.attributes;version="3.2",org.openanzo.exceptions;version=
+ "3.2",org.openanzo.glitter.query;version="3.2",org.openanzo.osgi;vers
+ ion="3.2",org.openanzo.osgi.attributes;version="3.2",org.openanzo.osg
+ i.registry;version="3.2.0",org.openanzo.rdf;version="3.2",org.openanz
+ o.rdf.utils;version="3.2",org.osgi.framework,org.osgi.service.cm,org.
+ osgi.service.metatype,org.osgi.util.tracker;version="1.4",org.slf4j;v
+ ersion="1.5"
+Bundle-SymbolicName: org.openanzo.osgi.registry
+Bundle-DocURL: http://www.cambridgesemantics.com
+

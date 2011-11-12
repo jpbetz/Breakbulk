@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/openanzo/!svn/ver/5202/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/adapter
+END
+BasicNodeConverter.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/openanzo/!svn/ver/5202/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/adapter/BasicNodeConverter.java
+END
+RioToAnzoWriterAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/adapter/RioToAnzoWriterAdapter.java
+END
+AnzoToRioHandlerAdapter.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/adapter/AnzoToRioHandlerAdapter.java
+END
+RioResultHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/adapter/RioResultHandler.java
+END
+ResultHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/openanzo/!svn/ver/4370/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/adapter/ResultHandler.java
+END

@@ -1,0 +1,74 @@
+<!--
+#*******************************************************************************
+# Copyright (c) 2007 Cambridge Semantics Incorporated.
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Eclipse Public License v1.0
+# which accompanies this distribution, and is available at
+# http://www.eclipse.org/legal/epl-v10.html
+#  
+# File:	    	$HeadURL: file:///home/mroy/subversion/openanzo/trunk/openanzo-common/build.xml $
+# Created On:   $LastChangeDate$
+# Created By: 	$Author$
+# Revision:	    $Id: build.xml 178 2007-07-31 14:22:33Z mroy $
+  
+# Contributors:
+#     Cambridge Semantics Incorporated - Fork to Anzo
+#*******************************************************************************
+-->
+<project name="org.openanzo.common" basedir=".">
+	<description>
+        Build file for SQL needed by Anzo Common.
+    </description>
+
+
+
+	<target name="defineTasksEclipse" description="Define taskDefs for within eclipse enviornment">
+		<path id="anzo.path">
+			<path location="../org.openanzo.jet.exceptions/bin/classes" />
+			<path location="../org.openanzo.exceptions/bin/classes" />
+			<path location="../org.openanzo.jdbc.opgen/bin/classes" />
+			<path location="../org.openanzo.rdf/bin/classes" />
+			<path location="../org.openanzo.services/bin/classes" />
+			<path>
+				<fileset dir="../org.openanzo.targetplatform">
+									<include name="**/*.jar" />
+								</fileset>
+								<fileset dir="../org.slf4j">
+									<include name="**/*.jar" />
+								</fileset>
+			</path>
+		</path>
+		<taskdef name="propTask" classpathref="anzo.path" classname="org.openanzo.jet.exceptions.PropertiesDefinitionTask" />
+		<taskdef name="dicTask" classpathref="anzo.path" classname="org.openanzo.jet.exceptions.DictionaryDefinitionTask" />
+		<taskdef name="metaTask" classpathref="anzo.path" classname="org.openanzo.jet.exceptions.MetatypeDefinitionTask" />
+
+		<property name="target_dir" value="." />
+	</target>
+
+	<target name="defineTasksMaven" description="Define taskDefs for within maven enviornment">
+		<taskdef name="propTask" classpath="${compile_classpath}" classname="org.openanzo.jet.exceptions.PropertiesDefinitionTask" />
+		<taskdef name="dicTask" classpath="${compile_classpath}" classname="org.openanzo.jet.exceptions.DictionaryDefinitionTask" />
+		<taskdef name="metaTask" classpath="${compile_classpath}" classname="org.openanzo.jet.exceptions.MetatypeDefinitionTask" />
+		<property name="target_dir" value="${gensrc_target}" />
+
+		<property name="gen-src-dir" value="${basedir}/${target_dir}/gensrc/main/java" />
+	</target>
+
+	<target name="generatePropertiesFiles" description="-->Generate properties files from XML definitions">
+		<propTask destdir="${basedir}/${target_dir}/gensrc/main/java" wikiDestdir="${basedir}/${target_dir}/gensrc/main/resources">
+			<fileset file="./docs/propertyDefinitions.xml" />
+		</propTask>
+
+		<dicTask destdir="${basedir}/${target_dir}/gensrc/main/java" wikiDestdir="${basedir}/${target_dir}/gensrc/main/resources">
+			<fileset file="./docs/propertyDefinitions.xml" />
+		</dicTask>
+
+		<metaTask destdir="${basedir}/${target_dir}/gensrc/main/java" packageName="org.openanzo.security.keystore.attributes">
+			<fileset file="./docs/propertyDefinitions.xml" />
+		</metaTask>
+	</target>
+
+	<target name="makeDirs">
+		<mkdir dir="${gen-src-dir}" />
+	</target>
+</project>

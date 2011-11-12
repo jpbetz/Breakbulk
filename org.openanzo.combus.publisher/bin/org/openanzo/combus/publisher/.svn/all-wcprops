@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/openanzo/!svn/ver/3135/openanzo/trunk/org.openanzo.combus.publisher/bin/org/openanzo/combus/publisher
+END
+EventPublisherActivator.class
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/3135/openanzo/trunk/org.openanzo.combus.publisher/bin/org/openanzo/combus/publisher/EventPublisherActivator.class
+END
+EventPublisher.class
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/3135/openanzo/trunk/org.openanzo.combus.publisher/bin/org/openanzo/combus/publisher/EventPublisher.class
+END
+EventPublisherMBean.class
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/3135/openanzo/trunk/org.openanzo.combus.publisher/bin/org/openanzo/combus/publisher/EventPublisherMBean.class
+END
+EventPublisher$PublisherMessage.class
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/openanzo/!svn/ver/3135/openanzo/trunk/org.openanzo.combus.publisher/bin/org/openanzo/combus/publisher/EventPublisher$PublisherMessage.class
+END
+EventPublisher$PublisherThread.class
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/openanzo/!svn/ver/3135/openanzo/trunk/org.openanzo.combus.publisher/bin/org/openanzo/combus/publisher/EventPublisher$PublisherThread.class
+END

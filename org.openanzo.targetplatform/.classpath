@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path=""/>
+	<classpathentry exported="true" kind="lib" path="org.apache.felix.bundlerepository-1.0.3.jar"/>
+	<classpathentry exported="true" kind="lib" path="org.apache.felix.configadmin-1.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="org.apache.felix.eventadmin-1.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="org.apache.felix.metatype-1.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="org.apache.felix.prefs-1.0.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="org.apache.felix.scr-1.0.2.jar"/>
+	<classpathentry exported="true" kind="lib" path="org.apache.felix.shell-1.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="org.apache.felix.upnp.basedriver-0.8.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="org.apache.felix.webconsole-1.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="org.osgi.compendium-1.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="org.osgi.core-1.0.1.jar"/>
+	<classpathentry exported="true" kind="lib" path="org.osgi.foundation-1.0.0.jar"/>
+	<classpathentry exported="true" kind="lib" path="org.osgi.service.obr-1.0.2.jar"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="con" path="org.eclipse.pde.core.requiredPlugins"/>
+	<classpathentry kind="output" path=""/>
+</classpath>

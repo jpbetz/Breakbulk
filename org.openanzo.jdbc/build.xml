@@ -1,0 +1,244 @@
+<!--
+#*******************************************************************************
+# Copyright (c) 2007 Cambridge Semantics Incorporated.
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Eclipse Public License v1.0
+# which accompanies this distribution, and is available at
+# http://www.eclipse.org/legal/epl-v10.html
+#  
+# File:	    	$HeadURL: file:///home/mroy/subversion/openanzo/trunk/openanzo-common/build.xml $
+# Created On:   $LastChangeDate$
+# Created By: 	$Author$
+# Revision:	    $Id: build.xml 178 2007-07-31 14:22:33Z mroy $
+  
+# Contributors:
+#     Cambridge Semantics Incorporated - Fork to Anzo
+#*******************************************************************************
+-->
+<project name="org.openanzo.common" basedir=".">
+	<description>
+        Build file for SQL needed by Anzo Common.
+    </description>
+
+
+
+	<target name="defineTasksEclipse" description="Define taskDefs for within eclipse enviornment">
+		<path id="anzo.path">
+			<path location="../org.openanzo.jet.services/bin/classes" />
+			<path location="../org.openanzo.jet.exceptions/bin/classes" />
+			<path location="../org.openanzo.exceptions/bin/classes" />
+			<path location="../org.openanzo.jdbc.opgen/bin/classes" />
+			<path location="../org.openanzo.rdf/bin/classes" />
+			<path location="../org.openanzo.services/bin/classes" />
+			<path>
+				<fileset dir="../org.openanzo.targetplatform">
+									<include name="**/*.jar" />
+								</fileset>
+								<fileset dir="../org.slf4j">
+									<include name="**/*.jar" />
+								</fileset>
+			</path>
+		</path>
+		<taskdef name="sqllibrary" classpathref="anzo.path" classname="org.openanzo.jdbc.opgen.ant.CompositionTask" />
+		<taskdef name="propTask" classpathref="anzo.path" classname="org.openanzo.jet.exceptions.PropertiesDefinitionTask" />
+		<taskdef name="dicTask" classpathref="anzo.path" classname="org.openanzo.jet.exceptions.DictionaryDefinitionTask" />
+
+		<property name="target_dir" value="." />
+
+		<property name="sql-dir" value="${basedir}/src/main/resources" />
+		<property name="src-dir" value="${basedir}/src/main/java" />
+		<property name="gen-src-dir" value="${basedir}/${target_dir}/gensrc/main/java" />
+
+		<property name="nodecentric-dir" value="${sql-dir}/nodecentric" />
+		<property name="etc-dir" value="${basedir}/${target_dir}/gensrc/main/resources/etc" />
+
+	</target>
+
+	<target name="defineTasksMaven" description="Define taskDefs for within maven enviornment">
+		<taskdef name="sqllibrary" classpath="${compile_classpath}" classname="org.openanzo.jdbc.opgen.ant.CompositionTask" />
+		<taskdef name="propTask" classpath="${compile_classpath}" classname="org.openanzo.jet.exceptions.PropertiesDefinitionTask" />
+		<taskdef name="dicTask" classpath="${compile_classpath}" classname="org.openanzo.jet.exceptions.DictionaryDefinitionTask" />
+
+		<property name="target_dir" value="${gensrc_target}" />
+
+		<property name="sql-dir" value="${basedir}/src/main/resources" />
+		<property name="src-dir" value="${basedir}/src/main/java" />
+		<property name="gen-src-dir" value="${basedir}/${target_dir}/gensrc/main/java" />
+
+		<property name="nodecentric-dir" value="${sql-dir}/nodecentric" />
+		<property name="etc-dir" value="${basedir}/${target_dir}/gensrc/main/resources/etc" />
+
+	</target>
+
+	<target name="generatePropertiesFiles" description="-->Generate properties files from XML definitions">
+		<propTask destdir="${basedir}/${target_dir}/gensrc/main/java" wikiDestdir="${basedir}/${target_dir}/gensrc/main/resources">
+			<fileset file="./docs/rdbPropertyDefinitions.xml" />
+		</propTask>
+
+		<dicTask destdir="${basedir}/${target_dir}/gensrc/main/java" wikiDestdir="${basedir}/${target_dir}/gensrc/main/resources">
+			<fileset file="./docs/rdbPropertyDefinitions.xml" />
+		</dicTask>
+	</target>
+
+	<target name="makeDirs">
+		<mkdir dir="${etc-dir}" />
+		<mkdir dir="${gen-src-dir}" />
+	</target>
+	<target name="wrappers" description="--> Builds java objects needed for Anzo.">
+		<sqllibrary>
+			<preparedstatements destbase="${gen-src-dir}/" javaclass="org.openanzo.jdbc.container.sql.BaseSQL" exception="org.openanzo.jdbc.utils.RdbException" excludenamespace="false" rethrowSQLException="false">
+				<fileset file="${nodecentric-dir}/common/xmlsql/base.sql" />
+			</preparedstatements>
+
+			<preparedstatements destbase="${gen-src-dir}/" javaclass="org.openanzo.jdbc.container.sql.GraphSQL" exception="org.openanzo.jdbc.utils.RdbException" excludenamespace="false" rethrowSQLException="false">
+				<fileset file="${nodecentric-dir}/common/xmlsql/graph.sql" />
+			</preparedstatements>
+
+			<preparedstatements destbase="${gen-src-dir}/" javaclass="org.openanzo.jdbc.container.sql.NodeSQL" exception="org.openanzo.jdbc.utils.RdbException" excludenamespace="false" rethrowSQLException="false">
+				<fileset file="${nodecentric-dir}/common/xmlsql/node.sql" />
+			</preparedstatements>
+
+			<preparedstatements destbase="${gen-src-dir}/" javaclass="org.openanzo.jdbc.container.sql.GlitterSQL" exception="org.openanzo.jdbc.utils.RdbException" excludenamespace="false" rethrowSQLException="false">
+				<fileset file="${nodecentric-dir}/common/xmlsql/Glitter.sql" />
+			</preparedstatements>
+
+			<!-- db specific -->
+			<preparedstatements destbase="${gen-src-dir}/" javaclass="org.openanzo.jdbc.container.sql.SequencesSQL" exception="org.openanzo.jdbc.utils.RdbException" excludenamespace="false" rethrowSQLException="false">
+				<fileset file="${nodecentric-dir}/common/xmlsql/with-sequences.sql" />
+			</preparedstatements>
+
+			<preparedstatements destbase="${gen-src-dir}/" javaclass="org.openanzo.jdbc.container.sql.NoSequencesSQL" exception="org.openanzo.jdbc.utils.RdbException" excludenamespace="false" rethrowSQLException="false">
+				<fileset file="${nodecentric-dir}/common/xmlsql/no-sequences.sql" />
+			</preparedstatements>
+
+			<preparedstatements destbase="${gen-src-dir}/" javaclass="org.openanzo.jdbc.container.sql.TransactionSQL" exception="org.openanzo.jdbc.utils.RdbException" excludenamespace="false" rethrowSQLException="false">
+				<fileset file="${nodecentric-dir}/common/xmlsql/transaction.sql" />
+			</preparedstatements>
+		</sqllibrary>
+	</target>
+	<target name="nodeCentricOracle">
+		<antcall target="generateLayoutSqlFile">
+			<param name="dest" value="${etc-dir}/Oracle_nc.sql" />
+			<param name="layout-dir" value="${nodecentric-dir}" />
+			<param name="database" value="oracle" />
+			<param name="indexFile" value="${nodecentric-dir}/common/indexes.ddl" />
+			<param name="schemaFile" value="common" />
+		</antcall>
+	</target>
+	<target name="nodeCentricMSSQL">
+		<antcall target="generateLayoutSqlFile">
+			<param name="dest" value="${etc-dir}/MSSQL_nc.sql" />
+			<param name="layout-dir" value="${nodecentric-dir}" />
+			<param name="database" value="mssql" />
+			<param name="indexFile" value="${nodecentric-dir}/common/indexes.ddl" />
+			<param name="schemaFile" value="mssql" />
+		</antcall>
+	</target>
+	<target name="nodeCentricDB2">
+		<echo>Dir ${basedir}</echo>
+		<antcall target="generateLayoutSqlFile">
+			<param name="dest" value="${etc-dir}/DB2_nc.sql" />
+			<param name="layout-dir" value="${nodecentric-dir}" />
+			<param name="database" value="db2" />
+			<param name="indexFile" value="${nodecentric-dir}/db2/indexes.ddl" />
+			<param name="schemaFile" value="common" />
+		</antcall>
+	</target>
+
+	<target name="nodeCentricPostgres">
+		<antcall target="generateLayoutSqlFile">
+			<param name="dest" value="${etc-dir}/Postgres_nc.sql" />
+			<param name="layout-dir" value="${nodecentric-dir}" />
+			<param name="database" value="postgres" />
+			<param name="indexFile" value="${nodecentric-dir}/common/indexes.ddl" />
+			<param name="schemaFile" value="common" />
+		</antcall>
+	</target>
+
+	<target name="nodeCentricHSQL">
+		<antcall target="generateLayoutSqlFile">
+			<param name="dest" value="${etc-dir}/HSQL_nc.sql" />
+			<param name="layout-dir" value="${nodecentric-dir}" />
+			<param name="database" value="hsql" />
+			<param name="indexFile" value="${nodecentric-dir}/common/indexes.ddl" />
+			<param name="schemaFile" value="common" />
+		</antcall>
+	</target>
+
+	<target name="nodeCentricH2">
+		<antcall target="generateLayoutSqlFile">
+			<param name="dest" value="${etc-dir}/H2_nc.sql" />
+			<param name="layout-dir" value="${nodecentric-dir}" />
+			<param name="database" value="h2" />
+			<param name="indexFile" value="${nodecentric-dir}/common/indexes.ddl" />
+			<param name="schemaFile" value="common" />
+		</antcall>
+	</target>
+
+	<target name="generateLayoutSqlFile" description="--> Combines DDL and SQL together for the AnzoDB2.sql file required by Anzo.">
+		<property name="dest" value="" />
+		<property name="layout-dir" value="" />
+		<property name="database" value="" />
+		<property name="indexFile" value="" />
+		<property name="schemaFile" value="" />
+		<sqllibrary destdir="${dest}">
+			<ddl procedure="initDBtables">
+				<fileset dir="${layout-dir}/common/initTables" />
+				<fileset dir="${layout-dir}/${database}/initDBtables" />
+			</ddl>
+			<ddl procedure="initIndexes">
+				<fileset file="${indexFile}" />
+			</ddl>
+			<ddl procedure="createTemporaryTables">
+				<fileset dir="${layout-dir}/${database}/createTemporaryTables" />
+			</ddl>
+
+			<ddl procedure="initGraphTables">
+				<fileset dir="${layout-dir}/${schemaFile}/initGraphTables" />
+				<fileset file="${layout-dir}/${database}/extraGraphTables.ddl" />
+			</ddl>
+
+			<!-- common -->
+
+			<preparedstatements>
+				<fileset file="${layout-dir}/common/xmlsql/base.sql" />
+				<fileset file="${layout-dir}/${database}/xmlsql/base.sql" />
+			</preparedstatements>
+
+			<preparedstatements>
+				<fileset file="${layout-dir}/common/xmlsql/graph.sql" />
+			</preparedstatements>
+
+			<preparedstatements>
+				<fileset file="${layout-dir}/${database}/xmlsql/graph.sql" />
+			</preparedstatements>
+
+			<preparedstatements>
+				<fileset file="${layout-dir}/common/xmlsql/node.sql" />
+			</preparedstatements>
+
+			<preparedstatements>
+				<fileset file="${layout-dir}/${database}/xmlsql/node.sql" />
+			</preparedstatements>
+
+			<preparedstatements>
+				<fileset file="${layout-dir}/common/xmlsql/Glitter.sql" />
+			</preparedstatements>
+
+			<!-- db specific -->
+			<preparedstatements>
+				<fileset file="${layout-dir}/common/xmlsql/with-sequences.sql" />
+				<fileset file="${layout-dir}/${database}/xmlsql/with-sequences.sql" />
+			</preparedstatements>
+
+			<preparedstatements>
+				<fileset file="${layout-dir}/common/xmlsql/no-sequences.sql" />
+			</preparedstatements>
+
+			<preparedstatements>
+				<fileset file="${layout-dir}/common/xmlsql/transaction.sql" />
+			</preparedstatements>
+		</sqllibrary>
+	</target>
+
+</project>

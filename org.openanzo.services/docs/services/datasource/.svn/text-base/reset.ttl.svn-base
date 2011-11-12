@@ -1,0 +1,36 @@
+@prefix format: <http://openanzo.org/service/format/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix system: <http://openanzo.org/ontologies/2008/07/System#> .
+
+
+<http://openanzo.org/service/operation/reset> system:name "reset" ;
+	system:requestParameter <http://openanzo.org/service/operation/reset/parameter/statements> ;
+	system:requestParameter0 <http://openanzo.org/service/operation/reset/parameter/statements> ;
+	system:requestParameter <http://openanzo.org/service/operation/reset/parameter/checks> ;
+	system:requestParameter1 <http://openanzo.org/service/operation/reset/parameter/checks> ;
+	system:restEndpoint "/anzo" ;
+	system:restType "PUT" ;
+	system:sysadminRequired "false" ;
+	system:wsOperation "http://openanzo.org/reset" ;
+	dc:description "Utility method that resets all data on the Server and reinitializes server to set of provided statements. This should only be used for testing. Operation can be turned off on the server." ;
+	dc:title "Reset" ;
+	a <http://openanzo.org/service/operation> .
+
+<http://openanzo.org/service/operation/reset/parameter/statements> system:name "statements" ;
+	system:nullAllowed "true" ;
+	system:parameterFormat "transportDependent" ;
+	system:parameterLocation "body" ;
+	system:type system:statements ;
+	system:validFormat format:jsonQuad , format:trig , format:trix ;
+	dc:description "Set of statements that are used to reinitialize the server." ;
+	a system:Parameter .
+
+<http://openanzo.org/service/operation/reset/parameter/checks> system:name "checks" ;
+	system:nullAllowed "true" ;
+	system:parameterFormat "transportDependent" ;
+	system:type system:statements ;
+	system:validFormat format:jsonQuad , format:trig , format:trix ;
+	dc:description "Set of statements that are used to check if the server has reset." ;
+	a system:Parameter .
+
+<http://openanzo.org/service/reset> system:operation <http://openanzo.org/service/operation/reset> .

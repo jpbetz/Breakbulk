@@ -1,0 +1,95 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/util/buildscripts
+END
+LICENSE
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/util/buildscripts/LICENSE
+END
+listProfileDeps.js
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/util/buildscripts/listProfileDeps.js
+END
+copyright.txt
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/util/buildscripts/copyright.txt
+END
+clean_release.sh
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/util/buildscripts/clean_release.sh
+END
+mk_branch.sh
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/util/buildscripts/mk_branch.sh
+END
+README
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/util/buildscripts/README
+END
+makeDojoJsWeb.js
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/util/buildscripts/makeDojoJsWeb.js
+END
+webbuild.html
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/util/buildscripts/webbuild.html
+END
+cdnBuild.txt
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/util/buildscripts/cdnBuild.txt
+END
+build.bat
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/util/buildscripts/build.bat
+END
+changeVersion.js
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/util/buildscripts/changeVersion.js
+END
+build.sh
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/util/buildscripts/build.sh
+END
+build_release.sh
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/util/buildscripts/build_release.sh
+END
+build.js
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/util/buildscripts/build.js
+END
+build_notice.txt
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/util/buildscripts/build_notice.txt
+END

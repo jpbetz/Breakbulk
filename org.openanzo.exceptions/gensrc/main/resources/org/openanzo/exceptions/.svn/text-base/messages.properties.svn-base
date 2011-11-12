@@ -1,0 +1,343 @@
+
+/*******************************************************************************
+ * Copyright (c) 2007-2008 Cambridge Semantics Incorporated.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * File:        $Source$
+ * Created by:  Generated Source from org.openanzo.rdf.utils.properties.jet
+ * Created on:  Generated Source from org.openanzo.rdf.utils.properties.jet
+ * Revision:	$Id$
+ * 
+ * Contributors:
+ *     Cambridge Semantics Incorporated - initial API and implementation
+ *******************************************************************************/
+ 
+
+
+ExceptionConstants.257=Failed to load object [{0}]
+ExceptionConstants.258=Failed to create object [{0}]
+ExceptionConstants.259=Failed executing batch operation:[{0}]
+ExceptionConstants.260=Attempted to add triple [{0}] [{1}] [{2}] to named graph [{3}] that either does not exist, or does not have add permission
+ExceptionConstants.261=Attempted to remove triple [{0}] [{1}] [{2}] to named graph [{3}] that either does not exist, or does not have remove permission
+ExceptionConstants.262=Attempted to read triples from NamedGraph [{0}] that either does not exist, or does not have read permission
+ExceptionConstants.263=No permission to insert NamedGraph [{0}]
+ExceptionConstants.264=No permission to remove NamedGraph [{0}]
+ExceptionConstants.265=Command [{0}] failed to commit due to precondition not being met. [{1}]
+ExceptionConstants.266=Failed to add a reserved URI:[{0}]
+ExceptionConstants.267=Could not execute find statements in datasource [{0}]
+ExceptionConstants.269=Could not lock the NamedGraphs needed for transaction [{0}]
+ExceptionConstants.270=Previous transaction failed involving graph [{0}]
+ExceptionConstants.271=Import contained statements with no named graph specified.
+ExceptionConstants.272=Error in update listener:{0}
+ExceptionConstants.276=Failed to create a datasource connection. {0}
+ExceptionConstants.277=Failed to return a datasource connection. {0}
+ExceptionConstants.278=Failed to start datasource transaction. {0}
+ExceptionConstants.279=Failed to commit datasource transaction. {0}
+ExceptionConstants.280=Failed to rollback datasource transaction. {0}
+ExceptionConstants.281=Failed to initialize datasource connection. {0}
+
+ExceptionConstants.4097=NamedGraph [{0}] not found
+ExceptionConstants.4098=Failed to insert triple ({0}) into metadata graph {1}, because an insert rule for a reserved predicate was not met.
+ExceptionConstants.4099=NamedGraph [{0}] is a non revisioned graph
+ExceptionConstants.4100=NamedGraph {0} is an unsupported type of graph for this operation.
+ExceptionConstants.4101=Revision [{0}] of NamedGraph [{1}] not found
+ExceptionConstants.4102=Could not get size of NamedGraph [{0}]
+ExceptionConstants.4103=Could not get the UUID of NamedGraph [{0}]
+ExceptionConstants.4104=Could not get the URI of NamedGraph [{0}]
+ExceptionConstants.4105={0} is a system graph which cannot be changed by a user.
+ExceptionConstants.4106=Named graph with UUID:[{0}] not valid at this time.
+
+ExceptionConstants.16385=Could not publish message to notification service:{0}
+ExceptionConstants.16386=Failure processing Update Message:{0}
+ExceptionConstants.16388=Tracker could not be registered with JMS selector [{0}] :{1}
+ExceptionConstants.16389=Tracker could not be unregistered with JMS selector [{0}] :{1}
+ExceptionConstants.16390=Timeout connecting to JMS server
+ExceptionConstants.16391=Error connecting to JMS server:{0}
+ExceptionConstants.16392=No Notification Service was created.
+ExceptionConstants.16393=No Response from Server for request {0}.
+ExceptionConstants.16394=Could not create connection to notification server due to server problem:{0}
+ExceptionConstants.16395=JMS exception unpacking method and transaction id from transaction complete message:{0}
+ExceptionConstants.16396=JMS Message missing message parameter.
+ExceptionConstants.16397=Error disconnecting from JMS server:{0}
+ExceptionConstants.16398=Could not create a producer for destination [{0}]:{1}
+ExceptionConstants.16399=Already connected to notification service
+ExceptionConstants.16400=Not connected to notification service
+ExceptionConstants.16401=Unknown Destination {0}
+ExceptionConstants.16402=Waiting for response for {0} interrupted
+ExceptionConstants.16403=Error setting message parameter:{0}
+ExceptionConstants.16404=User no longer authenticated or valid on the server
+ExceptionConstants.16405=Unknown server exception executing request {0}
+ExceptionConstants.16406=Failed to create an embedded ActiveMQ broker
+ExceptionConstants.16407=Failed to stop the embedded ActiveMQ broker
+ExceptionConstants.16408=User {0} not authorized to subscribe for topic {1}
+ExceptionConstants.16409=Sending message to [{0}] failed
+ExceptionConstants.16410=Error creating a JMS message
+ExceptionConstants.16411=No UUID for namedGraph [{0}] was found, so could not subscribe to namedGraph''s topic
+ExceptionConstants.16412=Invalid topic: [{0}]
+ExceptionConstants.16413=Recorder Error: [{0}]
+ExceptionConstants.16414=SSL required is true, but ssl host and port not set
+ExceptionConstants.16415=EncryptedTokenAuthenticationJSONTransport requires reference to valid Bayeux object
+ExceptionConstants.16416=Error Purging ActiveMQ Topics
+ExceptionConstants.16417=Unknown user or invalid password.
+ExceptionConstants.16418=Connection is not authenticated:{0}
+ExceptionConstants.16419=User {0} is not authorized for operation {1} on destination {2}
+ExceptionConstants.16420=Server is not ready to accept subscriptions, since a primary datasource is not yet active.
+ExceptionConstants.16421=User {0} is not authorized to subscribe to: {1} since is does not yet exist
+ExceptionConstants.16422=Error disconnecting from notifications
+ExceptionConstants.16423=Error processing message:{0}
+ExceptionConstants.16424=Error in statement channel listener:{0}
+ExceptionConstants.16425=Error closing jms {0}
+ExceptionConstants.16426=User must be a sysadmin to runas another user.
+
+ExceptionConstants.32769=Reset is disabled
+ExceptionConstants.32770=Error while authenticating user:{0}.
+ExceptionConstants.32771=User ID maps to multiple ldap users:{0}.
+ExceptionConstants.32772=Unknown user error:{0}.
+ExceptionConstants.32778=Initialization file ({0}) not found
+ExceptionConstants.32781=Servlet properties not set.
+ExceptionConstants.32782=Error during replication:{0}.
+ExceptionConstants.32783=Missing {0} for operation {1}.
+ExceptionConstants.32784=Request did not contain valid username and password
+ExceptionConstants.32785=Errors updating server.
+ExceptionConstants.32788=Failed to get roles for NamedGraph {0}
+ExceptionConstants.32789=Failed to get stored NamedGraphs for user {0}
+ExceptionConstants.32791=Unknown server operation error [{0}]
+ExceptionConstants.32792=Error executing query [{0}]
+ExceptionConstants.32793=Unknown server: {0}
+ExceptionConstants.32796=Internal error within ldap:{0}
+ExceptionConstants.32797=No user principal found within IOperationContext
+ExceptionConstants.32798=Replicate request contains invalid statements. Subjects must be URIs and objects must be revision numbers.Subject [{0}], Object [{1}]
+ExceptionConstants.32799=Failed to authenticate user:{0}
+ExceptionConstants.32800=Error getting client from pool
+ExceptionConstants.32812=Test search occurred, but found no results.
+ExceptionConstants.32813=Invalid LDAP configuration.
+ExceptionConstants.32801=No ldap component found in supplied data.
+ExceptionConstants.32803=Invalid LDAP configuration. Could not bind with admin dn [{0}]
+ExceptionConstants.32804=Invalid LDAP configuration. Search for test user failed.
+ExceptionConstants.32805=Invalid LDAP configuration. Could not bind with test user [{0}]
+ExceptionConstants.32806=The database jdbc connection string is not set.
+ExceptionConstants.32807=The database user is not set.
+ExceptionConstants.32808=The database type is not set.
+ExceptionConstants.32809=Failed to connect to the database.
+ExceptionConstants.32810=No rdb component found in supplied data.
+ExceptionConstants.32811=Anonymous users cannot create or update data.
+
+ExceptionConstants.65537=Error with configuration properties
+ExceptionConstants.65538=IO write error:{0}.
+ExceptionConstants.65539=IO read error:{0}.
+ExceptionConstants.65540=Error converting String To Set - Unknown format: {0}
+ExceptionConstants.65541=Node label must not be null for bnode: [{0}] (it may be that this blank node was created with a different blank node manager than the one in Constants.valueFactory)
+ExceptionConstants.65542=Failed to encode user name and password for service call endpoint.
+ExceptionConstants.65543=Unsupported datatype. Must be either {0}
+ExceptionConstants.65544=Invalid Timestamp. Nanoseconds must not be negative. {0}
+ExceptionConstants.65545=Error with encoding:{0}
+ExceptionConstants.65546=Unsupported RDF format:{0}
+ExceptionConstants.65549=Error deserializing data:{0}
+ExceptionConstants.65550=Could not find parser for format:{0}
+ExceptionConstants.65552=Error parsing RDF with format:{0}
+ExceptionConstants.65553=Error with RDF Handler while parsing RDF with format:{0}
+ExceptionConstants.65554=No RDF format found for given file extension:{0}
+ExceptionConstants.65555=No RDF format found for given mime type:{0}
+ExceptionConstants.65556=No RDF writer found for given mime type:{0}
+ExceptionConstants.65556=The given RDFFormat does not support namedgraphs:{0}
+ExceptionConstants.65557=Error Serializing json message
+
+ExceptionConstants.131073=Client not connected.
+ExceptionConstants.131074=Client already closed.
+ExceptionConstants.131078=Error in local persistence:{0}
+ExceptionConstants.131080=Failed to add triples to TransactionGraph:{0}
+ExceptionConstants.131081=Failed to delete triples to TransactionGraph:{0}
+ExceptionConstants.131085=The database specified is currently open: {0}
+ExceptionConstants.131086=InputCommand must already be in CommandVector:{0}
+ExceptionConstants.131101=Failed to clear database container for NamedGraph [{0}]
+ExceptionConstants.131102=Failed to initialize database container: [{0}]
+ExceptionConstants.131103=Could not initialized physical storage because database connection is not setup
+ExceptionConstants.131104=Could not initialize database tables: [{0}]
+ExceptionConstants.131106=Could not initialize containers sqlcache: [{0}]
+ExceptionConstants.131108=Failed executing batched insertStatement: [{0}]
+ExceptionConstants.131109=Failed finding node: [{0}]
+ExceptionConstants.131110=Failed determining if statements exists in database: [{0}]
+ExceptionConstants.131111=Failed finding statements in database: [{0}]
+ExceptionConstants.131112=Failed deleting statement from database: [{0}]
+ExceptionConstants.131113=Failed counting statements in database for namedGraph [{0}] : [{1}]
+ExceptionConstants.131115=Error executing sparql query [{0}]:[{1}]
+ExceptionConstants.131116=Failed counting statements in database for table [{0}] : [{1}]
+ExceptionConstants.131117=No colon in URI: [{0}]
+ExceptionConstants.131118=None of the values can be null, NAMEDGRAPHURI=[{0}], SUBJ=[{1}] , PROP=[{2}] ,OBJ=[{3}]
+ExceptionConstants.131119=Space in URI: [{0}]
+ExceptionConstants.131120=NamedGraph URI cannot be null
+ExceptionConstants.131121=Could not find automatic mapping of Java object to an RDF typed literal:{0}
+ExceptionConstants.131122=Error parsing query, [{0}]: [{1}]
+ExceptionConstants.131123=There was an internal error in the client due to a locking issue.
+ExceptionConstants.131124=Operations requiring JMS connectivity are not available to this client
+ExceptionConstants.131125=Error executing command:[{0}]
+ExceptionConstants.131126=Invalid URI:[{0}]
+ExceptionConstants.131127=CURIE must has a prefix and fragment separated by a '':''.
+ExceptionConstants.131128=Mapping for ''{0}'' not registered with this value factory.
+ExceptionConstants.131129=Variable name may not begin with ''?''
+ExceptionConstants.131130=Variable name may not contain whitespace chars.
+ExceptionConstants.131131=Failed to initialize named graph: [{0}]
+ExceptionConstants.131132=Failed calling listener's add statements: {0}
+ExceptionConstants.131133=Failed calling listener's remove statements: {0}
+ExceptionConstants.131134=Timeout causing extra replication: {0}
+ExceptionConstants.131136=Doing extra replication: {0}
+ExceptionConstants.131137=Received a message for a graph we weren't expecting: {0} in {1}
+ExceptionConstants.131138=Received a message for a graph we were expecting: {0} {1} {2}
+ExceptionConstants.131139=Replica not in sync: {0}
+ExceptionConstants.131140=Replicating new graphs:{0}
+ExceptionConstants.131141=Failed to initialize the Anzo Trust Manager
+ExceptionConstants.131142=Client operation not allowed under service user: {0}
+
+ExceptionConstants.262146=There was an error loading the database driver class:{0}.
+ExceptionConstants.262147=Cannot pass NULL to parameter [{0}] in prepared statement [{1}]
+ExceptionConstants.262148=Error executing database operation:{0}
+ExceptionConstants.262156=Failed to close connection pool: {0}
+ExceptionConstants.262157=JDBC connection already in a transaction.
+ExceptionConstants.262158=JDBC connection could not start a transaction.
+ExceptionConstants.262159=Failed to start jdbc transaction.
+ExceptionConstants.262160=Failed to commit jdbc transaction.
+ExceptionConstants.262161=Failed to rollback jdbc transaction.
+ExceptionConstants.262162=Failed to lock database table:{0}
+ExceptionConstants.262163=Failed to unlock database table:{0}
+ExceptionConstants.262164=Connection not in jdbc transaction.
+ExceptionConstants.262165=Failed to initialize jdbc connection.
+ExceptionConstants.262166=Failed to query for server''s initialization status.
+ExceptionConstants.262167=Failed waiting for the database to initialize.
+ExceptionConstants.262168=Failed to set the database connection''s isolation level.
+ExceptionConstants.262169=Failed getting the metadata about the jdbc table [{0}] from the database:.
+ExceptionConstants.262170=Failed to get a connection from the {0} pool.
+ExceptionConstants.262171=Failed to return a connection to the {0} pool.
+ExceptionConstants.262172=Failed to initialize the connection {0} pool.
+ExceptionConstants.262173=Failed to initialize temporary tables.
+ExceptionConstants.262174=Failed to get a result from a result set.
+ExceptionConstants.262175=Failed to close a prepared statement.
+ExceptionConstants.262178=Could not load SQL definitions from file:{0}
+ExceptionConstants.262179=Could not load SQL definitions from inputstream
+ExceptionConstants.262180=Exception with parm {0}: {1}={2} ({3}) sql:{4}
+ExceptionConstants.262181=Failed to execute an sql operation:[{0}] SQL:[{1}] Params:[{2}] Templates:[{3}]
+ExceptionConstants.262182=Unable to map node type for Class:{0}
+ExceptionConstants.262183=Unable to map ID to its node type: Type ({0}) in ID ({1})
+ExceptionConstants.262183=No value found for ID:({0})
+ExceptionConstants.262185=Could not find a statement with the given name:{0}
+ExceptionConstants.262186=There were missing or partial tables.
+
+ExceptionConstants.524289=
+ExceptionConstants.524290=Backend unable to generate solutions for supplied query pattern.
+ExceptionConstants.524291=
+ExceptionConstants.524292=
+ExceptionConstants.524293=The code exercised a not-yet-implemented feature:
+ExceptionConstants.524294=An error occurred while invoking a functional predicate.
+ExceptionConstants.524295=//"Type error: {0} is incompatible with required type: {1}
+ExceptionConstants.524298=Type error: {0} is incompatible with required type: {1}
+ExceptionConstants.524299=Invalid number of arguments: Received {0} but expected between {1} and {2}
+ExceptionConstants.524301=Query was refused because: " {0}
+ExceptionConstants.524303=Unexpected Glitter Exception: {0}
+ExceptionConstants.524305=Unknown or inaccessible graphs included in query: {0}
+ExceptionConstants.524307=Error parsing query, [{0}] : {1}
+ExceptionConstants.524308=No solutions were found.
+ExceptionConstants.524309=Error running SQL query during glitter query.
+ExceptionConstants.524310=Named graph context is not a variable or IRI reference:{0}
+ExceptionConstants.524311=Error populating database tables
+ExceptionConstants.524312=More names given than projected expressions
+ExceptionConstants.524313=SerialQueryExecutor: unreachable code reached
+ExceptionConstants.524314=Can only add TriplePatternNode objects to a BGP
+ExceptionConstants.524315=Function must be either a scalar or aggregate function.
+ExceptionConstants.524316=Cannot add more than one child to a Graph query node.
+ExceptionConstants.524317= May only add {0} as child to a {1} node.
+ExceptionConstants.524318=Cannot add a child to a {0} node.
+ExceptionConstants.524319=Cannot remove a child from a {0} node.
+ExceptionConstants.524320=Cannot produce Node object for unrecognized glitterNode of class:{0}
+ExceptionConstants.524321=Cannot negate unknown number value:{0}
+ExceptionConstants.524322=Parse exception rewriting node:{0}
+ExceptionConstants.524323=Malformed literal: {0} is not a valid lexical value for type: {1}
+ExceptionConstants.524324=SPARQL subqueries may not contain a FROM, FROM NAMED, or FROM DATASET clause.
+ExceptionConstants.524325=Too many solutions in solution set: {0}.
+ExceptionConstants.524326=Triple pattern predicate must be one of: variable, IRI [{0}]
+ExceptionConstants.524327=Can only print glitter parse exceptions.
+ExceptionConstants.524328=Query Cancelled.
+
+ExceptionConstants.1048577=Component [{0}]:[{1}] missing dependency [{2}]
+ExceptionConstants.1048578=Requested attribute {0} was of type {1}, but request for {2}
+ExceptionConstants.1048579=Error stopping {0}
+ExceptionConstants.1048581=Unknown internal exception within component: {0}
+ExceptionConstants.1048584=Component [{0}] is missing required parameter [{1}]
+ExceptionConstants.1048585={0} must be greater than {1}
+ExceptionConstants.1048586={0} must be less than {1}
+ExceptionConstants.1048587=The bundle [{0}] is not in the Active state. CurrentState=[{1}]
+ExceptionConstants.1048588=Invalid service syntax specified: [{0}] 
+ExceptionConstants.1048589=Invalid syntax while retrieving osgi configuration: [{0}] 
+ExceptionConstants.1048590=Registering service tracker: [{0}] {1}
+ExceptionConstants.1048591=Error updating OSGI configuration: [{0}] 
+ExceptionConstants.1048592=Cannot instantiate class: [{0}] 
+ExceptionConstants.1048593=Error starting: [{0}] 
+ExceptionConstants.1048594=Invalid Bundle Configuration:Bundle: [{0}] Property: [{1}] Error: [{2}]
+
+ExceptionConstants.2097153=Compound Exception:
+ExceptionConstants.2097154=Parameter {0} cannot be null
+ExceptionConstants.2097155=Thread was interrupted
+ExceptionConstants.2097156=Number format exception:{0}
+ExceptionConstants.2097157=Network port [{0}] already in use on interface [{1}]
+
+ExceptionConstants.4194305=Failed to clear the index.
+ExceptionConstants.4194306=Text indexing is not enabled for this datasource
+ExceptionConstants.4194307=Failed to initialize the index
+ExceptionConstants.4194308=Failed to query the index
+ExceptionConstants.4194309=Failed to query the index because the index is disabled.
+ExceptionConstants.4194310=Index operation failed due to text indexing service not being initialized.
+ExceptionConstants.4194320=A required index configuration property was missing: {0}
+ExceptionConstants.4194321=Could not delete Lucene lockfile: {0}
+ExceptionConstants.4194322=Could not delete Lucene lock file because it did not exist: {0}
+ExceptionConstants.4194323=Lucene lock file exists ({0}), but was not removed
+ExceptionConstants.4194324=Failed to close the index.
+ExceptionConstants.4194326=There was an exception parsing the index query:{0}
+ExceptionConstants.4194327=Wrong type of query, must be:{0}
+ExceptionConstants.4194328=No IndexSearcher available to run query.
+ExceptionConstants.4194330=Failed to initialize the IndexSearcher object at:{0}
+ExceptionConstants.4194332=Failed to create an index document for an object.
+ExceptionConstants.4194333=Failed to delete an index document for an object.
+ExceptionConstants.4194334=Failed to rebuild index.
+ExceptionConstants.4194335=Invalid time interval specifier:{0}
+ExceptionConstants.4194336=Invalid modified time did not match any known patterns:{0}
+
+ExceptionConstants.8388609=Error initializing semantic services:{0}
+ExceptionConstants.8388610=Unknown semantic service:{0}
+ExceptionConstants.8388611=Unknown operation:{0}:{1}
+ExceptionConstants.8388612=Error executing service/operation: {0}/{1} service-specific-error:{2}
+ExceptionConstants.8388613=Operation on AnzoClient is restricted in service execution
+
+ExceptionConstants.16777217=Error shutting down binary store
+ExceptionConstants.16777218=Error executing binary store operation: {0}
+ExceptionConstants.16777219=No content type could be found for {0}
+ExceptionConstants.16777220=Unrecognized rdf format: {0}
+ExceptionConstants.16777221=No file sent.
+ExceptionConstants.16777222=Multipart form data required.
+ExceptionConstants.16777223=No graph uri specified for update. {0}
+ExceptionConstants.16777224=File for update does not exist. {0}
+ExceptionConstants.16777225=Permission to update file denied. {0}
+ExceptionConstants.16777226=File currently locked. {0}
+ExceptionConstants.16777227=Failed to create graph: {0}
+ExceptionConstants.16777228=File already exists on server. {0}
+ExceptionConstants.16777229=Error uploading file. 
+ExceptionConstants.16777230=The revision {0} does not exist for binary store file: {1}
+ExceptionConstants.16777231=Error serving resource:{0} 
+ExceptionConstants.16777232=Error creating sha1 for file:{0} 
+ExceptionConstants.16777233=Error copying file: {0} to {1}
+ExceptionConstants.16777234=Error creating new file on server: {0}
+ExceptionConstants.16777235=Exception processing binary store request
+ExceptionConstants.16777236=Exception sending progress message
+ExceptionConstants.16777237=Cannot find statement channel for file upload feedback. The client needs to create the channel.
+ExceptionConstants.16777238=No SHA-1 Algorithm support
+ExceptionConstants.16777239=Error processing progress message
+
+ExceptionConstants.16777217={0}
+
+ExceptionConstants.33554433=Error executing binary store operation: {0}
+ExceptionConstants.33554434=Invalid Binary Store item:{0}
+ExceptionConstants.33554435=Already updating.
+ExceptionConstants.33554436=Access denied.
+ExceptionConstants.33554437=Error returned from HTTP server code {0}.
+ 
+ 	

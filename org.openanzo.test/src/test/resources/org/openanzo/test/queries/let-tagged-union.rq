@@ -1,0 +1,10 @@
+PREFIX : <http://example.org/>
+SELECT ?o ?p WHERE { 
+    {
+		:s1 :p1 ?o .
+		LET( ?p := :p1_extra ) .
+	} UNION {
+		:s2 :p2 ?o .
+		LET( ?p := :p2_extra ) .
+	}
+}

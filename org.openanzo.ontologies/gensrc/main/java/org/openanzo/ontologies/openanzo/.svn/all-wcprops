@@ -1,0 +1,263 @@
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/openanzo/!svn/ver/5156/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo
+END
+AnzoFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/5156/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/AnzoFactory.java
+END
+ResultImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/ResultImpl.java
+END
+UserImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/openanzo/!svn/ver/5125/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/UserImpl.java
+END
+DatasetTracker.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/DatasetTracker.java
+END
+TrackerListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/TrackerListener.java
+END
+PreconditionListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/PreconditionListener.java
+END
+AnzoServerListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/AnzoServerListener.java
+END
+Query.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/Query.java
+END
+RoleListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/5125/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/RoleListener.java
+END
+Registry.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/Registry.java
+END
+NamedGraphListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/openanzo/!svn/ver/5156/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/NamedGraphListener.java
+END
+TrackerImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/TrackerImpl.java
+END
+Result.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/Result.java
+END
+User.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/openanzo/!svn/ver/5125/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/User.java
+END
+PreconditionImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/PreconditionImpl.java
+END
+AnzoServerImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/AnzoServerImpl.java
+END
+RoleImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/openanzo/!svn/ver/5125/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/RoleImpl.java
+END
+AskResultListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/AskResultListener.java
+END
+StatementStreamListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/openanzo/!svn/ver/5156/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/StatementStreamListener.java
+END
+NamedGraphImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/5156/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/NamedGraphImpl.java
+END
+DatasetListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/DatasetListener.java
+END
+Tracker.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/Tracker.java
+END
+Precondition.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/Precondition.java
+END
+AnzoServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/AnzoServer.java
+END
+AskResultImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/AskResultImpl.java
+END
+Role.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/openanzo/!svn/ver/5125/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/Role.java
+END
+SelectorTrackerListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/SelectorTrackerListener.java
+END
+StatementStreamImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/openanzo/!svn/ver/5156/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/StatementStreamImpl.java
+END
+NamedGraph.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/5156/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/NamedGraph.java
+END
+DatasetImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/DatasetImpl.java
+END
+DatasetTrackerListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/DatasetTrackerListener.java
+END
+QueryListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/QueryListener.java
+END
+AskResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/AskResult.java
+END
+RegistryListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/RegistryListener.java
+END
+SelectorTrackerImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/SelectorTrackerImpl.java
+END
+StatementStream.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/openanzo/!svn/ver/5156/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/StatementStream.java
+END
+DatasetTrackerImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/DatasetTrackerImpl.java
+END
+ResultListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/ResultListener.java
+END
+UserListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/5125/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/UserListener.java
+END
+Dataset.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/Dataset.java
+END
+QueryImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/QueryImpl.java
+END
+RegistryImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/RegistryImpl.java
+END
+SelectorTracker.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/openanzo/SelectorTracker.java
+END

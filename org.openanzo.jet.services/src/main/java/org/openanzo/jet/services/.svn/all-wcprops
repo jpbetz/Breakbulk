@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.jet.services/src/main/java/org/openanzo/jet/services
+END
+ServicesWsListenerTemplate.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/openanzo/!svn/ver/4693/openanzo/trunk/org.openanzo.jet.services/src/main/java/org/openanzo/jet/services/ServicesWsListenerTemplate.java
+END
+ServicesSoapConstantsTemplate.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/openanzo/!svn/ver/4693/openanzo/trunk/org.openanzo.jet.services/src/main/java/org/openanzo/jet/services/ServicesSoapConstantsTemplate.java
+END
+ServicesInterfaceTemplate.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/openanzo/!svn/ver/4693/openanzo/trunk/org.openanzo.jet.services/src/main/java/org/openanzo/jet/services/ServicesInterfaceTemplate.java
+END
+ServicesWsddTemplate.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/4693/openanzo/trunk/org.openanzo.jet.services/src/main/java/org/openanzo/jet/services/ServicesWsddTemplate.java
+END
+ServiceWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/3858/openanzo/trunk/org.openanzo.jet.services/src/main/java/org/openanzo/jet/services/ServiceWrapper.java
+END
+ServicesWikiTemplate.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/4693/openanzo/trunk/org.openanzo.jet.services/src/main/java/org/openanzo/jet/services/ServicesWikiTemplate.java
+END
+ServerServicesDefinitionTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/openanzo/!svn/ver/4073/openanzo/trunk/org.openanzo.jet.services/src/main/java/org/openanzo/jet/services/ServerServicesDefinitionTask.java
+END
+ServicesRestProxyTemplate.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/openanzo/!svn/ver/4693/openanzo/trunk/org.openanzo.jet.services/src/main/java/org/openanzo/jet/services/ServicesRestProxyTemplate.java
+END
+ServicesDefinitionTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/4073/openanzo/trunk/org.openanzo.jet.services/src/main/java/org/openanzo/jet/services/ServicesDefinitionTask.java
+END
+ServicesRestListenerTemplate.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/openanzo/!svn/ver/4693/openanzo/trunk/org.openanzo.jet.services/src/main/java/org/openanzo/jet/services/ServicesRestListenerTemplate.java
+END
+GenerateWikiText.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/openanzo/!svn/ver/3760/openanzo/trunk/org.openanzo.jet.services/src/main/java/org/openanzo/jet/services/GenerateWikiText.java
+END
+ServerServiceWrapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/3858/openanzo/trunk/org.openanzo.jet.services/src/main/java/org/openanzo/jet/services/ServerServiceWrapper.java
+END
+ServicesCombusProxyTemplate.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.jet.services/src/main/java/org/openanzo/jet/services/ServicesCombusProxyTemplate.java
+END
+ServicesWSProxyTemplate.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/openanzo/!svn/ver/4693/openanzo/trunk/org.openanzo.jet.services/src/main/java/org/openanzo/jet/services/ServicesWSProxyTemplate.java
+END
+ServicesCombusListenerTemplate.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/openanzo/!svn/ver/4693/openanzo/trunk/org.openanzo.jet.services/src/main/java/org/openanzo/jet/services/ServicesCombusListenerTemplate.java
+END
+RestOperation.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/3858/openanzo/trunk/org.openanzo.jet.services/src/main/java/org/openanzo/jet/services/RestOperation.java
+END

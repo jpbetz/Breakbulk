@@ -1,0 +1,80 @@
+@prefix format: <http://openanzo.org/service/format/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix system: <http://openanzo.org/ontologies/2008/07/System#> .
+
+
+<http://openanzo.org/service/operation/executeAskQuery> system:name "askQuery" ;
+	system:requestParameter <http://openanzo.org/service/operation/executeAskQuery/parameter/baseURI> , <http://openanzo.org/service/operation/executeAskQuery/parameter/currentData> , <http://openanzo.org/service/operation/executeAskQuery/parameter/defaultNamedGraphs> , <http://openanzo.org/service/operation/executeAskQuery/parameter/namedDatasets> , <http://openanzo.org/service/operation/executeAskQuery/parameter/namedGraphs> , <http://openanzo.org/service/operation/executeAskQuery/parameter/query>, <http://openanzo.org/service/operation/executeAskQuery/parameter/queryBody> ;
+	system:requestParameter0 <http://openanzo.org/service/operation/executeAskQuery/parameter/defaultNamedGraphs> ;
+	system:requestParameter1 <http://openanzo.org/service/operation/executeAskQuery/parameter/namedGraphs> ;
+	system:requestParameter2 <http://openanzo.org/service/operation/executeAskQuery/parameter/namedDatasets> ;
+	system:requestParameter3 <http://openanzo.org/service/operation/executeAskQuery/parameter/query> ;
+	system:requestParameter4 <http://openanzo.org/service/operation/executeAskQuery/parameter/queryBody> ;
+	system:requestParameter5 <http://openanzo.org/service/operation/executeAskQuery/parameter/baseURI> ;
+	system:requestParameter6 <http://openanzo.org/service/operation/executeAskQuery/parameter/currentData> ;
+	system:restEndpoint "/anzo/sparql/ask" ;
+	system:restType "GET" ;
+	system:result <http://openanzo.org/service/operation/executeAskQuery/result> ;
+	system:sysadminRequired "false" ;
+	system:wsOperation "http://openanzo.org/query" ;
+	dc:description "Run a Sparql Ask query on the server and return the results in a QueryResult object." ;
+	dc:title "Ask Query" ;
+	a system:Operation .
+
+<http://openanzo.org/service/operation/executeAskQuery/parameter/baseURI> system:name "baseURI" ;
+	system:nullAllowed "true" ;
+	system:type system:uri ;
+	system:validFormat <http://openanzo.org/service/format/text/text> ;
+	dc:description "Base URI for query." ;
+	a system:Parameter .
+
+<http://openanzo.org/service/operation/executeAskQuery/parameter/currentData> system:name "currentData" ;
+	system:type system:boolean ;
+	system:validFormat <http://openanzo.org/service/format/text/text> ;
+	dc:description "Run ask against current, uncommitted data." ;
+	a system:Parameter .
+
+<http://openanzo.org/service/operation/executeAskQuery/parameter/defaultNamedGraphs> system:name "defaultNamedGraphs" ;
+	system:nullAllowed "true" ;
+	system:transportFormat <http://openanzo.org/service/operation/executeAskQuery/parameter/namedGraphs/transport/jms> , <http://openanzo.org/service/operation/executeAskQuery/parameter/namedGraphs/transport/js> , <http://openanzo.org/service/operation/executeAskQuery/parameter/namedGraphs/transport/rest> , <http://openanzo.org/service/operation/executeAskQuery/parameter/namedGraphs/transport/ws> ;
+	system:type system:requestUris ;
+	system:validFormat format:json , format:mpv , <http://openanzo.org/service/format/text/csv> , <http://openanzo.org/service/format/text/text> ;
+	dc:description "URIS of NamedGraphs to union together as the defaultModel for the dataset the query is run against." ;
+	a system:Parameter .
+
+<http://openanzo.org/service/operation/executeAskQuery/parameter/namedDatasets> system:name "namedDatasets" ;
+	system:nullAllowed "true" ;
+	system:type system:requestUris ;
+	system:validFormat format:json , format:mpv , <http://openanzo.org/service/format/text/csv> , <http://openanzo.org/service/format/text/text> ;
+	dc:description "URIs of datasets that contribute to the query's RDF dataset." ;
+	a system:Parameter .
+
+<http://openanzo.org/service/operation/executeAskQuery/parameter/namedGraphs> system:name "namedGraphs" ;
+	system:nullAllowed "true" ;
+	system:type system:requestUris ;
+	system:validFormat format:json , format:mpv , <http://openanzo.org/service/format/text/csv> , <http://openanzo.org/service/format/text/text> ;
+	dc:description "URIS of NamedGraphs for the dataset the query is run against." ;
+	a system:Parameter .
+
+<http://openanzo.org/service/operation/executeAskQuery/parameter/query> system:name "query" ;
+	system:nullAllowed "true" ;
+	system:parameterLocation "body" ;
+	system:type system:string ;
+	system:validFormat <http://openanzo.org/service/format/text/text> ;
+	dc:description "Sparql query text." ;
+	a system:Parameter .
+	
+<http://openanzo.org/service/operation/executeAskQuery/parameter/queryBody> system:name "queryBody" ;
+	system:nullAllowed "true" ;
+	system:type system:string ;
+	system:validFormat <http://openanzo.org/service/format/text/text> ;
+	dc:description "Sparql query text." ;
+	a system:Parameter .
+
+<http://openanzo.org/service/operation/executeAskQuery/result> system:name "result" ;
+	system:type system:boolean ;
+	system:validFormat <http://openanzo.org/service/format/text/text> ;
+	dc:description "The results of running the query.  Result format is dependent on both the type of query, and the requested format." ;
+	a system:Parameter .
+
+<http://openanzo.org/service/query> system:operation <http://openanzo.org/service/operation/executeAskQuery> .

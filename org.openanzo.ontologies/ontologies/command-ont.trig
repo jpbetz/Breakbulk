@@ -1,0 +1,23 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ont: <http://openanzo.org/ontologies/2008/07/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix command: <http://openanzo.org/ontologies/2008/07/Command#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+
+
+ont:Command {
+	
+	ont:Command dc:creator "Ben Szekely" ;
+		a owl:Ontology ;
+		rdfs:label "Anzo Client Command Ontology" ;
+		owl:versionInfo "0.1" .
+	
+	command:Command a owl:Class ;
+		rdfs:comment """Anzo Client Command.  The Ontology class should be applied to transaction URIs in 
+			transaction context graphs to indicate command types for the transaction.""" ;
+		rdfs:subClassOf [a owl:Restriction ;owl:maxCardinality "1" ;owl:minCardinality "0" ;owl:onProperty command:commandType] .
+	
+	command:commandType a owl:ObjectProperty ;	rdfs:comment "The command type" ;	rdfs:domain command:Command ;rdfs:range rdfs:Resource .
+}

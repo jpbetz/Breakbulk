@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/openanzo/!svn/ver/4737/openanzo/trunk/org.openanzo.ldap/src/main/java/org/openanzo/ldap/internal
+END
+LdapServerActivator.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/openanzo/!svn/ver/4737/openanzo/trunk/org.openanzo.ldap/src/main/java/org/openanzo/ldap/internal/LdapServerActivator.java
+END
+LdapServer.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/openanzo/!svn/ver/4554/openanzo/trunk/org.openanzo.ldap/src/main/java/org/openanzo/ldap/internal/LdapServer.java
+END

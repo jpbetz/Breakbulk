@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/openanzo/!svn/ver/5148/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf
+END
+StatementTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/openanzo/!svn/ver/5148/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf/StatementTest.js
+END
+DatasetTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf/DatasetTest.js
+END
+module.js
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf/module.js
+END
+NamedGraphTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf/NamedGraphTest.js
+END
+QuadStoreTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf/QuadStoreTest.js
+END
+GraphResourceTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf/GraphResourceTest.js
+END
+DeltaGraphTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/openanzo/!svn/ver/4684/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf/DeltaGraphTest.js
+END
+runTests.html
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf/runTests.html
+END
+sampleSPARQLResult.json
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf/sampleSPARQLResult.json
+END

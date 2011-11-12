@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf/parser
+END
+NTripleParserTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf/parser/NTripleParserTest.js
+END
+TabulatorParserTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf/parser/TabulatorParserTest.js
+END
+usersAndRoles.nt
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf/parser/usersAndRoles.nt
+END
+ontology.nt
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf/parser/ontology.nt
+END
+w3cTest.nt
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf/parser/w3cTest.nt
+END

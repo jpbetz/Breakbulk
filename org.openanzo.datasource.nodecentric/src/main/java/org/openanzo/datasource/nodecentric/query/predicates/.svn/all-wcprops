@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/openanzo/!svn/ver/4131/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/java/org/openanzo/datasource/nodecentric/query/predicates
+END
+ListMemberPredicate.java
+K 25
+svn:wc:ra_dav:version-url
+V 170
+/svn/openanzo/!svn/ver/4131/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/java/org/openanzo/datasource/nodecentric/query/predicates/ListMemberPredicate.java
+END
+TextLikePredicate.java
+K 25
+svn:wc:ra_dav:version-url
+V 168
+/svn/openanzo/!svn/ver/3854/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/java/org/openanzo/datasource/nodecentric/query/predicates/TextLikePredicate.java
+END

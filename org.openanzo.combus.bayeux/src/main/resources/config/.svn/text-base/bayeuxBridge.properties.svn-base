@@ -1,0 +1,3 @@
+service.pid=org.openanzo.combus.BayeuxBridge
+org.openanzo.services.enabled=true
+org.openanzo.combus.bayeuxBridge.threadPoolSize=10

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/openanzo/!svn/ver/5125/openanzo/trunk/org.openanzo.combus.publisher/src/main/java/org/openanzo/combus/publisher
+END
+EventPublisher.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/5125/openanzo/trunk/org.openanzo.combus.publisher/src/main/java/org/openanzo/combus/publisher/EventPublisher.java
+END
+EventPublisherMBean.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/openanzo/!svn/ver/3135/openanzo/trunk/org.openanzo.combus.publisher/src/main/java/org/openanzo/combus/publisher/EventPublisherMBean.java
+END
+EventPublisherActivator.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/openanzo/!svn/ver/5125/openanzo/trunk/org.openanzo.combus.publisher/src/main/java/org/openanzo/combus/publisher/EventPublisherActivator.java
+END

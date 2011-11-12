@@ -1,0 +1,11 @@
+@prefix : <http://example.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+:order-by-non-projected-variable {
+    :a :p 1 .
+    :b :p 3 .
+    :c :p 2 .
+    :d :p 0 .
+    :e :p 5 .
+    :f :p -1 .
+}

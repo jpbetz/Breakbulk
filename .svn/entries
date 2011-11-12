@@ -1,0 +1,181 @@
+10
+
+dir
+5248
+http://svn.openanzo.org/svn/openanzo/openanzo/trunk
+http://svn.openanzo.org/svn/openanzo
+
+
+
+2010-03-10T16:45:28.253894Z
+5246
+jordi
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0a2a6340-b48a-40e4-9632-36e452a58e02
+
+org.openanzo.binarystore
+dir
+
+org.openanzo.jet.exceptions
+dir
+
+org.openanzo.jdbc
+dir
+
+org.openanzo.execution
+dir
+
+org.openanzo.cache
+dir
+
+org.openanzo.server
+dir
+
+org.openanzo.servlet.status
+dir
+
+org.openanzo.combus.endpoint
+dir
+
+org.openanzo.indexer.lucene
+dir
+
+org.openanzo.execution.javascript
+dir
+
+org.openanzo.osgi.registry
+dir
+
+org.openanzo.activemq
+dir
+
+org.openanzo.security.keystore
+dir
+
+org.openanzo.js
+dir
+
+org.openanzo.servlet.validation
+dir
+
+org.openanzo.test
+dir
+
+org.openanzo.exceptions
+dir
+
+org.openanzo.ontologies
+dir
+
+org.openanzo.execution.java
+dir
+
+org.openanzo.analysis
+dir
+
+org.openanzo.client.pool
+dir
+
+org.openanzo.security.ldap
+dir
+
+org.openanzo.combus
+dir
+
+org.openanzo.targetplatform
+dir
+
+org.openanzo.osgi.dirwatcher
+dir
+
+org.openanzo.jmx
+dir
+
+org.openanzo.indexer
+dir
+
+org.openanzo.osgi
+dir
+
+org.openanzo.servlet.authentication
+dir
+
+org.openanzo.datasource.manager
+dir
+
+org.openanzo.servlet.control
+dir
+
+org.openanzo.jet.services
+dir
+
+org.openanzo.osgi.configuration
+dir
+
+org.openanzo.jdbc.opgen
+dir
+
+org.openanzo.rdf
+dir
+
+org.openanzo.osgi.bootstrap
+dir
+
+org.openanzo.client
+dir
+
+openanzo-maven
+dir
+
+org.openanzo.aspect
+dir
+
+org.openanzo.ldap
+dir
+
+org.openanzo.execution.echo
+dir
+
+org.openanzo.services
+dir
+
+org.openanzo.combus.bayeux
+dir
+
+org.openanzo.combus.publisher
+dir
+
+org.openanzo.servlet
+dir
+
+org.openanzo.servlet.sparql
+dir
+
+org.openanzo.datasource.nodecentric
+dir
+
+org.openanzo.combus.realtime
+dir
+
+org.openanzo.datasource
+dir
+
+org.openanzo.client.sample
+dir
+
+org.openanzo.combus.listeners
+dir
+

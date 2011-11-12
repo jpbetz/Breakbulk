@@ -1,0 +1,8 @@
+PREFIX : <http://example.org/>
+PREFIX f: <http://openanzo.org/glitter/builtin/functions#>
+
+SELECT ?s
+WHERE { 
+    ?s a :ty .
+    OPTIONAL { ?s :p ?v } .
+} ORDER BY f:unboundAsMaxValue(?v) 

@@ -1,0 +1,19 @@
+Manifest-Version: 1.0
+Export-Package: org.openanzo.osgi.attributes;version="3.2.0",org.opena
+ nzo.osgi;version="3.2.0"
+Bundle-Name: Anzo OSGI APIs
+Bundle-Vendor: Cambridge Semantics Inc.
+Bundle-Version: 3.2.0
+Bundle-ManifestVersion: 2
+Bundle-License: http://www.eclipse.org/legal/epl-v10.html
+Bundle-Description: Anzo OSGI APIs
+Import-Package: javax.xml.parsers,javax.xml.stream,javax.xml.transform
+ ,org.apache.commons.collections15.multimap;version="4.1",org.openanzo
+ .exceptions;version="3.2",org.openanzo.osgi;version="3.2.0",org.opena
+ nzo.osgi.attributes;version="3.2.0",org.openanzo.rdf.utils;version="3
+ .2",org.openanzo.services;version="3.2",org.osgi.framework,org.osgi.s
+ ervice.cm,org.osgi.service.event,org.osgi.service.metatype,org.osgi.u
+ til.tracker,org.slf4j;version="1.5"
+Bundle-SymbolicName: org.openanzo.osgi
+Bundle-DocURL: http://www.cambridgesemantics.com
+

@@ -1,0 +1,4 @@
+PREFIX : <http://example.org/>
+SELECT ?target
+  FROM DATASET :dataset
+ WHERE { ?s :p1 [] . ?s :p2 ?target }

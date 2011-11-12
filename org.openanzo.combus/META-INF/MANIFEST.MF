@@ -1,0 +1,39 @@
+Manifest-Version: 1.0
+Export-Package: org.openanzo.combus;version="3.2.0",org.openanzo.combu
+ s.proxy;version="3.2.0"
+Bundle-Name: Anzo Combus API
+Bundle-Vendor: Cambridge Semantics Inc.
+Bundle-Version: 3.2.0
+Bundle-ManifestVersion: 2
+Bundle-License: http://www.eclipse.org/legal/epl-v10.html
+Bundle-Description: Anzo Combus Api
+Import-Package: info.aduna.lang,
+ javax.jms;version="1.1",
+ javax.management.j2ee.statistics;version="1.1.0",
+ org.apache.activemq;version="5.3",
+ org.apache.activemq.broker;version="5.3",
+ org.apache.activemq.command;version="5.3",
+ org.apache.activemq.management;version="1.4",
+ org.apache.activemq.transport;version="5.3",
+ org.apache.commons.collections15;version="4.01",
+ org.apache.commons.collections15.bidimap;version="4.01",
+ org.apache.commons.collections15.multimap;version="4.01",
+ org.apache.commons.lang;version="2.4",
+ org.openanzo.combus;version="3.2.0",
+ org.openanzo.combus.proxy;version="3.2.0",
+ org.openanzo.datasource;version="3.2",
+ org.openanzo.datasource.services;version="3.2",
+ org.openanzo.exceptions;version="3.2",
+ org.openanzo.glitter.dataset;version="3.2.0",
+ org.openanzo.glitter.query;version="3.2",
+ org.openanzo.rdf;version="3.2",
+ org.openanzo.rdf.utils;version="3.2",
+ org.openanzo.services;version="3.2",
+ org.openanzo.services.impl;version="3.2",
+ org.openanzo.services.serialization;version="3.2",
+ org.openanzo.services.serialization.transport;version="3.2",
+ org.openrdf.rio;version="2.0",
+ org.slf4j;version="1.5"
+Bundle-SymbolicName: org.openanzo.combus
+Bundle-DocURL: http://www.cambridgesemantics.com
+

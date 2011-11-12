@@ -1,0 +1,20 @@
+Manifest-Version: 1.0
+Export-Package: org.openanzo.osgi.bootstrap;version="3.2.0"
+Bundle-Name: Anzo OSGI Bootstraping API
+Bundle-Vendor: Cambridge Semantics Inc.
+Bundle-Version: 3.2.0
+Bundle-ManifestVersion: 2
+Bundle-Activator: org.openanzo.osgi.bootstrap.BootstrapActivator
+Bundle-License: http://www.eclipse.org/legal/epl-v10.html
+Bundle-Description: Anzo OSGI Bootstraping API
+Import-Package: org.openanzo.combus;version="3.2.0",org.openanzo.excep
+ tions;version="3.2.0",org.openanzo.osgi;version="3.2.0",org.openanzo.
+ osgi.attributes;version="3.2.0",org.openanzo.osgi.bootstrap;version="
+ 3.2.0",org.openanzo.services;version="3.2.0",org.osgi.framework;versi
+ on="1.3",org.osgi.service.cm;version="1.2",org.osgi.service.log;versi
+ on="1.3.0",org.osgi.service.metatype;version="1.1",org.osgi.service.p
+ ackageadmin;version="1.2.0",org.osgi.service.startlevel;version="1.1.
+ 0",org.slf4j;version="1.4"
+Bundle-SymbolicName: org.openanzo.osgi.bootstrap
+Bundle-DocURL: http://www.cambridgesemantics.com
+

@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/ontologies
+END
+owl_1_1.owl
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/ontologies/owl_1_1.owl
+END
+collections.owl
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/ontologies/collections.owl
+END
+rdfs.owl
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/ontologies/rdfs.owl
+END

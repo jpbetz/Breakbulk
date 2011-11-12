@@ -1,0 +1,41 @@
+Manifest-Version: 1.0
+Private-Package: config;version="3.2.0",org.openanzo.combus.realtime;v
+ ersion="3.2.0"
+Bundle-Name: Anzo Realtime Event Publisher
+Configuration-Properties: ${bundleResourcePrefix}config/
+Bundle-Vendor: Cambridge Semantics Inc.
+Bundle-Version: 3.2.0
+Bundle-ManifestVersion: 2
+Bundle-Activator: org.openanzo.combus.realtime.RealtimeActivator
+Bundle-License: http://www.eclipse.org/legal/epl-v10.html
+Bundle-Description: Component that publishes realtime events to regist
+ ered trackers.
+Import-Package: info.aduna.lang,
+ javax.jms;version="1.1",
+ org.apache.activemq.management;version="5.2",
+ org.apache.commons.collections15;version="4.01",
+ org.apache.commons.collections15.multimap;version="4.01",
+ org.apache.commons.lang.builder;version="2.4",
+ org.openanzo.analysis;version="3.2.0",
+ org.openanzo.cache;version="3.2",
+ org.openanzo.combus;version="3.2",
+ org.openanzo.combus.endpoint;version="3.2",
+ org.openanzo.datasource;version="3.2",
+ org.openanzo.exceptions;version="3.2",
+ org.openanzo.glitter.dataset;version="3.2.0",
+ org.openanzo.osgi;version="3.2",
+ org.openanzo.osgi.attributes;version="3.2",
+ org.openanzo.rdf;version="3.2",
+ org.openanzo.rdf.utils;version="3.2",
+ org.openanzo.services;version="3.2",
+ org.openanzo.services.impl;version="3.2",
+ org.openanzo.services.serialization;version="3.2",
+ org.openanzo.services.serialization.transport;version="3.2",
+ org.openrdf.rio;version="2.0",
+ org.osgi.framework,
+ org.osgi.service.metatype,
+ org.slf4j;version="1.5"
+Bundle-SymbolicName: org.openanzo.combus.realtime
+Bundle-DocURL: http://www.cambridgesemantics.com
+Export-Package: org.openanzo.combus.realtime
+

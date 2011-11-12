@@ -1,0 +1,10 @@
+Manifest-Version: 1.0
+Bundle-ManifestVersion: 2
+Bundle-Name: Aspect
+Bundle-SymbolicName: org.openanzo.aspect
+Bundle-Version: 1.0.0
+Export-Package: org.openanzo.aspects
+Import-Package: org.openanzo.exceptions;version="3.2.0",
+ org.slf4j;version="1.5.6"
+Require-Bundle: org.aspectj.runtime;bundle-version="1.6.1";visibility:=reexport
+Eclipse-SupplementBundle: com.cambridgesemantics.mojo.dynamojo

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/openanzo/!svn/ver/4124/openanzo/trunk/org.openanzo.servlet.authentication/src/main/resources/docroot
+END
+login.html
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/openanzo/!svn/ver/4124/openanzo/trunk/org.openanzo.servlet.authentication/src/main/resources/docroot/login.html
+END
+error.html
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/openanzo/!svn/ver/4124/openanzo/trunk/org.openanzo.servlet.authentication/src/main/resources/docroot/error.html
+END

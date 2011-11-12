@@ -1,0 +1,6 @@
+@prefix : <http://example.org/> .
+
+:let-same-variable {
+	:s1 :p1 "a", "b", "c" .
+	:s2 :p2 "d", "e", "f" .
+}

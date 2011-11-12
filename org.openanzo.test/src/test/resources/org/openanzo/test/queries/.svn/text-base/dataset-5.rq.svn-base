@@ -1,0 +1,9 @@
+PREFIX : <http://example.org/>
+SELECT ?g ?target
+  FROM DATASET :dataset
+ WHERE { 
+ 	?subj :p1 [] ; :p2 ?target .
+ 	GRAPH ?g {
+ 		:start :p3 ?subj .
+ 	}
+ }

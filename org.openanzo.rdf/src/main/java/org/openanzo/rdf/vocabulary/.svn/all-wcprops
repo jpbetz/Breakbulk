@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/openanzo/!svn/ver/4023/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/vocabulary
+END
+VCard.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/vocabulary/VCard.java
+END
+Ldap.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/vocabulary/Ldap.java
+END
+OWL.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/vocabulary/OWL.java
+END
+XMLSchema.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/vocabulary/XMLSchema.java
+END
+DC.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/vocabulary/DC.java
+END
+Anzo.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/openanzo/!svn/ver/4023/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/vocabulary/Anzo.java
+END
+FOAF.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/vocabulary/FOAF.java
+END
+RDF.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/vocabulary/RDF.java
+END
+RDFS.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/vocabulary/RDFS.java
+END

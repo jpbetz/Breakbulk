@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/openanzo/!svn/ver/4852/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/query/planning
+END
+SimpleCostExecutionPlan.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/openanzo/!svn/ver/3858/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/query/planning/SimpleCostExecutionPlan.java
+END
+SimpleCostModel.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/openanzo/!svn/ver/4852/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/query/planning/SimpleCostModel.java
+END
+TripleNode.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/openanzo/!svn/ver/3858/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/query/planning/TripleNode.java
+END
+GreedyCostBasedExecutionPlan.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/openanzo/!svn/ver/4852/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/query/planning/GreedyCostBasedExecutionPlan.java
+END
+OdoTripleNode.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/3995/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/query/planning/OdoTripleNode.java
+END
+QueryOptimizer.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/openanzo/!svn/ver/4760/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/query/planning/QueryOptimizer.java
+END
+OdoQueryOptimizer.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/4760/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/query/planning/OdoQueryOptimizer.java
+END
+LexicalOrderBasedExecutionPlan.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/openanzo/!svn/ver/4760/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/query/planning/LexicalOrderBasedExecutionPlan.java
+END

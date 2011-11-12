@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/openanzo/!svn/ver/5156/openanzo/trunk/org.openanzo.ontologies/ontologies
+END
+command-ont.trig
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/openanzo/!svn/ver/4033/openanzo/trunk/org.openanzo.ontologies/ontologies/command-ont.trig
+END
+clientPersistence-ont.trig
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/openanzo/!svn/ver/4033/openanzo/trunk/org.openanzo.ontologies/ontologies/clientPersistence-ont.trig
+END
+semanticService-ont.trig
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/openanzo/!svn/ver/4033/openanzo/trunk/org.openanzo.ontologies/ontologies/semanticService-ont.trig
+END
+system-ont.trig
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/openanzo/!svn/ver/5128/openanzo/trunk/org.openanzo.ontologies/ontologies/system-ont.trig
+END
+anzo-ont.trig
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/openanzo/!svn/ver/5156/openanzo/trunk/org.openanzo.ontologies/ontologies/anzo-ont.trig
+END
+foaf-ont.trig
+K 25
+svn:wc:ra_dav:version-url
+V 91
+/svn/openanzo/!svn/ver/4033/openanzo/trunk/org.openanzo.ontologies/ontologies/foaf-ont.trig
+END

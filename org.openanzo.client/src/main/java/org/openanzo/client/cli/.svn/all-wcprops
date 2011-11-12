@@ -1,0 +1,203 @@
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/openanzo/!svn/ver/5246/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli
+END
+CollapseCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/openanzo/!svn/ver/5245/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/CollapseCommand.java
+END
+RdfIOCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/openanzo/!svn/ver/5234/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/RdfIOCommand.java
+END
+AnalyzeCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/openanzo/!svn/ver/5245/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/AnalyzeCommand.java
+END
+CreateCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/openanzo/!svn/ver/5245/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/CreateCommand.java
+END
+CommandLineInterface.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/openanzo/!svn/ver/5245/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/CommandLineInterface.java
+END
+DefaultConsole.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/openanzo/!svn/ver/5245/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/DefaultConsole.java
+END
+InvalidArgumentException.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/InvalidArgumentException.java
+END
+ImportCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/openanzo/!svn/ver/5245/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/ImportCommand.java
+END
+CallCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/openanzo/!svn/ver/5245/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/CallCommand.java
+END
+IConsole.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/openanzo/!svn/ver/5245/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/IConsole.java
+END
+SolutionTextWriter.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/openanzo/!svn/ver/5202/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/SolutionTextWriter.java
+END
+CLICompleter.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/openanzo/!svn/ver/5237/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/CLICompleter.java
+END
+UnionCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/openanzo/!svn/ver/5245/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/UnionCommand.java
+END
+CommandException.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/CommandException.java
+END
+RdfInputArgument.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/openanzo/!svn/ver/4479/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/RdfInputArgument.java
+END
+QueryCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/openanzo/!svn/ver/5245/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/QueryCommand.java
+END
+PlayCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/openanzo/!svn/ver/5245/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/PlayCommand.java
+END
+WatchCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/openanzo/!svn/ver/5245/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/WatchCommand.java
+END
+GenCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/openanzo/!svn/ver/5245/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/GenCommand.java
+END
+ReplaceCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/openanzo/!svn/ver/5245/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/ReplaceCommand.java
+END
+ExpandCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/openanzo/!svn/ver/5245/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/ExpandCommand.java
+END
+GetCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/openanzo/!svn/ver/5245/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/GetCommand.java
+END
+RdfUploadCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/openanzo/!svn/ver/5234/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/RdfUploadCommand.java
+END
+ConvertCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/openanzo/!svn/ver/5245/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/ConvertCommand.java
+END
+FindCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/openanzo/!svn/ver/5245/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/FindCommand.java
+END
+UpdateCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/openanzo/!svn/ver/5245/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/UpdateCommand.java
+END
+ResetCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/openanzo/!svn/ver/5245/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/ResetCommand.java
+END
+CommandContext.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/openanzo/!svn/ver/5237/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/CommandContext.java
+END
+PlaybackHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/openanzo/!svn/ver/5246/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/PlaybackHandler.java
+END
+SubCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/openanzo/!svn/ver/5234/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/SubCommand.java
+END
+AnzoConsole.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/openanzo/!svn/ver/5244/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/AnzoConsole.java
+END
+StatementComparator.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/openanzo/!svn/ver/3852/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/StatementComparator.java
+END
+RemoveCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/openanzo/!svn/ver/5245/openanzo/trunk/org.openanzo.client/src/main/java/org/openanzo/client/cli/RemoveCommand.java
+END

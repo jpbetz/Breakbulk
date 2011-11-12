@@ -1,0 +1,12 @@
+PREFIX : <http://example.org/>
+CONSTRUCT {
+	GRAPH ?o {
+		?s ?p "object" .
+	}
+	?o :is :graph .
+	GRAPH :fixed {
+		?p :ty "predicate" .
+	}
+} WHERE {
+	?s ?p ?o .
+}

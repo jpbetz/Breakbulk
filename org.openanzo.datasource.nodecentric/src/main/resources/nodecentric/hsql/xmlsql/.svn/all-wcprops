@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/openanzo/!svn/ver/4387/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/resources/nodecentric/hsql/xmlsql
+END
+with-sequences.sql
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/openanzo/!svn/ver/3849/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/resources/nodecentric/hsql/xmlsql/with-sequences.sql
+END
+LastTransaction.sql
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/openanzo/!svn/ver/3139/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/resources/nodecentric/hsql/xmlsql/LastTransaction.sql
+END
+InsertStatements.sql
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/openanzo/!svn/ver/4387/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/resources/nodecentric/hsql/xmlsql/InsertStatements.sql
+END

@@ -1,0 +1,19 @@
+@prefix : <http://example.org/> .
+
+:construct-2 {
+	:s1 :a1 :a2 .
+	:s1 :b1 :b2 .
+	:s1 :c1 :c2 .
+	
+	:s2 :b1 :b2 .
+	
+	:s3 :a1 :a2 .
+	:s3 :b1 :b2 .
+	
+	:s4 :b1 :b2 .
+	:s4 :c1 :c2 .
+	
+	:s5 :a1 :a2 .
+	:s5 :c1 :c2 .
+	
+}

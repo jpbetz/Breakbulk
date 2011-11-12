@@ -1,0 +1,10 @@
+<propertiesGroup packageName="org.openanzo.client" groupPrefix="org.openanzo.client" className="AnzoClient">
+	<description>Configuration properties for the local client stack.</description>
+	<property name="persistence.enabled" key="KEY_PERSISTENCE_ENABLED" passDefault="false" defaultValue="false" type="Boolean">
+		<description>This determines if the data retrieved into the local cache and local transactions are persisted to disk</description>
+		<description >If true, the client stack uses a relational database to store statements, as opposed to an in memory store if false.</description>
+	</property>
+	<property name="quadstore.shared" key="KEY_QUADSTORE_SHARED" passDefault="false" defaultValue="false" type="Boolean">
+		<description>Is the quad store shared between multiple anzo clients created.</description>
+	</property>
+</propertiesGroup>

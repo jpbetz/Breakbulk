@@ -1,0 +1,28 @@
+@prefix format: <http://openanzo.org/service/format/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix system: <http://openanzo.org/ontologies/2008/07/System#> .
+
+
+<http://openanzo.org/service/model> system:operation <http://openanzo.org/service/operation/getUUIDforUri> .
+
+<http://openanzo.org/service/operation/getUUIDforUri> system:name "getUUIDforUri" ;
+	system:requestParameter <http://openanzo.org/service/operation/getUUIDforUri/parameter/namedGraphUri> ;
+	system:requestParameter0 <http://openanzo.org/service/operation/getUUIDforUri/parameter/namedGraphUri> ;
+	system:result <http://openanzo.org/service/operation/getUUIDforUri/result> ;
+	system:sysadminRequired "false" ;
+	dc:description "Get the NamedGraph UUID for the given URI." ;
+	dc:title "Get UUID for URI" ;
+	a system:Operation .
+
+<http://openanzo.org/service/operation/getUUIDforUri/parameter/namedGraphUri> system:name "namedGraphUri" ;
+	system:nullAllowed "false" ;
+	system:type system:uri ;
+	system:validFormat format:json , <http://openanzo.org/service/format/text/text> ;
+	dc:description "URI of NamedGraph UUID to retrieve" ;
+	a system:Parameter .
+
+<http://openanzo.org/service/operation/getUUIDforUri/result> system:name "result" ;
+	system:type system:uri ;
+	system:validFormat format:json , <http://openanzo.org/service/format/text/text> ;
+	dc:description "UUID of NamedGraph." ;
+	a system:Parameter .

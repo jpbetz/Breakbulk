@@ -1,0 +1,26 @@
+Manifest-Version: 1.0
+Export-Package: org.openanzo.cache;version="3.2.0"
+Private-Package: config;version="3.2.0"
+Bundle-Name: Anzo Cache APIs
+Configuration-Properties: ${bundleResourcePrefix}config/
+Bundle-Vendor: Cambridge Semantics Inc.
+Bundle-Version: 3.2.0
+Bundle-Activator: org.openanzo.cache.CacheActivator
+Bundle-ManifestVersion: 2
+Bundle-License: http://www.eclipse.org/legal/epl-v10.html
+Bundle-Description: Anzo Cache APIs
+Import-Package: javax.management,javax.management.j2ee.statistics;vers
+ ion="1.1.0",net.sf.ehcache;version="1.6.0.beta1",net.sf.ehcache.event
+ ;version="1.6.0.beta1",net.sf.ehcache.management;version="1.6.0.beta1
+ ",net.sf.ehcache.store;version="1.6.0.beta1",org.apache.activemq.mana
+ gement;version="5.3",org.apache.commons.collections15.map;version="4.
+ 01",org.openanzo.cache;version="3.2.0",org.openanzo.exceptions;versio
+ n="3.2",org.openanzo.jmx;version="3.2",org.openanzo.osgi;version="3.2
+ ",org.openanzo.osgi.attributes;version="3.2",org.openanzo.rdf;version
+ ="3.2",org.openanzo.rdf.utils;version="3.2.0",org.openanzo.services;v
+ ersion="3.2",org.openanzo.services.serialization;version="3.2",org.os
+ gi.framework,org.osgi.service.event,org.osgi.service.metatype,org.slf
+ 4j;version="1.5"
+Bundle-SymbolicName: org.openanzo.cache
+Bundle-DocURL: http://www.cambridgesemantics.com
+

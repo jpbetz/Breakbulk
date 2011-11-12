@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/4693/openanzo/trunk/org.openanzo.jet.exceptions/src/main/java/org/openanzo/jet/exceptions
+END
+DictionaryDefinitionTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/openanzo/!svn/ver/4073/openanzo/trunk/org.openanzo.jet.exceptions/src/main/java/org/openanzo/jet/exceptions/DictionaryDefinitionTask.java
+END
+PropertiesDefinitionParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/openanzo/!svn/ver/4581/openanzo/trunk/org.openanzo.jet.exceptions/src/main/java/org/openanzo/jet/exceptions/PropertiesDefinitionParser.java
+END
+ExceptionDefinitionParser.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.jet.exceptions/src/main/java/org/openanzo/jet/exceptions/ExceptionDefinitionParser.java
+END
+MetatypeDefinitionTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/openanzo/!svn/ver/4073/openanzo/trunk/org.openanzo.jet.exceptions/src/main/java/org/openanzo/jet/exceptions/MetatypeDefinitionTask.java
+END
+PropertiesDefinitionTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/openanzo/!svn/ver/4073/openanzo/trunk/org.openanzo.jet.exceptions/src/main/java/org/openanzo/jet/exceptions/PropertiesDefinitionTask.java
+END
+ExceptionDefinitionTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/openanzo/!svn/ver/4073/openanzo/trunk/org.openanzo.jet.exceptions/src/main/java/org/openanzo/jet/exceptions/ExceptionDefinitionTask.java
+END

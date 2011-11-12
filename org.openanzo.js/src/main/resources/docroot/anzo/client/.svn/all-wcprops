@@ -1,0 +1,161 @@
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/openanzo/!svn/ver/5176/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/client
+END
+NamedGraphUpdateManager.js
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/openanzo/!svn/ver/4765/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/client/NamedGraphUpdateManager.js
+END
+JMSReplicationService.js
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/openanzo/!svn/ver/3328/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/client/JMSReplicationService.js
+END
+ReplicaUpdater.js
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/openanzo/!svn/ver/3601/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/client/ReplicaUpdater.js
+END
+Replicator.js
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/openanzo/!svn/ver/4765/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/client/Replicator.js
+END
+AnzoClient.js
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/openanzo/!svn/ver/5176/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/client/AnzoClient.js
+END
+Vocabulary.js
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/openanzo/!svn/ver/4868/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/client/Vocabulary.js
+END
+GraphTable.js
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/openanzo/!svn/ver/5009/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/client/GraphTable.js
+END
+_JMSNotificationRegistrationService.js
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/3747/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/client/_JMSNotificationRegistrationService.js
+END
+AnzoClientDataset.js
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/openanzo/!svn/ver/4807/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/client/AnzoClientDataset.js
+END
+JMSUpdateService.js
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/openanzo/!svn/ver/3747/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/client/JMSUpdateService.js
+END
+JMSResetService.js
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/client/JMSResetService.js
+END
+Serialization.js
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/openanzo/!svn/ver/3747/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/client/Serialization.js
+END
+Transaction.js
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/client/Transaction.js
+END
+TransactionProxy.js
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/client/TransactionProxy.js
+END
+TransactionQueue.js
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/openanzo/!svn/ver/4777/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/client/TransactionQueue.js
+END
+_Tracker.js
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/openanzo/!svn/ver/4240/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/client/_Tracker.js
+END
+JMSModelService.js
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/client/JMSModelService.js
+END
+JMSAuthorizationService.js
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/client/JMSAuthorizationService.js
+END
+Precondition.js
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/client/Precondition.js
+END
+StatementChannel.js
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/client/StatementChannel.js
+END
+JMSExecutionService.js
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/openanzo/!svn/ver/3448/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/client/JMSExecutionService.js
+END
+RealtimeUpdateManager.js
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/openanzo/!svn/ver/4240/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/client/RealtimeUpdateManager.js
+END
+JMSQueryService.js
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/openanzo/!svn/ver/4864/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/client/JMSQueryService.js
+END
+ClientGraph.js
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/3378/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/client/ClientGraph.js
+END
+BinaryStore.js
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/4807/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/client/BinaryStore.js
+END
+MetadataGraph.js
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/openanzo/!svn/ver/4868/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/client/MetadataGraph.js
+END

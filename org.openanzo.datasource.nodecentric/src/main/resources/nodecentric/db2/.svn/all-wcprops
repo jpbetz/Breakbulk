@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/openanzo/!svn/ver/4470/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/resources/nodecentric/db2
+END
+Indexes.ddl
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/openanzo/!svn/ver/4470/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/resources/nodecentric/db2/Indexes.ddl
+END
+TemporaryTablespace.ddl
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/openanzo/!svn/ver/3139/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/resources/nodecentric/db2/TemporaryTablespace.ddl
+END

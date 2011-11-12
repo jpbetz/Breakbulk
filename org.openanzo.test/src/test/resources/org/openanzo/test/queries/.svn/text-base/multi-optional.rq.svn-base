@@ -1,0 +1,43 @@
+PREFIX : <http://example.org/> 
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>  
+PREFIX dc: <http://purl.org/dc/elements/1.1/>  
+PREFIX anzo: <http://openanzo.org/ontologies/2008/07/Anzo#> 
+
+SELECT ?a ?title ?desc ?date ?b ?btitle ?c ?ctitle ?ccreator ?d ?dtitle ?dcreator 
+WHERE {
+	?a a :type . 
+	OPTIONAL { 
+		?a  dc:title ?title 
+	} .
+	OPTIONAL { 
+		?a  dc:description ?desc
+	} .
+	OPTIONAL { 
+		?a  anzo:modified ?date
+	} .
+	OPTIONAL { 
+		?a :p1 ?b .
+		OPTIONAL {
+			?b dc:title ?btitle
+		}
+	} .
+    OPTIONAL { 
+    	?a dc:creator ?c .
+    	OPTIONAL {
+    		?c dc:title ?ctitle
+    	} .
+    	OPTIONAL { 
+    		?c dc:creator ?ccreator
+    	} 
+    } .
+    OPTIONAL { 
+    	?a :p2 ?d .
+    	OPTIONAL {
+    		?d dc:title ?dtitle
+    	} .
+    	OPTIONAL {
+    		?d dc:creator ?dcreator
+    	}
+	}
+}
+

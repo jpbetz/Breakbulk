@@ -1,0 +1,425 @@
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/openanzo/!svn/ver/5125/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system
+END
+Operation.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/Operation.java
+END
+DatasourceListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/DatasourceListener.java
+END
+CredentialsListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/CredentialsListener.java
+END
+RDBConfigurationListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/RDBConfigurationListener.java
+END
+RDBComponentImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/RDBComponentImpl.java
+END
+LdapConfigurationListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/LdapConfigurationListener.java
+END
+NetworkConnectionListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/NetworkConnectionListener.java
+END
+JastorOntologyImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/JastorOntologyImpl.java
+END
+NetworkComponentListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/NetworkComponentListener.java
+END
+StatisticsProviderImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/StatisticsProviderImpl.java
+END
+HttpConfigurationImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/HttpConfigurationImpl.java
+END
+RDBComponent.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/RDBComponent.java
+END
+JastorOntology.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/JastorOntology.java
+END
+AuthorizationRuleListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/openanzo/!svn/ver/5125/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/AuthorizationRuleListener.java
+END
+FormatListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/FormatListener.java
+END
+JastorGenerationImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/JastorGenerationImpl.java
+END
+DatasourceCapabilityListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/DatasourceCapabilityListener.java
+END
+CountStatisticImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/CountStatisticImpl.java
+END
+TypeImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/TypeImpl.java
+END
+RDBDatasourceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/RDBDatasourceImpl.java
+END
+StatisticsProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/StatisticsProvider.java
+END
+OperationListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/OperationListener.java
+END
+HttpConfiguration.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/HttpConfiguration.java
+END
+SystemFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/SystemFactory.java
+END
+JastorGeneration.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/JastorGeneration.java
+END
+CountStatistic.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/CountStatistic.java
+END
+Type.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/Type.java
+END
+ServiceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/ServiceImpl.java
+END
+RDBDatasource.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/RDBDatasource.java
+END
+ComponentImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/ComponentImpl.java
+END
+StatisticImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/StatisticImpl.java
+END
+TimerStatisticImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/TimerStatisticImpl.java
+END
+Service.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/Service.java
+END
+RDBComponentListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/RDBComponentListener.java
+END
+ParameterImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/ParameterImpl.java
+END
+Component.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/Component.java
+END
+JastorOntologyListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/JastorOntologyListener.java
+END
+Statistic.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/Statistic.java
+END
+TimerStatistic.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/TimerStatistic.java
+END
+StatisticsProviderListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/StatisticsProviderListener.java
+END
+DatasourceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/DatasourceImpl.java
+END
+HttpConfigurationListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/HttpConfigurationListener.java
+END
+CredentialsImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/CredentialsImpl.java
+END
+Parameter.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/Parameter.java
+END
+RDBConfigurationImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/RDBConfigurationImpl.java
+END
+JastorGenerationListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/JastorGenerationListener.java
+END
+CountStatisticListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/CountStatisticListener.java
+END
+TypeListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/TypeListener.java
+END
+RDBDatasourceListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/RDBDatasourceListener.java
+END
+Datasource.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/Datasource.java
+END
+LdapConfigurationImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/LdapConfigurationImpl.java
+END
+NetworkConnectionImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/NetworkConnectionImpl.java
+END
+Credentials.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/Credentials.java
+END
+NetworkComponentImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/NetworkComponentImpl.java
+END
+RDBConfiguration.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/RDBConfiguration.java
+END
+ServiceListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/ServiceListener.java
+END
+ComponentListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/ComponentListener.java
+END
+LdapConfiguration.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/LdapConfiguration.java
+END
+NetworkConnection.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/NetworkConnection.java
+END
+AuthorizationRuleImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/openanzo/!svn/ver/5125/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/AuthorizationRuleImpl.java
+END
+FormatImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/FormatImpl.java
+END
+NetworkComponent.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/NetworkComponent.java
+END
+StatisticListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/StatisticListener.java
+END
+DatasourceCapabilityImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/DatasourceCapabilityImpl.java
+END
+TimerStatisticListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/TimerStatisticListener.java
+END
+OperationImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/OperationImpl.java
+END
+ParameterListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/ParameterListener.java
+END
+AuthorizationRule.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/openanzo/!svn/ver/5125/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/AuthorizationRule.java
+END
+Format.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/Format.java
+END
+DatasourceCapability.java
+K 25
+svn:wc:ra_dav:version-url
+V 140
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/system/DatasourceCapability.java
+END

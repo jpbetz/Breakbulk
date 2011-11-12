@@ -1,0 +1,60 @@
+<propertyDefinitions>
+	<propertiesGroup packageName="org.openanzo.security.keystore" groupPrefix="org.openanzo.security.keystore" className="KeyStore">
+		<description>Base configuration properties that are used by ldap authentication provider.</description>
+
+		<property name="keyFileLocation" key="KEY_FILE_LOCATION" passDefault="false"  type="String">
+			<description>The path to the secret keystore.</description>
+		</property>
+
+		<property name="keyPassword" key="KEY_PASSWORD" passDefault="false" defaultValue="secret" quoteDefault="true" type="Encrypted">
+			<description>Password used to protect the secret key in the keystore.</description>
+		</property>
+        
+        <property name="keystoreType" key="KEYSTORE_TYPE" passDefault="false" defaultValue="JCEKS" quoteDefault="true" type="String">
+            <description>Keystore Type.</description>
+        </property>
+
+		<property name="algorithm" key="KEY_ALGORITHM" passDefault="false" defaultValue="AES" quoteDefault="true" type="String">
+			<description>Algorithm to use for encrypting data. This is a transformation string of the format accepted by the javax.crypto.Cipher#getInstance method. The default is 'AES'.</description>
+		</property>
+        
+        <property name="trustFileLocation" key="TRUST_FILE_LOCATION" passDefault="false"   type="String">
+            <description>The path to the secret truststore.</description>
+        </property>
+
+        <property name="trustPassword" key="TRUST_PASSWORD" passDefault="false" defaultValue="secret"  quoteDefault="true" type="Encrypted">
+            <description>Password used to protect the secret key in the truststore.</description>
+        </property>
+        
+        <property name="truststoreType" key="TRUSTSTORE_TYPE" passDefault="false" defaultValue="JCEKS" quoteDefault="true" type="String">
+            <description>Truststore Type.</description>
+        </property>
+        
+        
+        <property name="clientKeyFileLocation" key="CLIENT_KEY_FILE_LOCATION" passDefault="false"  type="String">
+            <description>The path to the secret keystore.</description>
+        </property>
+
+        <property name="clientKeyPassword" key="CLIENT_KEY_PASSWORD" passDefault="false" defaultValue="secret" quoteDefault="true" type="Encrypted">
+            <description>Password used to protect the secret key in the keystore.</description>
+        </property>
+        
+        <property name="clientKeystoreType" key="CLIENT_KEYSTORE_TYPE" passDefault="false" defaultValue="JCEKS" quoteDefault="true" type="String">
+            <description>Keystore Type.</description>
+        </property>
+
+        
+        <property name="clientTrustFileLocation" key="CLIENT_TRUST_FILE_LOCATION" passDefault="false"   type="String">
+            <description>The path to the secret truststore.</description>
+        </property>
+
+        <property name="clientTrustPassword" key="CLIENT_TRUST_PASSWORD" passDefault="false" defaultValue="secret"  quoteDefault="true" type="Encrypted">
+            <description>Password used to protect the secret key in the truststore.</description>
+        </property>
+        
+        <property name="clientTruststoreType" key="CLIENT_TRUSTSTORE_TYPE" passDefault="false" defaultValue="JCEKS" quoteDefault="true" type="String">
+            <description>Truststore Type.</description>
+        </property>
+
+	</propertiesGroup>
+</propertyDefinitions>

@@ -1,0 +1,149 @@
+K 25
+svn:wc:ra_dav:version-url
+V 89
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.services/docs/services/datasource
+END
+getRolesForGraph.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/openanzo/!svn/ver/3164/openanzo/trunk/org.openanzo.services/docs/services/datasource/getRolesForGraph.ttl
+END
+executeQueryIndex.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/openanzo/!svn/ver/3164/openanzo/trunk/org.openanzo.services/docs/services/datasource/executeQueryIndex.ttl
+END
+modelservice.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/openanzo/!svn/ver/3164/openanzo/trunk/org.openanzo.services/docs/services/datasource/modelservice.ttl
+END
+authorizationService.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/openanzo/!svn/ver/3164/openanzo/trunk/org.openanzo.services/docs/services/datasource/authorizationService.ttl
+END
+reset.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/openanzo/!svn/ver/3164/openanzo/trunk/org.openanzo.services/docs/services/datasource/reset.ttl
+END
+update.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/openanzo/!svn/ver/3164/openanzo/trunk/org.openanzo.services/docs/services/datasource/update.ttl
+END
+getNamedGraphRevision.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/openanzo/!svn/ver/3164/openanzo/trunk/org.openanzo.services/docs/services/datasource/getNamedGraphRevision.ttl
+END
+queryService.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/openanzo/!svn/ver/3164/openanzo/trunk/org.openanzo.services/docs/services/datasource/queryService.ttl
+END
+executeAskQuery.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/openanzo/!svn/ver/3164/openanzo/trunk/org.openanzo.services/docs/services/datasource/executeAskQuery.ttl
+END
+indexService.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/openanzo/!svn/ver/3164/openanzo/trunk/org.openanzo.services/docs/services/datasource/indexService.ttl
+END
+findstatements.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/openanzo/!svn/ver/3164/openanzo/trunk/org.openanzo.services/docs/services/datasource/findstatements.ttl
+END
+executeQuery.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/openanzo/!svn/ver/3164/openanzo/trunk/org.openanzo.services/docs/services/datasource/executeQuery.ttl
+END
+replicationService.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/3164/openanzo/trunk/org.openanzo.services/docs/services/datasource/replicationService.ttl
+END
+resolveNamedDataset.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/openanzo/!svn/ver/3633/openanzo/trunk/org.openanzo.services/docs/services/datasource/resolveNamedDataset.ttl
+END
+getUriForUUID.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/openanzo/!svn/ver/3164/openanzo/trunk/org.openanzo.services/docs/services/datasource/getUriForUUID.ttl
+END
+getUUIDforUri.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/openanzo/!svn/ver/3745/openanzo/trunk/org.openanzo.services/docs/services/datasource/getUUIDforUri.ttl
+END
+resetService.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/openanzo/!svn/ver/3164/openanzo/trunk/org.openanzo.services/docs/services/datasource/resetService.ttl
+END
+updateService.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/openanzo/!svn/ver/3164/openanzo/trunk/org.openanzo.services/docs/services/datasource/updateService.ttl
+END
+containsNamedGraph.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/3164/openanzo/trunk/org.openanzo.services/docs/services/datasource/containsNamedGraph.ttl
+END
+replicate.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/openanzo/!svn/ver/3327/openanzo/trunk/org.openanzo.services/docs/services/datasource/replicate.ttl
+END
+import.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/openanzo/!svn/ver/3164/openanzo/trunk/org.openanzo.services/docs/services/datasource/import.ttl
+END
+getStoredNamedGraphs.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/openanzo/!svn/ver/3164/openanzo/trunk/org.openanzo.services/docs/services/datasource/getStoredNamedGraphs.ttl
+END
+getSize.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/openanzo/!svn/ver/3164/openanzo/trunk/org.openanzo.services/docs/services/datasource/getSize.ttl
+END
+cancelQuery.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.services/docs/services/datasource/cancelQuery.ttl
+END

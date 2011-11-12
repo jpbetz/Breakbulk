@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/openanzo/!svn/ver/4478/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/scripts/db2
+END
+db2setup_windows.sql
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/openanzo/!svn/ver/3586/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/scripts/db2/db2setup_windows.sql
+END
+db2setup.sh
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/openanzo/!svn/ver/3586/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/scripts/db2/db2setup.sh
+END
+runstats.sql
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/3794/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/scripts/db2/runstats.sql
+END
+droptables.bat
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/openanzo/!svn/ver/3586/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/scripts/db2/droptables.bat
+END
+runstats_extra.sql
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/openanzo/!svn/ver/3794/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/scripts/db2/runstats_extra.sql
+END
+db2setup.sql
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/3586/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/scripts/db2/db2setup.sql
+END
+droptables.sh
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/openanzo/!svn/ver/3586/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/scripts/db2/droptables.sh
+END
+runstats.bat
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/3586/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/scripts/db2/runstats.bat
+END
+runstats-extra.bat
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/openanzo/!svn/ver/3586/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/scripts/db2/runstats-extra.bat
+END
+dropdatabases.sql
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/openanzo/!svn/ver/4478/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/scripts/db2/dropdatabases.sql
+END
+runstats.sh
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/openanzo/!svn/ver/3586/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/scripts/db2/runstats.sh
+END
+db2setup.bat
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/3586/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/scripts/db2/db2setup.bat
+END
+runstats-extra.sh
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/openanzo/!svn/ver/3586/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/scripts/db2/runstats-extra.sh
+END

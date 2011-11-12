@@ -1,0 +1,93 @@
+<%@ jet
+		skeleton="generator.skeleton"	
+		package="org.openanzo.jet.services"
+		class="ServicesSoapConstantsTemplate"
+		imports="org.openanzo.rdf.jastor.JastorUtils org.openanzo.ontologies.system.*  org.openanzo.rdf.vocabulary.DC java.util.Iterator "%>
+/*******************************************************************************
+ * Copyright (c) 2004, 2007-2008 IBM Corporation and Cambridge Semantics Incorporated.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * File:        <%="$".toString()%>Source<%="$".toString()%>
+ * Created by:  Generated Source from org.openanzo.jdbc.utils.opgen.jet
+ * Created on:  Generated Source from org.openanzo.jdbc.utils.opgen.jet
+ * Revision:	<%="$".toString()%>Id<%="$".toString()%>
+ * 
+ * Contributors:
+ *     IBM Corporation - initial API and implementation
+ *	   Cambridge Semantics Incorporated - Fork to Anzo
+ *******************************************************************************/
+package org.openanzo.services.services.proxy.ws;
+import javax.xml.soap.Name;
+import javax.xml.namespace.QName;
+import org.apache.axis.message.PrefixedQName;
+import org.openanzo.rdf.Constants;
+<% ServiceWrapper wrapper=(ServiceWrapper)argument;Service service = wrapper.service; %>
+
+ /**
+ * Soap constants for <% if(service.getPropertyValue(DC.TITLE)!=null){%><%=JastorUtils.getStingValue(service.getPropertyValue(DC.TITLE))%><%}%> interface
+ * @author Generated Code
+ * 
+ */
+public class <%=service.getName()%>SoapConstants{
+	/** Endpoint path */
+    public final static String endpointPath          = "/model/service";
+
+<%for(Operation operation:JastorUtils.sortByTitle(service.getOperation())){
+%>
+    /** <%=operation.getName()%> webservice method */
+    public static class <%=org.openanzo.rdf.utils.WikiFormatUtils.capFirstLetter(operation.getName())%> {
+	    /** <%=operation.getName()%> QName */
+	    public final static QName name            = new QName(Constants.NAMESPACES.PREFIX, "<%=operation.getName()%>");
+	  
+	    /** Format QName */
+	    public final static QName formatQName            = new QName(Constants.NAMESPACES.PREFIX, "format");
+	    
+	    /** Format Name */
+	    public final static Name  formatName        = new PrefixedQName(formatQName);
+	 
+	   /** Format QName */
+	    public final static QName resultFormatQName            = new QName(Constants.NAMESPACES.PREFIX, "resultFormat");
+	    
+	    /** Format Name */
+	    public final static Name  resultFormatName        = new PrefixedQName(resultFormatQName);
+	    
+	    /** <%=operation.getName()%> QName */
+	    public final static QName resultsQName    = new QName(Constants.NAMESPACES.PREFIX, "<%=operation.getName()%>Results");
+	  
+	   /** <%=operation.getName()%> QName */
+	    public final static Name resultsName    = new PrefixedQName(resultsQName);
+	    
+	    /** <%=operation.getName()%> response Name */
+       public final static QName responseQName = new QName(Constants.NAMESPACES.PREFIX, "<%=operation.getName()%>");
+      
+<%Parameter parameters[]=new Parameter[8];%>
+<%if(operation.getRequestParameter0()!=null){ parameters[0]=operation.getRequestParameter0();}%>
+<%if(operation.getRequestParameter1()!=null){ parameters[1]=operation.getRequestParameter1();}%>
+<%if(operation.getRequestParameter2()!=null){ parameters[2]=operation.getRequestParameter2();}%>
+<%if(operation.getRequestParameter3()!=null){ parameters[3]=operation.getRequestParameter3();}%>
+<%if(operation.getRequestParameter4()!=null){ parameters[4]=operation.getRequestParameter4();}%>
+<%if(operation.getRequestParameter5()!=null){ parameters[5]=operation.getRequestParameter5();}%>
+<%if(operation.getRequestParameter6()!=null){ parameters[6]=operation.getRequestParameter6();}%>
+<%if(operation.getRequestParameter7()!=null){ parameters[7]=operation.getRequestParameter7();}%>
+<%for(int i=0;i<8;i++){Parameter parameter=parameters[i];%>
+<%if(parameter!=null){%>
+		/** <%=parameter.getName()%> QName */
+	    public final static QName <%=parameter.getName()%>QName       = new QName(Constants.NAMESPACES.PREFIX, "<%=parameter.getName()%>");
+	
+	    /** <%=parameter.getName()%> Name */
+	    public final static Name  <%=parameter.getName()%>Name        = new PrefixedQName(<%=parameter.getName()%>QName);
+<%if(parameter.getType()!=null&&(parameter.getType().getDefaultJMSFormat()!=null||parameter.getType().getDefaultJMSFormat()!=null||parameter.getType().getDefaultJMSFormat()!=null)){%>
+		/** <%=parameter.getName()%> format QName */
+		public final static QName <%=parameter.getName()%>FormatQName   = new QName(Constants.NAMESPACES.PREFIX, "<%=parameter.getName()%>Format");
+		
+		/** <%=parameter.getName()%> format Name */
+	    public final static Name  <%=parameter.getName()%>FormatName        = new PrefixedQName(<%=parameter.getName()%>FormatQName);
+<%}%>
+<%}%>
+<%}%>
+	}
+<%}%>
+}

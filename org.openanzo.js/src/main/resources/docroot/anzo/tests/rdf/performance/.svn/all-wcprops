@@ -1,0 +1,71 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf/performance
+END
+module.js
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf/performance/module.js
+END
+QuadStorePerformanceTest1.js
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf/performance/QuadStorePerformanceTest1.js
+END
+QuadStorePerformanceTest2.js
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf/performance/QuadStorePerformanceTest2.js
+END
+QuadStorePerformanceTest3.js
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf/performance/QuadStorePerformanceTest3.js
+END
+QuadStorePerformanceTest4.js
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf/performance/QuadStorePerformanceTest4.js
+END
+QuadStorePerformanceTest5.js
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf/performance/QuadStorePerformanceTest5.js
+END
+QuadStorePerformanceTest6.js
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf/performance/QuadStorePerformanceTest6.js
+END
+runTests.html
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf/performance/runTests.html
+END
+QuadStorePerformanceTest7.js
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf/performance/QuadStorePerformanceTest7.js
+END
+PerformanceUtils.js
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf/performance/PerformanceUtils.js
+END
+QuadStoreBenchmark.js
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/rdf/performance/QuadStoreBenchmark.js
+END

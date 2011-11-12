@@ -1,0 +1,60 @@
+#!/bin/bash
+#
+# Init file for Anzo server daemon
+#
+# chkconfig: 2345 20 80
+# description: Anzo server daemon
+#
+### BEGIN INIT INFO
+# Provides: anzo 
+# Required-Start: $local_fs $network $syslog
+# Should-Start: java
+# Required-Stop:
+# Default-Start: 2 3 4 5
+# Default-Stop: 0 1 2 6
+# Short-Description: hudson
+# Description: hudson
+### END INIT INFO
+
+. /etc/rc.d/init.d/functions
+# source function library
+if [ -f /lib/lsb/init-functions ]; then 
+	. /lib/lsb/init-functions
+fi
+
+export ANZO_HOME=/opt/anzo-3.1.0-SNAPSHOT/
+export JAVA_HOME=/usr/lib/jvm/java-openjdk/
+start() {
+	CMD="nohup ${ANZO_HOME}/bin/start.sh -d  >/var/log/anzo.out 2>&1"
+
+	if [ "`whoami`" == "root" ]; then
+		daemon "${CMD}"
+	elif [ "`whoami`" == "root" ]; then
+		su - admin -c "${CMD}"
+	else
+		echo "You are not root or admin, not starting"
+	fi
+}
+
+stop() {
+	${ANZO_HOME}/bin/stop.sh
+}
+
+case "$1" in
+	start)
+		start
+		;;
+	stop)
+		stop
+		;;
+	restart)
+		stop
+		start
+		;;
+	*)
+		echo "Usage: $0 [start|stop|restart]"
+		exit 1
+esac
+
+exit 0
+

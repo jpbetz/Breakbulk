@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/openanzo/!svn/ver/5246/openanzo/trunk/org.openanzo.server/openanzoConfig
+END
+status.servlet.properties
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/openanzo/!svn/ver/4796/openanzo/trunk/org.openanzo.server/openanzoConfig/status.servlet.properties
+END
+org.openanzo.SystemConfig.properties
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/openanzo/!svn/ver/3709/openanzo/trunk/org.openanzo.server/openanzoConfig/org.openanzo.SystemConfig.properties
+END
+org.openanzo.ldap.EmbeddedLDAPServer.properties
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/openanzo/!svn/ver/4917/openanzo/trunk/org.openanzo.server/openanzoConfig/org.openanzo.ldap.EmbeddedLDAPServer.properties
+END
+log4j.properties
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/openanzo/!svn/ver/3643/openanzo/trunk/org.openanzo.server/openanzoConfig/log4j.properties
+END
+httpService.properties
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/openanzo/!svn/ver/5152/openanzo/trunk/org.openanzo.server/openanzoConfig/httpService.properties
+END
+ldapAuthentication.properties
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/openanzo/!svn/ver/5246/openanzo/trunk/org.openanzo.server/openanzoConfig/ldapAuthentication.properties
+END
+org.openanzo.datasource.nodecentric.defaultDatasource.properties
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/openanzo/!svn/ver/4209/openanzo/trunk/org.openanzo.server/openanzoConfig/org.openanzo.datasource.nodecentric.defaultDatasource.properties
+END

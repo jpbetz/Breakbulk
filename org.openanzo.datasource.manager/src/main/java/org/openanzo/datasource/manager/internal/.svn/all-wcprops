@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/openanzo/!svn/ver/5125/openanzo/trunk/org.openanzo.datasource.manager/src/main/java/org/openanzo/datasource/manager/internal
+END
+InitResourceListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/openanzo/!svn/ver/4530/openanzo/trunk/org.openanzo.datasource.manager/src/main/java/org/openanzo/datasource/manager/internal/InitResourceListener.java
+END
+DatasourceManagerActivator.java
+K 25
+svn:wc:ra_dav:version-url
+V 161
+/svn/openanzo/!svn/ver/5125/openanzo/trunk/org.openanzo.datasource.manager/src/main/java/org/openanzo/datasource/manager/internal/DatasourceManagerActivator.java
+END
+DatasourceManagerCommand.java
+K 25
+svn:wc:ra_dav:version-url
+V 159
+/svn/openanzo/!svn/ver/3854/openanzo/trunk/org.openanzo.datasource.manager/src/main/java/org/openanzo/datasource/manager/internal/DatasourceManagerCommand.java
+END
+DatasourceService.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/openanzo/!svn/ver/3892/openanzo/trunk/org.openanzo.datasource.manager/src/main/java/org/openanzo/datasource/manager/internal/DatasourceService.java
+END

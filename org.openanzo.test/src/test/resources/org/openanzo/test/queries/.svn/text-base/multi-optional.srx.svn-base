@@ -1,0 +1,36 @@
+<?xml version="1.0"?>
+<sparql
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema#"
+    xmlns="http://www.w3.org/2005/sparql-results#" >
+  <head>
+    <variable name="a"/>
+    <variable name="title"/>
+    <variable name="desc"/>
+    <variable name="date"/>
+    <variable name="b"/>
+    <variable name="btitle"/>
+    <variable name="c"/>
+    <variable name="ctitle"/>
+    <variable name="ccreator"/>
+    <variable name="d"/>
+    <variable name="dtitle"/>
+    <variable name="dcreator"/>
+  </head>
+  <results>
+    <result>
+      <binding name="a"><uri>http://example.org/s1</uri></binding>
+      <binding name="title"><literal>TITLEA</literal></binding>
+      <binding name="desc"><literal>DESCRIPTION</literal></binding>
+      <binding name="date"><literal>NOW</literal></binding>
+      <binding name="b"><uri>http://example.org/s2</uri></binding>
+      <binding name="btitle"><literal>TITLEB</literal></binding>
+      <binding name="c"><uri>http://example.org/s3</uri></binding>
+      <binding name="ctitle"><literal>TITLEC</literal></binding>
+      <binding name="ccreator"><literal>CREATORC</literal></binding>
+      <binding name="d"><uri>http://example.org/s4</uri></binding>
+      <binding name="dtitle"><literal>TITLED</literal></binding>
+      <binding name="dcreator"><literal>CREATORD</literal></binding>
+    </result>
+  </results>
+</sparql>

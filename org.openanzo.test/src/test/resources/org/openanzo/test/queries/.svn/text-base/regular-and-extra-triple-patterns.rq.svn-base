@@ -1,0 +1,7 @@
+PREFIX : <http://example.org/>
+SELECT ?s ?o 
+WHERE { 
+  GRAPH ?g { 
+    :s :id :id . ?s :p ?o .  
+  } 
+}

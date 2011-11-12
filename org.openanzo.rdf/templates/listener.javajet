@@ -1,0 +1,98 @@
+<%@ jet package="org.openanzo.rdf.jastor.templates" skeleton="ontologyclass.skeleton"
+		class="ListenerTemplate" imports="org.openanzo.rdf.jastor.*  org.openanzo.rdf.jastor.inference.* org.openanzo.rdf.* org.openanzo.rdf.jastor.jet.*"  %>
+<% JastorContext ctx = oc.getContext(); %>
+<% if(ctx.isIncludeCopyright()){%>
+/*******************************************************************************
+ * Copyright (c) 2004, 2007-2008 IBM Corporation and Cambridge Semantics Incorporated.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * File:        <%="$".toString()%>Source<%="$".toString()%>
+ * Created by:  Generated Source from org.openanzo.jdbc.utils.opgen.jet
+ * Created on:  Generated Source from org.openanzo.jdbc.utils.opgen.jet
+ * Revision:	<%="$".toString()%>Id<%="$".toString()%>
+ * 
+ * Contributors:
+ *     IBM Corporation - initial API and implementation
+ *	   Cambridge Semantics Incorporated - Fork to Anzo
+ *******************************************************************************/
+ <%}%>
+package <%=oc.getPackageName()%>;
+
+/**
+ * Implementations of this listener may be registered with instances of <%=oc.getInterfaceFullClassname()%> to 
+ * receive notification when properties changed, added or removed.
+ * <br>
+ */
+public interface <%=oc.getListenerClassname()%> extends org.openanzo.rdf.jastor.ThingListener {
+
+<% if (!ctx.isGenerateVocabularyOnly()) { %>
+
+<% 	for (OntologyProperty prop: oc.listProperties(true)) {%>
+<%			if (prop.isSingleValued() && prop.isDatatypeProperty()) { %>
+<%				// if (!(prop.getRole() == OntologyProperty.ROLE_HERE || prop.getRole() == OntologyProperty.ROLE_BOOLEAN)) { %>
+<%					// continue; %>
+<%				// } %>
+<%	// one method regardless of the number of return types %>
+	/**
+	 * Called when <%=prop.getPropertyName()%> has changed
+	 * @param source the affected instance of <%=oc.getInterfaceFullClassname()%>
+	 */
+	public void <%=prop.getPropertyName()%>Changed(<%=oc.getInterfaceFullClassname()%> source);
+
+<%       } %>
+<%			if (prop.isMultiValued() && prop.isDatatypeProperty()) { %>
+<%				// boolean all = prop.getRole() == OntologyProperty.ROLE_HERE || prop.getRole() == OntologyProperty.ROLE_BOOLEAN; %>
+<%				for (Resource res: prop.listRanges(true,false)) { %>
+	/**
+	 * Called when a value of <%=prop.getPropertyName()%> has been added
+	 * @param source the affected instance of <%=oc.getInterfaceFullClassname()%>
+	 * @param newValue the object representing the new value
+	 */	
+	public void <%=prop.getPropertyName()%>Added(<%=oc.getInterfaceFullClassname()%> source, <%=prop.getReturnType(res)%> newValue);
+
+	/**
+	 * Called when a value of <%=prop.getPropertyName()%> has been removed
+	 * @param source the affected instance of <%=oc.getInterfaceFullClassname()%>
+	 * @param oldValue the object representing the removed value
+	 */	
+	public void <%=prop.getPropertyName()%>Removed(<%=oc.getInterfaceFullClassname()%> source, <%=prop.getReturnType(res)%> oldValue);
+
+<%          } %>
+<%       } %>
+<%			if (prop.isSingleValued() && prop.isObjectProperty()) { %>
+<%				// if (!(prop.getRole() == OntologyProperty.ROLE_HERE || prop.getRole() == OntologyProperty.ROLE_BOOLEAN)) { %>
+<%					// continue; %>
+<%				// } %>
+<%	// one method regardless of the number of return types %>
+	/**
+	 * Called when <%=prop.getPropertyName()%> has changed
+	 * @param source the affected instance of <%=oc.getInterfaceFullClassname()%>
+	 */
+	public void <%=prop.getPropertyName()%>Changed(<%=oc.getInterfaceFullClassname()%> source);
+
+<%       } %>
+<%			if (prop.isMultiValued() && prop.isObjectProperty()) { %>
+<%				//boolean all = prop.getRole() == OntologyProperty.ROLE_HERE || prop.getRole() == OntologyProperty.ROLE_BOOLEAN; %>
+<%				for (Resource res: prop.listRanges(true,false)) { %>
+	/**
+	 * Called when a value of <%=prop.getPropertyName()%> has been added
+	 * @param source the affected instance of <%=oc.getInterfaceFullClassname()%>
+	 * @param newValue the object representing the new value
+	 */	
+	public void <%=prop.getPropertyName()%>Added(<%=oc.getInterfaceFullClassname()%> source, <%=prop.getReturnType(res)%> newValue);
+
+	/**
+	 * Called when a value of <%=prop.getPropertyName()%> has been removed
+	 * @param source the affected instance of <%=oc.getInterfaceFullClassname()%>
+	 * @param oldValue the object representing the removed value
+	 */
+	public void <%=prop.getPropertyName()%>Removed(<%=oc.getInterfaceFullClassname()%> source, <%=prop.getReturnType(res)%> oldValue);
+		
+<%          } %>
+<%       } %>
+<% 	} %>
+<% } %>
+}

@@ -1,0 +1,46 @@
+<?xml version="1.0"?>
+<sparql
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema#"
+    xmlns="http://www.w3.org/2005/sparql-results#" >
+  <head>
+  	<variable name="tp"/>
+  </head>
+  <results>
+    <result>
+      <binding name="tp">
+      	<literal datatype="http://www.w3.org/2001/XMLSchema#time">12:00:01+01:00</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="tp">
+      	<literal datatype="http://www.w3.org/2001/XMLSchema#time">12:00:01Z</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="tp">
+      	<literal datatype="http://www.w3.org/2001/XMLSchema#time">12:00:01+08:00</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="tp">
+      	<literal datatype="http://www.w3.org/2001/XMLSchema#time">13:00:00+01:00</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="tp">
+      	<literal datatype="http://www.w3.org/2001/XMLSchema#time">11:00:00.55+01:00</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="tp">
+      	<literal datatype="http://www.w3.org/2001/XMLSchema#time">11:00:00Z</literal>
+      </binding>
+    </result>
+    <result>
+      <binding name="tp">
+      	<literal datatype="http://www.w3.org/2001/XMLSchema#time">11:00:00-10:00</literal>
+      </binding>
+    </result>
+  </results>
+</sparql>

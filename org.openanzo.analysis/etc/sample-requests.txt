@@ -1,0 +1,87 @@
+@request
+@properties
+defaultNamedGraphsFormat=text/plain
+defaultNamedGraphs=http://openanzo.org/namedGraphs/reserved/namedGraphs/ALL
+resultFormat=application/json
+jmsCorrelationId=1jq2vaxbdqteofvl5i-4
+destination=queue://services/query
+operation=query
+replyTo=temp-topic://ID:chopstick-1947-1230584071562-2:0:2
+namedDatasets=
+namedDatasetsFormat=text/plain
+namedGraphs=
+runAsUser=sysadmin
+namedGraphsFormat=text/plain
+requestUser=sysadmin
+@body
+ SELECT  (COUNT( DISTINCT ?value) AS ?count)   WHERE {  ?value <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://cambridgesemantics.com/mojo/1.0/Lens> . ?value <http://cambridgesemantics.com/mojo/1.0/category> <http://openanzo.org/expose/linkedDatasetView> . FILTER( ?value != <urn:com.cambridgesemantics.application.expose.lens.sv.view._LinkedDatasetViewPrototypeLens> )  OPTIONAL { ?value <http://purl.org/dc/elements/1.1/title> ?title } . OPTIONAL { ?value <http://purl.org/dc/elements/1.1/description> ?description } .   } 
+@response
+@properties
+operation=query
+jmsCorrelationId=1jq2vaxbdqteofvl5i-4
+ans_cacheHit=false
+ans_operationTime=15
+operationFailed=false
+@body
+SELECT
+{
+	"head": {
+		"vars": [ "count" ]
+	}, 
+	"results": {
+		"bindings": [
+			{
+				"count": { "type": "typed-literal", "datatype": "http:\/\/www.w3.org\/2001\/XMLSchema#integer", "value": "3" }
+			}
+		]
+	}
+}
+@request
+@properties
+defaultNamedGraphsFormat=text/plain
+defaultNamedGraphs=http://openanzo.org/namedGraphs/reserved/namedGraphs/ALL
+resultFormat=application/json
+jmsCorrelationId=1jq2vaxbdqteofvl5i-5
+destination=queue://services/query
+operation=query
+replyTo=temp-topic://ID:chopstick-1947-1230584071562-2:0:2
+namedDatasets=
+namedDatasetsFormat=text/plain
+namedGraphs=
+runAsUser=sysadmin
+namedGraphsFormat=text/plain
+requestUser=sysadmin
+@body
+ SELECT *  WHERE {  ?value <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://cambridgesemantics.com/mojo/1.0/Lens> . ?value <http://cambridgesemantics.com/mojo/1.0/category> <http://openanzo.org/expose/linkedDatasetView> . FILTER( ?value != <urn:com.cambridgesemantics.application.expose.lens.sv.view._LinkedDatasetViewPrototypeLens> )  OPTIONAL { ?value <http://purl.org/dc/elements/1.1/title> ?title } . OPTIONAL { ?value <http://purl.org/dc/elements/1.1/description> ?description } .   }  ORDER BY ?title  LIMIT 30 
+@response
+@properties
+operation=query
+jmsCorrelationId=1jq2vaxbdqteofvl5i-5
+ans_cacheHit=false
+ans_operationTime=16
+operationFailed=false
+@body
+SELECT
+{
+	"head": {
+		"vars": [ "title", "description", "value" ]
+	}, 
+	"results": {
+		"bindings": [
+			{
+				"title": { "type": "literal", "value": "Adverse Events" }, 
+				"value": { "type": "uri", "value": "http:\/\/openanzo.org\/d5e41ea8-c2f9-495c-850d-a1ea152816a7" }
+			}, 
+			{
+				"title": { "type": "literal", "value": "Demographic" }, 
+				"description": { "type": "literal", "value": "Demographic description" }, 
+				"value": { "type": "uri", "value": "http:\/\/openanzo.org\/248a921d-123d-4cfb-854d-1ea403acafa9" }
+			}, 
+			{
+				"title": { "type": "literal", "value": "Treatment" }, 
+				"description": { "type": "literal", "value": "Treatment description" }, 
+				"value": { "type": "uri", "value": "http:\/\/openanzo.org\/6fdc332d-5788-4917-8363-58a0fdb3e1ea" }
+			}
+		]
+	}
+}

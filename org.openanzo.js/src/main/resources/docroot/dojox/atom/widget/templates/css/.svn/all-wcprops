@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/atom/widget/templates/css
+END
+EntryHeader.css
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/atom/widget/templates/css/EntryHeader.css
+END
+HtmlFeedViewer.css
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/atom/widget/templates/css/HtmlFeedViewer.css
+END
+HtmlFeedEntryViewer.css
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/atom/widget/templates/css/HtmlFeedEntryViewer.css
+END
+HtmlFeedViewerEntry.css
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/atom/widget/templates/css/HtmlFeedViewerEntry.css
+END
+HtmlFeedEntryEditor.css
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/atom/widget/templates/css/HtmlFeedEntryEditor.css
+END
+HtmlFeedViewerGrouping.css
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/openanzo/!svn/ver/5186/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/dojox/atom/widget/templates/css/HtmlFeedViewerGrouping.css
+END

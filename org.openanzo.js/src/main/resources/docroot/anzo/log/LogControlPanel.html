@@ -1,0 +1,72 @@
+<div dojoAttachPoint="containerNode">
+<!-- 
+/*******************************************************************************
+ * Copyright (c) 2008 Cambridge Semantics Incorporated.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Cambridge Semantics Incorporated - initial API and implementation
+ *******************************************************************************/
+ 
+ HTML log grid is based on CSS/HTML techniques used in the Dojo Grid component.
+-->
+<div class="logControlPanel"
+	><div>
+  		<span class="loggerGridTitle">Current Loggers:</span>
+		<div class="logGrid"
+			><div class="logGrid-master-header"
+				><div class="logGrid-header"
+					><div style="width: 9000em;"
+						><div
+							><table class="logGrid-row-table" cellspacing="0" cellpadding="0" border="0"
+								><tbody
+									><tr
+										><th class="logGrid-cell loggerNameCellHeader">Logger Name</th
+										><th class="logGrid-cell loggerLevelCellHeader">Level</th
+									></tr
+								></tbody
+							></table
+						></div
+					></div
+				></div
+			></div
+			><div class="logGrid-master-view"
+				><div id="dojox_GridView_0" class="logGrid-view"
+					><input class="logGrid-hidden-focus" type="checkbox"
+					/><input class="logGrid-hidden-focus" type="checkbox"
+					/><div class="logGrid-scrollbox"
+						><div class="logGrid-content" dojoAttachPoint="logGridContent"
+							><div style="position: absolute; left: 0pt; top: 0px;" dojoAttachPoint="logGridBody"
+							></div
+						></div
+					></div
+				></div
+			></div
+		></div
+	></div
+	><button dojoAttachEvent="onclick:_onClickRefresh">Refresh</button
+	><span class="loggerAddBar"
+		><form dojoAttachEvent="onsubmit:_onClickAddLogger" style="display:inline; margin: 0; padding: 0;"
+			><input type="text" dojoAttachPoint="newLoggerTextBox" value=""
+			/><input type="submit" value="Add logger"
+		/></form
+	></span
+	><p
+		><select dojoAttachPoint="setAllLoggersSelect"><option>ALL</option><option>TRACE</option><option>DEBUG</option><option>INFO</option><option selected="selected">WARN</option><option>ERROR</option><option>FATAL</option><option>OFF</option></select>
+		<button dojoAttachEvent="onclick:_onClickSetAllLoggers">Set all loggers</button
+	></p
+	><p
+		><button dojoAttachEvent="onclick:_onClickEnableLogging">Enable logging</button
+		><button dojoAttachEvent="onclick:_onClickDisableLogging">Disable logging</button
+	></p
+	><p
+		><form dojoAttachEvent="onsubmit:_onClickAddMethodTracing" style="display:inline; margin: 0; padding: 0;"
+			><input type="text" dojoAttachPoint="methodTracingTextBox" value="anzo"
+			/><input type="submit" value="Add method tracing"
+		/></form
+	></p
+></div
+></div>

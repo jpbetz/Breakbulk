@@ -1,0 +1,59 @@
+#!/bin/bash
+#*******************************************************************************
+# Copyright (c) 2007-2009 Cambridge Semantics Incorporated.
+# All rights reserved. This program and the accompanying materials
+# are made available under the terms of the Eclipse Public License v1.0
+# which accompanies this distribution, and is available at
+# http://www.eclipse.org/legal/epl-v10.html
+#
+# Portions of the script based on the Apache Tomcat startup scripts
+# obtained from the Apache Software Foundation (ASF) under the
+# Apache License v2.0 found at: http://www.apache.org/licenses/LICENSE-2.0
+#
+# Contributors:
+#   Cambridge Semantics Incorporated
+#*******************************************************************************
+#
+# Bootstrap script for Open Anzo Command Line Interface
+#
+# Environment Variable Prerequisites
+#
+#   ANZO_CLI_HOME    Must point at your Open Anzo installation directory.
+#
+#   ANZO_CLI_OPTS    (Optional) Java runtime options given to the JVM.
+#
+#   JAVA_HOME        Must point at your Java Development Kit or Java
+#                    Runtime Environment installation.
+#
+
+if [ -z "$JAVA_HOME" ] ; then
+	echo "The JAVA_HOME environment variable is not defined."
+	echo "It is needed to run this program."
+	echo "Please set JAVA_HOME to the install directory of a JDK or JRE."
+	exit 1
+fi
+
+if [ -z "$ANZO_CLI_HOME" ] ; then
+	# Guess the ANZO_CLI_HOME variable if it isn't specified.
+	ANZO_CLI_HOME=$PWD
+fi
+
+if [ ! -e "$ANZO_CLI_HOME/anzo" ] ; then
+	echo "The ANZO_CLI_HOME environment variable is not defined correctly."
+	echo "Please set ANZO_CLI_HOME to the Open Anzo installation directory."
+	echo "Current ANZO_CLI_HOME value is: $ANZO_CLI_HOME"
+	exit 1
+fi
+
+if [ -z "$ANZO_CLI_OPTS" ] ; then
+        ANZO_CLI_OPTS=-Xmx256M
+fi
+
+"$JAVA_HOME/bin/java" \
+		$ANZO_CLI_OPTS \
+		-Danzo.plugins="$ANZO_CLI_HOME/plugins/" \
+		-Dlog4j.configuration=file:///$ANZO_CLI_HOME/cli/log4j-cli.properties \
+        -classpath "$ANZO_CLI_HOME/plugins/cli/classworlds-1.0.1.jar" \
+    	-Dclassworlds.conf="$ANZO_CLI_HOME/cli/classworlds-cli.conf" \
+    	org.codehaus.classworlds.Launcher \
+        "$@"

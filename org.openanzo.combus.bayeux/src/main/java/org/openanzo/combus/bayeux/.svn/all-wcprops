@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/openanzo/!svn/ver/5173/openanzo/trunk/org.openanzo.combus.bayeux/src/main/java/org/openanzo/combus/bayeux
+END
+BayeuxJMSBridge.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/openanzo/!svn/ver/4656/openanzo/trunk/org.openanzo.combus.bayeux/src/main/java/org/openanzo/combus/bayeux/BayeuxJMSBridge.java
+END
+BayeuxJMSConstants.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/4554/openanzo/trunk/org.openanzo.combus.bayeux/src/main/java/org/openanzo/combus/bayeux/BayeuxJMSConstants.java
+END
+EncryptedTokenAuthenticationJSONTransport.java
+K 25
+svn:wc:ra_dav:version-url
+V 157
+/svn/openanzo/!svn/ver/4653/openanzo/trunk/org.openanzo.combus.bayeux/src/main/java/org/openanzo/combus/bayeux/EncryptedTokenAuthenticationJSONTransport.java
+END
+HttpRequestBayeux.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/4653/openanzo/trunk/org.openanzo.combus.bayeux/src/main/java/org/openanzo/combus/bayeux/HttpRequestBayeux.java
+END
+BridgeConnectionManager.java
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/openanzo/!svn/ver/4530/openanzo/trunk/org.openanzo.combus.bayeux/src/main/java/org/openanzo/combus/bayeux/BridgeConnectionManager.java
+END
+EncryptedTokenAuthenticationContinuationBayeux.java
+K 25
+svn:wc:ra_dav:version-url
+V 162
+/svn/openanzo/!svn/ver/4653/openanzo/trunk/org.openanzo.combus.bayeux/src/main/java/org/openanzo/combus/bayeux/EncryptedTokenAuthenticationContinuationBayeux.java
+END
+PrincipalFilter.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/openanzo/!svn/ver/3777/openanzo/trunk/org.openanzo.combus.bayeux/src/main/java/org/openanzo/combus/bayeux/PrincipalFilter.java
+END
+BayeuxJMSBridgeServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/openanzo/!svn/ver/4653/openanzo/trunk/org.openanzo.combus.bayeux/src/main/java/org/openanzo/combus/bayeux/BayeuxJMSBridgeServlet.java
+END
+BayeuxActivator.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/openanzo/!svn/ver/5173/openanzo/trunk/org.openanzo.combus.bayeux/src/main/java/org/openanzo/combus/bayeux/BayeuxActivator.java
+END

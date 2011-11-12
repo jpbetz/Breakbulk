@@ -1,0 +1,348 @@
+<?xml version="1.0"?>
+<!--
+ Copyright (c) 2004, 2007 IBM Corporation and Cambridge Semantics Incorporated.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v10.html
+
+  File:        $Source: /cvsroot/slrp/boca/com.ibm.adtech.boca.maven/boca-model/build.xml,v $
+  Created by:  Matthew Roy ( <a href="mailto:mroy@us.ibm.com">mroy@us.ibm.com </a>)
+  Created on:  1/1/2007
+  Revision:	$Id: build.xml 180 2007-07-31 14:24:13Z mroy $
+
+ Contributors:
+     IBM Corporation - initial API and implementation
+     Cambridge Semantics Incorporated - Fork to Anzo
+-->
+<project name="openanzo-datasource-nodecentric" basedir=".">
+	<!-- set global properties for this build -->
+	<path id="anzo.path">
+		<path location="../org.openanzo.jet.services/bin/classes" />
+		<path location="../org.openanzo.jet.exceptions/bin/classes" />
+		<path location="../org.openanzo.exceptions/bin/classes" />
+		<path location="../org.openanzo.jdbc.opgen/bin/classes" />
+		<path location="../org.openanzo.rdf/bin/classes" />
+		<path location="../org.openanzo.services/bin/classes" />
+		<path>
+			<fileset dir="../org.openanzo.targetplatform">
+								<include name="**/*.jar" />
+							</fileset>
+							<fileset dir="../org.slf4j">
+								<include name="**/*.jar" />
+							</fileset>
+		</path>
+	</path>
+
+	<target name="defineTasksEclipse" description="Define taskDefs for within eclipse enviornment">
+		<taskdef name="sqllibrary" classpathref="anzo.path" classname="org.openanzo.jdbc.opgen.ant.CompositionTask" />
+		<taskdef name="metaTask" classpathref="anzo.path" classname="org.openanzo.jet.exceptions.MetatypeDefinitionTask" />
+
+		<property name="target_dir" value="." />
+		<property name="anzo-layout-dir" value="${basedir}/src/main/resources/nodecentric" />
+		<property name="layout-dir" value="${basedir}/../org.openanzo.jdbc/src/main/resources/nodecentric" />
+		<property name="xmlsql-statements-dir" value="${anzo-layout-dir}/common/xmlsql" />
+
+		<property name="src-dir" value="${basedir}/src/main/java" />
+		<property name="gen-src-dir" value="${basedir}/${target_dir}/gensrc/main/java" />
+		<property name="etc-dir" value="${basedir}/${target_dir}/gensrc/main/resources/etc" />
+	</target>
+
+	<target name="defineTasksMaven" description="Define taskDefs for within maven enviornment">
+		<taskdef name="sqllibrary" classpath="${compile_classpath}" classname="org.openanzo.jdbc.opgen.ant.CompositionTask" />
+		<taskdef name="metaTask" classpath="${compile_classpath}" classname="org.openanzo.jet.exceptions.MetatypeDefinitionTask" />
+
+		<property name="target_dir" value="${gensrc_target}" />
+		<property name="anzo-layout-dir" value="${basedir}/src/main/resources/nodecentric" />
+		<property name="layout-dir" value="${basedir}/../org.openanzo.jdbc/src/main/resources/nodecentric" />
+		<property name="xmlsql-statements-dir" value="${anzo-layout-dir}/common/xmlsql" />
+
+		<property name="src-dir" value="${basedir}/src/main/java" />
+		<property name="gen-src-dir" value="${basedir}/${target_dir}/gensrc/main/java" />
+		<property name="etc-dir" value="${basedir}/${target_dir}/gensrc/main/resources/etc" />
+
+	</target>
+
+	<description>
+            Combines DDL and SQL together for the AnzoDB2.sql file required by Anzo.
+    </description>
+
+	<target name="generateMetatypeFiles" description="-->Generate properties files from XML definitions">
+		<metaTask destdir="${basedir}/${target_dir}/gensrc/main/java" packageName="org.openanzo.datasource.nodecentric.attributes">
+			<fileset file="../org.openanzo.jdbc/docs/rdbPropertyDefinitions.xml" />
+		</metaTask>
+	</target>
+
+	<target name="makeDirs">
+		<mkdir dir="${etc-dir}" />
+		<mkdir dir="${gen-src-dir}" />
+	</target>
+
+	<target name="wrappers" description="--> Builds java objects needed for Anzo.">
+		<sqllibrary>
+
+			<preparedstatements destbase="${gen-src-dir}/" javaclass="org.openanzo.datasource.nodecentric.rdb.sql.ReplicationRdbWrapper" exception="org.openanzo.jdbc.utils.RdbException" excludenamespace="false" rethrowSQLException="false">
+				<fileset file="${xmlsql-statements-dir}/Replication.sql" />
+			</preparedstatements>
+
+			<preparedstatements destbase="${gen-src-dir}/" javaclass="org.openanzo.datasource.nodecentric.sql.InsertStatementsRdbWrapper" exception="org.openanzo.jdbc.utils.RdbException" excludenamespace="false" rethrowSQLException="false">
+				<fileset file="${xmlsql-statements-dir}/InsertStatements.sql" />
+			</preparedstatements>
+
+			<preparedstatements destbase="${gen-src-dir}/" javaclass="org.openanzo.datasource.nodecentric.sql.NamedGraphRdbWrapper" exception="org.openanzo.jdbc.utils.RdbException" excludenamespace="false" rethrowSQLException="false">
+				<fileset file="${xmlsql-statements-dir}/NamedGraph.sql" />
+			</preparedstatements>
+
+			<preparedstatements destbase="${gen-src-dir}/" javaclass="org.openanzo.datasource.nodecentric.sql.StatementRdbWrapper" exception="org.openanzo.jdbc.utils.RdbException" excludenamespace="false" rethrowSQLException="false">
+				<fileset file="${xmlsql-statements-dir}/Statement.sql" />
+			</preparedstatements>
+
+			<preparedstatements destbase="${gen-src-dir}/" javaclass="org.openanzo.datasource.nodecentric.sql.GlitterRdbWrapper" exception="org.openanzo.jdbc.utils.RdbException" excludenamespace="false" rethrowSQLException="false">
+				<fileset file="${xmlsql-statements-dir}/Glitter.sql" />
+			</preparedstatements>
+
+			<preparedstatements destbase="${gen-src-dir}/" javaclass="org.openanzo.datasource.nodecentric.sql.ServerRdbWrapper" exception="org.openanzo.jdbc.utils.RdbException" excludenamespace="false" rethrowSQLException="false">
+				<fileset file="${xmlsql-statements-dir}/Server.sql" />
+			</preparedstatements>
+			<preparedstatements destbase="${gen-src-dir}/" javaclass="org.openanzo.datasource.nodecentric.sql.LastTransactionTime" exception="org.openanzo.jdbc.utils.RdbException" excludenamespace="false" rethrowSQLException="false">
+				<fileset file="${xmlsql-statements-dir}/LastTransaction.sql" />
+			</preparedstatements>
+			<preparedstatements destbase="${gen-src-dir}/" javaclass="org.openanzo.datasource.nodecentric.sql.Backup" exception="org.openanzo.jdbc.utils.RdbException" excludenamespace="false" rethrowSQLException="false">
+				<fileset file="${xmlsql-statements-dir}/Backup.sql" />
+			</preparedstatements>
+		</sqllibrary>
+	</target>
+
+	<target name="db2sql" description="--> Combines DDL and SQL together for the AnzoDB2.sql file required by Anzo.">
+		<antcall target="generateLayoutSqlFile">
+			<param name="dest" value="${etc-dir}/ServerDB2.sql" />
+			<param name="database" value="db2" />
+			<param name="indexFile" value="${anzo-layout-dir}/db2/Indexes.ddl" />
+			<param name="schemaFile" value="common" />
+			<param name="updateDir" value="db2" />
+		</antcall>
+	</target>
+	<target name="oraclesql" description="--> Combines DDL and SQL together for the ServerOracle.sql file required by Anzo.">
+		<antcall target="generateLayoutSqlFile">
+			<param name="dest" value="${etc-dir}/ServerOracle.sql" />
+			<param name="database" value="oracle" />
+			<param name="indexFile" value="${anzo-layout-dir}/oracle/Indexes.ddl" />
+			<param name="schemaFile" value="common" />
+			<param name="updateDir" value="oracle" />
+		</antcall>
+	</target>
+	<target name="postgressql" description="--> Combines DDL and SQL together for the AnzoPostgres.sql file required by Anzo.">
+		<antcall target="generateLayoutSqlFile">
+			<param name="dest" value="${etc-dir}/ServerPostgres.sql" />
+			<param name="database" value="postgres" />
+			<param name="indexFile" value="${anzo-layout-dir}/postgres/Indexes.ddl" />
+			<param name="schemaFile" value="common" />
+			<param name="updateDir" value="common" />
+		</antcall>
+	</target>
+	<target name="hsqlsql" description="--> Combines DDL and SQL together for the AnzoHSQL.sql file required by Anzo.">
+		<antcall target="generateLayoutSqlFile">
+			<param name="dest" value="${etc-dir}/ServerHSQL.sql" />
+			<param name="database" value="hsql" />
+			<param name="indexFile" value="${anzo-layout-dir}/common/Indexes.ddl" />
+			<param name="schemaFile" value="common" />
+			<param name="updateDir" value="common" />
+		</antcall>
+	</target>
+
+	<target name="h2sql" description="--> Combines DDL and SQL together for the AnzoH@.sql file required by Anzo.">
+		<antcall target="generateLayoutSqlFile">
+			<param name="dest" value="${etc-dir}/ServerH2.sql" />
+			<param name="database" value="h2" />
+			<param name="indexFile" value="${anzo-layout-dir}/common/Indexes.ddl" />
+			<param name="schemaFile" value="common" />
+			<param name="updateDir" value="common" />
+		</antcall>
+
+	</target>
+	<target name="mssql" description="--> Combines DDL and SQL together for the AnzoH@.sql file required by Anzo.">
+		<antcall target="generateLayoutSqlFile">
+			<param name="dest" value="${etc-dir}/ServerMSSQL.sql" />
+			<param name="database" value="mssql" />
+			<param name="indexFile" value="${anzo-layout-dir}/mssql/Indexes.ddl" />
+			<param name="schemaFile" value="mssql" />
+			<param name="updateDir" value="common" />
+		</antcall>
+	</target>
+	<target name="generateLayoutSqlFile" description="--> Combines DDL and SQL together for the AnzoDB2.sql file required by Anzo.">
+		<property name="dest" value="" />
+		<property name="layout-dir" value="" />
+		<property name="anzo-layout-dir" value="" />
+		<property name="database" value="" />
+		<property name="sequenceFile" value="" />
+		<property name="indexFile" value="" />
+		<property name="schemaFile" value="" />
+		<property name="updateDir" value="" />
+		<sqllibrary destdir="${dest}">
+
+			<ddl procedure="initDBtables">
+				<fileset dir="${layout-dir}/common/initTables/" />
+				<fileset dir="${anzo-layout-dir}/${schemaFile}/initDBtables" />
+				<fileset file="${layout-dir}/${database}/extraGraphTables.ddl" />
+			</ddl>
+
+			<ddl procedure="initIndexes">
+				<fileset file="${indexFile}" />
+			</ddl>
+
+			<ddl procedure="initSequences">
+				<fileset file="${layout-dir}/${database}/initDBtables/sequences.ddl" />
+				<fileset file="${anzo-layout-dir}/${database}/Sequences.ddl" />
+			</ddl>
+
+			<ddl procedure="dropTables">
+				<fileset file="${anzo-layout-dir}/common/dropTables.ddl" />
+			</ddl>
+
+			<ddl procedure="initServerTables">
+				<fileset file="${anzo-layout-dir}/common/Server.ddl" />
+			</ddl>
+
+			<ddl procedure="initTablespace">
+				<fileset file="${anzo-layout-dir}/${database}/TemporaryTablespace.ddl" />
+			</ddl>
+
+			<ddl procedure="createTemporaryTables">
+				<fileset dir="${anzo-layout-dir}/${database}/createTemporaryTables/" />
+			</ddl>
+
+			<ddl procedure="2To3">
+				<fileset file="${anzo-layout-dir}/common/updates/2To3.ddl" />
+			</ddl>
+
+			<ddl procedure="3To4">
+				<fileset file="${anzo-layout-dir}/common/updates/3To4.ddl" />
+			</ddl>
+
+			<ddl procedure="4To5">
+				<fileset file="${anzo-layout-dir}/common/updates/4To5.ddl" />
+			</ddl>
+
+			<ddl procedure="5To6">
+				<fileset file="${anzo-layout-dir}/${updateDir}/updates/5To6.ddl" />
+			</ddl>
+			<ddl procedure="5To6more">
+				<fileset file="${anzo-layout-dir}/${database}/updates/5To6more.ddl" />
+			</ddl>
+			<ddl procedure="6To7">
+				<fileset file="${anzo-layout-dir}/${updateDir}/updates/6To7.ddl" />
+			</ddl>
+			<ddl procedure="6To7more">
+				<fileset file="${anzo-layout-dir}/${database}/updates/6To7more.ddl" />
+			</ddl>
+			<ddl procedure="7To8">
+				<fileset file="${anzo-layout-dir}/${updateDir}/updates/7To8.ddl" />
+			</ddl>
+			<ddl procedure="7To8more">
+				<fileset file="${anzo-layout-dir}/${database}/updates/7To8more.ddl" />
+			</ddl>
+			<ddl procedure="8To9">
+				<fileset file="${anzo-layout-dir}/${updateDir}/updates/8To9.ddl" />
+			</ddl>
+			<ddl procedure="8To9more">
+				<fileset file="${anzo-layout-dir}/${database}/updates/8To9more.ddl" />
+			</ddl>
+			<ddl procedure="10To11">
+				<fileset file="${anzo-layout-dir}/common/updates/10To11.ddl" />
+			</ddl>
+			<ddl procedure="10To11more">
+				<fileset file="${anzo-layout-dir}/${database}/updates/10To11more.ddl" />
+			</ddl>
+			<ddl procedure="11To12">
+				<fileset file="${anzo-layout-dir}/common/updates/11To12.ddl" />
+			</ddl>
+			<preparedstatements>
+				<fileset file="${layout-dir}/common/xmlsql/node.sql" />
+				<fileset file="${layout-dir}/${database}/xmlsql/node.sql" />
+			</preparedstatements>
+
+			<preparedstatements>
+				<fileset file="${layout-dir}/common/xmlsql/base.sql" />
+				<fileset file="${layout-dir}/${database}/xmlsql/base.sql" />
+			</preparedstatements>
+
+			<preparedstatements>
+				<fileset file="${layout-dir}/common/xmlsql/with-sequences.sql" />
+				<fileset file="${layout-dir}/${database}/xmlsql/with-sequences.sql" />
+			</preparedstatements>
+
+			<preparedstatements>
+				<fileset file="${layout-dir}/common/xmlsql/no-sequences.sql" />
+			</preparedstatements>
+
+			<preparedstatements>
+				<fileset file="${xmlsql-statements-dir}/Replication.sql" />
+				<fileset file="${anzo-layout-dir}/${database}/xmlsql/Replication.sql" />
+			</preparedstatements>
+
+			<preparedstatements>
+				<fileset file="${xmlsql-statements-dir}/Aci.sql" />
+				<fileset file="${anzo-layout-dir}/${database}/xmlsql/Aci.sql" />
+			</preparedstatements>
+
+			<preparedstatements>
+				<fileset file="${xmlsql-statements-dir}/Acl.sql" />
+			</preparedstatements>
+
+			<preparedstatements>
+				<fileset file="${xmlsql-statements-dir}/InsertStatements.sql" />
+				<fileset file="${anzo-layout-dir}/${database}/xmlsql/InsertStatements.sql" />
+			</preparedstatements>
+
+			<preparedstatements>
+				<fileset file="${xmlsql-statements-dir}/NamedGraph.sql" />
+				<fileset file="${anzo-layout-dir}/${database}/xmlsql/NamedGraph.sql" />
+			</preparedstatements>
+
+			<preparedstatements>
+				<fileset file="${xmlsql-statements-dir}/Statement.sql" />
+				<fileset file="${anzo-layout-dir}/${database}/xmlsql/Statement.sql" />
+			</preparedstatements>
+
+			<preparedstatements>
+				<fileset file="${xmlsql-statements-dir}/StatementFind.sql" />
+			</preparedstatements>
+
+			<preparedstatements>
+				<fileset file="${xmlsql-statements-dir}/User.sql" />
+			</preparedstatements>
+
+			<preparedstatements>
+				<fileset file="${xmlsql-statements-dir}/UsersRoles.sql" />
+			</preparedstatements>
+
+			<preparedstatements>
+				<fileset file="${xmlsql-statements-dir}/Role.sql" />
+			</preparedstatements>
+
+			<preparedstatements>
+				<fileset file="${xmlsql-statements-dir}/Inference.sql" />
+			</preparedstatements>
+
+			<preparedstatements>
+				<fileset file="${xmlsql-statements-dir}/LastTransaction.sql" />
+				<fileset file="${anzo-layout-dir}/${database}/xmlsql/LastTransaction.sql" />
+			</preparedstatements>
+
+			<preparedstatements>
+				<fileset file="${xmlsql-statements-dir}/Glitter.sql" />
+				<fileset file="${anzo-layout-dir}/${database}/Glitter.sql" />
+			</preparedstatements>
+
+			<preparedstatements>
+				<fileset file="${xmlsql-statements-dir}/Backup.sql" />
+			</preparedstatements>
+
+			<preparedstatements>
+				<fileset file="${xmlsql-statements-dir}/Server.sql" />
+				<fileset file="${anzo-layout-dir}/${database}/xmlsql/Server.sql" />
+			</preparedstatements>
+		</sqllibrary>
+	</target>
+</project>
+

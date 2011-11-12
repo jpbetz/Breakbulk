@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 90
+/svn/openanzo/!svn/ver/5202/openanzo/trunk/org.openanzo.rdf/src/test/java/org/openanzo/rdf
+END
+TestCoreConstructs.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/openanzo/!svn/ver/5202/openanzo/trunk/org.openanzo.rdf/src/test/java/org/openanzo/rdf/TestCoreConstructs.java
+END
+TestRDFNodes.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/openanzo/!svn/ver/5202/openanzo/trunk/org.openanzo.rdf/src/test/java/org/openanzo/rdf/TestRDFNodes.java
+END
+TestValueFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/3863/openanzo/trunk/org.openanzo.rdf/src/test/java/org/openanzo/rdf/TestValueFactory.java
+END
+DatasetTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/openanzo/!svn/ver/4756/openanzo/trunk/org.openanzo.rdf/src/test/java/org/openanzo/rdf/DatasetTest.java
+END
+NamedGraphTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/openanzo/!svn/ver/3863/openanzo/trunk/org.openanzo.rdf/src/test/java/org/openanzo/rdf/NamedGraphTest.java
+END
+QuadStoreTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.rdf/src/test/java/org/openanzo/rdf/QuadStoreTest.java
+END
+TestSerializers.java
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/openanzo/!svn/ver/4737/openanzo/trunk/org.openanzo.rdf/src/test/java/org/openanzo/rdf/TestSerializers.java
+END

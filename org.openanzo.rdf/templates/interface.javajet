@@ -1,0 +1,313 @@
+<%@ jet package="org.openanzo.rdf.jastor.templates"
+		skeleton="ontologyclass.skeleton"
+		class="InterfaceTemplate" imports="org.openanzo.rdf.jastor.*  org.openanzo.rdf.jastor.inference.* org.openanzo.rdf.* org.openanzo.rdf.jastor.jet.*" %>
+<% JastorContext ctx = oc.getContext(); %>
+<% if(ctx.isIncludeCopyright()){%>
+/*******************************************************************************
+ * Copyright (c) 2004, 2007-2008 IBM Corporation and Cambridge Semantics Incorporated.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * File:        <%="$".toString()%>Source<%="$".toString()%>
+ * Created by:  Generated Source from org.openanzo.jdbc.utils.opgen.jet
+ * Created on:  Generated Source from org.openanzo.jdbc.utils.opgen.jet
+ * Revision:	<%="$".toString()%>Id<%="$".toString()%>
+ * 
+ * Contributors:
+ *     IBM Corporation - initial API and implementation
+ *	   Cambridge Semantics Incorporated - Fork to Anzo
+ *******************************************************************************/
+ <%}%>
+package <%=oc.getPackageName()%>;
+
+/**
+ * Interface for <%=oc.getComment().getLabel()%> ontology class<br>
+ * Use the <%=oc.getFactoryFullClassname()%> to create instances of this interface.
+ * <p>(URI: <%=ctx.remapUri(oc.getURI()) %>)</p>
+ * <br>
+<% if (oc.getComment().listRDFSPropertyNames().length > 0) { %>
+ * RDF Schema Standard Properties <br>
+<% 	String[] names = oc.getComment().listRDFSPropertyNames(); %>
+<% 	for (int i=0;i<names.length;i++) { %>
+ * 	<%=names[i] + " : " + oc.getComment().getRDFSProperty(names[i])%> <br>
+<% 	} %>
+<% } %>
+ * <br>
+<% if (oc.getComment().listDCPropertyNames().length > 0) { %>
+ * Dublin Core Standard Properties <br>
+<% 	String[] names = oc.getComment().listDCPropertyNames(); %>
+<% 	for (int i=0;i<names.length;i++) { %>
+ * 	<%=names[i] + " : " + oc.getComment().getDCProperty(names[i])%> <br>
+<% 	} %>
+<% } %>
+ * <br>
+<% if (oc.getComment().getVersionInfo() != null) { %>
+ *	@version <%=oc.getComment().getVersionInfo()%>
+<% } %>
+ */
+ @SuppressWarnings("all")
+public interface <%=oc.getInterfaceClassname()%> extends 
+<% for (OntologyClass extClass: oc.listImmediateExtensionClasses()) { %>
+<%=extClass.getInterfaceFullClassname()%>, <% } %><%=ctx.getThingInterface().getName()%> {
+	
+	/**
+	 * The rdf:type for this ontology class
+     */
+	public static final org.openanzo.rdf.URI TYPE = org.openanzo.rdf.jastor.ThingFactory.valueFactory.createURI("<%=ctx.remapUri(oc.getURI())%>");
+	
+<% for (OntologyProperty prop: oc.listProperties(false)) {%>
+
+	/**
+	 * The Anzo Property for <%=prop.getPropertyName()%> 
+	 * <p>(URI: <%=ctx.remapUri(prop.getURI())%>)</p>
+	 * <br>
+<% 	if (prop.getComment().listRDFSPropertyNames().length > 0) { %>
+	 * <br>
+	 * RDF Schema Standard Properties <br>
+<% 		String[] names = prop.getComment().listRDFSPropertyNames(); %>
+<% 		for (int i=0;i<names.length;i++) { %>
+	 * 	<%=names[i] + " : " + prop.getComment().getRDFSProperty(names[i])%> <br>
+<% 		} %>
+	 * <br>
+<%		} %>
+<% 	if (prop.getComment().listDCPropertyNames().length > 0) { %>
+	 * Dublin Core Standard Properties <br>
+<% 		String[] names = prop.getComment().listDCPropertyNames(); %>
+<% 		for (int i=0;i<names.length;i++) { %>
+	 * 	<%=names[i] + " : " + prop.getComment().getDCProperty(names[i])%> <br>
+<% 		} %>
+	 * <br>
+<% 	} %>  
+<%		if (prop.getComment().getVersionInfo() != null) { %>
+	 * @version <%=prop.getComment().getVersionInfo()%>
+<%		} %>
+	 */
+	public static org.openanzo.rdf.URI <%=prop.getPropertyName()%>Property = org.openanzo.rdf.jastor.ThingFactory.valueFactory.createURI("<%=ctx.remapUri(prop.getURI())%>");
+
+<% } %>
+
+<% for (Resource individual: oc.listIndividuals()) {%>
+
+	/**
+	 * Individual for URI: <%=individual.toString()%>
+	 */
+	public static org.openanzo.rdf.URI <%=oc.getIndividualIdentifierName(individual)%> = org.openanzo.rdf.MemURI.create("<%=individual.toString()%>");
+
+<% } %>
+
+<% if (!ctx.isGenerateVocabularyOnly()) { %>
+
+<% 	for (OntologyProperty prop: oc.listProperties(true)) {%>
+<%			if (prop.isSingleValued() && prop.isDatatypeProperty()) { %>
+<%		   	boolean all = (prop.getRole() == OntologyProperty.ROLE_HERE); %>
+<%				for (Resource res: prop.listRanges(all,true)) { %>
+	/**
+	 * Gets the '<%=prop.getPropertyName()%>' property value from the given graph
+	 * @return		{@link <%=prop.getReturnType(res)%>}
+	 * @see			#<%=prop.getPropertyName()%>Property
+	 * @throws org.openanzo.rdf.jastor.JastorException
+	 */
+	public <%=prop.getReturnType(res)%> get<%=prop.getPropertyCapped(res)%>() throws org.openanzo.rdf.jastor.JastorException;
+	
+	/**
+	 * Gets the '<%=prop.getPropertyName()%>' property value
+	 * @param 		includeEntireDataset Get the properties from the entire dataset, and not just the namedgraph
+	 * @return		{@link <%=prop.getReturnType(res)%>}
+	 * @see			#<%=prop.getPropertyName()%>Property
+	 * @throws org.openanzo.rdf.jastor.JastorException
+	 */
+	public <%=prop.getReturnType(res)%> get<%=prop.getPropertyCapped(res)%>(boolean includeEntireDataset) throws org.openanzo.rdf.jastor.JastorException;
+
+	/**
+	 * Sets the '<%=prop.getPropertyName()%>' property value
+	 * @param	<%=prop.getPropertyName()%>	{@link <%=prop.getReturnType(res)%>}, the value to set
+	 * @see			#<%=prop.getPropertyName()%>Property
+	 * @throws org.openanzo.rdf.jastor.JastorException
+	 */
+	public void set<%=prop.getPropertyCapped()%>(<%=prop.getReturnType(res)%> <%=prop.getPropertyName()%>) throws org.openanzo.rdf.jastor.JastorException;
+
+<%          } %>
+<%       } %>
+<%			if (prop.isMultiValued() && prop.isDatatypeProperty()) { %>
+<%		   	boolean all = (prop.getRole() == OntologyProperty.ROLE_HERE); %>
+<%				for (Resource res: prop.listRanges(all,true)) { %>
+	/**
+	 * Iterates through the '<%=prop.getPropertyName()%>' property values.  This Iteartor
+	 * may be used to remove all such values.
+	 * @return		{@link java.util.Collection} of {@link <%=prop.getReturnType(res)%>}
+	 * @see			#<%=prop.getPropertyName()%>Property
+	 * @throws org.openanzo.rdf.jastor.JastorException
+	 */
+	public java.util.Collection<<%=prop.getReturnType(res)%>> get<%=prop.getPropertyCapped(res)%>() throws org.openanzo.rdf.jastor.JastorException;
+
+	/**
+	 * Iterates through the '<%=prop.getPropertyName()%>' property values.  This Iteartor
+	 * may be used to remove all such values.
+	 * @param 		includeEntireDataset Get the properties from the entire dataset, and not just the namedgraph
+	 * @return		{@link java.util.Collection} of {@link <%=prop.getReturnType(res)%>}
+	 * @see			#<%=prop.getPropertyName()%>Property
+	 * @throws org.openanzo.rdf.jastor.JastorException
+	 */
+	public java.util.Collection<<%=prop.getReturnType(res)%>> get<%=prop.getPropertyCapped(res)%>(boolean includeEntireDataset) throws org.openanzo.rdf.jastor.JastorException;
+	
+
+	/**
+	 * Add a '<%=prop.getPropertyName()%>' property value
+	 * @param	<%=prop.getPropertyName()%>	{@link <%=prop.getReturnType(res)%>}, the value to add
+	 * @see			#<%=prop.getPropertyName()%>Property
+	 * @throws org.openanzo.rdf.jastor.JastorException
+	 */
+	public void add<%=prop.getPropertyCapped()%>(<%=prop.getReturnType(res)%> <%=prop.getPropertyName()%>) throws org.openanzo.rdf.jastor.JastorException;
+	
+	/**
+	 * Remove a '<%=prop.getPropertyName()%>' property value. This method should not
+	 * be invoked while iterator through values.  In that case, the remove() method of the Iterator
+	 * itself should be used.
+	 * @param	<%=prop.getPropertyName()%>	{@link <%=prop.getReturnType(res)%>}, the value to remove
+	 * @see			#<%=prop.getPropertyName()%>Property
+	 * @throws org.openanzo.rdf.jastor.JastorException
+	 */
+	public void remove<%=prop.getPropertyCapped()%>(<%=prop.getReturnType(res)%> <%=prop.getPropertyName()%>) throws org.openanzo.rdf.jastor.JastorException;
+	
+<%          } %>
+<%       } %>
+<%			if (prop.isSingleValued() && prop.isObjectProperty()) { %>
+<%		   	boolean all = (prop.getRole() == OntologyProperty.ROLE_HERE); %>
+<%				for (Resource res: prop.listRanges(all,true)) { %>
+	/**
+	 * Gets the '<%=prop.getPropertyName()%>' property value
+	 * @return		{@link <%=prop.getReturnType(res)%>}
+	 * @see			#<%=prop.getPropertyName()%>Property
+	 * @throws org.openanzo.rdf.jastor.JastorException
+	 */
+	public <%=prop.getReturnType(res)%> get<%=prop.getPropertyCapped(res)%>() throws org.openanzo.rdf.jastor.JastorException;
+	
+	/**
+	 * Gets the '<%=prop.getPropertyName()%>' property value
+	 * @param 		includeEntireDataset Get the properties from the entire dataset, and not just the namedgraph
+	 * @return		{@link <%=prop.getReturnType(res)%>}
+	 * @see			#<%=prop.getPropertyName()%>Property
+	 * @throws org.openanzo.rdf.jastor.JastorException
+	 */
+	public <%=prop.getReturnType(res)%> get<%=prop.getPropertyCapped(res)%>(boolean includeEntireDataset) throws org.openanzo.rdf.jastor.JastorException;
+
+	/**
+	 * Sets the '<%=prop.getPropertyName()%>' property value
+	 * @param	<%=prop.getPropertyName()%>	{@link <%=prop.getReturnType(res)%>}, value to set
+	 * @see			#<%=prop.getPropertyName()%>Property
+	 * @throws org.openanzo.rdf.jastor.JastorException
+	 */
+	public void set<%=prop.getPropertyCapped()%>(<%=prop.getReturnType(res)%> <%=prop.getPropertyName()%>) throws org.openanzo.rdf.jastor.JastorException;
+	
+	/**
+	 * Sets the '<%=prop.getPropertyName()%>' property value to an anonymous node
+	 * @return		{@link <%=prop.getReturnType(res)%>}, the created value
+	 * @see			#<%=prop.getPropertyName()%>Property
+	 * @throws org.openanzo.rdf.jastor.JastorException
+	 */	
+	public <%=prop.getReturnType(res)%> set<%=prop.getPropertyCapped(res)%>() throws org.openanzo.rdf.jastor.JastorException;
+	
+	/**
+	 * Sets the '<%=prop.getPropertyName()%>' property value to the given resource, and add's rdf:type properties.  This
+	 * method is equivalent constructing a new instance of {@link <%=prop.getReturnType(res)%>} with the factory.
+	 * and calling set<%=prop.getPropertyCapped()%>(<%=prop.getReturnType(res)%> <%=prop.getPropertyName()%>)
+	 * The resource argument have rdf:type <%=ctx.remapUri(prop.getRangeOntologyClass(res).getURI())%>.  That is, this method
+	 * should not be used as a shortcut for creating new objects in the model.
+	 * @param	resource	{@link org.openanzo.rdf.Resource} must not be be null.
+	 * @return		{@link <%=prop.getReturnType(res)%>}, the newly created value
+	 * @see			#<%=prop.getPropertyName()%>Property
+	 * @throws org.openanzo.rdf.jastor.JastorException
+	 */
+	public <%=prop.getReturnType(res)%> set<%=prop.getPropertyCapped(res)%>(org.openanzo.rdf.Resource resource) throws org.openanzo.rdf.jastor.JastorException;
+	
+<%          } %>
+<%       } %>
+<%			if (prop.isMultiValued() && prop.isObjectProperty()) { %>
+<%		   	boolean all = (prop.getRole() == OntologyProperty.ROLE_HERE); %>
+<%				for (Resource res: prop.listRanges(all,true)) { %>
+	/**
+	 * Get an Iterator the '<%=prop.getPropertyName()%>' property values.  This Iteartor
+	 * may be used to remove all such values.
+	 * @return		{@link java.util.Collection} of {@link <%=prop.getReturnType(res)%>}
+	 * @see			#<%=prop.getPropertyName()%>Property
+	 * @throws org.openanzo.rdf.jastor.JastorException
+	 */
+	public java.util.Collection<<%=prop.getReturnType(res)%>> get<%=prop.getPropertyCapped(res)%>() throws org.openanzo.rdf.jastor.JastorException;
+
+	/**
+	 * Get an Iterator the '<%=prop.getPropertyName()%>' property values.  This Iteartor
+	 * may be used to remove all such values.
+	 * @param 		includeEntireDataset Get the properties from the entire dataset, and not just the namedgraph
+	 * @return		{@link java.util.Collection} of {@link <%=prop.getReturnType(res)%>}
+	 * @see			#<%=prop.getPropertyName()%>Property
+	 * @throws org.openanzo.rdf.jastor.JastorException
+	 */
+	public java.util.Collection<<%=prop.getReturnType(res)%>> get<%=prop.getPropertyCapped(res)%>(boolean includeEntireDataset) throws org.openanzo.rdf.jastor.JastorException;
+	
+
+	/**
+	 * Adds a value for the '<%=prop.getPropertyName()%>' property
+	 * @param	<%=prop.getPropertyName()%>	The {@link <%=prop.getReturnType(res)%>} to add
+	 * @see			#<%=prop.getPropertyName()%>Property
+	 * @throws org.openanzo.rdf.jastor.JastorException
+	 */
+	public void add<%=prop.getPropertyCapped()%>(<%=prop.getReturnType(res)%> <%=prop.getPropertyName()%>) throws org.openanzo.rdf.jastor.JastorException;
+	
+	/**
+	 * Adds an anonymous value for the '<%=prop.getPropertyName()%>' property
+	 * @return		The anoymous {@link <%=prop.getReturnType(res)%>} created
+	 * @see			#<%=prop.getPropertyName()%>Property
+	 * @throws org.openanzo.rdf.jastor.JastorException
+	 */
+	public <%=prop.getReturnType(res)%> add<%=prop.getPropertyCapped(res)%>() throws org.openanzo.rdf.jastor.JastorException;
+	
+	/**
+	 * Adds a value for the '<%=prop.getPropertyName()%>' property.  This
+	 * method is equivalent constructing a new instance of {@link <%=prop.getReturnType(res)%>} with the factory
+	 * and calling add<%=prop.getPropertyCapped()%>(<%=prop.getReturnType(res)%> <%=prop.getPropertyName()%>)
+	 * The resource argument have rdf:type <%=ctx.remapUri(prop.getRangeOntologyClass(res).getURI())%>.  That is, this method
+	 * should not be used as a shortcut for creating new objects in the model.
+	 * @param	resource	The {@link org.openanzo.rdf.Resource} to add
+	 * @return <%=prop.getReturnType(res)%>, value added
+	 * @see			#<%=prop.getPropertyName()%>Property
+	 * @throws org.openanzo.rdf.jastor.JastorException
+	 */
+	public <%=prop.getReturnType(res)%> add<%=prop.getPropertyCapped(res)%>(org.openanzo.rdf.Resource resource) throws org.openanzo.rdf.jastor.JastorException;
+	
+	/**
+	 * Removes a value for the '<%=prop.getPropertyName()%>' property.  This method should not
+	 * be invoked while iterator through values.  In that case, the remove() method of the Iterator
+	 * itself should be used.
+	 * @param	<%=prop.getPropertyName()%>	The {@link <%=prop.getReturnType(res)%>} to remove
+	 * @see			#<%=prop.getPropertyName()%>Property
+	 * @throws org.openanzo.rdf.jastor.JastorException
+	 */
+	public void remove<%=prop.getPropertyCapped()%>(<%=prop.getReturnType(res)%> <%=prop.getPropertyName()%>) throws org.openanzo.rdf.jastor.JastorException;
+
+<%          } %>
+		
+	/**
+	 * Removes a value for the '<%=prop.getPropertyName()%>' property.  This method should not
+	 * be invoked while iterator through values.  In that case, the remove() method of the Iterator
+	 * itself should be used.
+	 * @param	<%=prop.getPropertyName()%>	The {@link org.openanzo.rdf.Resource} to remove
+	 * @see			#<%=prop.getPropertyName()%>Property
+	 * @throws org.openanzo.rdf.jastor.JastorException
+	 */
+	public void remove<%=prop.getPropertyCapped()%>(org.openanzo.rdf.Resource <%=prop.getPropertyName()%>) throws org.openanzo.rdf.jastor.JastorException;
+
+
+<%       } %>
+/**
+	 * Clears all values for '<%=prop.getPropertyName()%>'. 
+	 * @param 		includeEntireDataset Delete the properties from the entire dataset, and not just the namedgraph
+	 * @see			#<%=prop.getPropertyName()%>Property
+	 * @throws org.openanzo.rdf.jastor.JastorException
+	 */
+	public void clear<%=prop.getPropertyCapped()%>(boolean includeEntireDataset) throws org.openanzo.rdf.jastor.JastorException;
+<% 	} %>
+
+<% } %>
+}

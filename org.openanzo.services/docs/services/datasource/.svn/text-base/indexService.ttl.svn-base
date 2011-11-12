@@ -1,0 +1,15 @@
+@prefix format: <http://openanzo.org/service/format/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix system: <http://openanzo.org/ontologies/2008/07/System#> .
+
+
+<http://openanzo.org/service/index> system:availableOverJms "true" ;
+	system:availableOverRest "true" ;
+	system:availableOverWS "true" ;
+	system:isDatasourceService "true";
+	system:interface "org.openanzo.servicecontainer.services.IIndexService" ;
+	system:jmsQueueName "index" ;
+	system:name "IndexService" ;
+	dc:description "Operations related to quering the index data on the server" ;
+	dc:title "Index Service" ;
+	a system:Service .

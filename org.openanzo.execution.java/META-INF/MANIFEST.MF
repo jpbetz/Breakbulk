@@ -1,0 +1,25 @@
+Manifest-Version: 1.0
+Export-Package: org.openanzo.execution.java;version="3.2.0"
+Private-Package: config;version="3.2.0"
+Bundle-Name: Anzo Semantic Service Java Executor
+Configuration-Properties: ${bundleResourcePrefix}config/
+Bundle-Vendor: Cambridge Semantics Inc.
+Bundle-Version: 3.2.0
+Bundle-Activator: org.openanzo.execution.java.JavaExecutorActivator
+Bundle-ManifestVersion: 2
+Bundle-License: http://www.eclipse.org/legal/epl-v10.html
+Bundle-Description: Executor for java based semantic services.
+Import-Package: org.apache.activemq.management;version="5.3",org.apach
+ e.commons.collections15.multimap;version="4.1.0",org.openanzo.client;
+ version="3.2",org.openanzo.client.pool;version="3.2.0",org.openanzo.e
+ xceptions;version="3.2",org.openanzo.execution;version="3.2.0",org.op
+ enanzo.execution.java;version="3.2.0",org.openanzo.ontologies.executi
+ on;version="3.2",org.openanzo.osgi;version="3.2",org.openanzo.osgi.at
+ tributes;version="3.2",org.openanzo.osgi.registry;version="3.2",org.o
+ penanzo.rdf;version="3.2",org.openanzo.rdf.jastor;version="3.2.0",org
+ .openanzo.rdf.utils;version="3.2",org.openanzo.services;version="3.2"
+ ,org.osgi.framework,org.osgi.service.cm,org.osgi.service.metatype;ver
+ sion="1.1.0",org.osgi.util.tracker,org.slf4j;version="1.4"
+Bundle-SymbolicName: org.openanzo.execution.java
+Bundle-DocURL: http://www.cambridgesemantics.com
+

@@ -1,0 +1,10 @@
+PREFIX : <http://example.org/>
+PREFIX preds: <http://openanzo.org/ontologies/2008/07/Anzo#>
+ 
+SELECT DISTINCT ?g ?s ?o WHERE {
+  GRAPH ?g {
+    ?s a :type .
+    ?s :title ?o .
+    ?o preds:textlike "On the R%" .
+  }
+}

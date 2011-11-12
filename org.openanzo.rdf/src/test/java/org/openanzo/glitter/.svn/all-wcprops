@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/openanzo/!svn/ver/4463/openanzo/trunk/org.openanzo.rdf/src/test/java/org/openanzo/glitter
+END
+TestQueryParsingAndValidating.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/openanzo/!svn/ver/3863/openanzo/trunk/org.openanzo.rdf/src/test/java/org/openanzo/glitter/TestQueryParsingAndValidating.java
+END
+TestSPARQLAlgebra.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/openanzo/!svn/ver/4222/openanzo/trunk/org.openanzo.rdf/src/test/java/org/openanzo/glitter/TestSPARQLAlgebra.java
+END
+TestGlitterFunctions.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/openanzo/!svn/ver/4242/openanzo/trunk/org.openanzo.rdf/src/test/java/org/openanzo/glitter/TestGlitterFunctions.java
+END
+TestGroupByProjection.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/openanzo/!svn/ver/4463/openanzo/trunk/org.openanzo.rdf/src/test/java/org/openanzo/glitter/TestGroupByProjection.java
+END
+TestQueryAndAstStrings.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/openanzo/!svn/ver/4241/openanzo/trunk/org.openanzo.rdf/src/test/java/org/openanzo/glitter/TestQueryAndAstStrings.java
+END

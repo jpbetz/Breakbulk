@@ -1,0 +1,5 @@
+@prefix : <http://example.org/> .
+
+:graph-uri-in-graph-contents-extra {
+	:graph-uri-in-graph-contents-extra :p :o .
+}

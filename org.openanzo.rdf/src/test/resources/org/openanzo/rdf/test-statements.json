@@ -1,0 +1,18 @@
+[
+  { "subject":{"value":"http://example.org/subject1","objectType":"uri"},
+    "predicate":"http://example.org/predicate1",
+    "object":{"value":"http://example.org/object1","objectType":"uri"},
+    "namedGraphUri":"http://example.org/namedGraph1"
+  },
+  { "subject":{"value":"http://example.org/subject2","objectType":"uri"},
+    "predicate":"http://example.org/predicate2",
+    "object":{"value":"http://example.org/object2","objectType":"uri"},
+    "namedGraphUri":"http://example.org/namedGraph1"
+  },
+  {
+    "subject":{"value":"http://example.org/subject1","objectType":"uri"},
+    "predicate":"http://example.org/predicate3",
+    "object":{"value":"A literal value","objectType":"literal"},
+    "namedGraphUri":"http://example.org/namedGraph2"
+  }
+]

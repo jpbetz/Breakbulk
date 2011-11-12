@@ -1,0 +1,396 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix system: <http://openanzo.org/ontologies/2008/07/System#> .
+@prefix ont: <http://openanzo.org/ontologies/2008/07/> .
+@prefix services: <http://openanzo.org/services/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix anzo: <http://openanzo.org/ontologies/2008/07/Anzo#> .
+
+
+ont:System {
+	ont:System a owl:Ontology ;
+		rdfs:comment "Container Components Ontology." ;
+		rdfs:label "Container Components Ontology" ;
+		owl:versionInfo "0.1" .
+	
+	system:AuthorizationRule a owl:Class ;
+		rdfs:comment "AuthorizationConfiguration" ;
+		rdfs:subClassOf 
+		[a owl:Restriction ;owl:minCardinality "1" ;owl:onProperty system:uriPattern,system:role],
+	 	[a owl:Restriction ;owl:cardinality "1" ;	owl:onProperty system:privilege] .
+	
+	system:Component a owl:Class ;
+		rdfs:comment "Service Container Component" ;
+		rdfs:subClassOf 
+		[a owl:Restriction ;	owl:maxCardinality "1" ;	owl:onProperty system:className,system:initOrder,system:enabled,system:credentials],
+		[a owl:Restriction ;	owl:mincardinality "0" ;	owl:onProperty system:dependency ] .
+	
+	
+	system:Credentials a owl:Class ;
+		rdfs:subClassOf [a owl:Restriction ;	owl:maxCardinality "1" ;owl:onProperty system:user ,system:password ] .
+	
+	
+	system:datasourceCapability a owl:ObjectProperty ; rdfs:domain system:Datasource ; rdfs:range system:DatasourceCapability ; rdfs:label "Datasource capability" .
+	system:Datasource a owl:Class ;
+		rdfs:comment "Datasource" ;
+		rdfs:subClassOf system:Component,
+		[a owl:Restriction ;	owl:maxCardinality "1" ;	owl:onProperty system:isPrimary,system:resetEnabled ],
+		[a owl:Restriction ;	owl:minCardinality "1" ;	owl:onProperty system:uriPattern ,system:authorizationRule ],
+		[a owl:Restriction ;	owl:cardinality "1" ;	owl:onProperty system:enableCaching ,system:enableIndexing].
+	
+	system:capabilityService a owl:ObjectProperty ; 
+		rdfs:label "Capability service" ;
+		rdfs:comment "The services used to supply this capability, if any" ;
+		rdfs:domain system:DatasourceCapability ;
+		rdfs:range system:Service ;
+	.
+	system:DatasourceCapability a owl:Class ; rdfs:label "Datasource capability" .
+	
+	system:DatasourceRead a system:DatasourceCapability ; 
+		rdfs:label "Datasource read" ;
+		system:capabilityService services:ModelService , services:ReplicationService ;
+	.
+	
+	system:DatasourceUpdate a system:DatasourceCapability ; 
+		rdfs:label "Datasource update" ;
+		system:capabilityService services:UpdateService ;
+	.
+	
+	system:DatasourceQuery a system:DatasourceCapability ; 
+		rdfs:label "Datasource query" ;
+		system:capabilityService services:QueryService ;
+	.
+	
+	system:DatasourceEvents a system:DatasourceCapability ; 
+		rdfs:label "Datasource events" ;
+		system:capabilityService services:NotificationRegistrationService ;
+	.
+	
+	system:StatisticsProvider a owl:Class ;
+		rdfs:comment "StatisticsProvider" ;
+		rdfs:subClassOf 
+		[a owl:Restriction ;	owl:cardinality "1" ;	owl:onProperty dc:title,dc:description,system:statisticsEnabled ],
+		[a owl:Restriction ;	owl:minCardinality "0" ;	owl:onProperty system:statistic ].
+	
+	system:Statistic a owl:Class ;
+		rdfs:comment "Statistic" ;
+		rdfs:subClassOf 
+		[a owl:Restriction ;	owl:cardinality "1" ;	owl:onProperty dc:title,dc:description,system:statisticsEnabled ,system:statisticUnit,system:statisticStartTime,system:statisticLastSampleTime,system:statisticsCount ].
+	
+	system:CountStatistic a owl:Class ;
+		rdfs:comment "CounterStatistic" ;
+		rdfs:subClassOf system:Statistic,
+		[a owl:Restriction ;	owl:cardinality "1" ;	owl:onProperty  system:statisticPeriod,system:statisticFrequency].
+
+	system:TimerStatistic a owl:Class ;
+		rdfs:comment "TimerStatistic" ;
+		rdfs:subClassOf system:Statistic,
+		[a owl:Restriction ;	owl:cardinality "1" ;	owl:onProperty system:statisticMaxTime,system:statisticMinTime,system:statisticTotalTime,system:statisticAverageTime,system:statisticAverageExcludingMinMax,system:statisticAveragePerSecond,system:statisticAveragePerSecondExcludingMinMax ].
+
+	
+	system:RDBDatasource a owl:Class ;
+		rdfs:comment "Datasource" ;
+		rdfs:subClassOf system:Datasource,system:RDBComponent.
+		
+	system:Format a owl:Class ;
+		rdfs:comment "Transport specific format info" ;
+		rdfs:subClassOf [a owl:Restriction ;	owl:cardinality "1" ;	owl:onProperty system:location ,system:javaType ] .
+	
+	system:NetworkComponent a owl:Class ;
+		rdfs:comment "Component that uses a network connection" ;
+		rdfs:subClassOf [a owl:Restriction ;	owl:maxCardinality "1" ;	owl:onProperty system:connection ,system:networkTimeout ] , system:Component .
+	
+	system:NetworkConnection a owl:Class ;
+		rdfs:comment "Network connection to a host" ;
+		rdfs:subClassOf [a owl:Restriction ;	owl:maxCardinality "1" ;	owl:onProperty system:port ,system:host,system:useSsl ,system:timeout,system:keystoreFile,system:keystoreType,system:keystorePassword,system:truststoreFile,system:truststoreType,system:truststorePassword] .
+	
+	system:Operation a owl:Class ;
+		rdfs:comment "Operation on a Service" ;
+		rdfs:subClassOf 
+		[a owl:Restriction ;	owl:cardinality "1" ;	owl:onProperty system:requestParameter0 ,system:requestParameter1 ,system:requestParameter2 ,system:requestParameter3 ,system:requestParameter4 ,system:requestParameter5 ,system:requestParameter6 ,system:requestParameter7 ,system:name ],
+		[a owl:Restriction ;	owl:maxCardinality "1" ;	owl:onProperty system:bypassPool,system:sysadminRequired ,system:wsOperation ,system:restEndpoint ,system:restType],
+		[a owl:Restriction ;	owl:minCardinality "0" ;	owl:onProperty system:requestParameter ,system:result ].
+	
+	system:Parameter a owl:Class ;
+		rdfs:comment "Request Parameter" ;
+		rdfs:subClassOf [a owl:Restriction ;	owl:cardinality "1" ;	owl:onProperty system:name ,system:type ,system:nullAllowed ,system:parameterLocation ] .
+	
+	system:RDBComponent a owl:Class ;
+		rdfs:comment "RDB Provider" ;
+		rdfs:subClassOf system:Component,	
+		[a owl:Restriction ;	owl:maxCardinality "1" ;	owl:onProperty 
+			system:dbURL ,
+			system:dbUser ,
+			system:dbPassword ,
+			system:dbType ,
+			system:canonicalTable ,
+			system:configuration ,
+			system:containerName ,
+			system:clear ,
+			system:perUserConnection ,
+			system:nodeCacheSize ,
+			system:client ],
+		[a owl:Restriction ;	owl:minCardinality "0" ;	owl:onProperty 
+			system:initResource ,
+			system:connectionSetupFunction ,
+			system:connectionTeardownFunction
+		].
+
+	system:RDBConfiguration a owl:Class ;
+		rdfs:subClassOf 
+		[a owl:Restriction ;	owl:maxCardinality "1" ;owl:onProperty 
+		system:connectionType,
+		system:clientSqlFile,
+		system:serverSqlFile,
+		system:dbDriver,
+		system:quoteChar,
+		system:maxTableName,
+		system:useTempInsert,
+		system:useTempFind,
+		system:useUniqueTempNames,
+		system:supportsOptionalJoins,
+		system:supportsSequences,
+		system:supportsIndividualBatchUpdates,
+		system:supportsFullOuterJoins,
+		system:supportsWithClause ,
+		system:maxIndexLength ,
+		system:maxObjectLength ,
+		system:useUpperCaseTable ,
+		system:useUpperCaseTempTables ,
+		system:sessionPrefix ,
+		system:supportsTableLocks ,
+		system:supportsTableUnLocks ,
+		system:singleRowOptimizationString ,
+		system:indexSuffix ,
+		system:tableLockSuffix ,
+		system:forceTempTableCreation ,
+		system:dropTableSuffix ,
+		system:supportsIsolation ,
+		system:smallInt ,
+		system:bigInt ,
+		system:varChar ,
+		system:blob ,
+		system:tableCreateSuffix ,
+		system:textFieldSuffix ,
+		system:generatedIdString ,
+		system:forceTableTablePurge ,
+		system:requiresTempTablespace] .
+	
+	
+	system:Service a owl:Class ;
+		rdfs:comment "Anzo Service" ;
+		rdfs:subClassOf system:Component,
+		[a owl:Restriction ;	owl:cardinality "1" ;	owl:onProperty system:interface ,system:isDatasourceService ,system:name ,system:availableOverJms ,system:availableOverWS ,system:availableOverRest ],
+		[a owl:Restriction ;	owl:mincardinality "0" ; owl:onProperty system:operation ],
+		[a owl:Restriction ;	owl:maxCardinality "1" ;	owl:onProperty system:jmsQueueName] .
+		
+	system:Type a owl:Class ;
+		rdfs:comment "Type of parameter" ;
+		rdfs:subClassOf 
+	[a owl:Restriction ;	owl:cardinality "1" ;	owl:onProperty system:name ,system:javaType ,system:defaultValue , system:javaTransportType , system:serializer ,system:defaultWSFormat ,system:defaultRestFormat ,system:defaultJMSFormat ],
+	[a owl:Restriction ;	owl:mincardinality "0" ;	owl:onProperty system:validFormat] .
+	
+	system:HttpConfiguration a owl:Class ;
+		rdfs:subClassOf system:NetworkComponent.
+
+	
+	system:LdapConfiguration a owl:Class ;
+		rdfs:subClassOf system:NetworkComponent,
+		[a owl:Restriction ;	owl:maxCardinality "1" ;owl:onProperty 
+		system:ldapUseInternal,
+		system:ldapId,
+		system:ldapSuffix,
+		system:ldapO,
+		system:ldapCN,
+		system:ldapInitFile,
+		system:ldapInternalPrincipal,
+		system:ldapInternalCredentials,
+		system:ldapSearchBaseDN,
+		system:userBaseDN,
+		system:roleBaseDN,
+		system:dnToUriTemplate,
+		system:rolesSearch,
+		system:userSearch,
+		system:userIdAttribute,
+		system:sysadminRole].
+	
+	system:ldapUseInternal 			a owl:DatatypeProperty ;rdfs:domain system:LdapConfiguration ;rdfs:range xsd:boolean ;rdfs:comment "Use an internal ldap server." .
+	system:ldapId 					a owl:DatatypeProperty ;rdfs:domain system:LdapConfiguration ;rdfs:range xsd:string ;rdfs:comment "Ldap Host ID." .
+	system:ldapSuffix 				a owl:DatatypeProperty ;rdfs:domain system:LdapConfiguration ;rdfs:range xsd:string ;rdfs:comment "Ldap Suffix." .
+	system:ldapInternalPrincipal 	a owl:DatatypeProperty ;rdfs:domain system:LdapConfiguration ;rdfs:range xsd:string ;rdfs:comment "Ldap Organization." .
+	system:ldapInternalCredentials 	a owl:DatatypeProperty ;rdfs:domain system:LdapConfiguration ;rdfs:range xsd:string ;rdfs:comment "Ldap Organization." .
+	system:ldapO 					a owl:DatatypeProperty ;rdfs:domain system:LdapConfiguration ;rdfs:range xsd:string ;rdfs:comment "Ldap Organization." .
+	system:ldapCN 					a owl:DatatypeProperty ;rdfs:domain system:LdapConfiguration ;rdfs:range xsd:string ;rdfs:comment "Ldap Common Name." .
+	system:ldapInitFile 			a owl:DatatypeProperty ;rdfs:domain system:LdapConfiguration ;rdfs:range xsd:string ;rdfs:comment "Ldap Init File." .
+	system:ldapSearchBaseDN 		a owl:DatatypeProperty ;rdfs:domain system:LdapConfiguration ;rdfs:range xsd:string ;rdfs:comment "Ldap Search Base DN." .
+	system:userBaseDN 				a owl:DatatypeProperty ;rdfs:domain system:LdapConfiguration ;rdfs:range xsd:string ;rdfs:comment "Ldap Search Base DN." .
+	system:roleBaseDN 				a owl:DatatypeProperty ;rdfs:domain system:LdapConfiguration ;rdfs:range xsd:string.
+	system:dnToUriTemplate 			a owl:DatatypeProperty ;rdfs:domain system:LdapConfiguration ;rdfs:range xsd:string.
+	system:rolesSearch 				a owl:DatatypeProperty ;rdfs:domain system:LdapConfiguration ;rdfs:range xsd:string.
+	system:userSearch 				a owl:DatatypeProperty ;rdfs:domain system:LdapConfiguration ;rdfs:range xsd:string.
+	system:userIdAttribute 			a owl:DatatypeProperty ;rdfs:domain system:LdapConfiguration ;rdfs:range xsd:string .
+	system:sysadminRole 			a owl:DatatypeProperty ;rdfs:domain system:LdapConfiguration ;rdfs:range xsd:string .
+	system:uriPattern 				a owl:DatatypeProperty ;rdfs:domain [a owl:Class ;	owl:unionOf (system:Datasource system:AuthorizationRule)] ;rdfs:range xsd:string ;	rdfs:comment "URI pattern." .
+	system:authorizationRule 		a owl:ObjectProperty   ;rdfs:domain system:Datasource 		 ;rdfs:range system:AuthorizationRule ;	rdfs:comment "Datasource authorization configuration." .
+	
+	system:className 				a owl:DatatypeProperty ;rdfs:domain system:Component ;rdfs:range xsd:string ;rdfs:comment "ClassName for this component." .
+	system:credentials 				a owl:ObjectProperty   ;rdfs:domain [a owl:Class ;owl:unionOf ( system:Component )] ;rdfs:range system:Credentials ;rdfs:comment "Service Container Credentials" .
+	system:dependency 				a owl:ObjectProperty   ;rdfs:domain system:Component ;rdfs:range system:Component .
+	system:enabled 					a owl:DatatypeProperty ;rdfs:domain system:Component ;rdfs:range xsd:boolean ;rdfs:comment "Component is enabled." .
+	system:initOrder	 			a owl:DatatypeProperty ;rdfs:domain system:Component ;rdfs:range xsd:int ;rdfs:comment "Init order hint, lowest to highest." .
+	
+	system:enableCaching 			a owl:DatatypeProperty ;rdfs:domain system:Datasource ;rdfs:range xsd:boolean ;rdfs:comment "Enabled caching in datasource." .
+	system:enableIndexing 			a owl:DatatypeProperty ;rdfs:domain system:Datasource ;rdfs:range xsd:boolean ;rdfs:comment "Enabled text indexing in datasource." .
+	system:isPrimary 				a owl:DatatypeProperty ;rdfs:domain system:Datasource ;rdfs:range xsd:boolean ;rdfs:comment "Is this the primary datasource." .
+	system:resetEnabled 			a owl:DatatypeProperty ;rdfs:domain system:Datasource ;rdfs:range xsd:boolean ;rdfs:comment "Is resetEnabled on this datasource." .
+	
+	system:connection 				a owl:ObjectProperty ;rdfs:domain system:NetworkComponent 	 ;rdfs:range system:NetworkConnection ;rdfs:comment "Port for network service." .
+	system:networkTimeout 			a owl:DatatypeProperty ;rdfs:domain system:NetworkComponent  ;rdfs:range xsd:long ;rdfs:comment "Timeout for network service." .
+	system:host 					a owl:DatatypeProperty ;rdfs:domain system:NetworkConnection ;rdfs:range xsd:string ;rdfs:comment "Host name/address for network connection." .
+	system:port 					a owl:DatatypeProperty ;rdfs:domain system:NetworkConnection ;rdfs:range xsd:int ;rdfs:comment "Port for network connection." .
+	system:useSsl 					a owl:DatatypeProperty ;rdfs:domain system:NetworkConnection ;rdfs:range xsd:boolean ;rdfs:comment "Use Ssl." .
+	system:keystoreFile 			a owl:DatatypeProperty ;rdfs:domain system:NetworkConnection ;rdfs:range xsd:string ;rdfs:comment "Keystore file." .
+	system:keystoreType 			a owl:DatatypeProperty ;rdfs:domain system:NetworkConnection ;rdfs:range xsd:string ;rdfs:comment "Keystore type." .
+	system:keystorePassword 		a owl:DatatypeProperty ;rdfs:domain system:NetworkConnection ;rdfs:range xsd:string ;rdfs:comment "Keystore password." .
+	system:truststoreFile 			a owl:DatatypeProperty ;rdfs:domain system:NetworkConnection ;rdfs:range xsd:string ;rdfs:comment "Truststore file." .
+	system:truststoreType 			a owl:DatatypeProperty ;rdfs:domain system:NetworkConnection ;rdfs:range xsd:string ;rdfs:comment "Truststore type." .
+	system:truststorePassword 		a owl:DatatypeProperty ;rdfs:domain system:NetworkConnection ;rdfs:range xsd:string ;rdfs:comment "Truststore password." .
+	
+	system:password 				a owl:DatatypeProperty ;rdfs:domain [a owl:Class ;owl:unionOf ( system:Credentials )] ;rdfs:range xsd:string ;rdfs:comment "User for network service." .
+	
+	system:privilege 				a owl:DatatypeProperty ;rdfs:domain system:AuthorizationRule ;rdfs:range xsd:string ;rdfs:comment "Privilege for rule." .
+	system:role 					a owl:ObjectProperty ;rdfs:domain system:AuthorizationRule ;rdfs:range anzo:Role ;rdfs:comment "Role object." .
+
+	system:client 					a owl:DatatypeProperty ;rdfs:domain system:RDBComponent ;rdfs:range xsd:boolean 	;rdfs:comment "Flag for whether or not this is a client or server configuration." .
+	system:perUserConnection 		a owl:DatatypeProperty ;rdfs:domain system:RDBComponent ;rdfs:range xsd:boolean 	;rdfs:comment "Flag for whether or not the database database connections are made specific to a user." .	
+	system:nodeCacheSize 			a owl:DatatypeProperty ;rdfs:domain system:RDBComponent ;rdfs:range xsd:int 		;rdfs:comment "Size of node cache." .
+	system:initResource 			a owl:DatatypeProperty ;rdfs:domain system:RDBComponent ;rdfs:range xsd:string 		;rdfs:comment "Resource paths for DDL to initialize the database." .
+	system:canonicalTable 			a owl:DatatypeProperty ;rdfs:domain system:RDBComponent ;rdfs:range xsd:string 		;rdfs:comment "A table name, the existence of which indicates that this RDB connection has been initialized." .
+	system:clear 					a owl:DatatypeProperty ;rdfs:domain system:RDBComponent ;rdfs:range xsd:boolean 	;rdfs:comment "Flag for whether or not the database should be cleared when the database is first loaded." .	
+	system:configuration 			a owl:ObjectProperty   ;rdfs:domain system:RDBComponent ;rdfs:range system:RDBConfiguration ;rdfs:comment "Anzo database type name." .
+	system:connectionSetupFunction 	a owl:DatatypeProperty ;rdfs:domain system:RDBComponent ;rdfs:range xsd:string 		;rdfs:comment "SQL operation executed when connection is received from pool." .
+	system:connectionTeardownFunction a owl:DatatypeProperty ;rdfs:domain system:RDBComponent ;rdfs:range xsd:string 	;rdfs:comment "SQL operation executed when connection is returned to pool." .
+	system:connectionType 			a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:string 	;rdfs:comment "Type of RDB connection." .
+	system:containerName 			a owl:DatatypeProperty ;rdfs:domain system:RDBComponent ;rdfs:range xsd:string 		;rdfs:comment "Unique URI to name container of statements and named graphs." .
+	system:dbPassword 				a owl:DatatypeProperty ;rdfs:domain system:RDBComponent ;rdfs:range xsd:string 		;rdfs:comment "Database password." .
+	system:dbURL 					a owl:DatatypeProperty ;rdfs:domain system:RDBComponent ;rdfs:range xsd:string 		;rdfs:comment "The jdbc URL for the connection to the database." .
+	system:dbUser 					a owl:DatatypeProperty ;rdfs:domain system:RDBComponent ;rdfs:range xsd:string 		;rdfs:comment "Database user id." .
+	
+	system:bigInt 					a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:string ;rdfs:comment "Big int type." .
+	system:blob						a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:string ;rdfs:comment "Blob type." .
+	system:clientSqlFile 			a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:string ;rdfs:comment "Path to file containing table, index definitions as well as text of prepared statements." .
+	system:dbType 					a owl:DatatypeProperty ;rdfs:domain [a owl:Class ;	owl:unionOf (system:RDBConfiguration  system:RDBComponent)]  ;rdfs:range xsd:string ;rdfs:comment "Database type." .
+	system:dbDriver 				a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:string ;rdfs:comment "JDBC driver class name. Only needed if replacing the default driver for the given database type." .
+	system:dropTableSuffix 			a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:string ;rdfs:comment "Size of node cache." .
+	system:forceTableTablePurge 	a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:boolean ;rdfs:comment "Size of node cache." .
+	system:forceTempTableCreation 	a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:boolean ;rdfs:comment "Size of node cache." .
+	system:generatedIdString 		a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:string ;rdfs:comment "Size of node cache." .
+	system:indexSuffix 				a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:string ;rdfs:comment "Size of node cache." .
+	system:maxIndexLength 			a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:int ;rdfs:comment "The max length of an index." .
+	system:maxObjectLength 			a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:int ;rdfs:comment "The max length of a node's value before using the long table." .
+	system:maxTableName 			a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:int ;rdfs:comment "Max length of table names." .
+	system:quoteChar 				a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:string ;rdfs:comment "Quote char used in queries." .
+	system:requiresTempTablespace 	a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:boolean ;rdfs:comment "Size of node cache." .
+	system:serverSqlFile 			a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:string ;rdfs:comment "Path to file containing table, index definitions as well as text of prepared statements." .
+	system:sessionPrefix 			a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:string ;rdfs:comment "Prefix prepended to start of temporary tables." .
+	system:singleRowOptimizationString a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:string ;rdfs:comment "Size of node cache." .
+	system:smallInt 				a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:string ;rdfs:comment "Size of node cache." .
+	system:supportsFullOuterJoins 	a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:boolean ;rdfs:comment "Does the database support full outer joins." .
+	system:supportsIndividualBatchUpdates a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;	rdfs:range xsd:boolean ;rdfs:comment "Does the database support individual batch updates." .
+	system:supportsIsolation 		a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:boolean ;rdfs:comment "Size of node cache." .
+	system:supportsOptionalJoins 	a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:boolean ;rdfs:comment "Does the database support optional joins." .
+	system:supportsSequences 		a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:boolean ;rdfs:comment "Does the database support sequences." .
+	system:supportsTableLocks 		a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:boolean ;rdfs:comment "Does the database support table locks." .
+	system:supportsTableUnLocks 	a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:boolean ;rdfs:comment "Does the database support explicit table unlocks." .
+	system:supportsWithClause 		a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:boolean ;rdfs:comment "Does the database support the WITH clause." .
+	system:tableCreateSuffix 		a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:string ;rdfs:comment "Size of node cache." .
+	system:tableLockSuffix 			a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:string ;rdfs:comment "Size of node cache." .
+	system:textFieldSuffix 			a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:string ;rdfs:comment "Size of node cache." .
+	system:varChar 					a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:string ;rdfs:comment "Var char type." .
+	system:useTempFind 				a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:boolean ;rdfs:comment "Can database use temporary tables for find operations." .
+	system:useTempInsert 			a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:boolean ;rdfs:comment "Can database use temporary tables for insert operation." .
+	system:useUniqueTempNames 		a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:boolean ;rdfs:comment "Does the database disallow multiple references to the same temporary table within a query." .
+	system:useUpperCaseTable 		a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:boolean ;rdfs:comment "Does the database use all uppercase strings for table and column names." .
+	system:useUpperCaseTempTables 	a owl:DatatypeProperty ;rdfs:domain system:RDBConfiguration ;rdfs:range xsd:boolean ;rdfs:comment "Does the database use all uppercase strings for temporary tables and column names." .
+	
+	system:timeout 					a owl:DatatypeProperty ;	rdfs:domain system:NetworkConnection ;	rdfs:range xsd:long ;	rdfs:comment "Timeout for network connection." .
+	
+	system:interface 				a owl:DatatypeProperty ;rdfs:domain system:Service ;rdfs:range xsd:string ;rdfs:comment "Interface name" .
+	system:isDatasourceService 		a owl:DatatypeProperty ;rdfs:domain system:Service ;rdfs:range xsd:boolean ;rdfs:comment "Is this a datasource service" .
+	system:jmsQueueName 			a owl:DatatypeProperty ;rdfs:domain system:Service ;rdfs:range xsd:string ;	rdfs:comment "JMS queue for this request." .
+	system:availableOverJms 		a owl:DatatypeProperty ;rdfs:domain system:Service ;rdfs:range xsd:boolean ;rdfs:comment "Name of service" .
+	system:availableOverRest 		a owl:DatatypeProperty ;rdfs:domain system:Service ;rdfs:range xsd:boolean .
+	system:availableOverWS 			a owl:DatatypeProperty ;rdfs:domain system:Service ;rdfs:range xsd:boolean .
+	system:operation 				a owl:ObjectProperty ;rdfs:domain system:Service ;rdfs:range system:Operation ;rdfs:comment "Service Operation" .
+		
+	system:sysadminRequired 		a owl:DatatypeProperty ;rdfs:domain system:Operation ;rdfs:range xsd:boolean ;	rdfs:comment "Does a user need to be sysadmin to run this operation." .
+	system:requestParameter 		a owl:ObjectProperty ;rdfs:domain system:Operation ;rdfs:range system:Parameter ;rdfs:comment "Request Paremeter." .
+	system:requestParameter0 		a owl:ObjectProperty ;	rdfs:domain system:Operation ;	rdfs:range system:Parameter ;	rdfs:comment "Request Paremeter 0." .
+	system:requestParameter1 		a owl:ObjectProperty ;rdfs:domain system:Operation ;rdfs:range system:Parameter ;rdfs:comment "Request Paremeter 1." .
+	system:requestParameter2 		a owl:ObjectProperty ;rdfs:domain system:Operation ;rdfs:range system:Parameter ;rdfs:comment "Request Paremeter 2." .
+	system:requestParameter3 		a owl:ObjectProperty ;rdfs:domain system:Operation ;rdfs:range system:Parameter ;rdfs:comment "Request Paremeter 3." .
+	system:requestParameter4 		a owl:ObjectProperty ;rdfs:domain system:Operation ;rdfs:range system:Parameter ;rdfs:comment "Request Paremeter 4." .
+	system:requestParameter5 		a owl:ObjectProperty ;rdfs:domain system:Operation ;rdfs:range system:Parameter ;rdfs:comment "Request Paremeter 5." .
+	system:requestParameter6 		a owl:ObjectProperty ;rdfs:domain system:Operation ;rdfs:range system:Parameter ;rdfs:comment "Request Paremeter 6." .
+	system:requestParameter7 		a owl:ObjectProperty ;rdfs:domain system:Operation ;rdfs:range system:Parameter ;rdfs:comment "Request Paremeter 7." .
+	system:bypassPool  				a owl:DatatypeProperty ;rdfs:domain system:Operation ;rdfs:range xsd:boolean ;rdfs:comment "Bypass Listening Pool." .
+	system:restEndpoint 			a owl:DatatypeProperty ;rdfs:domain system:Operation ;rdfs:range xsd:string ;rdfs:comment "Rest Endpoint." .
+	system:restType 				a owl:DatatypeProperty ;rdfs:domain system:Operation ;rdfs:range xsd:string ;rdfs:comment "Rest Type." .
+	system:result 					a owl:ObjectProperty ;rdfs:domain system:Operation ;rdfs:range system:Parameter .
+	
+	system:validFormat 				a owl:ObjectProperty ;rdfs:domain system:Type ;rdfs:range system:Format .
+	system:serializer 				a owl:DatatypeProperty ;rdfs:domain system:Type ;	rdfs:range xsd:string .
+	system:defaultJMSFormat 		a owl:ObjectProperty ;rdfs:domain system:Type ;rdfs:range system:Format .
+	system:defaultRestFormat 		a owl:ObjectProperty ;rdfs:domain system:Type ;rdfs:range system:Format .
+	system:defaultValue 			a owl:DatatypeProperty ;rdfs:domain system:Type ;rdfs:range xsd:string .
+	system:defaultWSFormat 			a owl:ObjectProperty ;rdfs:domain system:Type ;rdfs:range system:Format .
+	system:javaTransportType 		a owl:DatatypeProperty ;rdfs:domain system:Type ;rdfs:range xsd:string .
+	
+	system:user 					a owl:DatatypeProperty ;rdfs:domain [a owl:Class ;owl:unionOf ( system:Credentials )] ;	rdfs:range xsd:string ;	rdfs:comment "User for network service." .
+	
+	system:javaType 				a owl:DatatypeProperty ; rdfs:domain [a owl:Class ;	owl:unionOf ( system:Format  system:Type )] ;rdfs:range xsd:string .
+		
+	system:name 					a owl:DatatypeProperty ;rdfs:domain [a owl:Class ;	owl:unionOf ( system:Service system:Parameter system:Operation  system:Type )] ;rdfs:range xsd:string .
+		
+	system:nullAllowed 				a owl:DatatypeProperty ;rdfs:domain system:Parameter ;rdfs:range xsd:boolean .
+	system:parameterLocation 		a owl:DatatypeProperty ;rdfs:domain system:Parameter ;rdfs:range xsd:string .
+	system:type 					a owl:ObjectProperty ;rdfs:domain system:Parameter ;rdfs:range system:Type .
+		
+	system:location 				a owl:DatatypeProperty ;rdfs:domain system:Format ;rdfs:range xsd:anyURI .
+	
+	system:wsOperation 				a owl:DatatypeProperty ;	rdfs:domain system:Operation ; rdfs:range xsd:string ; rdfs:comment "WebSerivice call name." .	
+	
+	dc:title 						a owl:DatatypeProperty ;rdfs:domain  [a owl:Class; owl:unionOf ( system:Statistic  system:StatisticsProvider )]  ;rdfs:range xsd:string .
+	dc:description 					a owl:DatatypeProperty ;rdfs:domain  [a owl:Class ;	owl:unionOf ( system:Statistic system:StatisticsProvider )]  ;rdfs:range xsd:string .
+	system:statisticsEnabled 		a owl:DatatypeProperty ;rdfs:domain  [a owl:Class ;	owl:unionOf ( system:Statistic system:StatisticsProvider )]  ;rdfs:range xsd:boolean.
+	
+	system:statistic 				a owl:ObjectProperty 	;rdfs:domain system:StatisticsProvider ;rdfs:range system:Statistic.
+	system:statisticStartTime 		a owl:DatatypeProperty ;rdfs:domain system:Statistic ;rdfs:range xsd:long.
+	system:statisticLastSampleTime 	a owl:DatatypeProperty ;rdfs:domain system:Statistic ;rdfs:range xsd:long.
+	system:statisticUnit 			a owl:DatatypeProperty ;rdfs:domain system:Statistic ;rdfs:range xsd:string.
+	system:statisticPeriod 			a owl:DatatypeProperty ;rdfs:domain system:CountStatistic ;rdfs:range xsd:double.
+	system:statisticFrequency 		a owl:DatatypeProperty ;rdfs:domain system:CountStatistic ;rdfs:range xsd:double.
+	system:statisticCount 			a owl:DatatypeProperty ;rdfs:domain system:Statistic ;rdfs:range xsd:long.
+	system:statisticMaxTime 		a owl:DatatypeProperty ;rdfs:domain system:TimerStatistic ;rdfs:range xsd:long.
+	system:statisticMinTime 		a owl:DatatypeProperty ;rdfs:domain system:TimerStatistic ;rdfs:range xsd:long.
+	system:statisticTotalTime 		a owl:DatatypeProperty ;rdfs:domain system:TimerStatistic ;rdfs:range xsd:long.
+	system:statisticAverageTime 	a owl:DatatypeProperty ;rdfs:domain system:TimerStatistic ;rdfs:range xsd:double.
+	system:statisticAverageExcludingMinMax 			a owl:DatatypeProperty ;rdfs:domain system:TimerStatistic ;rdfs:range xsd:double.
+	system:statisticAveragePerSecond 				a owl:DatatypeProperty ;rdfs:domain system:TimerStatistic ;rdfs:range xsd:double.
+	system:statisticAveragePerSecondExcludingMinMax a owl:DatatypeProperty ;rdfs:domain system:TimerStatistic ;rdfs:range xsd:double.
+	
+	### Jastor generation config for the CLI ###
+	
+	system:generate 				a owl:DatatypeProperty , owl:FunctionalProperty ; rdfs:domain system:JastorOntology ; rdfs:range xsd:boolean .
+	system:ontologyUri 				a owl:DatatypeProperty , owl:FunctionalProperty ; rdfs:domain system:JastorOntology ; rdfs:range xsd:anyURI .
+	system:package 					a owl:DatatypeProperty , owl:FunctionalProperty ; rdfs:domain system:JastorOntology ; rdfs:range xsd:string .
+	system:JastorOntology 			a owl:Class .
+	
+	system:destDir 					a owl:DatatypeProperty , owl:FunctionalProperty ; rdfs:domain system:JastorGeneration ; rdfs:range xsd:string .
+	system:generateListeners 		a owl:DatatypeProperty , owl:FunctionalProperty ; rdfs:domain system:JastorGeneration ; rdfs:range xsd:boolean .
+	system:jastorOntology 			a owl:ObjectProperty ; rdfs:domain system:JastorGeneration ; rdfs:range system:JastorOntology .
+	system:JastorGeneration 		a owl:Class .
+
+}

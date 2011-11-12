@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<sparql
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:xs="http://www.w3.org/2001/XMLSchema#"
+    xmlns="http://www.w3.org/2005/sparql-results#" >
+  <head>
+  	<variable name="g"/>
+    <variable name="s"/>
+    <variable name="o"/>
+  </head>
+  <results>
+    <result>
+      <binding name="g"><uri>http://example.org/textlike-2</uri></binding>
+      <binding name="s"><uri>http://example.org/yes1</uri></binding>
+      <binding name="o"><literal>On the Road Again</literal></binding>
+    </result>
+    <result>
+      <binding name="g"><uri>http://example.org/textlike-2</uri></binding>
+      <binding name="s"><uri>http://example.org/yes2</uri></binding>
+      <binding name="o"><literal>On the River Kwai</literal></binding>
+    </result>
+  </results>
+</sparql>

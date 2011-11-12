@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/openanzo/!svn/ver/3450/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/rdf/vocabulary
+END
+DC.js
+K 25
+svn:wc:ra_dav:version-url
+V 111
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/rdf/vocabulary/DC.js
+END
+FOAF.js
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/rdf/vocabulary/FOAF.js
+END
+RDF.js
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/rdf/vocabulary/RDF.js
+END
+RDFS.js
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/rdf/vocabulary/RDFS.js
+END
+OWL.js
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/3450/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/rdf/vocabulary/OWL.js
+END
+XMLSchema.js
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/openanzo/!svn/ver/3284/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/rdf/vocabulary/XMLSchema.js
+END

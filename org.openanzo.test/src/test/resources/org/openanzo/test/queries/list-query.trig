@@ -1,0 +1,6 @@
+@prefix : <http://example.org/> .
+
+:list-query {
+	:list1 :list (13) .
+	:list2 :list (:one :two :three) .
+}

@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE rdf:RDF [
+  <!ENTITY rdf 'http://www.w3.org/1999/02/22-rdf-syntax-ns#'>
+  <!ENTITY rdfs 'http://www.w3.org/2000/01/rdf-schema#'>
+  <!ENTITY xsd 'http://www.w3.org/2001/XMLSchema#'>
+  <!ENTITY owl 'http://www.w3.org/2002/07/owl#'>
+  <!ENTITY owl11 'http://www.w3.org/2006/12/owl11#'>
+  <!ENTITY owl11xml 'http://www.w3.org/2006/12/owl11-xml#'>
+  <!ENTITY dc 'http://purl.org/dc/elements/1.1/'>
+]>
+<rdf:RDF
+	xmlns:base='&owl11;'
+	xmlns:owl='&owl;'
+	xmlns:owl11='&owl11;'
+	xmlns:owl11xml='&owl11xml;'
+	xmlns:rdf='&rdf;'
+	xmlns:rdfs='&rdfs;'
+	xmlns:xsd='&xsd;'
+	xmlns:dc='&dc;'>
+	
+	<owl:Ontology rdf:about='&owl11;OWL11'>
+		<owl:versionInfo>1.1</owl:versionInfo>		
+		<rdfs:comment>OWL 1.1 Classes</rdfs:comment>
+		<owl:imports rdf:resource="&rdfs;RDFS"/>
+	</owl:Ontology>
+		
+	<owl:Class rdf:about="&owl;Ontology">				
+		<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty>
+					<owl:ObjectProperty rdf:about="owl11xml:Imports">
+						<rdfs:domain rdf:resource="&owl;Ontology"/>
+						<rdfs:range rdf:resource="&owl;Imports"/>
+					</owl:ObjectProperty>
+				</owl:onProperty>
+			</owl:Restriction>
+		</rdfs:subClassOf>				
+	</owl:Class>
+	
+	<owl:Class rdf:about="&owl;OWLEntity">
+		<rdfs:subClassOf rdf:resource="&rdfs;Resource"/>
+		<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty>
+					<owl:ObjectProperty rdf:about="&owl;sameAs">
+						<rdfs:domain rdf:resource="&owl;OWLEntity"/>
+						<rdfs:range rdf:resource="&owl;OWLEntity"/>
+					</owl:ObjectProperty>
+				</owl:onProperty>
+			</owl:Restriction>
+		</rdfs:subClassOf>		
+		<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty>
+					<owl:ObjectProperty rdf:about="&owl;differentFrom">
+						<rdfs:domain rdf:resource="&owl;OWLEntity"/>
+						<rdfs:range rdf:resource="&owl;OWLEntity"/>
+					</owl:ObjectProperty>
+				</owl:onProperty>
+			</owl:Restriction>
+		</rdfs:subClassOf>				
+	</owl:Class>
+	
+	<owl:Class rdf:about="&owl;Thing">
+	 	<rdfs:subClassOf rdf:resource="&owl;Class"/>
+		<owl:unionOf rdf:parseType="Collection">
+	    	<owl:Class rdf:about="&owl;Nothing"/>
+	    	<owl:Class>
+		     	<owl:complementOf rdf:resource="&owl;Nothing"/>
+		   	</owl:Class>
+	  	</owl:unionOf>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&owl;Nothing">
+	  <rdfs:subClassOf rdf:resource="&owl;Class"/>
+	  <owl:complementOf rdf:resource="&owl;Thing"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&owl;Class">	
+		<rdfs:subClassOf rdf:resource="&rdfs;Class"/>
+		<rdfs:subClassOf>
+			<owl:Restriction owl:cardinality="1">
+				<owl:onProperty>
+					<owl:ObjectProperty rdf:about="&owl;unionOf">
+						<rdfs:domain rdf:resource="&owl;Class"/>
+						<rdfs:range rdf:resource="&rdfs;List"/>
+					</owl:ObjectProperty>
+				</owl:onProperty>
+			</owl:Restriction>
+		</rdfs:subClassOf>		
+		<rdfs:subClassOf>
+			<owl:Restriction owl:cardinality="1">
+				<owl:onProperty>
+					<owl:ObjectProperty rdf:about="&owl;intersectionOf">
+						<rdfs:domain rdf:resource="&owl;Class"/>
+						<rdfs:range rdf:resource="&rdfs;List"/>
+					</owl:ObjectProperty>
+				</owl:onProperty>
+			</owl:Restriction>
+		</rdfs:subClassOf>	
+		<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty>
+					<owl:ObjectProperty rdf:about="&owl;complementOf">
+						<rdfs:domain rdf:resource="&owl;Class"/>
+						<rdfs:range rdf:resource="&owl;Class"/>
+					</owl:ObjectProperty>
+				</owl:onProperty>
+			</owl:Restriction>
+		</rdfs:subClassOf>		
+		<rdfs:subClassOf>
+			<owl:Restriction owl:cardinality="1">
+				<owl:onProperty rdf:resource="&owl;oneOf"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>	
+		
+		<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty>
+					<owl:ObjectProperty rdf:about="&owl;equivalentClass">
+						<rdfs:subPropertyOf rdf:resource="&rdfs;subClassOf"/>
+						<rdfs:domain rdf:resource="&owl;Class"/>
+						<rdfs:range rdf:resource="&owl;Class"/>
+					</owl:ObjectProperty>
+				</owl:onProperty>
+			</owl:Restriction>
+		</rdfs:subClassOf>		
+		<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty>
+					<owl:ObjectProperty rdf:about="&owl;disjointWith">
+						<rdfs:domain rdf:resource="&owl;Class"/>
+						<rdfs:range rdf:resource="&owl;Class"/>
+					</owl:ObjectProperty>
+				</owl:onProperty>
+			</owl:Restriction>
+		</rdfs:subClassOf>		
+		<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty>
+					<owl:ObjectProperty rdf:about="&owl11;disjointUnionOf">
+						<rdfs:domain rdf:resource="&owl;Class"/>
+						<rdfs:range rdf:resource="&owl;Class"/>
+					</owl:ObjectProperty>
+				</owl:onProperty>
+			</owl:Restriction>
+		</rdfs:subClassOf>			
+	</owl:Class>
+	
+	<owl:Class rdf:about="&owl;AnnotationProperty">	
+	<rdfs:subClassOf rdf:resource="&owl;OWLEntity"/>		
+	</owl:Class>
+	
+	<owl:ObjectProperty rdf:about="&owl;oneOf">
+			 <rdfs:domain>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<owl:Class rdf:about="&owl;DataRange"/>
+					<owl:Class rdf:about="&owl;Class"/>
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:domain>
+		<rdfs:range rdf:resource="&rdfs;List"/>
+	</owl:ObjectProperty>
+	
+	<owl:Class rdf:about="&owl;ObjectProperty">
+	<rdfs:subClassOf rdf:resource="&rdf;Property"/>		
+		<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty>
+					<owl:ObjectProperty rdf:about="&owl11;subObjectPropertyOf">
+						<rdfs:domain rdf:resource="&owl;ObjectProperty"/>
+						<rdfs:range rdf:resource="&owl;ObjectProperty"/>
+					</owl:ObjectProperty>
+				</owl:onProperty>
+			</owl:Restriction>
+		</rdfs:subClassOf>			
+		<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty>
+					<owl:ObjectProperty rdf:about="&owl11;equivalentObjectProperty">
+						<rdfs:domain rdf:resource="&owl;ObjectProperty"/>
+						<rdfs:range rdf:resource="&owl;ObjectProperty"/>
+					</owl:ObjectProperty>
+				</owl:onProperty>
+			</owl:Restriction>
+		</rdfs:subClassOf>			
+		<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty>
+					<owl:ObjectProperty rdf:about="&owl11;disjointObjectProperties">
+						<rdfs:domain rdf:resource="&owl;ObjectProperty"/>
+						<rdfs:range rdf:resource="&owl;ObjectProperty"/>
+					</owl:ObjectProperty>
+				</owl:onProperty>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+		<rdfs:subClassOf>
+			<owl:Restriction owl:cardinality="1">
+				<owl:onProperty>
+					<owl:ObjectProperty rdf:about="&owl11;objectPropertyDomain">
+						<rdfs:domain rdf:resource="&owl;ObjectProperty"/>
+						<rdfs:range rdf:resource="&owl;Class"/>
+					</owl:ObjectProperty>
+				</owl:onProperty>
+			</owl:Restriction>
+		</rdfs:subClassOf>
+	
+		<rdfs:subClassOf>
+			<owl:Restriction owl:cardinality="1">
+				<owl:onProperty>
+					<owl:ObjectProperty rdf:about="&owl11;objectPropertyRange">
+						<rdfs:domain rdf:resource="&owl;ObjectProperty"/>
+						<rdfs:range rdf:resource="&owl;Class"/>
+					</owl:ObjectProperty>
+				</owl:onProperty>
+			</owl:Restriction>
+		</rdfs:subClassOf>	
+		
+		<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty>
+					<owl:ObjectProperty rdf:about="&owl;inverseOf">
+						<rdfs:domain rdf:resource="&owl;ObjectProperty"/>
+						<rdfs:range rdf:resource="&owl;ObjectProperty"/>
+					</owl:ObjectProperty>
+				</owl:onProperty>
+			</owl:Restriction>
+		</rdfs:subClassOf>			
+	</owl:Class>
+	
+	<owl:Class rdf:about="&owl;TransitiveProperty">
+		<rdfs:subClassOf rdf:resource="&owl;ObjectProperty"/>
+	</owl:Class>
+	<owl:Class rdf:about="&owl11;FunctionalObjectProperty">
+		<rdfs:subClassOf rdf:resource="&owl;ObjectProperty"/>
+	</owl:Class>
+	<owl:Class rdf:about="&owl;FunctionalProperty">
+		<rdfs:subClassOf rdf:resource="&owl;ObjectProperty"/>
+	</owl:Class>
+	<owl:Class rdf:about="&owl;InverseFunctionalProperty">
+		<rdfs:subClassOf rdf:resource="&owl;ObjectProperty"/>
+	</owl:Class>
+	<owl:Class rdf:about="&owl11;ReflexiveProperty">
+		<rdfs:subClassOf rdf:resource="&owl;ObjectProperty"/>
+	</owl:Class>
+	<owl:Class rdf:about="&owl11;IrreflexiveProperty">
+		<rdfs:subClassOf rdf:resource="&owl;ObjectProperty"/>
+	</owl:Class>
+	<owl:Class rdf:about="&owl;SymmetricProperty">
+		<rdfs:subClassOf rdf:resource="&owl;ObjectProperty"/>
+	</owl:Class>
+	<owl:Class rdf:about="&owl11;AntisymmetricProperty">
+		<rdfs:subClassOf rdf:resource="&owl;ObjectProperty"/>
+	</owl:Class>
+		
+	<owl:Class rdf:about="&owl;DatatypeProperty">	
+	<rdfs:subClassOf rdf:resource="&rdf;Property"/>		
+		<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty>
+					<owl:ObjectProperty rdf:about="&owl11;subDataPropertyOf">
+						<rdfs:domain rdf:resource="&owl;DatatypeProperty"/>
+						<rdfs:range rdf:resource="&owl;DatatypeProperty"/>
+					</owl:ObjectProperty>
+				</owl:onProperty>
+			</owl:Restriction>
+		</rdfs:subClassOf>	
+		<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty>
+					<owl:ObjectProperty rdf:about="&owl11;equivalentDataProperty">
+						<rdfs:domain rdf:resource="&owl;DatatypeProperty"/>
+						<rdfs:range rdf:resource="&owl;DatatypeProperty"/>
+					</owl:ObjectProperty>
+				</owl:onProperty>
+			</owl:Restriction>
+		</rdfs:subClassOf>	
+		<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty>
+					<owl:ObjectProperty rdf:about="&owl;equivalentProperty">
+						<rdfs:subPropertyOf rdf:resource="&rdfs;subPropertyOf"/>
+						<rdfs:domain rdf:resource="&owl;DatatypeProperty"/>
+						<rdfs:range rdf:resource="&owl;DatatypeProperty"/>
+					</owl:ObjectProperty>
+				</owl:onProperty>
+			</owl:Restriction>
+		</rdfs:subClassOf>	
+		<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty>
+					<owl:ObjectProperty rdf:about="&owl11;disjointDataProperties">
+						<rdfs:domain rdf:resource="&owl;DatatypeProperty"/>
+						<rdfs:range rdf:resource="&owl;DatatypeProperty"/>
+					</owl:ObjectProperty>
+				</owl:onProperty>
+			</owl:Restriction>
+		</rdfs:subClassOf>	
+		<rdfs:subClassOf>
+			<owl:Restriction owl:cardinality="1">
+				<owl:onProperty>
+					<owl:ObjectProperty rdf:about="&owl11;dataPropertyDomain">
+						<rdfs:domain rdf:resource="&owl;DatatypeProperty"/>
+						<rdfs:range rdf:resource="&owl;Class"/>
+					</owl:ObjectProperty>
+				</owl:onProperty>
+			</owl:Restriction>
+		</rdfs:subClassOf>	
+		<rdfs:subClassOf>
+			<owl:Restriction owl:cardinality="1">
+				<owl:onProperty>
+					<owl:ObjectProperty rdf:about="&owl11;dataPropertyRange">
+						<rdfs:domain rdf:resource="&owl;DatatypeProperty"/>
+						<rdfs:range rdf:resource="&owl;DataRange"/>
+					</owl:ObjectProperty>
+				</owl:onProperty>
+			</owl:Restriction>
+		</rdfs:subClassOf>	
+	
+	</owl:Class>
+
+	<owl:Class rdf:about="&owl11;FunctionalDataPropety">
+		<rdfs:subClassOf rdf:resource="&owl;DatatypeProperty"/>
+	</owl:Class>
+
+	<owl:Class rdf:about="&owl;FunctionalPropety">
+		<rdfs:subClassOf rdf:resource="&owl;DatatypeProperty"/>
+	</owl:Class>
+	
+	<owl:Class rdf:about="&owl;Individual">	
+	<rdfs:subClassOf rdf:resource="&owl;OWLEntity"/>		
+	</owl:Class>
+	
+	<owl:Class rdf:about="&owl;Constant">	
+	</owl:Class>
+
+	<owl:Class rdf:about="&owl;DataRange">	
+		<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty>
+					<owl:ObjectProperty rdf:about="&owl;complementOf">
+						<rdfs:domain rdf:resource="&owl;DataRange"/>
+						<rdfs:range rdf:resource="&owl;DataRange"/>
+					</owl:ObjectProperty>
+				</owl:onProperty>
+			</owl:Restriction>
+		</rdfs:subClassOf>	
+		<rdfs:subClassOf>
+			<owl:Restriction owl:cardinality="1">
+				<owl:onProperty rdf:resource="&owl;oneOf"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>	
+		<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty rdf:resource="&owl11;onDataRange"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>		
+	</owl:Class>
+	
+	<owl:DatatypeProperty rdf:about="&owl;minCardinality">
+	  <rdfs:domain>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<owl:Class rdf:about="&owl11;ObjectRestriction" />
+					<owl:Class rdf:about="&owl11;DataRestriction" />
+					<owl:Class rdf:about="&owl;Restriction" />
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:domain>
+	  <rdfs:range rdf:resource="&xsd;int"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="&owl;maxCardinality">
+	  <rdfs:domain>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<owl:Class rdf:about="&owl11;ObjectRestriction" />
+					<owl:Class rdf:about="&owl11;DataRestriction" />
+					<owl:Class rdf:about="&owl;Restriction" />
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:domain>
+	  <rdfs:range rdf:resource="&xsd;int"/>
+	</owl:DatatypeProperty>
+
+	<owl:DatatypeProperty rdf:about="&owl;cardinality">
+	  <rdfs:domain>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<owl:Class rdf:about="&owl11;ObjectRestriction" />
+					<owl:Class rdf:about="&owl11;DataRestriction" />
+					<owl:Class rdf:about="&owl;Restriction" />
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:domain>
+	  <rdfs:range rdf:resource="&xsd;int"/>
+	</owl:DatatypeProperty>
+	
+	<owl:ObjectProperty rdf:about="&owl;onProperty">
+	  <rdfs:domain>
+			<owl:Class>
+				<owl:unionOf rdf:parseType="Collection">
+					<owl:Class rdf:about="&owl11;ObjectRestriction" />
+					<owl:Class rdf:about="&owl11;DataRestriction" />
+					<owl:Class rdf:about="&owl;Restriction" />
+				</owl:unionOf>
+			</owl:Class>
+		</rdfs:domain>
+	  <rdfs:range rdf:resource="&rdf;Property"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&owl11;onClass">
+	  <rdfs:domain>
+			<owl:Class rdf:about="&owl11;ObjectRestriction" />			
+		</rdfs:domain>
+	  <rdfs:range rdf:resource="&owl;Class"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&owl11;onDataRange">
+	  <rdfs:domain>
+			<owl:Class rdf:about="&owl11;DataRestriction" />		
+		</rdfs:domain>
+	  <rdfs:range rdf:resource="&owl;DataRange"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&owl;someValuesFrom">
+	  <rdfs:domain>
+			<owl:Class rdf:about="&owl;Restriction" />			
+		</rdfs:domain>
+	  <rdfs:range rdf:resource="&owl;Entity"/>
+	</owl:ObjectProperty>
+	
+	<owl:ObjectProperty rdf:about="&owl;allValuesFrom">
+	  <rdfs:domain>
+			<owl:Class rdf:about="&owl;Restriction" />			
+		</rdfs:domain>
+	  <rdfs:range rdf:resource="&owl;Entity"/>
+	</owl:ObjectProperty>
+
+	<owl:DatatypeProperty rdf:about="&owl;hasValue">
+	  <rdfs:domain>
+			<owl:Class rdf:about="&owl;Restriction" />			
+		</rdfs:domain>
+	  <rdfs:range rdf:resource="&xsd;anyURI"/>
+	</owl:DatatypeProperty>
+	
+
+	<owl:Class rdf:about="&owl;Restriction">
+	   	<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty rdf:resource="&owl;cardinality"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>	
+		
+		<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty rdf:resource="&owl;minCardinality"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>	
+		
+		<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty rdf:resource="&owl;maxCardinality"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>	
+		
+		<rdfs:subClassOf>
+			<owl:Restriction owl:cardinality="1">
+				<owl:onProperty rdf:resource="&owl;onProperty"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>	
+		
+		<rdfs:subClassOf>
+			<owl:Restriction owl:cardinality="1">
+				<owl:onProperty rdf:resource="&owl;hasValue"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>	
+		
+		<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty rdf:resource="&owl;someValuesFrom"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>	
+		
+		<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty rdf:resource="&owl;allValuesFrom"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>	
+	</owl:Class>	
+
+	<owl:Class rdf:about="&owl11;ObjectRestriction">
+	 	<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty rdf:resource="&owl;cardinality"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>	
+		
+		<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty rdf:resource="&owl;minCardinality"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>	
+		
+		<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty rdf:resource="&owl;maxCardinality"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>	
+		
+		<rdfs:subClassOf>
+			<owl:Restriction owl:cardinality="1">
+				<owl:onProperty rdf:resource="&owl;onProperty"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>		
+			
+		<rdfs:subClassOf>
+			<owl:Restriction owl:cardinality="1">
+				<owl:onProperty rdf:resource="&owl11;onClass"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>		
+				
+	</owl:Class>	
+	
+	<owl:Class rdf:about="&owl11;DataRestriction">
+	 	<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty rdf:resource="&owl;cardinality"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>	
+		
+		<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty rdf:resource="&owl;minCardinality"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>	
+		
+		<rdfs:subClassOf>
+			<owl:Restriction owl:mincardinality="0">
+				<owl:onProperty rdf:resource="&owl;maxCardinality"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>	
+		
+		<rdfs:subClassOf>
+			<owl:Restriction owl:cardinality="1">
+				<owl:onProperty rdf:resource="&owl;onProperty"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>		
+			
+		<rdfs:subClassOf>
+			<owl:Restriction owl:cardinality="1">
+				<owl:onProperty rdf:resource="&owl11;onDataRange"/>
+			</owl:Restriction>
+		</rdfs:subClassOf>		
+			
+	</owl:Class>	
+	
+	
+</rdf:RDF>

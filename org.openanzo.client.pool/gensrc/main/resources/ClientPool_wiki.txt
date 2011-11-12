@@ -1,0 +1,8 @@
+
+== !ClientPool ==
+ Base configuration properties that are used by client pool provider.
+
+|| Property Name || Description || Example || 
+||org.openanzo.client.pool.usesJms||Whether or not this pool's clients use JMS [[BR]] ||
+||org.openanzo.client.pool.maxClient||Maximum number of clients in the pool [[BR]] ||
+||org.openanzo.client.pool.minClient||Minimum number of idle clients in the pool [[BR]] ||

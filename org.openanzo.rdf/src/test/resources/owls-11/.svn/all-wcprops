@@ -1,0 +1,65 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/test/resources/owls-11
+END
+Expression.owl
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/test/resources/owls-11/Expression.owl
+END
+Profile.owl
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/test/resources/owls-11/Profile.owl
+END
+Service.owl
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/test/resources/owls-11/Service.owl
+END
+ObjectList.owl
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/test/resources/owls-11/ObjectList.owl
+END
+Resource.owl
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/test/resources/owls-11/Resource.owl
+END
+swrl.owl
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/test/resources/owls-11/swrl.owl
+END
+rdf.owl
+K 25
+svn:wc:ra_dav:version-url
+V 94
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/test/resources/owls-11/rdf.owl
+END
+Grounding.owl
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/test/resources/owls-11/Grounding.owl
+END
+time-entry.owl
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/test/resources/owls-11/time-entry.owl
+END
+Process.owl
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/test/resources/owls-11/Process.owl
+END

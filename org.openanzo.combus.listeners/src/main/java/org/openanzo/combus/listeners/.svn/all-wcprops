@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/openanzo/!svn/ver/5060/openanzo/trunk/org.openanzo.combus.listeners/src/main/java/org/openanzo/combus/listeners
+END
+BatchedCombusQueryServiceListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/openanzo/!svn/ver/4881/openanzo/trunk/org.openanzo.combus.listeners/src/main/java/org/openanzo/combus/listeners/BatchedCombusQueryServiceListener.java
+END
+BatchedQueryResultsHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/openanzo/!svn/ver/4597/openanzo/trunk/org.openanzo.combus.listeners/src/main/java/org/openanzo/combus/listeners/BatchedQueryResultsHandler.java
+END
+BatchedReplicationHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/openanzo/!svn/ver/4597/openanzo/trunk/org.openanzo.combus.listeners/src/main/java/org/openanzo/combus/listeners/BatchedReplicationHandler.java
+END
+CombusDatasourceListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/openanzo/!svn/ver/4507/openanzo/trunk/org.openanzo.combus.listeners/src/main/java/org/openanzo/combus/listeners/CombusDatasourceListener.java
+END
+CombusListenersActivator.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/openanzo/!svn/ver/5060/openanzo/trunk/org.openanzo.combus.listeners/src/main/java/org/openanzo/combus/listeners/CombusListenersActivator.java
+END

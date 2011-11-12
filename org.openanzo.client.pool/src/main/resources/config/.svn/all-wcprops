@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 93
+/svn/openanzo/!svn/ver/3557/openanzo/trunk/org.openanzo.client.pool/src/main/resources/config
+END
+restricted.properties
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/openanzo/!svn/ver/3557/openanzo/trunk/org.openanzo.client.pool/src/main/resources/config/restricted.properties
+END
+defaultSystemDatasourcePool.properties
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/3557/openanzo/trunk/org.openanzo.client.pool/src/main/resources/config/defaultSystemDatasourcePool.properties
+END

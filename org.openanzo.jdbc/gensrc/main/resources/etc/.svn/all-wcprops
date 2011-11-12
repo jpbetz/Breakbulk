@@ -1,0 +1,53 @@
+K 25
+svn:wc:ra_dav:version-url
+V 86
+/svn/openanzo/!svn/ver/4737/openanzo/trunk/org.openanzo.jdbc/gensrc/main/resources/etc
+END
+Derby_nc.sql
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/openanzo/!svn/ver/3800/openanzo/trunk/org.openanzo.jdbc/gensrc/main/resources/etc/Derby_nc.sql
+END
+MySQL_nc.sql
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/openanzo/!svn/ver/3800/openanzo/trunk/org.openanzo.jdbc/gensrc/main/resources/etc/MySQL_nc.sql
+END
+Oracle_nc.sql
+K 25
+svn:wc:ra_dav:version-url
+V 100
+/svn/openanzo/!svn/ver/4737/openanzo/trunk/org.openanzo.jdbc/gensrc/main/resources/etc/Oracle_nc.sql
+END
+Postgres_nc.sql
+K 25
+svn:wc:ra_dav:version-url
+V 102
+/svn/openanzo/!svn/ver/4737/openanzo/trunk/org.openanzo.jdbc/gensrc/main/resources/etc/Postgres_nc.sql
+END
+DB2_nc.sql
+K 25
+svn:wc:ra_dav:version-url
+V 97
+/svn/openanzo/!svn/ver/4737/openanzo/trunk/org.openanzo.jdbc/gensrc/main/resources/etc/DB2_nc.sql
+END
+HSQL_nc.sql
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/openanzo/!svn/ver/4737/openanzo/trunk/org.openanzo.jdbc/gensrc/main/resources/etc/HSQL_nc.sql
+END
+H2_nc.sql
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/openanzo/!svn/ver/4737/openanzo/trunk/org.openanzo.jdbc/gensrc/main/resources/etc/H2_nc.sql
+END
+MSSQL_nc.sql
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/openanzo/!svn/ver/4737/openanzo/trunk/org.openanzo.jdbc/gensrc/main/resources/etc/MSSQL_nc.sql
+END

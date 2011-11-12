@@ -1,0 +1,14 @@
+PREFIX : <http://example.org/>
+
+SELECT DISTINCT ?value
+WHERE 
+{
+  ?value ?p ?txt .
+  ?txt <http://openanzo.org/ontologies/2008/07/Anzo#textmatch> 'query-string' .
+
+  OPTIONAL { ?value <http://xmlns.com/foaf/0.1/givenname> ?givenname } . 
+
+  { ?value <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> :type1 . }
+  UNION
+  { ?value <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> :type2 . }
+}

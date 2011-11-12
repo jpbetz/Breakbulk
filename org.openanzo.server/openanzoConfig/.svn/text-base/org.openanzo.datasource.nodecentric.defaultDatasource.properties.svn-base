@@ -1,0 +1,11 @@
+service.factoryPid=org.openanzo.datasource.nodecentric.Factory
+org.openanzo.services.enabled=true
+org.openanzo.services.instanceURI=http://openanzo.org/datasource/systemDatasource
+org.openanzo.datasource.isPrimary=true
+org.openanzo.database.password=
+org.openanzo.database.user=sa
+org.openanzo.database.type=ServerH2
+#org.openanzo.database.url=jdbc:h2:${bundleLocation}/databases/systemDB
+org.openanzo.database.url=jdbc:h2:mem:test;DB_CLOSE_DELAY=-1
+org.openanzo.datasource.uriPatterns=*
+org.openanzo.datasource.resetEnabled=true

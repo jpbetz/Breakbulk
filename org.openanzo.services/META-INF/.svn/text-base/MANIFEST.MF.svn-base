@@ -1,0 +1,49 @@
+Manifest-Version: 1.0
+Export-Package: org.openanzo.services.serialization.transport;version=
+ "3.2.0",org.openanzo.services.serialization;version="3.2.0",org.opena
+ nzo.services.impl;version="3.2.0",org.openanzo.services;version="3.2.
+ 0",org.openanzo.services.serialization.handlers;version="3.2.0"
+Bundle-Name: Anzo Services API
+Bundle-Vendor: Cambridge Semantics Inc.
+Bundle-Version: 3.2.0
+Bundle-ManifestVersion: 2
+Bundle-Activator: org.openanzo.services.ServicesActivator
+Bundle-License: http://www.eclipse.org/legal/epl-v10.html
+Bundle-Description: Anzo Services API
+Import-Package: info.aduna.lang,
+ info.aduna.xml,
+ javax.jms,
+ javax.management.j2ee.statistics;version="1.1",
+ javax.xml.parsers,
+ javax.xml.stream,
+ org.apache.activemq.management,
+ org.apache.commons.codec.binary;version="1.3",
+ org.apache.commons.lang.builder;version="2.4",
+ org.codehaus.jackson;version="0.9",
+ org.openanzo.analysis;version="3.2",
+ org.openanzo.exceptions;version="3.2",
+ org.openanzo.glitter.dataset;version="3.2.0",
+ org.openanzo.glitter.query;version="3.2",
+ org.openanzo.ontologies.openanzo;version="3.2",
+ org.openanzo.rdf;version="3.2",
+ org.openanzo.rdf.adapter;version="3.2",
+ org.openanzo.rdf.jastor;version="3.2.0",
+ org.openanzo.rdf.utils;version="3.2",
+ org.openanzo.rdf.vocabulary;version="3.2",
+ org.openanzo.services;version="3.2.0",
+ org.openanzo.services.impl;version="3.2.0",
+ org.openanzo.services.serialization;version="3.2.0",
+ org.openanzo.services.serialization.handlers;version="3.2.0",
+ org.openanzo.services.serialization.transport;version="3.2.0",
+ org.openrdf.model;version="2.0",
+ org.openrdf.query;version="2.0",
+ org.openrdf.query.resultio;version="2.0",
+ org.openrdf.query.resultio.sparqljson;version="2.0",
+ org.openrdf.query.resultio.sparqlxml;version="2.0",
+ org.openrdf.rio;version="2.0",
+ org.osgi.framework,
+ org.osgi.util.tracker,
+ org.slf4j;version="1.5"
+Bundle-SymbolicName: org.openanzo.services
+Bundle-DocURL: http://www.cambridgesemantics.com
+

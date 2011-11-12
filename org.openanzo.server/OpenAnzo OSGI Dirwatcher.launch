@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<launchConfiguration type="org.eclipse.pde.ui.EquinoxLauncher">
+<booleanAttribute key="append.args" value="true"/>
+<booleanAttribute key="automaticAdd" value="false"/>
+<booleanAttribute key="automaticValidate" value="false"/>
+<stringAttribute key="bootstrap" value=""/>
+<stringAttribute key="checked" value="[NONE]"/>
+<booleanAttribute key="clearConfig" value="true"/>
+<stringAttribute key="configLocation" value="${workspace_loc:/org.openanzo.server}/workspace/openanzo_dirwatcher"/>
+<booleanAttribute key="default_auto_start" value="true"/>
+<intAttribute key="default_start_level" value="6"/>
+<booleanAttribute key="includeOptional" value="true"/>
+<stringAttribute key="org.eclipse.debug.core.source_locator_id" value="org.eclipse.pde.ui.launcher.PDESourceLookupDirector"/>
+<stringAttribute key="org.eclipse.debug.core.source_locator_memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;&lt;sourceLookupDirector&gt;&#10;&lt;sourceContainers duplicates=&quot;false&quot;&gt;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;&amp;lt;directory nest=&amp;quot;false&amp;quot; path=&amp;quot;/work/src/felix-trunk/webconsole/src/main/java&amp;quot;/&amp;gt;&quot; typeId=&quot;org.eclipse.debug.core.containerType.directory&quot;/&gt;&#10;&lt;container memento=&quot;&amp;lt;?xml version=&amp;quot;1.0&amp;quot; encoding=&amp;quot;UTF-8&amp;quot;?&amp;gt;&amp;lt;default/&amp;gt;&quot; typeId=&quot;org.eclipse.debug.core.containerType.default&quot;/&gt;&#10;&lt;/sourceContainers&gt;&#10;&lt;/sourceLookupDirector&gt;"/>
+<stringAttribute key="org.eclipse.jdt.launching.PROGRAM_ARGUMENTS" value="-os ${target.os} -ws ${target.ws} -arch ${target.arch} -nl ${target.nl} -console"/>
+<stringAttribute key="org.eclipse.jdt.launching.SOURCE_PATH_PROVIDER" value="org.eclipse.pde.ui.workbenchClasspathProvider"/>
+<stringAttribute key="org.eclipse.jdt.launching.VM_ARGUMENTS" value="-Declipse.ignoreApp=true &#13;&#10;-Dosgi.noShutdown=true&#13;&#10;-DBUNDLE_RESOURCE_PREFIX=src/main/resources/&#13;&#10;-DANZO_HOME=&quot;${workspace_loc}/anzo-maven/target/assembly&quot;&#13;&#10;-DANZO_CONF=&quot;${workspace_loc}/anzo-maven/target/assembly/configuration}&quot;&#13;&#10;-Dorg.openanzo.osgi.bootstrap.path=&quot;${workspace_loc}/anzo-maven/target/assembly/configuration/config&quot;&#13;&#10;-Dorg.ops4j.pax.logging.DefaultServiceLog.level=ERROR&#10;-Dorg.openanzo.directory.3=${workspace_loc}/anzo-maven/target/assembly/plugins/dependencies&#10;-Dorg.openanzo.directory.5=${workspace_loc}/anzo-maven/target/assembly/plugins/openanzo,${workspace_loc}/anzo-maven/target/assembly/plugins/addons"/>
+<stringAttribute key="org.eclipse.jdt.launching.WORKING_DIRECTORY" value="${workspace_loc:/org.openanzo.server}/workspace/openanzo"/>
+<stringAttribute key="org.ops4j.pax.cursor.logLevel" value="INFO"/>
+<booleanAttribute key="org.ops4j.pax.cursor.overwrite" value="false"/>
+<booleanAttribute key="org.ops4j.pax.cursor.overwriteSystemBundles" value="false"/>
+<booleanAttribute key="org.ops4j.pax.cursor.overwriteUserBundles" value="false"/>
+<listAttribute key="org.ops4j.pax.cursor.runArguments">
+<listEntry value="--overwrite=false"/>
+<listEntry value="--overwriteUserBundles=false"/>
+<listEntry value="--overwriteSystemBundles=false"/>
+<listEntry value="--log=INFO"/>
+</listAttribute>
+<stringAttribute key="pde.version" value="3.3"/>
+<booleanAttribute key="show_selected_only" value="false"/>
+<stringAttribute key="target_bundles" value="org.eclipse.equinox.util@1:default,org.eclipse.equinox.event@1:default,org.ops4j.pax.logging.pax-logging-api@1:default,org.eclipse.equinox.registry@1:default,org.eclipse.equinox.preferences@1:default,org.eclipse.equinox.metatype@1:default,org.eclipse.equinox.ds@1:true,org.eclipse.osgi.services@1:default,org.eclipse.equinox.io@1:default,org.eclipse.equinox.launcher@1:default,org.eclipse.equinox.cm@1:default,org.eclipse.osgi.util@1:default,org.apache.felix.configadmin@default:default,org.eclipse.equinox.common@1:default,org.eclipse.equinox.app@1:default,org.eclipse.osgi@-1:true,org.ops4j.pax.logging.pax-logging-service@1:default"/>
+<booleanAttribute key="tracing" value="false"/>
+<booleanAttribute key="useDefaultConfigArea" value="false"/>
+<stringAttribute key="workspace_bundles" value="org.openanzo.osgi.dirwatcher@2:default"/>
+</launchConfiguration>

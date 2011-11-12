@@ -1,0 +1,36 @@
+<!--
+  Copyright (c) 2007 Cambridge Semantics Incorporated.
+  All rights reserved. This program and the accompanying materials
+  are made available under the terms of the Eclipse Public License v1.0
+  which accompanies this distribution, and is available at
+  http://www.eclipse.org/legal/epl-v10.html
+-->
+<html>
+<head>
+  <title>JavaScript Debugger Aid</title>
+  <script type="text/javascript" src="../src/dojo/dojo.js" djConfig="parseOnLoad: true"></script>
+
+  <!-- Load JavaScript files via Script statements for better debugging information than Dojo's eval. -->
+  <script type="text/javascript" src="../src/anzo/client/JMSNotificationService.js"></script>
+
+</head>
+<body>
+<h3>JavaScript Debugger Aid</h3>
+
+<p>
+This file is useful when syntax errors appear in JavaScript code being loaded by the Dojo module system.
+When code is loaded by the Dojo module system it looses line number information in the syntax errors.
+</p>
+
+To use:
+<ol>
+    <li>Edit this HTML document to add the potentially problematic file in a &lt;script&gt; tag. See the examples already there.</li>
+    <li>Load this document in the browser you'll get a better script error message sent by the browser.</li>
+</ol>
+
+<p>
+Once of the most common errors is to have trailing commas in object or array literals (ex. <code>{ foo: 1, bar: 2, }</code>
+or <code>[ 1, 2, ]</code>). Internet Explorer considers that a script error while Firefox and Rhino are more forgiving.
+</p>
+</body>
+</html>

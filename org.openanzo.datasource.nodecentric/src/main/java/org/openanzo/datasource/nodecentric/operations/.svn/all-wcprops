@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 139
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/java/org/openanzo/datasource/nodecentric/operations
+END
+Find.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/java/org/openanzo/datasource/nodecentric/operations/Find.java
+END
+Update.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/java/org/openanzo/datasource/nodecentric/operations/Update.java
+END
+Remove.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/java/org/openanzo/datasource/nodecentric/operations/Remove.java
+END
+Contains.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/java/org/openanzo/datasource/nodecentric/operations/Contains.java
+END

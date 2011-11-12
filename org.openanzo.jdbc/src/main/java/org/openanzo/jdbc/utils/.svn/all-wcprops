@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.jdbc/src/main/java/org/openanzo/jdbc/utils
+END
+FileLineIterator.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/openanzo/!svn/ver/3841/openanzo/trunk/org.openanzo.jdbc/src/main/java/org/openanzo/jdbc/utils/FileLineIterator.java
+END
+PreparedStatementProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.jdbc/src/main/java/org/openanzo/jdbc/utils/PreparedStatementProvider.java
+END
+Transformer.java
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/openanzo/!svn/ver/3148/openanzo/trunk/org.openanzo.jdbc/src/main/java/org/openanzo/jdbc/utils/Transformer.java
+END
+ResultSetIterator.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.jdbc/src/main/java/org/openanzo/jdbc/utils/ResultSetIterator.java
+END
+PreparedStatementExecutor.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.jdbc/src/main/java/org/openanzo/jdbc/utils/PreparedStatementExecutor.java
+END
+RdbException.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.jdbc/src/main/java/org/openanzo/jdbc/utils/RdbException.java
+END
+UnhandledRdbException.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.jdbc/src/main/java/org/openanzo/jdbc/utils/UnhandledRdbException.java
+END
+IteratorUtils.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/openanzo/!svn/ver/4329/openanzo/trunk/org.openanzo.jdbc/src/main/java/org/openanzo/jdbc/utils/IteratorUtils.java
+END
+ClosableIterator.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/openanzo/!svn/ver/3148/openanzo/trunk/org.openanzo.jdbc/src/main/java/org/openanzo/jdbc/utils/ClosableIterator.java
+END

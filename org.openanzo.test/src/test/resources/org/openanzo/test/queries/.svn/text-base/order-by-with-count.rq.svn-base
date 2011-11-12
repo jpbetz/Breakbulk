@@ -1,0 +1,9 @@
+PREFIX : <http://example.org/>
+PREFIX dc: <http://purl.org/dc/elements/1.1/>
+
+SELECT ?v1 ( COUNT(?v1) AS ?count)
+WHERE { 
+	?value a :Building .
+	?value :location ?v0 .
+	?v0 dc:title ?v1 .
+} GROUP BY ?v1 ORDER BY ?v1

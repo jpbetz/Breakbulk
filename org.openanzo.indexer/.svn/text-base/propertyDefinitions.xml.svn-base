@@ -1,0 +1,34 @@
+<propertyDefinitions>
+	<propertiesGroup packageName="org.openanzo.indexer" groupPrefix="org.openanzo.indexer" className="Indexer">
+		<description>Configuration properties for the Indexing API</description>
+		<property name="indexerFactoryType" key="KEY_INDEXER_FACTORY_CLASS" passDefault="false" type="String">
+			<description>The class name for the implementation of the indexer factory to use.</description>
+			<description type="Server">The class name for the implementation of the indexer factory to use.</description>
+			<description type="Embedded">See server.</description>
+			<example>org.openanzo.model.indexer.lucene.ModelIndexerFactory</example>			
+		</property>
+		<property name="rebuildIndex" key="KEY_INDEXER_REBUILD" passDefault="false" defaultValue="false" type="Boolean">
+			<description>Should the indexer be rebuilt on startup.</description>
+			<description type="Server">When persistence is enabled and this property is true, the index will rebuild the indexer when the container is started.</description>
+			<description type="Embedded">See server</description>
+		</property>
+		<property name="indexClear" key="KEY_INDEXER_CLEAR" passDefault="false" defaultValue="false" type="Boolean">
+			<description>Clear the index on startup.</description>
+			<description type="Server">When persistence is enabled and this property is true, the index will clear the indexer when the container is started.</description>
+			<description type="Embedded">See server</description>			
+		</property>
+		<property name="enabled" key="KEY_INDEX_ENABLED" passDefault="false" defaultValue="false" type="Boolean">
+			<description>Should the indexer be enabled.</description>
+			<description type="Server">When persistence is enabled, the indexer allows for the use of text index predicates as part of Sparql queries.</description>
+			<description type="Embedded">See server</description>
+		</property>
+		<property name="async" key="KEY_INDEXER_ASYNCHRONOUS" passDefault="false" defaultValue="false" type="Boolean">
+			<description>Should indexer add items to index in an asynchronous manor</description>
+			<description type="Server"></description>
+			<description type="Embedded"></description>			
+		</property>
+		<property name="pageSize" key="KEY_INDEXER_PAGE_SIZE" passDefault="true" type="Integer">
+			<description>The index pagesize</description>		
+		</property>
+	</propertiesGroup>
+</propertyDefinitions>

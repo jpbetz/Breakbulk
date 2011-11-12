@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/openanzo/!svn/ver/5246/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource
+END
+IStoredNamedGraph.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/3854/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/IStoredNamedGraph.java
+END
+IServerQuadStoreProvider.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/4474/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/IServerQuadStoreProvider.java
+END
+IDatasource.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/openanzo/!svn/ver/3892/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/IDatasource.java
+END
+IDatasourceRegistrationListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/openanzo/!svn/ver/3854/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/IDatasourceRegistrationListener.java
+END
+IDatasourceComponent.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/openanzo/!svn/ver/3854/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/IDatasourceComponent.java
+END
+IServerQuadStore.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/openanzo/!svn/ver/5036/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/IServerQuadStore.java
+END
+StoredNamedGraph.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/openanzo/!svn/ver/5179/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/StoredNamedGraph.java
+END
+IMultiStageUpdateHandler.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/3854/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/IMultiStageUpdateHandler.java
+END
+IDatasourceListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/openanzo/!svn/ver/3948/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/IDatasourceListener.java
+END
+PrimaryDatasourceTracker.java
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/3674/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/PrimaryDatasourceTracker.java
+END
+IDatasourceFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/3137/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/IDatasourceFactory.java
+END
+NamedDatasourceTracker.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/4302/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/NamedDatasourceTracker.java
+END
+ConfiguredWithPrimaryDatasourceActivator.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/openanzo/!svn/ver/3854/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/ConfiguredWithPrimaryDatasourceActivator.java
+END

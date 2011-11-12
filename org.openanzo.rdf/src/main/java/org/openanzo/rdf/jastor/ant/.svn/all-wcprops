@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 101
+/svn/openanzo/!svn/ver/4158/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/ant
+END
+OntologyElement.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/ant/OntologyElement.java
+END
+JastorTask.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/openanzo/!svn/ver/4158/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/ant/JastorTask.java
+END
+TemplateElement.java
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/openanzo/!svn/ver/4043/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/ant/TemplateElement.java
+END
+PrefixElement.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/ant/PrefixElement.java
+END
+BaseTypesElement.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/openanzo/!svn/ver/3760/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/ant/BaseTypesElement.java
+END
+CustomThingElement.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/openanzo/!svn/ver/3760/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/jastor/ant/CustomThingElement.java
+END

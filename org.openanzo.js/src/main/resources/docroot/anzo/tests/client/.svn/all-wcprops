@@ -1,0 +1,185 @@
+K 25
+svn:wc:ra_dav:version-url
+V 103
+/svn/openanzo/!svn/ver/4868/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client
+END
+JMSReplicationServiceTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/4737/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/JMSReplicationServiceTest.js
+END
+RealtimeUpdateTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/openanzo/!svn/ver/4807/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/RealtimeUpdateTest.js
+END
+LdapQueryTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/openanzo/!svn/ver/4807/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/LdapQueryTest.js
+END
+AnzoClientTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/openanzo/!svn/ver/4864/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/AnzoClientTest.js
+END
+EmailService.js
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/openanzo/!svn/ver/4807/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/EmailService.js
+END
+GraphTableTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/GraphTableTest.js
+END
+TestData.js
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/TestData.js
+END
+JMSNotificationRegistrationServiceTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/openanzo/!svn/ver/4278/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/JMSNotificationRegistrationServiceTest.js
+END
+AnzoClientDatasetTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/AnzoClientDatasetTest.js
+END
+JMSUpdateServiceTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/4737/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/JMSUpdateServiceTest.js
+END
+JMSResetServiceTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/JMSResetServiceTest.js
+END
+SerializationTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/SerializationTest.js
+END
+runTests.html
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/runTests.html
+END
+BayeuxEfficiencyTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/4807/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/BayeuxEfficiencyTest.js
+END
+ResetTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/ResetTest.js
+END
+runResetTests.html
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/runResetTests.html
+END
+AnzoClientDateTimeTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/openanzo/!svn/ver/4807/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/AnzoClientDateTimeTest.js
+END
+TopicSubscriptionTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/TopicSubscriptionTest.js
+END
+TransactionTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/TransactionTest.js
+END
+module.js
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/openanzo/!svn/ver/4328/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/module.js
+END
+ShapesServices.js
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/openanzo/!svn/ver/4807/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/ShapesServices.js
+END
+TransactionProxyTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/TransactionProxyTest.js
+END
+resetModule.js
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/resetModule.js
+END
+TransactionQueueTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/4777/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/TransactionQueueTest.js
+END
+JMSModelServiceTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/openanzo/!svn/ver/4737/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/JMSModelServiceTest.js
+END
+JMSExecutionServiceTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/openanzo/!svn/ver/3153/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/JMSExecutionServiceTest.js
+END
+MultiBrowserTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/openanzo/!svn/ver/4807/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/MultiBrowserTest.js
+END
+JMSQueryServiceTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/openanzo/!svn/ver/3915/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/JMSQueryServiceTest.js
+END
+ClientGraphTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 122
+/svn/openanzo/!svn/ver/3747/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/ClientGraphTest.js
+END
+MetadataGraphTest.js
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/openanzo/!svn/ver/4868/openanzo/trunk/org.openanzo.js/src/main/resources/docroot/anzo/tests/client/MetadataGraphTest.js
+END

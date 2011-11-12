@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/openanzo/!svn/ver/5225/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression
+END
+UnaryFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/UnaryFunction.java
+END
+ScalarFunctionBase.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/openanzo/!svn/ver/5202/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/ScalarFunctionBase.java
+END
+ScalarFunctionOnValuesAndErrors.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/ScalarFunctionOnValuesAndErrors.java
+END
+TertiaryFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/3952/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/TertiaryFunction.java
+END
+PrefixOperator.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/openanzo/!svn/ver/3858/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/PrefixOperator.java
+END
+AggregaterFunctionBase.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/4440/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/AggregaterFunctionBase.java
+END
+ScalarFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/ScalarFunction.java
+END
+PolymorphicFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/openanzo/!svn/ver/3841/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/PolymorphicFunction.java
+END
+FunctionRegistry.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/4131/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/FunctionRegistry.java
+END
+ScalarFunctionOnTerms.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/ScalarFunctionOnTerms.java
+END
+Function.java
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/Function.java
+END
+ScalarFunctionOnValues.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/ScalarFunctionOnValues.java
+END
+FunctionWithAttributes.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/4062/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/FunctionWithAttributes.java
+END
+InfixOperator.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/openanzo/!svn/ver/3858/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/InfixOperator.java
+END
+BinaryFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/openanzo/!svn/ver/3952/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/BinaryFunction.java
+END
+AggregateFunction.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/glitter/expression/AggregateFunction.java
+END

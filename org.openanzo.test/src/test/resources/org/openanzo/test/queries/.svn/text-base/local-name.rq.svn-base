@@ -1,0 +1,3 @@
+prefix glitter: <http://openanzo.org/glitter/builtin/functions#> 
+prefix ex: <http://example.org/> 
+SELECT (glitter:localName(?s) as ?localName) WHERE { ?s a ex:MyObject . }

@@ -1,0 +1,281 @@
+<propertyDefinitions>
+	<propertiesGroup packageName="org.openanzo.jdbc.container" groupPrefix="org.openanzo.database" className="RDB">
+		<description>Configuration properties for the RDB database connection.</description>
+		<property name="url" key="KEY_DATABASE_URL" passDefault="false" type="String">
+			<description>The jdbc URL for the connection to the database.</description>
+			<description type="Client">Used if local persistence is enabled.</description>
+			<description type="Server">Not Used</description>
+			<description type="Embedded">See client. Note: Persistence shouldn't be used when in embedded mode since stack already has direct access to the database.</description>
+			<example>On DB2: jdbc:db2://localhost:50000/anzo</example>
+			<example>On Oracle: jdbc:oracle:thin:@localhost:1521</example>
+			<example>On PostgreSQL: jdbc:postgresql:anzo</example>
+			<example>On HSQL: jdbc:hsqldb:mem:anzodb</example>
+			<example>On MySQL: jdbc:mysql://localhost/anzo</example>
+		</property>
+		<property name="url.prefix" key="KEY_DATABASE_URL_PREFIX" passDefault="false" type="String">
+			<description>String prepended to the jdbc URLs.</description>
+			<example>jdbc:derby:</example>
+		</property>
+		<property name="url.postfix" key="KEY_DATABASE_URL_POSTFIX" passDefault="false" type="String">
+			<description>String appended to the jdbc URLs</description>
+			<example>;create=true;upgrade=true</example>
+		</property>
+		<property name="type" key="KEY_DATABASE_TYPE" passDefault="false" type="String">
+			<description>Anzo database type name.</description>
+			<description type="Client">Used if local persistence is enabled.</description>
+			<description type="Server">Not Used</description>
+			<description type="Embedded">See client. Note: Persistence shouldn't be used when in embedded mode since stack already has direct access to the database.</description>
+			<example>For DB2: DB2</example>
+			<example>For Oracle: Oracle</example>
+			<example>For Derby: Derby</example>
+			<example>For PostgreSQL: Postgres</example>
+			<example>For HSQL: HSQL</example>
+			<example>For MySQL: MySQL</example>
+		</property>
+		<property name="driver" key="KEY_DATABASE_DRIVER" passDefault="false" type="String">
+			<description>JDBC driver class name. Only needed if replacing the default driver for the given database type.</description>
+			<example>For using the derby network client driver: org.apache.derby.jdbc.ClientDriver</example>
+		</property>
+		<property name="user" key="KEY_DATABASE_USER" passDefault="false" type="String">
+			<description>Login id for the connection to the database.</description>
+			<description type="Client">Used if local persistence is enabled.</description>
+			<description type="Server">Not Used</description>
+			<description type="Embedded">See client. Note: Persistence shouldn't be used when in embedded mode since stack already has direct access to the database.</description>
+			<example>For DB2: db2inst1</example>
+			<example>For Oracle: anzo</example>
+			<example>For Derby: anzo</example>
+			<example>For PostgreSQL: anzo</example>
+			<example>For HSQL: sa</example>
+			<example>For MySQL: anzo</example>
+		</property>
+		<property name="password" key="KEY_DATABASE_PASSWORD" passDefault="false" type="Encrypted">
+			<description>Password for the connection to the database.</description>
+			<description type="Client">Used if local persistence is enabled.</description>
+			<description type="Server">Not Used</description>
+			<description type="Embedded">See client. Note: Persistence shouldn't be used when in embedded mode since stack already has direct access to the database.</description>
+			<example>For DB2: password</example>
+			<example>For Oracle: anzo</example>
+			<example>For Derby: (don't specify a password)</example>
+			<example>For PostgreSQL: anzo</example>
+			<example>For HSQL: (don't specify a password)</example>
+			<example>For MySQL: anzo</example>
+		</property>
+		<property name="fileLocation" key="KEY_DATABASE_FILE_LOCATION" passDefault="false" type="String">
+			<description>Local directory path from where file based database will be loaded.</description>
+			<description type="Client">Used if local persistence is enabled.</description>
+			<description type="Server">Not Used</description>
+			<description type="Embedded">See client. Note: Persistence shouldn't be used when in embedded mode since stack already has direct access to the database.</description>
+			<example>For Derby: /tmp/anzoDerby</example>
+		</property>
+		<property name="containerName" key="KEY_DATABASE_CONTAINER_NAME" passDefault="false" type="String">
+			<description>Unique URI to name container of statements and named graphs.</description>
+			<description type="Client">Used if local persistence is enabled.</description>
+			<description type="Server">Not Used</description>
+			<description type="Embedded">See client. Note: Persistence shouldn't be used when in embedded mode since stack already has direct access to the database.</description>
+			<example>http://openanzo.org/container1</example>
+		</property>
+		<property name="clearOnLoad" key="KEY_DATABASE_CLEAR" quoteDefault="true" defaultValue="false" type="Boolean">
+			<description>Flag for whether or not the database should be cleared when the database is first loaded.</description>
+			<description type="Client">Used if local persistence is enabled.</description>
+			<description type="Server">Not Used</description>
+			<description type="Embedded">See client. Note: Persistence shouldn't be used when in embedded mode since stack already has direct access to the database.</description>
+		</property>
+		<property name="sqlfile" key="KEY_DATABASE_SQL_FILENAME" passDefault="false" type="String">
+			<description>Path to file containing table, index definitions as well as text of prepared statements.</description>
+			<description>This property is automatically set based on the database type. You only need to change this property if you do not want to use the standard file for you database.</description>
+		</property>
+		<property name="quotechar" key="KEY_DATABASE_QUOTE_CHAR" passDefault="false" type="String">
+			<description>Quote char used in queries</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="maxTablenameLength" key="KEY_DATABASE_MAX_TABLENAME_LENGTH" passDefault="false" defaultValue="64" type="Integer" min="0">
+			<description>Max length of table names</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="useTempTableInsert" key="KEY_DATABASE_USE_TEMP_INSERT" quoteDefault="true" defaultValue="false" type="Boolean">
+			<description>Can database use temporary tables for insert operations</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="useTempTableFind" key="KEY_DATABASE_USE_TEMP_FIND" quoteDefault="true" defaultValue="false" type="Boolean">
+			<description>Can database use temporary tables for find operations</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="uniqueTempNames" key="KEY_DATABASE_UNIQUE_TEMP_NAMES" quoteDefault="true" defaultValue="false" type="Boolean">
+			<description>Does the database disallow multiple references to the same temporary table within a query.</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+        <property name="supportsOptionalJoins" key="KEY_DATABASE_SUPPORTS_OPTIONAL_JOINS" quoteDefault="true" defaultValue="true" type="Boolean">
+            <description>Does the database support optional joins</description>
+            <example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+        </property>
+		<property name="supportsSequences" key="KEY_DATABASE_SUPPORTS_SEQUENCES" quoteDefault="true" defaultValue="false" type="Boolean">
+			<description>Does the database support sequences</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="supportsFullouterJoins" key="KEY_DATABASE_SUPPORTS_FULLOUTER_JOINS" quoteDefault="true" defaultValue="false" type="Boolean">
+			<description>Does the database support full outer joins</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="supportsWithClause" key="KEY_DATABASE_SUPPORTS_WITH_CLAUSE" quoteDefault="true" defaultValue="false" type="Boolean">
+			<description>Does the database support the WITH clause</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="maxIndexKeyLength" key="KEY_DATABASE_MAX_INDEX_KEY_LENGTH" passDefault="false" defaultValue="64" type="Integer" min="0">
+			<description>The max length of an index</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="maxLongObjectLength" key="KEY_DATABASE_MAX_LONG_OBJECT_LENGTH" passDefault="false" defaultValue="64" type="Integer" min="0">
+			<description>The max length of a node's value before using the long table.</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="usesUppercase" key="KEY_DATABASE_USES_UPPERCASE" quoteDefault="true" defaultValue="false" type="Boolean">
+			<description>Does the database use all uppercase strings for table and column names</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="usesUppercaseTempTables" key="KEY_DATABASE_USES_UPPERCASE_TEMPTABLES" quoteDefault="true" defaultValue="false" type="Boolean">
+			<description>Does the database use all uppercase strings for temporary tables and column names</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="sessionPrefix" key="KEY_DATABASE_SESSION_PREFIX" passDefault="false" type="String">
+			<description>Prefix prepended to start of temporary tables</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="supportsTableLocks" key="KEY_DATABASE_SUPPORTS_TABLELOCKS" quoteDefault="true" defaultValue="false" type="Boolean">
+			<description>Does the database support table locks</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="supportsTableUnLocks" key="KEY_DATABASE_SUPPORTS_TABLEUNLOCKS" quoteDefault="true" defaultValue="false" type="Boolean">
+			<description>Does the database support explicit table unlocks</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="nodeCacheSize" key="KEY_DATABASE_NODE_CACHE_SIZE" passDefault="true" type="Integer" min="0">
+			<description>Size of node cache</description>
+			<example>Default is 25000</example>
+		</property>
+		<property name="useHardReset" key="KEY_DATABASE_USE_HARD_RESET" quoteDefault="true" defaultValue="false" type="Boolean">
+			<description>Does the database need to drop all tables for a reset, instead of just deleting the rows from the existing tables</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="bigInt" key="KEY_DATABASE_BIG_INT" passDefault="false" type="String">
+			<description>The text required within a create table operation for specifying a BIGINT</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="dropTableSuffix" key="KEY_DATABASE_DROP_TABLE_SUFFIX" passDefault="false" type="String">
+			<description>The text added to the end of a table drop command.</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="forceTempTablePurge" key="KEY_DATABASE_FORCE_TT_PURGE" passDefault="false" type="Boolean">
+			<description>True if temporary tables need to be explicitly purged after using.</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="forceTempTableCreation" key="KEY_DATABASE_FORCE_TT_CREATE" passDefault="false" type="Boolean">
+			<description>Force the creation of temporary tables, even if they are already showing up in the catalog.</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="indexSuffix" key="KEY_DATABASE_SESSION_INDEX_SUFFIX" passDefault="false" type="String">
+			<description>Text to add to the end of a create index call</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="singleRowOptimizationString" key="KEY_DATABASE_SINGLE_ROW" passDefault="false" type="String">
+			<description>Text added to the end of a query that is expected to return 1 row</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="smallInt" key="KEY_DATABASE_SMALL_INT" passDefault="false" type="String">
+			<description>The text required within a create table operation for specifying a SMALLINT</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="varChar" key="KEY_DATABASE_VAR_CHAR" passDefault="false" type="String">
+			<description>The text required within a create table operation for specifying a VARCHAR</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="blob" key="KEY_DATABASE_BLOB" passDefault="false" type="String">
+			<description>The text required within a create table operation for specifying a BLOB</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="supportsIsolation" key="KEY_DATABASE_ISOLATION" passDefault="false" type="Boolean">
+			<description>True if this database supports setting isolation levels on the jdbc driver</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="supportsIndividualBatchUpdates" key="KEY_DATABASE_SUPPORT_SINGLE_BATCH" passDefault="false" type="Boolean">
+			<description>True if the database supports batch operations where individual batch calls fail</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="tableCreateSuffix" key="KEY_DATABASE_CREATE_SUFFIX" passDefault="false" type="String">
+			<description>Text added to the end of a table creation call</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="tableLockSuffix" key="KEY_DATABASE_LOCK_SUFFIX" passDefault="false" type="String">
+			<description>Text added to the end of a lock table call</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="textFieldSuffix" key="KEY_DATABASE_TEXT_FIELD_SUFFIX" passDefault="false" type="String">
+			<description>Text added to the end of a text field definition within a create table call.</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="generatedIdString" key="KEY_DATABASE_GENERATED_ID" passDefault="false" type="String">
+			<description>The text required within a create table operation for specifying a generated id column</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="requiresTempTablespace" key="KEY_DATABASE_REQUIRES_TT" passDefault="false" type="Boolean">
+			<description>True if this database requires the creation of a temporary tablespace</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="canonicalTableName" key="KEY_DATABASE_CANONICAL_TABLE_NAME" passDefault="false" type="String">
+			<description>Name of table used to determine if database is initialized</description>
+			<example>This property is automatically set based on the database type. You only need to change this property if you do not want to use the default for you database.</example>
+		</property>
+		<property name="initializationFiles" key="KEY_DATABASE_INITIALIZATION_FILES" passDefault="false" type="String">
+			<description>Comma separated list of files that are used to initialize database at creation time.</description>
+			<example></example>
+		</property>
+        <property name="supportsIdentity" key="KEY_DATABASE_SUPPORTS_IDENTITY" passDefault="false" type="Boolean">
+            <description>Supports identity.</description>
+            <example></example>
+        </property>
+         <property name="supportsLimitOffset" key="KEY_DATABASE_SUPPORTS_LIMIT_OFFSET" passDefault="false" type="Boolean">
+            <description>Supports Limit Offset queries.</description>
+            <example></example>
+        </property>
+        <property name="limitTransactionSize" key="KEY_DATABASE_LIMIT_TRANSACTION_SIZE" passDefault="false" type="Boolean">
+            <description>Limit the transactions size.</description>
+            <example></example>
+        </property>
+         <property name="validationQuery" key="KEY_DATABASE_VALIDATION_QUERY" passDefault="false" type="String">
+            <description>Query that validates the connection is still valid.</description>
+            <example></example>
+        </property>
+	</propertiesGroup>
+	<propertiesGroup packageName="org.openanzo.jdbc.layout.indexer" groupPrefix="org.openanzo.indexer.literals" className="LiteralIndexer">
+		<description>Configuration properties used for setting up literal indexer.</description>
+		<property name="enabled" key="KEY_LITERAL_INDEX_ENABLED" passDefault="false" defaultValue="false" type="Boolean">
+			<description>Should the literal indexer be enabled.</description>
+			<description type="Client">When persistence is enabled on the client, enabling the literal indexer allows for text index predicates as part of Sparql queries.</description>
+			<description type="Server">The server uses its own Lucene index, so this property is not used.</description>
+			<description type="Embedded">See server</description>
+		</property>
+		<property name="rebuildIndex" key="KEY_LITERAL_INDEXER_REBUILD" passDefault="false" defaultValue="false" type="Boolean">
+			<description>Should the literal indexer be rebuilt on startup.</description>
+			<description type="Client">When persistence is enabled on the client and this property is true, the index will rebuild the indexer when the container is started.</description>
+			<description type="Server">The server uses its own Lucene index, so this property is not used.</description>
+			<description type="Embedded">See server</description>
+		</property>
+		<property name="indexLocation" key="KEY_LITERAL_INDEX_LOCATION" passDefault="false" type="String">
+			<description>Location of the index files on disk.</description>
+			<description type="Client">When persistence is enabled on the client, this property points to the location of the Lucene index on disk.</description>
+			<description type="Server">The server uses its own Lucene index, so this property is not used.</description>
+			<description type="Embedded">See server</description>
+		</property>
+		<property name="removeLockFile" key="KEY_LITERAL_INDEX_REMOVE_LOCK_FILE" passDefault="false" defaultValue="true" type="Boolean">
+			<description>Force a removal of a previous lock file on startup.</description>
+			<description type="Client">When persistence is enabled on the client and this property is true, the index will remove any previous Lucene lock files on disk.</description>
+			<description type="Server">The server uses its own Lucene index, so this property is not used.</description>
+			<description type="Embedded">See server</description>
+		</property>
+		<property name="indexClear" key="KEY_LITERAL_INDEXER_CLEAR" passDefault="false" defaultValue="false" type="Boolean">
+			<description>Clear the index on startup.</description>
+			<description type="Client">When persistence is enabled on the client and this property is true, the index will clear the indexer when the container is started.</description>
+			<description type="Server">The server uses its own Lucene index, so this property is not used.</description>
+			<description type="Embedded">See server</description>
+		</property>
+	</propertiesGroup>
+</propertyDefinitions>

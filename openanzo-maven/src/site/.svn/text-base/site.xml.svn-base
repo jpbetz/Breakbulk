@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<project name="OpenAnzo">
+
+  <!-- stylus and application both look pretty good to me -jpbetz
+  <skin>
+    <groupId>org.apache.maven.skins</groupId>
+    <artifactId>maven-application-skin</artifactId>
+    <version>1.0-SNAPSHOT</version>
+  </skin>
+  -->
+  
+  <!--
+  <bannerLeft>
+    <name>OpenAnzo</name>
+    <src>http://www.openanzo.org/images/Anzobanner.png</src>
+    <href>http://openanzo.org/</href>
+  </bannerLeft>
+  <bannerRight>
+    <src>http://maven.apache.org/images/maven-small.gif</src>
+  </bannerRight>
+  -->
+  
+  <body>
+    <links>
+      <item name="Maven" href="http://maven.apache.org/"/>
+    </links>
+
+    <menu name="The OpenAnzo Project">
+      <item name="Wiki" href="http://www.openanzo.org/projects/openanzo/wiki"/>
+      <item name="Tickets" href="http://www.openanzo.org/projects/openanzo/report"/>
+      <item name="Source" href="http://www.openanzo.org/projects/openanzo/browser"/>
+      <item name="Javadoc" href="http://www.openanzo.org/openanzo/apidocs/"/>
+      <item name="Download" href="http://www.openanzo.org/projects/openanzo/downloads"/>
+    </menu>
+    
+    <menu ref="parent" />
+    
+    <menu ref="modules" />
+    
+    <menu ref="reports" />
+
+  </body>
+  
+  <publishDate position="navigation-bottom" format="MM-dd-yy"/>
+</project>

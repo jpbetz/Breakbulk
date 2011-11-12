@@ -1,0 +1,36 @@
+<propertyDefinitions>
+	<propertiesGroup packageName="org.openanzo.indexer.lucene" groupPrefix="org.openanzo.indexer.lucene" className="Lucene">
+		<description>Configuration properties for the Lucene index</description>
+		<property name="indexLocation" key="KEY_LUCENE_INDEX_LOCATION" passDefault="false" type="String">
+			<description>Location of the Lucene index on disk</description>
+			<description type="Client">The client uses its own Lucene index, so this property is not used.</description>
+			<description type="Server">When indexing is enabled on the server, this property points to the location of the Lucene index on disk.</description>
+			<description type="Embedded">See server</description>
+		</property>
+		<property name="field" key="KEY_LUCENE_QUERY_FIELD" passDefault="false" type="String">
+			<description>Default field in index that is queried</description>
+			<description type="Client">The client uses its own Lucene index, so this property is not used.</description>
+			<description type="Server">This is the default field in the index that is queried.</description>
+			<description type="Embedded">See server</description>
+		</property>
+		<property name="text" key="KEY_LUCENE_QUERY_TEXT" passDefault="false" type="String">
+			<description>Default query text</description>
+			<description type="Client">The client uses its own Lucene index, so this property is not used.</description>
+			<description type="Server">This is the default query text to use.</description>
+			<description type="Embedded">See server</description>		
+		</property>
+		<property name="removeLockFile" key="KEY_LUCENE_REMOVE_LOCK_FILE" passDefault="false" defaultValue="true" type="Boolean">
+			<description>Force a removal of a previous lock file on startup.</description>
+			<description type="Client">The client uses its own Lucene index, so this property is not used.</description>
+			<description type="Server">When indexing is enabled on the server and this property is true, the index will remove any previous Lucene lock files on disk.</description>			
+			<description type="Embedded">See server</description>
+		</property>
+		<property name="indexerHome" key="INDEXER_HOME" passDefault="false"  type="String">
+			<description>Absolute directory location of the Lucene index on disk.</description>
+			<description type="Client">The client uses its own Lucene index, so this property is not used.</description>
+			<description type="Server">When indexing is enabled on the server, this property will be used to determine the Lucene directory on disk.</description>			
+			<description type="Embedded">See server</description>
+		</property>
+		
+	</propertiesGroup>
+</propertyDefinitions>

@@ -1,0 +1,131 @@
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/openanzo/!svn/ver/5202/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/transport
+END
+StringSerializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/openanzo/!svn/ver/3769/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/transport/StringSerializer.java
+END
+NamedGraphSerializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/transport/NamedGraphSerializer.java
+END
+TransactionsSerializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/openanzo/!svn/ver/3769/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/transport/TransactionsSerializer.java
+END
+ReplicationSerializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/openanzo/!svn/ver/3783/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/transport/ReplicationSerializer.java
+END
+URIArraySetSerializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/openanzo/!svn/ver/3769/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/transport/URIArraySetSerializer.java
+END
+URISetArraySerializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/transport/URISetArraySerializer.java
+END
+URISetSerializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/openanzo/!svn/ver/3769/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/transport/URISetSerializer.java
+END
+ValueSerializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/openanzo/!svn/ver/5202/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/transport/ValueSerializer.java
+END
+BooleanSerializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 147
+/svn/openanzo/!svn/ver/3769/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/transport/BooleanSerializer.java
+END
+PrincipalSerializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/transport/PrincipalSerializer.java
+END
+PrivilegeSerializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/openanzo/!svn/ver/3769/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/transport/PrivilegeSerializer.java
+END
+StatementsSerializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/openanzo/!svn/ver/3783/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/transport/StatementsSerializer.java
+END
+ResourceSerializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/openanzo/!svn/ver/3164/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/transport/ResourceSerializer.java
+END
+IntSerializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/openanzo/!svn/ver/3769/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/transport/IntSerializer.java
+END
+SelectorTrackerSerializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 155
+/svn/openanzo/!svn/ver/4302/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/transport/SelectorTrackerSerializer.java
+END
+LongSerializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/openanzo/!svn/ver/3769/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/transport/LongSerializer.java
+END
+URISerializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/openanzo/!svn/ver/3769/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/transport/URISerializer.java
+END
+QueryUriSetSerializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/openanzo/!svn/ver/5031/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/transport/QueryUriSetSerializer.java
+END
+DatasetTrackerSerializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/transport/DatasetTrackerSerializer.java
+END
+IMessage.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/openanzo/!svn/ver/3164/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/transport/IMessage.java
+END
+QueryResultSerializer.java
+K 25
+svn:wc:ra_dav:version-url
+V 151
+/svn/openanzo/!svn/ver/3882/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/serialization/transport/QueryResultSerializer.java
+END

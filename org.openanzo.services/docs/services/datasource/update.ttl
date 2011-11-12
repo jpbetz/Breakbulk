@@ -1,0 +1,40 @@
+@prefix format: <http://openanzo.org/service/format/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix system: <http://openanzo.org/ontologies/2008/07/System#> .
+
+<http://openanzo.org/service/operation/updateServer> system:name "update" ;
+	system:requestParameter <http://openanzo.org/service/operation/updateServer/parameter/returnResults> , <http://openanzo.org/service/operation/updateServer/parameter/transactions> ;
+	system:requestParameter0 <http://openanzo.org/service/operation/updateServer/parameter/returnResults> ;
+	system:requestParameter1 <http://openanzo.org/service/operation/updateServer/parameter/transactions> ;
+	system:restEndpoint "/anzo/statements" ;
+	system:restType "POST" ;
+	system:result <http://openanzo.org/service/operation/updateServer/result> ;
+	system:sysadminRequired "false" ;
+	system:wsOperation "http://openanzo.org/update" ;
+	dc:description "Sends a set of transactions to the server to be processed." ;
+	dc:title "Update Server" ;
+	a system:Operation .
+
+<http://openanzo.org/service/operation/updateServer/parameter/returnResults> system:name "returnResults" ;
+	system:nullAllowed "false" ;
+	system:type system:boolean ;
+	system:validFormat <http://openanzo.org/service/format/text/text> ;
+	dc:description "Should operation return the additions and deletions within the IUpdates object." ;
+	a system:Parameter .
+
+<http://openanzo.org/service/operation/updateServer/parameter/transactions> system:name "transactions" ;
+	system:nullAllowed "false" ;
+	system:parameterLocation "body" ;
+	system:type system:transactions ;
+	system:validFormat format:anzo-xml , format:jsonUpdate ;
+	dc:description "Set of transactions to commit on the server." ;
+	a system:Parameter .
+
+<http://openanzo.org/service/operation/updateServer/result> system:name "result" ;
+	system:parameterFormat "transport dependent" ;
+	system:type system:modelUpdate ;
+	system:validFormat format:anzo-xml , format:jsonUpdate ;
+	dc:description "If returnResults is true, IUpdates will include the changes that occured on the server due to this update or if the transaction failed, the set of errors. If returnResults is false, only errors will be returned." ;
+	a system:Parameter .
+
+<http://openanzo.org/service/update> system:operation <http://openanzo.org/service/operation/updateServer> .

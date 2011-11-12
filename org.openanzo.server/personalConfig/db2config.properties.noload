@@ -1,0 +1,10 @@
+service.factoryPid=org.openanzo.datasource.nodecentric.Factory
+org.openanzo.services.enabled=true
+org.openanzo.services.instanceURI=http://openanzo.org/datasource/systemDatasource
+org.openanzo.datasource.initFiles=resource:/org/openanzo/datasource/nodecentric/initialize.trig
+org.openanzo.datasource.isPrimary=true
+org.openanzo.database.password=db21nst!
+org.openanzo.database.user=db2inst1
+org.openanzo.database.type=ServerDB2
+org.openanzo.database.url=jdbc:db2://localhost:50000/anzo
+org.openanzo.datasource.uriPatterns=*

@@ -1,0 +1,58 @@
+@prefix format: <http://openanzo.org/service/format/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix system: <http://openanzo.org/ontologies/2008/07/System#> .
+
+
+<http://openanzo.org/service/index> system:operation <http://openanzo.org/service/operation/executeQueryIndex> .
+
+<http://openanzo.org/service/operation/executeQueryIndex> system:name "queryIndex" ;
+	system:requestParameter <http://openanzo.org/service/operation/executeQuery/parameter/query>, <http://openanzo.org/service/operation/executeQuery/parameter/queryBody>  , <http://openanzo.org/service/operation/executeQueryIndex/parameter/numberOfResults> , <http://openanzo.org/service/operation/executeQueryIndex/parameter/offset> ;
+	system:requestParameter0 <http://openanzo.org/service/operation/executeQuery/parameter/query> ;
+	system:requestParameter1 <http://openanzo.org/service/operation/executeQuery/parameter/queryBody> ;
+	system:requestParameter2 <http://openanzo.org/service/operation/executeQueryIndex/parameter/offset> ;
+	system:requestParameter3 <http://openanzo.org/service/operation/executeQueryIndex/parameter/numberOfResults> ;
+	system:restEndpoint "/anzo/statements/index" ;
+	system:restType "GET" ;
+	system:result <http://openanzo.org/service/operation/executeQueryIndex/result> ;
+	system:sysadminRequired "false" ;
+	system:wsOperation "http://openanzo.org/queryIndex" ;
+	dc:description "Run a query against the index on the server and returns the results in a collection of statements." ;
+	dc:title "Execute Query Index" ;
+	a system:Operation .
+
+<http://openanzo.org/service/operation/executeQueryIndex/parameter/numberOfResults> system:name "numberOfResults" ;
+	system:nullAllowed "true" ;
+	system:type system:int ;
+	system:validFormat <http://openanzo.org/service/format/text/text> ;
+	dc:description "Max number of results to return" ;
+	a system:Parameter .
+
+<http://openanzo.org/service/operation/executeQueryIndex/parameter/offset> system:name "offset" ;
+	system:nullAllowed "true" ;
+	system:type system:int ;
+	system:validFormat <http://openanzo.org/service/format/text/text> ;
+	dc:description "Offset into the number of results to return" ;
+	a system:Parameter .
+
+<http://openanzo.org/service/operation/executeQueryIndex/parameter/queryBody>
+	system:name "queryBody" ;
+	system:nullAllowed "true" ;
+	system:type system:string ;
+	system:parameterLocation "body" ;
+	system:validFormat <http://openanzo.org/service/format/text/text> ;
+	dc:description "Index query text." ;
+	a system:Parameter .
+	
+<http://openanzo.org/service/operation/executeQueryIndex/parameter/query> system:name "query" ;
+	system:nullAllowed "true" ;
+	system:type system:string ;
+	system:parameterLocation "body" ;
+	system:validFormat <http://openanzo.org/service/format/text/text> ;
+	dc:description "Index query text." ;
+	a system:Parameter .
+
+<http://openanzo.org/service/operation/executeQueryIndex/result> system:name "result" ;
+	system:type system:statements ;
+	system:validFormat format:jsonQuad , format:trig , format:trix ;
+	dc:description "Collection of statements that match the index query." ;
+	a system:Parameter .

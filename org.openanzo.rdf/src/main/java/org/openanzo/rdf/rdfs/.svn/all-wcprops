@@ -1,0 +1,209 @@
+K 25
+svn:wc:ra_dav:version-url
+V 95
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs
+END
+LiteralListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/LiteralListener.java
+END
+AltImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/AltImpl.java
+END
+_PropertyImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/_PropertyImpl.java
+END
+ContainerMembershipPropertyListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/ContainerMembershipPropertyListener.java
+END
+List.java
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/List.java
+END
+ClassListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/ClassListener.java
+END
+Datatype.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/Datatype.java
+END
+LiteralImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/LiteralImpl.java
+END
+Alt.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/Alt.java
+END
+_Property.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/_Property.java
+END
+ContainerMembershipPropertyImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/ContainerMembershipPropertyImpl.java
+END
+ClassImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/ClassImpl.java
+END
+ContainerListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/ContainerListener.java
+END
+Literal.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/Literal.java
+END
+_ResourceListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/_ResourceListener.java
+END
+SeqListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/SeqListener.java
+END
+BagListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/BagListener.java
+END
+ContainerMembershipProperty.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/ContainerMembershipProperty.java
+END
+ContainerImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/ContainerImpl.java
+END
+Class.java
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/Class.java
+END
+_ResourceImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/_ResourceImpl.java
+END
+SeqImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/SeqImpl.java
+END
+BagImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/BagImpl.java
+END
+ListListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/ListListener.java
+END
+DatatypeListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/DatatypeListener.java
+END
+Container.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/Container.java
+END
+_Resource.java
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/_Resource.java
+END
+RDFSFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/RDFSFactory.java
+END
+AltListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/AltListener.java
+END
+Seq.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/Seq.java
+END
+_PropertyListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/openanzo/!svn/ver/3160/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/_PropertyListener.java
+END
+Bag.java
+K 25
+svn:wc:ra_dav:version-url
+V 104
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/Bag.java
+END
+ListImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/ListImpl.java
+END
+DatatypeImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/rdfs/DatatypeImpl.java
+END

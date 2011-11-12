@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 134
+/svn/openanzo/!svn/ver/5141/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/java/org/openanzo/datasource/nodecentric/query
+END
+ServerEngineConfig.java
+K 25
+svn:wc:ra_dav:version-url
+V 158
+/svn/openanzo/!svn/ver/4720/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/java/org/openanzo/datasource/nodecentric/query/ServerEngineConfig.java
+END
+ServerSolutionGeneratorFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 170
+/svn/openanzo/!svn/ver/3827/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/java/org/openanzo/datasource/nodecentric/query/ServerSolutionGeneratorFactory.java
+END
+ServerBGPQuery.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/openanzo/!svn/ver/4475/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/java/org/openanzo/datasource/nodecentric/query/ServerBGPQuery.java
+END
+ServerSQL.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/openanzo/!svn/ver/3777/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/java/org/openanzo/datasource/nodecentric/query/ServerSQL.java
+END
+ServerSolutionGenerator.java
+K 25
+svn:wc:ra_dav:version-url
+V 163
+/svn/openanzo/!svn/ver/5141/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/java/org/openanzo/datasource/nodecentric/query/ServerSolutionGenerator.java
+END
+GraphSet.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/openanzo/!svn/ver/3993/openanzo/trunk/org.openanzo.datasource.nodecentric/src/main/java/org/openanzo/datasource/nodecentric/query/GraphSet.java
+END

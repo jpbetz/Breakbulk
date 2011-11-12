@@ -1,0 +1,38 @@
+Manifest-Version: 1.0
+Export-Package: org.openanzo.servlet.attributes;version="3.2.0",org.op
+ enanzo.servlet;version="3.2.0"
+Private-Package: config;version="3.2.0",org.openanzo.servlet.internal;
+ version="3.2.0"
+Bundle-Name: Anzo Servlet API
+Configuration-Properties: ${bundleResourcePrefix}config/
+Bundle-Vendor: Cambridge Semantics Inc.
+Bundle-Version: 3.2.0
+Bundle-Activator: org.openanzo.servlet.internal.ServletsActivator
+Bundle-ManifestVersion: 2
+Bundle-License: http://www.eclipse.org/legal/epl-v10.html
+Bundle-Description: Anzo Servlet API
+Import-Package: javax.activation,javax.security.auth,javax.servlet;ver
+ sion="2.5",javax.servlet.http;version="2.5",org.apache.commons.io;ver
+ sion="1.4",org.apache.commons.lang;version="2.4",org.apache.commons.l
+ ang.builder;version="2.4",org.apache.commons.lang.time;version="2.4",
+ org.eclipse.jetty.http;version="7.0.0.v20091005",org.eclipse.jetty.ht
+ tp.security;version="7.0.0.v20091005",org.eclipse.jetty.io;version="7
+ .0.0.v20091005",org.eclipse.jetty.security;version="7.0.0.v20091005",
+ org.eclipse.jetty.security.authentication;version="7.0.0.v20091005",o
+ rg.eclipse.jetty.server;version="7.0.0.v20091005",org.eclipse.jetty.s
+ erver.handler;version="7.0.0.v20091005",org.eclipse.jetty.servlet;ver
+ sion="7.0.0.v20091005",org.eclipse.jetty.servlets;version="7.0.0.v200
+ 91005",org.eclipse.jetty.util;version="7.0.0.v20091005",org.eclipse.j
+ etty.util.resource;version="7.0.0.v20091005",org.openanzo.exceptions;
+ version="3.2",org.openanzo.osgi;version="3.2",org.openanzo.osgi.attri
+ butes;version="3.2",org.openanzo.rdf;version="3.2",org.openanzo.rdf.u
+ tils;version="3.2.0",org.openanzo.security.keystore;version="3.2.0",o
+ rg.openanzo.services;version="3.2",org.openanzo.services.impl;version
+ ="3.2",org.openanzo.servlet;version="3.2.0",org.openanzo.servlet.attr
+ ibutes;version="3.2.0",org.ops4j.pax.web.service;version="0.7.2.CSI",
+ org.osgi.framework,org.osgi.service.cm,org.osgi.service.http;version=
+ "1.2",org.osgi.service.metatype,org.osgi.util.tracker;version="1.4",o
+ rg.slf4j;version="1.5"
+Bundle-SymbolicName: org.openanzo.servlet
+Bundle-DocURL: http://www.cambridgesemantics.com
+

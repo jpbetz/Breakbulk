@@ -1,0 +1,41 @@
+K 25
+svn:wc:ra_dav:version-url
+V 92
+/svn/openanzo/!svn/ver/5246/openanzo/trunk/org.openanzo.test/src/test/java/org/openanzo/test
+END
+ServerQueryTests.java
+K 25
+svn:wc:ra_dav:version-url
+V 114
+/svn/openanzo/!svn/ver/4737/openanzo/trunk/org.openanzo.test/src/test/java/org/openanzo/test/ServerQueryTests.java
+END
+ProtocolDatasetQueryTests.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/openanzo/!svn/ver/4835/openanzo/trunk/org.openanzo.test/src/test/java/org/openanzo/test/ProtocolDatasetQueryTests.java
+END
+QueryDatasetQueryTests.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/openanzo/!svn/ver/3859/openanzo/trunk/org.openanzo.test/src/test/java/org/openanzo/test/QueryDatasetQueryTests.java
+END
+TestEncryptedTokenAuthorizationBlocksServletAccess.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/openanzo/!svn/ver/5152/openanzo/trunk/org.openanzo.test/src/test/java/org/openanzo/test/TestEncryptedTokenAuthorizationBlocksServletAccess.java
+END
+QueryTest.java
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/openanzo/!svn/ver/4062/openanzo/trunk/org.openanzo.test/src/test/java/org/openanzo/test/QueryTest.java
+END
+QueryTestSuiteBase.java
+K 25
+svn:wc:ra_dav:version-url
+V 116
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.test/src/test/java/org/openanzo/test/QueryTestSuiteBase.java
+END

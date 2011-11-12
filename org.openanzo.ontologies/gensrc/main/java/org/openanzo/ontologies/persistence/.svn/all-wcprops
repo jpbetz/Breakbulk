@@ -1,0 +1,101 @@
+K 25
+svn:wc:ra_dav:version-url
+V 119
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/persistence
+END
+ReferencedNamedGraphListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/persistence/ReferencedNamedGraphListener.java
+END
+ReferencedQuadStoreListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 152
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/persistence/ReferencedQuadStoreListener.java
+END
+PersistedPreconditionImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/persistence/PersistedPreconditionImpl.java
+END
+PersistedTransaction.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/persistence/PersistedTransaction.java
+END
+ClientPersistenceRootImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/persistence/ClientPersistenceRootImpl.java
+END
+ReferencedNamedGraphImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/persistence/ReferencedNamedGraphImpl.java
+END
+ClientPersistenceFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/persistence/ClientPersistenceFactory.java
+END
+ReferencedQuadStoreImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 148
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/persistence/ReferencedQuadStoreImpl.java
+END
+PersistedTransactionListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 153
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/persistence/PersistedTransactionListener.java
+END
+PersistedPrecondition.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/persistence/PersistedPrecondition.java
+END
+PersistedPreconditionListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/persistence/PersistedPreconditionListener.java
+END
+ClientPersistenceRoot.java
+K 25
+svn:wc:ra_dav:version-url
+V 146
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/persistence/ClientPersistenceRoot.java
+END
+ReferencedNamedGraph.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/persistence/ReferencedNamedGraph.java
+END
+ReferencedQuadStore.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/persistence/ReferencedQuadStore.java
+END
+PersistedTransactionImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 149
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/persistence/PersistedTransactionImpl.java
+END
+ClientPersistenceRootListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 154
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/persistence/ClientPersistenceRootListener.java
+END

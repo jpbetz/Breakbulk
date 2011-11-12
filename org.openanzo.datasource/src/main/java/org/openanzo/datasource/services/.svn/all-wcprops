@@ -1,0 +1,119 @@
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/openanzo/!svn/ver/5246/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/services
+END
+IQueryCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/openanzo/!svn/ver/5042/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/services/IQueryCache.java
+END
+ModelServiceCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/5043/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/services/ModelServiceCache.java
+END
+BaseDatasourceComponent.java
+K 25
+svn:wc:ra_dav:version-url
+V 142
+/svn/openanzo/!svn/ver/3854/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/services/BaseDatasourceComponent.java
+END
+ReplicationWithCacheStats.java
+K 25
+svn:wc:ra_dav:version-url
+V 144
+/svn/openanzo/!svn/ver/3892/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/services/ReplicationWithCacheStats.java
+END
+CachedAuthorizationService.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/openanzo/!svn/ver/5166/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/services/CachedAuthorizationService.java
+END
+BaseModelService.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/openanzo/!svn/ver/5046/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/services/BaseModelService.java
+END
+BaseAuthorizationService.java
+K 25
+svn:wc:ra_dav:version-url
+V 143
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/services/BaseAuthorizationService.java
+END
+ModelServiceWithCacheStats.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/openanzo/!svn/ver/3892/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/services/ModelServiceWithCacheStats.java
+END
+BaseQueryService.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/openanzo/!svn/ver/5042/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/services/BaseQueryService.java
+END
+BaseIndexService.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/openanzo/!svn/ver/4507/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/services/BaseIndexService.java
+END
+NamedGraphRevision.java
+K 25
+svn:wc:ra_dav:version-url
+V 137
+/svn/openanzo/!svn/ver/3854/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/services/NamedGraphRevision.java
+END
+BaseReplicationService.java
+K 25
+svn:wc:ra_dav:version-url
+V 141
+/svn/openanzo/!svn/ver/4590/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/services/BaseReplicationService.java
+END
+BaseDatasource.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/4581/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/services/BaseDatasource.java
+END
+QueryServiceWithCacheStats.java
+K 25
+svn:wc:ra_dav:version-url
+V 145
+/svn/openanzo/!svn/ver/3892/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/services/QueryServiceWithCacheStats.java
+END
+CachedAuthorizationServiceStats.java
+K 25
+svn:wc:ra_dav:version-url
+V 150
+/svn/openanzo/!svn/ver/3892/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/services/CachedAuthorizationServiceStats.java
+END
+QueryCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/openanzo/!svn/ver/5042/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/services/QueryCache.java
+END
+ReplicationCache.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/openanzo/!svn/ver/5012/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/services/ReplicationCache.java
+END
+BaseUpdateService.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/5246/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/services/BaseUpdateService.java
+END
+BaseResetService.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.datasource/src/main/java/org/openanzo/datasource/services/BaseResetService.java
+END

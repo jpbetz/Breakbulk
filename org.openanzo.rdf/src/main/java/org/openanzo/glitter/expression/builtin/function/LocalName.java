@@ -1,0 +1,47 @@
+/*******************************************************************************
+ * Copyright (c) 2004, 2007 IBM Corporation and Cambridge Semantics Incorporated.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ *
+ * File: $Source: /cvsroot/slrp/glitter/com.ibm.adtech.glitter/src/com/ibm/adtech/glitter/expression/builtin/cast/XSDInteger.java,v $
+ * Created by:  Lee Feigenbaum (<a href="mailto:feigenbl@us.ibm.com">feigenbl@us.ibm.com</a>)
+ * Created on: 10/23/06
+ * Revision: $Id: XSDInteger.java 164 2007-07-31 14:11:09Z mroy $
+ *
+ * Contributors: IBM Corporation - initial API and implementation
+ *     Cambridge Semantics Incorporated - Fork to Anzo
+ *******************************************************************************/
+package org.openanzo.glitter.expression.builtin.function;
+
+import org.openanzo.glitter.exception.IncompatibleTypeException;
+import org.openanzo.glitter.expression.UnaryFunction;
+import org.openanzo.glitter.util.Glitter;
+import org.openanzo.rdf.Constants;
+import org.openanzo.rdf.URI;
+import org.openanzo.rdf.Value;
+import org.openanzo.rdf.Constants.NAMESPACES;
+
+/**
+ * Given a URI returns the local name
+ * 
+ * @author lee <lee@cambridgesemantics.com>
+ * 
+ */
+public class LocalName extends UnaryFunction {
+
+    @Override
+    public Value call(Value arg1) throws IncompatibleTypeException {
+        if (arg1 instanceof URI) {
+            URI uri = (URI)arg1;
+            return Constants.valueFactory.createTypedLiteral(uri.getLocalName());
+        }
+        throw new IncompatibleTypeException(arg1, "URI");
+    }
+
+    public URI getIdentifier() {
+        return Glitter.createURI(NAMESPACES.GLITTER_FUNCTION_NAMESPACE + "localName");
+    }
+
+}

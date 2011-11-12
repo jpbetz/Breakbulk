@@ -1,0 +1,22 @@
+@prefix : <http://example.org/> .
+
+:g1 {
+	:s1 :p "object" .
+	:s1 :q "object" .
+}
+
+:g2 { :s2 :p "object" }
+
+:g3 { :s3 :p "object" }
+
+{
+	:g1 :is :graph .
+	:g2 :is :graph .
+	:g3 :is :graph .
+}
+
+:fixed { 
+	:p :ty "predicate" .
+	:q :ty "predicate" .
+}
+

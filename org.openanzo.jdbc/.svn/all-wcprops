@@ -1,0 +1,47 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/openanzo/!svn/ver/5202/openanzo/trunk/org.openanzo.jdbc
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/openanzo/!svn/ver/3148/openanzo/trunk/org.openanzo.jdbc/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 69
+/svn/openanzo/!svn/ver/3148/openanzo/trunk/org.openanzo.jdbc/.project
+END
+project.xml
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/openanzo/!svn/ver/3148/openanzo/trunk/org.openanzo.jdbc/project.xml
+END
+build.properties
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/openanzo/!svn/ver/3627/openanzo/trunk/org.openanzo.jdbc/build.properties
+END
+pom.xml
+K 25
+svn:wc:ra_dav:version-url
+V 68
+/svn/openanzo/!svn/ver/4796/openanzo/trunk/org.openanzo.jdbc/pom.xml
+END
+.jetproperties
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/openanzo/!svn/ver/3148/openanzo/trunk/org.openanzo.jdbc/.jetproperties
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 70
+/svn/openanzo/!svn/ver/4906/openanzo/trunk/org.openanzo.jdbc/build.xml
+END

@@ -1,0 +1,30 @@
+Manifest-Version: 1.0
+Export-Package: org.openanzo.security.ldap;version="3.2.0",org.openanz
+ o.security.ldap.attributes;version="3.2.0"
+Private-Package: config;version="3.2.0"
+Bundle-Name: Anzo Ldap Authentication Provider
+Bundle-Vendor: Cambridge Semantics Inc.
+Bundle-Version: 3.2.0
+Bundle-ManifestVersion: 2
+Bundle-Activator: org.openanzo.security.ldap.LdapAuthenticatorActivato
+ r
+Bundle-License: http://www.eclipse.org/legal/epl-v10.html
+Bundle-Description: Authentication provider that binds to an embedded 
+ or external LDAP server for authentication and user's roles.
+Import-Package: com.novell.ldap;version="4.3",com.sun.net.ssl.internal
+ .ssl;resolution:=optional,javax.management.remote,org.apache.activemq
+ .management;version="5.1",org.apache.commons.pool;version="1.4",org.a
+ pache.commons.pool.impl;version="1.4",org.apache.directory.shared.lda
+ p.util;version="1.5.5",org.openanzo.cache;version="3.2.0",org.openanz
+ o.exceptions;version="3.2.0",org.openanzo.osgi;version="3.2.0",org.op
+ enanzo.osgi.attributes;version="3.2.0",org.openanzo.rdf;version="3.2.
+ 0",org.openanzo.security.keystore;version="3.2.0",org.openanzo.securi
+ ty.ldap;version="3.2.0",org.openanzo.security.ldap.attributes;version
+ ="3.2.0",org.openanzo.services;version="3.2.0",org.openanzo.services.
+ impl;version="3.2.0",org.osgi.framework;version="1.3",org.osgi.servic
+ e.cm;version="1.2",org.osgi.service.event;version="1.1.0",org.osgi.se
+ rvice.metatype;version="1.1",org.osgi.util.tracker,org.slf4j;version=
+ "1.4.0"
+Bundle-SymbolicName: org.openanzo.security.ldap
+Bundle-DocURL: http://www.cambridgesemantics.com
+

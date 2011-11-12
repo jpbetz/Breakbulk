@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 99
+/svn/openanzo/!svn/ver/4813/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/datatype
+END
+TypeMaps.java
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/datatype/TypeMaps.java
+END
+TypedValueMapper.java
+K 25
+svn:wc:ra_dav:version-url
+V 121
+/svn/openanzo/!svn/ver/4813/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/datatype/TypedValueMapper.java
+END
+LexicalToNativeTypeMap.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/3858/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/datatype/LexicalToNativeTypeMap.java
+END
+NativeToLexicalTypeMap.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/3858/openanzo/trunk/org.openanzo.rdf/src/main/java/org/openanzo/rdf/datatype/NativeToLexicalTypeMap.java
+END

@@ -1,0 +1,10 @@
+prefix : <http://example.org/> 
+prefix xsd: <http://www.w3.org/2001/XMLSchema#>  
+prefix f: <http://openanzo.org/glitter/builtin/functions#>
+SELECT ?o (f:partitionIndex(
+	?o, 
+	"11:00:00"^^xsd:time, 
+	"PT1H"^^xsd:duration) AS ?index) 
+{
+	:s :p ?o .
+}

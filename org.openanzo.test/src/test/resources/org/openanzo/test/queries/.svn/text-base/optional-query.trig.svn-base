@@ -1,0 +1,13 @@
+@prefix : <http://example.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+@prefix dc: <http://purl.org/dc/elements/1.1/> . 
+@prefix anzo: <http://openanzo.org/ontologies/2008/07/Anzo#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+:optional-query {
+     :s1 
+        :p1 :o1;
+        :p2 :o2;
+        :p3 "o4$";
+        rdf:type :type1.
+     :s2 :p3 :o3.
+}

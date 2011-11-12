@@ -1,0 +1,23 @@
+K 25
+svn:wc:ra_dav:version-url
+V 87
+/svn/openanzo/!svn/ver/3286/openanzo/trunk/org.openanzo.services/docs/services/security
+END
+authenticateUser.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/openanzo/!svn/ver/3164/openanzo/trunk/org.openanzo.services/docs/services/security/authenticateUser.ttl
+END
+authenticationService.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 113
+/svn/openanzo/!svn/ver/3164/openanzo/trunk/org.openanzo.services/docs/services/security/authenticationService.ttl
+END
+getUserPrincipal.ttl
+K 25
+svn:wc:ra_dav:version-url
+V 108
+/svn/openanzo/!svn/ver/3164/openanzo/trunk/org.openanzo.services/docs/services/security/getUserPrincipal.ttl
+END

@@ -1,0 +1,15 @@
+@prefix format: <http://openanzo.org/service/format/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix system: <http://openanzo.org/ontologies/2008/07/System#> .
+
+
+<http://openanzo.org/service/model> system:availableOverJms "true" ;
+	system:availableOverRest "true" ;
+	system:availableOverWS "true" ;
+	system:isDatasourceService "true";
+	system:interface "org.openanzo.servicecontainer.services.IModelService" ;
+	system:jmsQueueName "model" ;
+	system:name "ModelService" ;
+	dc:description "Operations related to updating and quering the data on the server" ;
+	dc:title "Model Service" ;
+	a system:Service .

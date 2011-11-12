@@ -1,0 +1,25 @@
+prefix : <http://example.org/> 
+prefix dc: <http://purl.org/dc/elements/1.1/> 
+prefix foaf: <http://xmlns.com/foaf/0.1/> 
+prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> 
+prefix anzo: <http://openanzo.org/ontologies/2008/07/Anzo#> 
+
+SELECT DISTINCT ?givenname ?surname ?title
+ WHERE {
+   ?value ?p ?txt .
+   ?txt <http://openanzo.org/ontologies/2008/07/Anzo#textmatch> 'small' .
+ {
+   { ?value <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://xmlns.com/foaf/0.1/Person> . }
+   UNION
+   { ?value <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.example.org/shape#Triangle> . }
+   UNION
+   { ?value <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.example.org/shape#Circle> . }
+ }
+   
+   OPTIONAL { ?value <http://xmlns.com/foaf/0.1/givenname> ?givenname } .
+   OPTIONAL { ?value <http://xmlns.com/foaf/0.1/surname> ?surname } .
+   OPTIONAL { ?value <http://purl.org/dc/elements/1.1/title> ?title } .
+   OPTIONAL { ?value <http://purl.org/dc/elements/1.1/description> ?description } .
+   OPTIONAL { ?value <http://xmlns.com/foaf/0.1/img> ?img } .
+ }
+ OFFSET 0 LIMIT 100

@@ -1,0 +1,55 @@
+10
+
+dir
+5248
+http://svn.openanzo.org/svn/openanzo/openanzo/trunk/org.openanzo.jdbc/src/main/resources/nodecentric
+http://svn.openanzo.org/svn/openanzo
+
+
+
+2009-08-18T23:52:32.295123Z
+4440
+mroy
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0a2a6340-b48a-40e4-9632-36e452a58e02
+
+mssql
+dir
+
+derby
+dir
+
+mysql
+dir
+
+oracle
+dir
+
+postgres
+dir
+
+db2
+dir
+
+hsql
+dir
+
+common
+dir
+
+h2
+dir
+

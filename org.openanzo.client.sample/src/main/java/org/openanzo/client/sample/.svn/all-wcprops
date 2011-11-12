@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 110
+/svn/openanzo/!svn/ver/4158/openanzo/trunk/org.openanzo.client.sample/src/main/java/org/openanzo/client/sample
+END
+StatementChannels.java
+K 25
+svn:wc:ra_dav:version-url
+V 133
+/svn/openanzo/!svn/ver/4037/openanzo/trunk/org.openanzo.client.sample/src/main/java/org/openanzo/client/sample/StatementChannels.java
+END
+Commands.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/openanzo/!svn/ver/4037/openanzo/trunk/org.openanzo.client.sample/src/main/java/org/openanzo/client/sample/Commands.java
+END
+ReplicaGraph.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/4037/openanzo/trunk/org.openanzo.client.sample/src/main/java/org/openanzo/client/sample/ReplicaGraph.java
+END
+MetadataGraph.java
+K 25
+svn:wc:ra_dav:version-url
+V 129
+/svn/openanzo/!svn/ver/4037/openanzo/trunk/org.openanzo.client.sample/src/main/java/org/openanzo/client/sample/MetadataGraph.java
+END
+ResetRepository.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/openanzo/!svn/ver/4158/openanzo/trunk/org.openanzo.client.sample/src/main/java/org/openanzo/client/sample/ResetRepository.java
+END
+ExecuteService.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/openanzo/!svn/ver/4037/openanzo/trunk/org.openanzo.client.sample/src/main/java/org/openanzo/client/sample/ExecuteService.java
+END
+Datasets.java
+K 25
+svn:wc:ra_dav:version-url
+V 124
+/svn/openanzo/!svn/ver/4037/openanzo/trunk/org.openanzo.client.sample/src/main/java/org/openanzo/client/sample/Datasets.java
+END
+RealtimeUpdates.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/openanzo/!svn/ver/4037/openanzo/trunk/org.openanzo.client.sample/src/main/java/org/openanzo/client/sample/RealtimeUpdates.java
+END
+ServerGraph.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/4037/openanzo/trunk/org.openanzo.client.sample/src/main/java/org/openanzo/client/sample/ServerGraph.java
+END
+Transactions.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/4037/openanzo/trunk/org.openanzo.client.sample/src/main/java/org/openanzo/client/sample/Transactions.java
+END
+QueryAndFind.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/4037/openanzo/trunk/org.openanzo.client.sample/src/main/java/org/openanzo/client/sample/QueryAndFind.java
+END
+GraphPermissions.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/4037/openanzo/trunk/org.openanzo.client.sample/src/main/java/org/openanzo/client/sample/GraphPermissions.java
+END
+NamedGraphInitializers.java
+K 25
+svn:wc:ra_dav:version-url
+V 138
+/svn/openanzo/!svn/ver/4037/openanzo/trunk/org.openanzo.client.sample/src/main/java/org/openanzo/client/sample/NamedGraphInitializers.java
+END

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 96
+/svn/openanzo/!svn/ver/4136/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/root/cli
+END
+log4j-cli.properties
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/openanzo/!svn/ver/4136/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/root/cli/log4j-cli.properties
+END
+classworlds-cli.conf
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/openanzo/!svn/ver/4136/openanzo/trunk/openanzo-maven/openanzo-assembly/src/release/root/cli/classworlds-cli.conf
+END

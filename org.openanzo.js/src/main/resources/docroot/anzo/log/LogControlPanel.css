@@ -1,0 +1,143 @@
+/*******************************************************************************
+ * Copyright (c) 2008 Cambridge Semantics Incorporated.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * Contributors:
+ *     Cambridge Semantics Incorporated - initial API and implementation
+ *******************************************************************************/
+
+/* CSS for log grid is based on CSS/HTML techniques used in the Dojo Grid component */ 
+
+.logControlPanel {
+	font: normal normal 12px Verdana, Geneva, Arial, Helvetica, sans-serif;
+	background-color: #EEE; 
+	padding: 5px; 
+	width: 40em;
+}
+
+.logControlPanel .loggerNameCell, .logControlPanel .loggerNameCellHeader {
+	width: 27em;
+}
+.logControlPanel .loggerLevelCell, .logControlPanel .loggerLevelCellHeader {
+	width: 10em;
+}
+.logControlPanel .loggerNameCell {
+	font-family:monospace;
+}
+.logControlPanel .logGrid-view, .logControlPanel .logGrid-scrollbox {
+	height: 13em;
+}
+.logControlPanel .logGrid-master-header {
+	position: relative;
+	height: 1.8em;
+}
+.logControlPanel .logGrid {
+	position: relative;
+	background-color: #EBEADB;
+	font-family: Geneva, Arial, Helvetica, sans-serif;
+	-moz-outline-style: none;
+	outline: none;
+	-moz-user-select: none;
+	height: 14.9em;
+}
+.logControlPanel .logGrid-header, .logControlPanel .logGrid-view {
+	width: 39.8em;
+	left: 1px;
+	top: 0;
+}
+.logControlPanel .logGrid-content {
+	height: 2.05em;
+	width: 38.3em;
+}
+
+.logControlPanel .logGrid table {
+	padding: 0;
+}
+.logControlPanel .logGrid td {
+	-moz-outline: none;
+}
+.logControlPanel .logGrid-master-view  {
+	position: relative;
+}
+.logControlPanel .logGrid-view {
+	position: absolute;
+	overflow: hidden;
+}
+.logControlPanel .logGrid-header {
+	position: absolute;
+	overflow: hidden;
+	background-color: #E8E1CF;
+}
+.logControlPanel .logGrid-header table {
+	text-align: center;
+}
+.logControlPanel .logGrid-header .logGrid-cell { 
+	border: 1px solid;
+	border-color: #F6F4EB #ACA899 #ACA899 #F6F4EB;
+	background-color: #E8E1CF;
+	padding-bottom: 2px;
+}
+.logControlPanel .logGrid-scrollbox {
+	position: relative;
+	overflow: scroll;
+	background-color: white;
+	width: 100%;
+}
+.logControlPanel .logGrid-content {
+	position: relative;
+	overflow: hidden;
+	 -moz-outline-style: none;
+	outline: none;
+}
+.logControlPanel .logGrid-row {
+	position: relative;
+	width: 9000em;
+		/*border: 1px solid #E8E4D8;*/
+	border: 1px solid #E8E4D8;
+	border-color: #F8F7F1;
+	/*padding: 0 0 1px 0;*/
+	border-left: none;
+	border-right: none;
+	background-color: white;
+	border-top: none;
+}
+.logControlPanel .logGrid-row-odd {
+	background-color: #FFFDF3;
+}
+.logControlPanel .logGrid-row-table {
+	table-layout: fixed;
+	width: 0;
+}
+.logControlPanel .logGrid-cell {
+	border: 1px solid;
+	border-color: #EBEADB;
+	border-right-color: #D5CDB5;
+	padding: 3px 3px 3px 3px;
+	text-align: left;
+	overflow: hidden;
+	font-size: 12px;
+}
+.logControlPanel .logGrid-input, .logControlPanel .logGrid-select, .logControlPanel .logGrid-textarea {
+	margin: 0;
+	padding: 0;
+	border-style: none;
+	width: 100%;
+	font-size: 100%;
+	font-family: inherit;
+}
+.logControlPanel .logGrid-hidden-focus {
+	position: absolute;
+	left: -1000px;
+	top: -1000px;
+	height: 0px;
+	width: 0px;
+}
+.logControlPanel .loggerAddBar {
+	margin-left:6em;
+}
+.logControlPanel .loggerGridTitle {
+	font-weight: bold;
+}

@@ -1,0 +1,11 @@
+@prefix : <http://example.org/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> . 
+
+:partitionindex-datetimes {
+	:s :p
+		"2009-01-01T12:00:00Z"^^xsd:dateTime,
+		"2009-01-01T18:00:00Z"^^xsd:dateTime,
+		"2009-01-02T00:00:00Z"^^xsd:dateTime,
+		"2009-01-03T15:00:00Z"^^xsd:dateTime
+	.	
+}

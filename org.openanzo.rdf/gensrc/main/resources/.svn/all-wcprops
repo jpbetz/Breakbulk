@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/openanzo/!svn/ver/3863/openanzo/trunk/org.openanzo.rdf/gensrc/main/resources
+END
+SimpleCharStream.java.patch
+K 25
+svn:wc:ra_dav:version-url
+V 109
+/svn/openanzo/!svn/ver/3863/openanzo/trunk/org.openanzo.rdf/gensrc/main/resources/SimpleCharStream.java.patch
+END
+ParseException.java.patch
+K 25
+svn:wc:ra_dav:version-url
+V 107
+/svn/openanzo/!svn/ver/3863/openanzo/trunk/org.openanzo.rdf/gensrc/main/resources/ParseException.java.patch
+END
+SPARQLParserTokenManager.java.patch
+K 25
+svn:wc:ra_dav:version-url
+V 117
+/svn/openanzo/!svn/ver/3863/openanzo/trunk/org.openanzo.rdf/gensrc/main/resources/SPARQLParserTokenManager.java.patch
+END
+Token.java.patch
+K 25
+svn:wc:ra_dav:version-url
+V 98
+/svn/openanzo/!svn/ver/3863/openanzo/trunk/org.openanzo.rdf/gensrc/main/resources/Token.java.patch
+END
+TokenMgrError.java.patch
+K 25
+svn:wc:ra_dav:version-url
+V 106
+/svn/openanzo/!svn/ver/3863/openanzo/trunk/org.openanzo.rdf/gensrc/main/resources/TokenMgrError.java.patch
+END

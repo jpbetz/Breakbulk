@@ -1,0 +1,6 @@
+PREFIX : <http://example.org/>
+CONSTRUCT { ?o :an :object }
+WHERE  
+{
+	:s :p ?o .
+}

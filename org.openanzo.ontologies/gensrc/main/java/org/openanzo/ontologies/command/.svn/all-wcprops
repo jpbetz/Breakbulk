@@ -1,0 +1,29 @@
+K 25
+svn:wc:ra_dav:version-url
+V 115
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/command
+END
+CommandImpl.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/command/CommandImpl.java
+END
+CommandListener.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/command/CommandListener.java
+END
+CommandFactory.java
+K 25
+svn:wc:ra_dav:version-url
+V 135
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/command/CommandFactory.java
+END
+Command.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/4883/openanzo/trunk/org.openanzo.ontologies/gensrc/main/java/org/openanzo/ontologies/command/Command.java
+END

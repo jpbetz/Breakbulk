@@ -1,0 +1,116 @@
+<!--
+*******************************************************************************
+ Copyright (c) 2007-2009 Cambridge Semantics Incorporated.
+ All rights reserved. This program and the accompanying materials
+ are made available under the terms of the Eclipse Public License v1.0
+ which accompanies this distribution, and is available at
+ http://www.eclipse.org/legal/epl-v10.html
+*******************************************************************************
+-->
+<project name="regress-server-control" basedir=".">
+	<description>
+		This Ant script is used by the Maven build to start/stop a copy of the newly built server.
+		It launches it in the background and waits until it the server is ready.
+		The server is launched using configuration information suitable for running regress tests.
+		The main difference in a regress configuration is that it uses different server ports than normal,
+		to avoid conflicting with other running servers and it sets up a control servlet to allow shutting
+		down the server via a web request.
+
+		It's split out into its own file and included in the distribution for use by the
+		Anzo.NET regression tests as well.
+    </description>
+
+	<fail message="anzo.regress-server.dir, anzo.regress-server.host, anzo.regress-combus.port, anzo.regress-ldap.port, anzo.regress-jmx.port, anzo.regress-jvm-debugger.port, and anzo.regress-server.host properties must be defined.">
+		<condition>
+			<not>
+				<and>
+					<isset property="anzo.regress-server.dir" /> <!-- The directory where the server package was extracted -->
+					<isset property="anzo.regress-server.host" /> <!-- The web host for the server -->
+					<isset property="anzo.regress-server.port" /> <!-- The server web port -->
+					<isset property="anzo.regress-combus.port" />
+					<isset property="anzo.regress-ldap.port" />
+					<isset property="anzo.regress-jmx.port" />
+					<isset property="anzo.regress-jvm-debugger.port" />
+				</and>
+			</not>
+		</condition>
+	</fail>
+
+	<available file="${anzo.regress-server.dir}" type="dir" property="anzo.dirAvailable" />
+	<fail if="${anzo.dirAvailable}" message="Specified anzo.regress-server.dir directory does not exist: ${anzo.regress-server.dir}"/>
+
+	<target name="start" depends="stop">
+		<!--
+		  Start up the anzo server from the jars in unzipped assembly.
+		  Provide server with custom regression configuration:
+		    use hsql, an in memory SQL database and runs
+		    on non-standard ports so it does not interfere with any anzo servers already running on system
+		-->
+		<echo message="Starting server (at ${anzo.regress-server.dir})." />
+
+		<delete includeemptydirs="true" quiet="true"> <!-- delete log directory in case we're reusing this server directory -->
+			<fileset dir="${anzo.regress-server.dir}/var/log" includes="**/*" />
+		</delete>
+
+		<!--
+			Ant's parallel/daemons tags run the server in a child process that does not to outlive the maven process.
+			when runing in the Maven build, we want this behavior. But when running in other builds, we need the server
+			to outlive the ant process. The 'anzo.regress-server.spawn' controlls that behavior.
+		-->
+		<condition property="anzo.regress-server.spawn" value="true"> <!-- default for spawn is true --> 
+			<not>
+				<isset property="${anzo.regress-server.spawn}" />
+			</not>
+		</condition>
+		<condition property="anzo.regress-server.spawn" value="true" else="false"> <!-- normalize spawn property to 'true' or 'false' -->
+			<istrue value="${anzo.regress-server.spawn}" />
+		</condition>
+		<condition property="anzo.regress-server.failonerror" value="true" else="false">
+			<isfalse value="${anzo.regress-server.spawn}" />
+		</condition>
+		<echo message="Spawn mode: ${anzo.regress-server.spawn}" />
+		<parallel>
+			<daemons>
+				<java dir="${anzo.regress-server.dir}" 
+						spawn="${anzo.regress-server.spawn}"
+						fork="true"
+						classname="org.eclipse.equinox.launcher.Main"
+						classpath="${anzo.regress-server.dir}/plugins/org.eclipse.equinox.launcher_1.0.200.v20090520.jar"
+						maxmemory="1024m"
+						failonerror="${anzo.regress-server.failonerror}">
+					<jvmarg value="-server" />
+					<jvmarg value="-Xdebug" />
+					<jvmarg value="-Xrunjdwp:transport=dt_socket,address=${anzo.regress-jvm-debugger.port},suspend=n,server=y" />
+					<sysproperty key="ANZO_HOME" value="${anzo.regress-server.dir}" />
+					<sysproperty key="org.openanzo.osgi.bootstrap.path" value="${anzo.regress-server.dir}/configuration/regressionConfig:${anzo.regress-server.dir}/configuration/config" />
+					<sysproperty key="org.osgi.service.http.port" value="${anzo.regress-server.port}" />
+					<sysproperty key="org.openanzo.combus.port" value="${anzo.regress-combus.port}" />
+					<sysproperty key="org.openanzo.ldap.port" value="${anzo.regress-ldap.port}" />
+					<sysproperty key="org.openanzo.directory.6" value="plugins/regression" />
+                    <sysproperty key="org.openanzo.jmx.port" value="${anzo.regress-jmx.port}" />
+					<sysproperty key="org.openanzo.regressiontest" value="${anzo.regress-server.dir}" />
+					<arg value="-noExit" />
+					<arg value="-console 1234" />
+				</java>
+			</daemons>
+		</parallel>
+	   <sleep seconds="10"/>
+       <echo message="Waiting for status file"/>
+	   <waitfor timeoutproperty="timedout" maxwait="10" maxwaitunit="minute" checkevery="500" checkeveryunit="millisecond">
+	   		<available file="${anzo.regress-server.dir}/status.txt"/>
+		</waitfor>
+		<fail if="timedout" message="timed out waiting for services in server to start." />
+		<echo message="Server started" />
+	</target>
+
+	<target name="stop">
+		<echo message="Stopping any left-over servers..." />
+		<waitfor timeoutproperty="timedout">
+			<not>
+				<http url="http://${anzo.regress-server.host}:${anzo.regress-server.port}/control/kill" />
+			</not>
+		</waitfor>
+		<fail if="timedout" message="...timed out waiting for left-over server to stop." />
+		<echo message="...all clear." />
+	</target>
+</project>

@@ -1,0 +1,8 @@
+@prefix : <http://example.org/> .
+
+:select-distinct-uri {
+	:s1 :p1 :o1, :o2, :o3 .
+	:s2 :p2 :o2, :o3 .
+	:s3 :p3 :o3, :o7, :o9, :o10 .
+	:s4 :p4 :o4 .
+}

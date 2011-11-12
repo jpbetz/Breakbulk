@@ -1,0 +1,129 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix ont: <http://openanzo.org/ontologies/2008/07/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix anzo: <http://openanzo.org/ontologies/2008/07/Anzo#> .
+
+
+ont:Anzo {
+	
+	ont:Anzo dc:contributor "Lee Feigenbaum" , "Matthew Roy"  ;
+		dc:creator "Joe Betz" ;
+		a owl:Ontology ;
+		rdfs:label "Anzo core ontology" ;
+		owl:versionInfo "0.1" , "3.0" .
+	
+	anzo:AnzoServer a owl:Class ;
+		rdfs:comment "Anzo Server" ;
+		rdfs:subClassOf [a owl:Restriction ;owl:cardinality "1" ;owl:onProperty anzo:serverId,anzo:uriPrefix ] .
+	
+	anzo:AskResult a owl:Class ;
+		rdfs:comment "A result for a AskQuery" ;
+		rdfs:subClassOf [a owl:Restriction ;owl:cardinality "1" ;owl:onProperty anzo:boolean] , anzo:Result .
+	
+	anzo:Dataset a owl:Class ;
+		rdfs:comment "A dataset is a collection of zero or more default graphs and zero or more named graphs." ;
+		rdfs:subClassOf 
+		[a owl:Restriction ;owl:minCardinality "0" ;owl:onProperty anzo:defaultNamedGraph,anzo:defaultGraph,anzo:namedGraph],
+		[a owl:Restriction ;owl:cardinality "1" ;owl:onProperty anzo:includeMetadataGraphs] .
+	
+	anzo:DatasetTracker a owl:Class ;
+		rdfs:comment "A DatasetTracker" ;
+		rdfs:subClassOf [a owl:Restriction ;owl:minCardinality "0" ;owl:onProperty anzo:namedDataset] , anzo:Dataset , anzo:Tracker .
+	
+	anzo:NamedGraph a owl:Class ;
+		rdfs:comment "A metadata associated with a grouping of statements" ;
+		rdfs:subClassOf 
+		[a owl:Restriction ;owl:minCardinality "0" ;owl:onProperty anzo:createdBy ,anzo:canBeReadBy ,anzo:canBeAddedToBy ,anzo:canBeRemovedFromBy ,anzo:lastModifiedByUser,anzo:inheritsFrom],
+		[a owl:Restriction ;owl:cardinality "1" ;owl:onProperty anzo:hasMetadataGraph,anzo:uuid,anzo:revision,anzo:datasource,anzo:created,anzo:modified,anzo:persisted,anzo:revisioned ].
+	
+	
+	anzo:Precondition a owl:Class ;
+		rdfs:comment "A precondition for a transaction" ;
+		rdfs:subClassOf 
+		[a owl:Restriction ;owl:cardinality "1" ;owl:onProperty anzo:dataset,anzo:query,anzo:result ] .
+	
+	anzo:Query a owl:Class ;
+		rdfs:comment "A dataset for a precondition" ;
+		rdfs:subClassOf [a owl:Restriction ;owl:cardinality "1" ;owl:onProperty anzo:queryString] .
+	
+	anzo:Registry a owl:Class ;
+		rdfs:comment "A Registry is ...." ;
+		rdfs:subClassOf [a owl:Restriction ;owl:cardinality "1" ;owl:onProperty anzo:registeredType] , anzo:Dataset .
+	
+	anzo:Result a owl:Class ;
+		rdfs:comment "A result for a precondition" .
+	
+	anzo:SelectorTracker a owl:Class ;
+		rdfs:comment "A SelectorTracker" ;
+		rdfs:subClassOf 
+		anzo:Tracker,
+		[a owl:Restriction ;owl:mincardinality "0" ;owl:onProperty anzo:subject,anzo:predicate,anzo:object,anzo:namedGraphUri] .
+	
+	anzo:StatementStream a owl:Class ;
+		rdfs:comment "Subclass of NamedGraph for graphs that describe StatementStreams" ;
+		rdfs:subClassOf anzo:NamedGraph .
+	
+	anzo:Tracker a owl:Class ;
+		rdfs:comment "A Tracker" .
+	
+	anzo:User a owl:Class ;
+		rdfs:comment "User" .
+	
+	anzo:Role a owl:Class ;
+		rdfs:comment "Role" ;
+		rdfs:subClassOf [a owl:Restriction ;	owl:mincardinality "0" ;owl:onProperty anzo:member ] ,
+		[a owl:Restriction ;owl:cardinality "1" ;owl:onProperty dc:title,dc:description] .
+	
+	anzo:member a owl:ObjectProperty ;rdfs:domain anzo:Role ;rdfs:range anzo:User ;rdfs:comment "Member of role." .
+	
+	anzo:serverId 	a owl:DatatypeProperty ;		rdfs:domain anzo:AnzoServer ;	rdfs:range xsd:anyURI ;rdfs:comment "A unique uri for server's id" .
+	anzo:uriPrefix 	a owl:DatatypeProperty ;		rdfs:domain anzo:AnzoServer ;	rdfs:range xsd:string ;rdfs:comment "Prefix for service URI prefixes" .
+	
+	anzo:boolean 	a owl:DatatypeProperty ;		rdfs:domain anzo:AskResult ;	rdfs:range xsd:boolean .
+	
+	anzo:inheritsFrom	 	a owl:ObjectProperty ;	 rdfs:domain anzo:NamedGraph ;	rdfs:range anzo:NamedGraph .
+	anzo:canBeAddedToBy 	a owl:ObjectProperty ;	 rdfs:domain anzo:NamedGraph ;	rdfs:range anzo:Role .
+	anzo:canBeReadBy 		a owl:ObjectProperty ;	 rdfs:domain anzo:NamedGraph ;	rdfs:range anzo:Role .
+	anzo:canBeRemovedFromBy a owl:ObjectProperty ;	 rdfs:domain anzo:NamedGraph ;	rdfs:range anzo:Role .
+	anzo:createdBy 			a owl:ObjectProperty ;	 rdfs:domain anzo:NamedGraph ;	rdfs:range anzo:User .
+	anzo:datasource 		a owl:ObjectProperty ;	 rdfs:domain anzo:NamedGraph ;	rdfs:range <http://openanzo.org/ontologies/2008/07/System#Datasource>  .
+	anzo:hasMetadataGraph 	a owl:DatatypeProperty ; rdfs:domain anzo:NamedGraph ;	rdfs:range xsd:anyURI .
+	anzo:lastModifiedByUser a owl:ObjectProperty ;	 rdfs:domain anzo:NamedGraph ;	rdfs:range anzo:User .
+	anzo:created 			a owl:DatatypeProperty ; rdfs:domain anzo:NamedGraph ;	rdfs:range xsd:dateTime ;	rdfs:comment "Timestamp of when graph was created".
+	anzo:modified 			a owl:DatatypeProperty ; rdfs:domain anzo:NamedGraph ;	rdfs:range xsd:dateTime ;	rdfs:comment "Timestamp of last time object was modified".
+	anzo:persisted 			a owl:DatatypeProperty ; rdfs:domain anzo:NamedGraph ;	rdfs:range xsd:boolean ;	rdfs:comment "True if this named graph is persisted in the datasource".
+	anzo:revision 			a owl:DatatypeProperty ; rdfs:domain anzo:NamedGraph ;	rdfs:range xsd:long ;		rdfs:comment "A version number that increments each time the object of the statement is changed" .
+	anzo:revisioned 		a owl:DatatypeProperty ; rdfs:domain anzo:NamedGraph ;	rdfs:range xsd:boolean ;	rdfs:comment "True if this named graph is stored in a revisioned datasource" .
+	anzo:uuid 				a owl:DatatypeProperty ; rdfs:domain anzo:NamedGraph ;	rdfs:range xsd:anyURI .
+	
+	anzo:datasource 		a owl:ObjectProperty ;	rdfs:domain anzo:SemanticView ;	rdfs:range <http://openanzo.org/ontologies/2008/07/System#Datasource> .
+	anzo:ontology 			a owl:ObjectProperty ;	rdfs:domain anzo:SemanticView ;	rdfs:range anzo:NamedGraph .
+	
+	anzo:dataset 			a owl:ObjectProperty ;	rdfs:domain anzo:Precondition ;	rdfs:range anzo:Dataset .
+	anzo:query 				a owl:ObjectProperty ;	rdfs:domain anzo:Precondition ;	rdfs:range anzo:Query .
+	anzo:result 			a owl:ObjectProperty ;	rdfs:domain anzo:Precondition ;	rdfs:range anzo:Result .
+	
+	anzo:defaultGraph 		a owl:ObjectProperty ;	rdfs:domain anzo:Dataset ;		rdfs:range anzo:NamedGraph .
+	anzo:namedGraph 		a owl:ObjectProperty ;	rdfs:domain anzo:Dataset ;		rdfs:range anzo:NamedGraph .
+	anzo:defaultNamedGraph	a owl:ObjectProperty ;	rdfs:domain anzo:Dataset ;		rdfs:range anzo:NamedGraph .
+	anzo:includeMetadataGraphs a owl:DatatypeProperty ;	rdfs:domain anzo:Dataset ;rdfs:range xsd:boolean .
+	
+	anzo:namedDataset 		a owl:ObjectProperty ;	rdfs:domain anzo:DatasetTracker ;rdfs:range anzo:NamedGraph .
+	
+	anzo:namedGraphUri 		a owl:DatatypeProperty ;	rdfs:domain anzo:SelectorTracker ;rdfs:range xsd:anyURI .
+	anzo:object 			a owl:DatatypeProperty ;	rdfs:domain anzo:SelectorTracker ;rdfs:range xsd:anyURI .
+	anzo:predicate 			a owl:DatatypeProperty ;	rdfs:domain anzo:SelectorTracker ;rdfs:range xsd:anyURI .
+	anzo:subject 			a owl:DatatypeProperty ;	rdfs:domain anzo:SelectorTracker ;rdfs:range xsd:anyURI .
+	
+	anzo:queryString 		a owl:DatatypeProperty ;	rdfs:domain anzo:Query ;rdfs:range xsd:string .
+	
+	anzo:registeredType 	a owl:ObjectProperty ;		rdfs:domain anzo:Registry .	
+	
+	dc:title 				a owl:DatatypeProperty ;rdfs:domain  [a owl:Class; owl:unionOf ( anzo:role )]  ;rdfs:range xsd:string .
+	dc:description 			a owl:DatatypeProperty ;rdfs:domain  [a owl:Class ;	owl:unionOf ( anzo:role )]  ;rdfs:range xsd:string .
+	
+	
+}

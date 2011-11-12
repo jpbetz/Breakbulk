@@ -1,0 +1,6 @@
+PREFIX : <http://example.org/>
+
+SELECT DISTINCT ?date
+WHERE { 
+	?s :dateProperty ?date
+} ORDER BY DESC(?date) LIMIT 1

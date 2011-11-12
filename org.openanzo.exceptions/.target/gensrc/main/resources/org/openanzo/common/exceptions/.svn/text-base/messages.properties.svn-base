@@ -1,0 +1,290 @@
+
+/*******************************************************************************
+ * Copyright (c) 2007 Cambridge Semantics Incorporated.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * File:        $Source$
+ * Created by:  Generated Source from org.openanzo.utils.properties.jet
+ * Created on:  11/10/2007
+ * Revision:	$Id$
+ * 
+ * Contributors:
+ *     Cambridge Semantics Incorporated - initial API and implementation
+ *******************************************************************************/
+ 
+ExceptionConstants.MAJORCODES.1=IO
+ExceptionConstants.MAJORCODES.2=Core
+ExceptionConstants.MAJORCODES.4=Transport
+ExceptionConstants.MAJORCODES.8=Combus
+ExceptionConstants.MAJORCODES.16=ServiceContainer
+ExceptionConstants.MAJORCODES.32=Backend
+ExceptionConstants.MAJORCODES.64=Security
+ExceptionConstants.MAJORCODES.128=RDB
+ExceptionConstants.MAJORCODES.256=Internal
+ExceptionConstants.MAJORCODES.512=Client
+ExceptionConstants.MAJORCODES.1024=Configuration
+ExceptionConstants.MAJORCODES.2048=Glitter
+ExceptionConstants.MAJORCODES.4096=Jastor
+
+ExceptionConstants.257=Failed to load object <{0}> in <{1}>
+ExceptionConstants.258=Failed to create object <{0}> in <{1}>
+ExceptionConstants.259=Failed to create object <{0}> in <{1}> since it already exists.
+ExceptionConstants.260=Failed during batch operation for type [{0}].
+ExceptionConstants.261=Failed executing batch operation:[{0}]
+ExceptionConstants.262=Invalid argument [{0}], needed for operation [{1}].
+ExceptionConstants.263=Attempted to add triple <{0}> <{1}> <{2}> to named graph <{3}> that either doesn't exist, or doesn't have add permission
+ExceptionConstants.264=Attempted to remove triple <{0}> <{1}> <{2}> to named graph <{3}> that either doesn't exist, or doesn't have remove permission
+ExceptionConstants.265=Attempted to read triples from NamedGraph <{0}> that either doesn't exist, or doesn't have read permission
+ExceptionConstants.266=No permission to change Acl of NamedGraph <{0}>
+ExceptionConstants.267=No permission to insert NamedGraph <{0}>
+ExceptionConstants.268=No permission to remove NamedGraph <{0}>
+ExceptionConstants.269=Command <{0}> failed to commit due to precondition not being met. <{1}>
+ExceptionConstants.270=No permission to add to system graph:[{0}]
+ExceptionConstants.271=No permission to remove from system graph:[{0}]
+ExceptionConstants.272=Failed to add a reserved URI:[{0}]
+
+ExceptionConstants.513=Password must not be null when adding a user:{0}
+ExceptionConstants.514=DefaultRole must not be null when adding a user:{0}
+ExceptionConstants.515=User Id already in use:<{0}>
+ExceptionConstants.516=Failed to insert user <{0}>
+ExceptionConstants.517=Failed to remove user <{0}>
+ExceptionConstants.518=Failed to update user <{0}>
+ExceptionConstants.519=Failed to select roles for user <{0}>
+ExceptionConstants.521=Failed select explicit roles for user <{0}>
+ExceptionConstants.522=No default role found for user <{0}>
+ExceptionConstants.523=Failed to load User <{0}>
+ExceptionConstants.524=User <{0}> not found
+ExceptionConstants.525=User with id [{0}] not found
+
+ExceptionConstants.1025=Role <{0}> not found on server
+ExceptionConstants.1026=Failed to get parent roles for role <{0}>
+ExceptionConstants.1027=Failed to insert role <{0}>
+ExceptionConstants.1028=Failed to remove role <{0}>
+ExceptionConstants.1029=Failed to update role <{0}>
+ExceptionConstants.1030=Role Id already in use:{0}
+ExceptionConstants.1031=Failed to insert user <{0}> to role <{1}>
+ExceptionConstants.1032=Failed to remove user <{0}> to role <{1}>
+ExceptionConstants.1033=Failed to insert implicit user <{0}> to role <{1}>
+ExceptionConstants.1034=Failed to select users for role <{0}>
+ExceptionConstants.1035=Could not find user <{0}> in role <{1}>:[{2}]
+ExceptionConstants.1036=Failed to insert role <{0}> as subrole of <{1}>
+ExceptionConstants.1037=Failed to remove role <{0}> as subrole of <{1}>
+
+ExceptionConstants.2049=ACL <{0}> not found on server
+ExceptionConstants.2050=Failed to insert ACL <{0}>
+ExceptionConstants.2051=Failed to remove ACL <{0}>
+ExceptionConstants.2052=Failed to update privileges for ACL <{0}>
+ExceptionConstants.2053=ACIs are immutable <{0}>
+ExceptionConstants.2054=Could not create ACL from template <{0}>
+ExceptionConstants.2055=Could not create default acl <{0}>
+ExceptionConstants.2056=Could not get privileges for user <{0}> using acl <{1}>
+ExceptionConstants.2057=Failed to update ACI <{0}> for ACL <{1}>
+ExceptionConstants.2058=Failed to list ACIs for ACL <{0}>:[{1}]
+
+ExceptionConstants.4097=Failed to list NamedGraphs on server
+ExceptionConstants.4098=NamedGraph <{0}> not found on server
+ExceptionConstants.4099=MetaData Graph <{0}> not found on server
+ExceptionConstants.4100=Failed to load NamedGraph <{0}>
+ExceptionConstants.4101=Failed to insert NamedGraph <{0}>
+ExceptionConstants.4102=Failed to remove NamedGraph <{0}>
+ExceptionConstants.4103=Failed to update NamedGraph <{0}>
+ExceptionConstants.4104=Modified time must not be null for Named Graph <{0}>
+ExceptionConstants.4105=No <{0}> permission for NamedGraph <{1}>.
+ExceptionConstants.4106=Failed to get roles for NamedGraph <{0}>.
+ExceptionConstants.4107=Failed to get users for NamedGraph <{0}>.
+
+ExceptionConstants.8193=Statement <{0}> not found on server
+ExceptionConstants.8194=Failed to load Statement <{0}>
+ExceptionConstants.8195=Failed to insert Statement <{0}> <{1}> <{2}> <{3}>
+ExceptionConstants.8196=Failed to remove Statement <{0}>
+ExceptionConstants.8197=Modified time must not be null for Statement <{0}>
+ExceptionConstants.8198=Failed to get ACL <{0}> for Statement <{1}>
+ExceptionConstants.8199=Failed to get NamedGraph for Statement <{0}>
+ExceptionConstants.8200=Failed to get all Statements on server
+
+ExceptionConstants.16385=Could not publish message to notification service:{0}
+ExceptionConstants.16386=Failure processing Update Message:{0}
+ExceptionConstants.16387=Tracker <{0}> improperty serialized:{1}
+ExceptionConstants.16388=Tracker could not be registered with JMS selector [{0}] :{1}
+ExceptionConstants.16389=Tracker could not be unregistered with JMS selector [{0}] :{1}
+ExceptionConstants.16390=Timeout connecting to JMS server
+ExceptionConstants.16391=Error connecting to JMS server:{0}
+ExceptionConstants.16392=No Notification Service was created.
+ExceptionConstants.16393=No Response from Server for request {0}.
+ExceptionConstants.16394=Could not create connection to notification server due to server problem:{0}
+ExceptionConstants.16395=JMS exception upacking method and transaction id from transaction complete message:{0}
+ExceptionConstants.16396=JMS Message missing message parameter.
+ExceptionConstants.16397=Error disconnecting from JMS server:{0}
+ExceptionConstants.16398=No JmsProvider was created for jmsProviderClass:{0}
+ExceptionConstants.16399=Could not create a producer for destination [{0}]:{1}
+ExceptionConstants.16400=Could not deregister producer for destination [{0}]:{1}
+ExceptionConstants.16401=Already connected to notification service
+ExceptionConstants.16402=Not connected to notification service
+ExceptionConstants.16403=Unknown Destination {0}
+ExceptionConstants.16404=Waiting for response for {0} interrupted
+ExceptionConstants.16405=Error setting message parameter:{0}
+ExceptionConstants.16406=User no longer authenticated or valid on the server
+ExceptionConstants.16407=Unknown server exception executing request {0}
+
+ExceptionConstants.32769=Reset is disabled
+ExceptionConstants.32770=RepositoryConnectionPool not initialized correctly.
+ExceptionConstants.32771=Failed to authenticate user:{0}.
+ExceptionConstants.32772=Unknown user error:{0}.
+ExceptionConstants.32773=No Such Algorithm Available
+ExceptionConstants.32774=Internal error hashing password
+ExceptionConstants.32775=Error searching for statements:{0}
+ExceptionConstants.32776=Query must be of type SELECT or CONSTRUCT:{0}
+ExceptionConstants.32777=Could not get size for NamedGraph {0}
+ExceptionConstants.32778=Initialization file ({0}) not found
+ExceptionConstants.32779=Revision [{0}] of NamedGraph <{1}> not found
+ExceptionConstants.32780=Error finding matches:{0}
+ExceptionConstants.32781=Servlet properties not set.
+ExceptionConstants.32782=Error during replication:{0}.
+ExceptionConstants.32783=Missing {0} for operation {1}.
+ExceptionConstants.32784=Request did not contain valid username and password
+ExceptionConstants.32785=Errors updating server.
+ExceptionConstants.32786=Could not get metaDataUri for NamedGraph {0}
+ExceptionConstants.32787=User {0} not member of SysAdmin role.
+ExceptionConstants.32788=Failed to get users for NamedGraph {0}
+ExceptionConstants.32789=Failed to get stored NamedGraphs for user {0}
+ExceptionConstants.32790=Dataset for query must contain atleast 1 NamedModel or a DefaultModel
+ExceptionConstants.32791=Unknown server operation error [{0}]
+ExceptionConstants.32832=Failed to clear the index {0}
+ExceptionConstants.32833=Failed to rebuild the index {0}
+ExceptionConstants.32834=Failed to initialize the index {0}
+ExceptionConstants.32835=Failed to query the index {0}
+ExceptionConstants.32836=Failed to query the index because the index is disabled.
+ExceptionConstants.32837=Failed to update the index {0}
+ExceptionConstants.32838=Failed to update the index because update was interrupted (probably by a reset) {0}
+ExceptionConstants.32839=Failed to update the index because there was an error parsing the statements on update {0}
+ExceptionConstants.32840=Failed to update the index because there was an IO error while parsing {0}
+ExceptionConstants.32841=Failed to update the index because the object of the statement could not be retrieved.
+ExceptionConstants.32842=Failed to update the index because the a database connection could not be acquired.
+ExceptionConstants.32843=Failed to update the index because pre-indexing setup was unsuccessful {0}
+ExceptionConstants.32844=Failed to update the index because post-indexing cleanup was unsuccessful {0}
+ExceptionConstants.32845=Unkown server: {0}
+ExceptionConstants.32846=Failed to authenticated
+ExceptionConstants.32847=Internal error within a hosted servlet:{0}
+
+ExceptionConstants.65537=Error with SOAP message:{0}.
+ExceptionConstants.65538=Internal error writing transport message:{0}.
+ExceptionConstants.65539=Internal error reading transport message:{0}.
+ExceptionConstants.65540=Failed to create service call:{0}
+ExceptionConstants.65541=Internal network error:{0}
+ExceptionConstants.65542=Failed to encode user name and password for service call endpoint.
+ExceptionConstants.65543=Input stream {0} missing from response.
+ExceptionConstants.65544=Host name for web services endpoint not set.
+ExceptionConstants.65545=Error with encoding:{0}
+ExceptionConstants.65546=Unknown AXIS error:{0}
+
+ExceptionConstants.131073=Error creating local persistent cache:{0}
+ExceptionConstants.131074=Could not lock cache lock:{0}
+ExceptionConstants.131075=Invalid automatic replication interval [{0}] specified
+ExceptionConstants.131076=Cound not load tracker:{0}
+ExceptionConstants.131077=Error notifying replication listeners:{0}
+ExceptionConstants.131078=Error in local persistence:{0}
+ExceptionConstants.131079=Error closing local database:{0}
+ExceptionConstants.131080=Failed to add triples to TransactionGraph:{0}
+ExceptionConstants.131081=Failed to delete triples to TransactionGraph:{0}
+ExceptionConstants.131082=Parent graph already set, and cannot be changed
+ExceptionConstants.131083=Current thread did not start transaction.
+ExceptionConstants.131084=Tracker is not registered with trackerSet. Register the StatementTracker first.
+ExceptionConstants.131085=The database specified is currently open: {0}
+ExceptionConstants.131086=InputCommand must already be in CommandVector:{0}
+ExceptionConstants.131087=Error persisting changeset[{0}] for graph[{1}]:{2}
+ExceptionConstants.131088=Error persisting command [{0}] with type [{1}]:{2}
+ExceptionConstants.131089=Error persisting transaction [{0}]:{1}
+ExceptionConstants.131090=Error persisting transaction queue [{0}]:{1}
+ExceptionConstants.131091=Error loading persisted changeset[{0}]:{1}
+ExceptionConstants.131092=Error loading persisted command[{0}] with type [{1}]:{2}
+ExceptionConstants.131093=Error loading persisted transaction[{0}]:{1}
+ExceptionConstants.131094=Error loading persisted transaction queue[{0}]:{1}
+ExceptionConstants.131095=Error deleting persisted changeset[{0}]:{1}
+ExceptionConstants.131096=Error deleting persisted command[{0}] with type [{1}]:{2}
+ExceptionConstants.131097=Error deleting persisted transaction[{0}]:{1}
+ExceptionConstants.131098=Error deleting persisted transaction queue[{0}]:{1}
+ExceptionConstants.131099=URI invalid:{0}
+ExceptionConstants.131100=Model [{0}] unable to be instantiated in Dataset
+ExceptionConstants.131101=Failed to clear database container for NamedGraph [{0}]
+ExceptionConstants.131102=Failed to initialize database container: [{0}]
+ExceptionConstants.131103=Could not initialized physical storage because database connection is not setup
+ExceptionConstants.131104=Could not initialize database tables: [{0}]
+ExceptionConstants.131105=Could not initialize database temporary tables: [{0}]
+ExceptionConstants.131106=Could not initialize containers sqlcache: [{0}]
+ExceptionConstants.131107=Could not get metadata information from the database tables: [{0}]
+ExceptionConstants.131108=Failed executing batched insertStatement: [{0}]
+ExceptionConstants.131109=Failed finding node: [{0}]
+ExceptionConstants.131110=Failed determining if statements exists in database: [{0}]
+ExceptionConstants.131111=Failed finding statements in database: [{0}]
+ExceptionConstants.131112=Failed deleting statement from database: [{0}]
+ExceptionConstants.131113=Failed counting statements in database for namedGraph [{0}] : [{1}]
+ExceptionConstants.131114=Extracting triple from row encountered exception:[{0}]
+ExceptionConstants.131115=Error executing sparql query [{0}]:[{1}]
+ExceptionConstants.131116=Failed counting statements in database for table [{0}] : [{1}]
+ExceptionConstants.131117=Failed deleting table [{0}] in database: [{1}]
+ExceptionConstants.131118=None of the values can be null, NAMEDGRAPHURI=[{0}], SUBJ=[{1}] , PROP=[{2}] ,OBJ=[{3}]
+ExceptionConstants.131119=Space in URI: [{0}]
+ExceptionConstants.131120=NamedGraph URI cannot be null
+ExceptionConstants.131121=Error executing query, [{0}]: [{1}]
+ExceptionConstants.131122=Error parsing query, [{0}]: [{1}]
+
+ExceptionConstants.262145=Database in config must specify either a uri or jndiName attribute.
+ExceptionConstants.262146=Driver class not found:{0}.
+ExceptionConstants.262147=Failed to create database driver connection:{0}
+ExceptionConstants.262148=Error executing database operation:{0}
+ExceptionConstants.262149=Could not rollback database table init:{0}
+ExceptionConstants.262150=Could not return prepared statement:{0}
+ExceptionConstants.262151=Naming error:{0}
+ExceptionConstants.262152=Unable to load SQL file:{0}
+ExceptionConstants.262153=Unhandled RDB exception:{0}
+ExceptionConstants.262154=Could not detect the state of database table {0}:{1}
+ExceptionConstants.262155=Too many open connections to database [{0}]
+ExceptionConstants.262156=Failed to close connection pool: {0}
+ExceptionConstants.262157=JDBC connection already in a transaction.
+ExceptionConstants.262158=JDBC connection could not start a transaction.
+ExceptionConstants.262159=Failed to start jdbc transaction.
+ExceptionConstants.262160=Failed to commit jdbc transaction.
+ExceptionConstants.262161=Failed to rollback jdbc transaction.
+ExceptionConstants.262162=Failed to lock server table.
+ExceptionConstants.262163=Failed to unlock server table.
+ExceptionConstants.262164=Connection not in jdbc transaction.
+ExceptionConstants.262165=Failed to initialize jdbc connection.
+ExceptionConstants.262166=Failed to query for server's initialization status.
+ExceptionConstants.262167=Failed waiting for the database to initialize.
+ExceptionConstants.262168=Failed to set the database connection's isolation level.
+ExceptionConstants.262169=Failed getting the status of a jdbc table. {0}
+ExceptionConstants.262170=Failed to get a connection from the {0} pool.
+ExceptionConstants.262171=Failed to return a connection to the {0} pool.
+ExceptionConstants.262172=Failed to initialize the connection {0} pool.
+ExceptionConstants.262173=Failed to initialize temptables.
+
+ExceptionConstants.524289=
+ExceptionConstants.524290=Backend unable to generate solutions for supplied query pattern.
+ExceptionConstants.524291=
+ExceptionConstants.524292=
+ExceptionConstants.524293=The code exercised a not-yet-implemented feature:
+ExceptionConstants.524294=An error occurred while invoking a functional predicate.
+ExceptionConstants.524295=//"Type error: {0} is incompatible with required type: {1}
+ExceptionConstants.524298=Type error: {0} is incompatible with required type: {1}
+ExceptionConstants.524299=Invalid number of arguments: Received {0} but expected between {1} and {2}
+ExceptionConstants.524300=Query was refused because: " {0}
+ExceptionConstants.524301=
+ExceptionConstants.524302=
+ExceptionConstants.524303=
+ExceptionConstants.524304=
+ExceptionConstants.524305=
+ExceptionConstants.524306=
+ExceptionConstants.524307=Error parsing query:{0}
+
+ExceptionConstants.1048577=Component {0} missing dependency {1}
+ExceptionConstants.1048578=Requested attribute {0} was of type {1}, but request for {2}
+ExceptionConstants.1048579=Error stopping {0}
+ExceptionConstants.1048580=Failed to initialize a dynamically defined class: {0}
+ExceptionConstants.1048581=Unknown internal exception within component: {0}
+
+ExceptionConstants.2097153=Compound Exception:
+ 
+ 	

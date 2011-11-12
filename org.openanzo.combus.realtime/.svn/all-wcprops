@@ -1,0 +1,35 @@
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/openanzo/!svn/ver/5087/openanzo/trunk/org.openanzo.combus.realtime
+END
+.classpath
+K 25
+svn:wc:ra_dav:version-url
+V 82
+/svn/openanzo/!svn/ver/3136/openanzo/trunk/org.openanzo.combus.realtime/.classpath
+END
+.project
+K 25
+svn:wc:ra_dav:version-url
+V 80
+/svn/openanzo/!svn/ver/3136/openanzo/trunk/org.openanzo.combus.realtime/.project
+END
+build.properties
+K 25
+svn:wc:ra_dav:version-url
+V 88
+/svn/openanzo/!svn/ver/3674/openanzo/trunk/org.openanzo.combus.realtime/build.properties
+END
+pom.xml
+K 25
+svn:wc:ra_dav:version-url
+V 79
+/svn/openanzo/!svn/ver/4891/openanzo/trunk/org.openanzo.combus.realtime/pom.xml
+END
+build.xml
+K 25
+svn:wc:ra_dav:version-url
+V 81
+/svn/openanzo/!svn/ver/4906/openanzo/trunk/org.openanzo.combus.realtime/build.xml
+END

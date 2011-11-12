@@ -1,0 +1,240 @@
+@prefix format: <http://openanzo.org/service/format/> .
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix system: <http://openanzo.org/ontologies/2008/07/System#> .
+
+
+format:anzo-xml system:javaType "org.openanzo.rdf.utils.SerializationConstants.MIMETYPE_ANZO_XML" ;
+	system:location "http://www.openanzo.org/projects/openanzo/wiki/XMLTransportFormat" ;
+	dc:description "Anzo's XML update format." ;
+	dc:title "application/anzo-xml" ;
+	a system:Format .
+
+format:json system:javaType "org.openanzo.rdf.RDFFormat.JSON.getDefaultMIMEType()" ;
+	system:location "http://www.json.org" ;
+	dc:description "Basic JSON format." ;
+	dc:title "application/json" ;
+	a system:Format .
+
+format:jsonQuad system:javaType "org.openanzo.rdf.RDFFormat.JSON.getDefaultMIMEType()" ;
+	system:location "http://www.openanzo.org/projects/openanzo/wiki/JSONQuadFormat" ;
+	dc:description "Anzo's JSON Quad format." ;
+	dc:title "application/json" ;
+	a system:Format .
+
+format:jsonUpdate system:javaType "org.openanzo.rdf.RDFFormat.JSON.getDefaultMIMEType()" ;
+	system:location "http://www.openanzo.org/projects/openanzo/wiki/JSONUpdateFormat" ;
+	dc:description "Anzo's JSON update format." ;
+	dc:title "application/json" ;
+	a system:Format .
+
+format:mpv dc:description "Multiple String Parameter Values" ;
+	dc:title "multiple parameter values" ;
+	a system:Format .
+
+<http://openanzo.org/service/format/sparql/xml> system:javaType "org.openanzo.rdf.RDFFormat.SPARQL.getDefaultMIMEType()" ;
+	system:location "http://www.w3.org/TR/rdf-sparql-XMLres/" ;
+	dc:description "Sparql XML format." ;
+	dc:title "application/sparql-results+xml" ;
+	a system:Format .
+
+<http://openanzo.org/service/format/text/csv> system:javaType "org.openanzo.rdf.utils.SerializationConstants.MIMETYPE_CSV" ;
+	system:location "http://www.openanzo.org/projects/openanzo/wiki/CSVFormat" ;
+	dc:description "Simple text format. Multiple values use a , as a text delimiter." ;
+	dc:title "text/csv" ;
+	a system:Format .
+
+<http://openanzo.org/service/format/text/text> system:javaType "org.openanzo.rdf.utils.SerializationConstants.MIMETYPE_TEXT" ;
+	system:location "http://www.openanzo.org/projects/openanzo/wiki/TextFormat" ;
+	dc:description "Simple text format. Multiple values use a new line as a text delimiter." ;
+	dc:title "text/text" ;
+	a system:Format .
+
+format:trig system:javaType "org.openrdf.rio.RDFFormat.TRIG.getDefaultMIMEType()" ;
+	system:location "http://sites.wiwiss.fu-berlin.de/suhl/bizer/TriG/" ;
+	dc:description "Trig RDF Format." ;
+	dc:title "application/x-trig" ;
+	a system:Format .
+
+format:trix system:javaType "org.openrdf.rio.RDFFormat.TRIX.getDefaultMIMEType()" ;
+	system:location "http://swdev.nokia.com/trix/trix.html" ;
+	dc:description "Trix RDF Format." ;
+	dc:title "application/trix" ;
+	a system:Format .
+
+system:INamedGraphUpdateHandler system:javaType "org.openanzo.services.serialization.INamedGraphUpdateHandler" ;
+	a system:Type .
+	
+system:IReplicationHandler system:javaType "org.openanzo.services.serialization.IReplicationHandler" ;
+	a system:Type .
+	
+system:anzoPrincipal <http://openanzo.org/service/operation/parameter/type#name> "Anzo Princiapl" ;
+	system:defaultJMSFormat <http://openanzo.org/service/format/text/text> ;
+	system:defaultRestFormat format:json ;
+	system:defaultWSFormat <http://openanzo.org/service/format/text/text> ;
+	system:javaType "org.openanzo.services.AnzoPrincipal" ;
+	system:serializer "org.openanzo.services.serialization.transport.PrincipalSerializer" ;
+	system:validFormat format:json , <http://openanzo.org/service/format/text/csv> , <http://openanzo.org/service/format/text/text> ;
+	a system:Type .
+
+system:boolean <http://openanzo.org/service/operation/parameter/type#name> "Boolean" ;
+	system:defaultValue "false" ;
+	system:javaType "boolean" ;
+	system:serializer "org.openanzo.services.serialization.transport.BooleanSerializer" ;
+	a system:Type .
+
+system:destination <http://openanzo.org/service/operation/parameter/type#name> "JMS Destination" ;
+	system:javaType "javax.jms.Destination" ;
+	a system:Type .
+
+system:selectorTrackers <http://openanzo.org/service/operation/parameter/type#name> "Set of SelectorTrackers" ;
+	system:defaultJMSFormat format:trig ;
+	system:javaType "java.util.Set<org.openanzo.services.impl.SelectorTracker>" ;
+	system:serializer "org.openanzo.services.serialization.transport.SelectorTrackerSerializer" ;
+	system:validFormat format:jsonQuad , format:trig , format:trix ;
+	a system:Type .
+	
+system:datasetTrackers <http://openanzo.org/service/operation/parameter/type#name> "Set of DatasetTrackers" ;
+	system:defaultJMSFormat format:trig ;
+	system:javaType "java.util.Set<org.openanzo.services.impl.DatasetTracker>" ;
+	system:serializer "org.openanzo.services.serialization.transport.DatasetTrackerSerializer" ;
+	system:validFormat format:jsonQuad , format:trig , format:trix ;
+	a system:Type .
+
+system:int <http://openanzo.org/service/operation/parameter/type#name> "Integer" ;
+	system:defaultValue "-1" ;
+	system:javaType "int" ;
+	system:serializer "org.openanzo.services.serialization.transport.IntSerializer" ;
+	a system:Type .
+
+system:literal <http://openanzo.org/service/operation/parameter/type#name> "Literal" ;
+	system:javaType "org.openanzo.rdf.Literal" ;
+	system:serializer "org.openanzo.services.serialization.transport." ;
+	a system:Type .
+
+system:long <http://openanzo.org/service/operation/parameter/type#name> "Long" ;
+	system:defaultValue "-1" ;
+	system:javaType "long" ;
+	system:serializer "org.openanzo.services.serialization.transport.LongSerializer" ;
+	a system:Type .
+
+system:modelUpdate <http://openanzo.org/service/operation/parameter/type#name> "Model update results" ;
+	system:defaultJMSFormat format:anzo-xml ;
+	system:defaultRestFormat format:jsonUpdate ;
+	system:defaultWSFormat format:anzo-xml ;
+	system:javaType "org.openanzo.services.IUpdates" ;
+	system:serializer "org.openanzo.services.serialization.transport.TransactionsSerializer" ;
+	system:validFormat format:anzo-xml , format:jsonUpdate ;
+	a system:Type .
+
+system:namedGraph <http://openanzo.org/service/operation/parameter/type#name> "NamedGraph" ;
+	system:defaultJMSFormat format:trig ;
+	system:defaultRestFormat format:jsonQuad ;
+	system:defaultWSFormat format:trig ;
+	system:javaType "org.openanzo.rdf.IAnzoGraph" ;
+	system:serializer "org.openanzo.services.serialization.transport.NamedGraphSerializer" ;
+	system:validFormat format:jsonQuad , format:trig , format:trix ;
+	a system:Type .
+
+system:privilege system:javaType "org.openanzo.services.Privilege" ;
+	system:serializer "org.openanzo.services.serialization.transport.PrivilegeSerializer" ;
+	a system:Type .
+
+system:queryResult <http://openanzo.org/service/operation/parameter/type#name> "Query Results" ;
+	system:defaultJMSFormat <http://openanzo.org/service/format/sparql/xml> ;
+	system:defaultRestFormat <http://openanzo.org/service/format/sparql/xml> ;
+	system:defaultWSFormat <http://openanzo.org/service/format/sparql/xml> ;
+	system:javaType "org.openanzo.glitter.query.QueryResults" ;
+	system:serializer "org.openanzo.services.serialization.transport.QueryResultSerializer" ;
+	system:validFormat format:json , <http://openanzo.org/service/format/sparql/xml> ;
+	a system:Type .
+
+system:replicationUpdate <http://openanzo.org/service/operation/parameter/type#name> "Replication results" ;
+	system:defaultJMSFormat format:anzo-xml ;
+	system:defaultRestFormat format:jsonUpdate ;
+	system:defaultWSFormat format:anzo-xml ;
+	system:serializer "org.openanzo.services.serialization.transport.ReplicationSerializer" ;	
+	system:validFormat format:anzo-xml , format:jsonUpdate ;
+	a system:Type .
+
+system:requestUris <http://openanzo.org/service/operation/parameter/type#name> "Set of URIs" ;
+	system:defaultJMSFormat <http://openanzo.org/service/format/text/text> ;
+	system:defaultWSFormat <http://openanzo.org/service/format/text/text> ;
+	system:javaType "java.util.Set<org.openanzo.rdf.URI>" ;
+	system:serializer "org.openanzo.services.serialization.transport.URISetSerializer" ;
+	system:validFormat <http://openanzo.org/service/format/text/csv> , <http://openanzo.org/service/format/text/text> ;
+	a system:Type .
+
+system:resource <http://openanzo.org/service/operation/parameter/type#name> "Resource" ;
+	system:javaType "org.openanzo.rdf.Resource" ;
+	system:serializer "org.openanzo.services.serialization.transport.ResourceSerializer" ;
+	a system:Type .
+
+system:statements <http://openanzo.org/service/operation/parameter/type#name> "Collection of Statements" ;
+	system:defaultJMSFormat format:trig ;
+	system:defaultRestFormat format:jsonQuad ;
+	system:defaultWSFormat format:trig ;
+	system:javaTransportType "java.io.Reader" ;
+	system:javaType "java.util.Collection<org.openanzo.rdf.Statement>" ;
+	system:serializer "org.openanzo.services.serialization.transport.StatementsSerializer" ;
+	a system:Type .
+
+system:string <http://openanzo.org/service/operation/parameter/type#name> "String" ;
+	system:javaType "String" ;
+	system:serializer "org.openanzo.services.serialization.transport.StringSerializer" ;
+	a system:Type .
+
+system:trackers <http://openanzo.org/service/operation/parameter/type#name> "Set of ITrackers" ;
+	system:defaultJMSFormat format:trig ;
+	system:defaultRestFormat format:jsonQuad ;
+	system:defaultWSFormat format:trig ;
+	system:javaType "java.util.Set<org.openanzo.services.trackers.ITracker>" ;
+	system:serializer "org.openanzo.services.serialization.transport.TrackerSerializer" ;
+	system:validFormat format:jsonQuad , format:trig , format:trix ;
+	a system:Type .
+
+system:transactions <http://openanzo.org/service/operation/parameter/type#name> "Array of transactions" ;
+	system:defaultJMSFormat format:anzo-xml ;
+	system:defaultRestFormat format:jsonUpdate ;
+	system:defaultWSFormat format:anzo-xml ;
+	system:javaTransportType "java.io.Reader" ;
+	system:javaType "org.openanzo.services.IUpdates" ;
+	system:serializer "org.openanzo.services.serialization.transport.TransactionsSerializer" ;
+	system:validFormat format:anzo-xml , format:jsonUpdate ;
+	a system:Type .
+
+system:uri <http://openanzo.org/service/operation/parameter/type#name> "URI" ;
+	system:javaType "org.openanzo.rdf.URI" ;
+	system:serializer "org.openanzo.services.serialization.transport.URISerializer" ;
+	a system:Type .
+
+system:uriArray <http://openanzo.org/service/operation/parameter/type#name> "Array of URIs" ;
+	system:defaultJMSFormat <http://openanzo.org/service/format/text/text> ;
+	system:defaultRestFormat <http://openanzo.org/service/format/text/text> ;
+	system:defaultWSFormat <http://openanzo.org/service/format/text/text> ;
+	system:javaType "org.openanzo.rdf.URI[]" ;
+	system:serializer "org.openanzo.services.serialization.transport.URIArraySetSerializer" ;
+	system:validFormat <http://openanzo.org/service/format/text/csv> , <http://openanzo.org/service/format/text/text> ;
+	a system:Type .
+
+system:uris <http://openanzo.org/service/operation/parameter/type#name> "Set of URIs" ;
+	system:defaultJMSFormat <http://openanzo.org/service/format/text/text> ;
+	system:defaultRestFormat <http://openanzo.org/service/format/text/text> ;
+	system:defaultWSFormat <http://openanzo.org/service/format/text/text> ;
+	system:javaType "java.util.Set<org.openanzo.rdf.URI>" ;
+	system:serializer "org.openanzo.services.serialization.transport.URISetSerializer" ;
+	system:validFormat <http://openanzo.org/service/format/text/csv> , <http://openanzo.org/service/format/text/text> ;
+	a system:Type .
+	
+system:datasets <http://openanzo.org/service/operation/parameter/type#name> "Multiple Set of URI for dataset" ;
+	system:defaultJMSFormat <http://openanzo.org/service/format/text/text> ;
+	system:defaultRestFormat <http://openanzo.org/service/format/text/text> ;
+	system:defaultWSFormat <http://openanzo.org/service/format/text/text> ;
+	system:javaType "org.openanzo.glitter.dataset.QueryDataset" ;
+	system:serializer "org.openanzo.services.serialization.transport.QueryUriSetSerializer" ;
+	system:validFormat <http://openanzo.org/service/format/text/csv> , <http://openanzo.org/service/format/text/text> ;
+	a system:Type .
+	
+system:value <http://openanzo.org/service/operation/parameter/type#name> "Value" ;
+	system:javaType "org.openanzo.rdf.Value" ;
+	system:serializer "org.openanzo.services.serialization.transport.ValueSerializer" ;
+	a system:Type .

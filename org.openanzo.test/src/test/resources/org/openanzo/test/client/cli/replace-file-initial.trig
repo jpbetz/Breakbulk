@@ -1,0 +1,18 @@
+@prefix dc: <http://purl.org/dc/elements/1.1/> .
+@prefix clitest: <http://cambridgesemantics.com/cli-tests#> .
+
+clitest:create-file {
+	clitest:create
+		dc:description "Created by reading a file" ;
+		dc:title "Create File Command" ;
+		dc:source [
+			dc:title "Need to try a bnode"
+		] ;
+		
+		dc:source clitest:foo ;
+	.
+	
+	clitest:foo
+		dc:title "non-bnode" ;
+	.
+}

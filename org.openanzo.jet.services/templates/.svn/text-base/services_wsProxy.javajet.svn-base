@@ -1,0 +1,282 @@
+<%@ jet
+		skeleton="generator.skeleton"
+		package="org.openanzo.jet.services"
+		class="ServicesWSProxyTemplate"
+		imports="org.openanzo.rdf.jastor.JastorUtils org.openanzo.ontologies.system.*  org.openanzo.rdf.vocabulary.DC java.util.Iterator org.openanzo.rdf.utils.WikiFormatUtils"%>
+/*******************************************************************************
+ * Copyright (c) 2004, 2007-2008 IBM Corporation and Cambridge Semantics Incorporated.
+ * All rights reserved. This program and the accompanying materials
+ * are made available under the terms of the Eclipse Public License v1.0
+ * which accompanies this distribution, and is available at
+ * http://www.eclipse.org/legal/epl-v10.html
+ * 
+ * File:        <%="$".toString()%>Source<%="$".toString()%>
+ * Created by:  Generated Source from org.openanzo.jdbc.utils.opgen.jet
+ * Created on:  Generated Source from org.openanzo.jdbc.utils.opgen.jet
+ * Revision:	<%="$".toString()%>Id<%="$".toString()%>
+ * 
+ * Contributors:
+ *     IBM Corporation - initial API and implementation
+ *	   Cambridge Semantics Incorporated - Fork to Anzo
+ *******************************************************************************/
+package org.openanzo.services.services.proxy.ws;
+import java.io.IOException;
+import java.util.UUID;
+
+import javax.xml.soap.SOAPElement;
+import javax.xml.soap.SOAPException;
+
+import org.apache.axis.AxisFault;
+import org.apache.axis.client.Call;
+import org.apache.axis.message.SOAPBodyElement;
+import org.apache.axis.message.SOAPEnvelope;
+import org.openanzo.common.SoapConstants;
+
+import org.openanzo.exceptions.AnzoAxisFault;
+import org.openanzo.exceptions.AnzoException;
+import org.openanzo.exceptions.ExceptionConstants;
+import org.openanzo.rdf.Constants;
+import org.openanzo.services.IOperationContext;
+import org.openanzo.serialization.SoapSerializationUtils;
+import org.openanzo.rdf.URI;
+
+
+<% ServiceWrapper wrapper=(ServiceWrapper)argument;Service service = wrapper.service; %>
+
+ /**
+ * <% if(service.getPropertyValue(DC.TITLE)!=null){%><%=JastorUtils.getStingValue(service.getPropertyValue(DC.TITLE))%><%}%> interface
+ * <% if(service.getPropertyValue(DC.DESCRIPTION)!=null){%><%=JastorUtils.getStingValue(service.getPropertyValue(DC.DESCRIPTION))%><%}%>
+ * @author Generated Code
+ * 
+ */
+public class WS<%=service.getName()%>Proxy extends BaseWSProxyService implements org.openanzo.services.services.I<%=service.getName()%>{
+	/** Service's Name in {@link String} form */
+    public static final String SERVICE_NAME = Constants.NAMESPACES.SERVICE_PREFIX + "ws<%=service.getName()%>Proxy";
+
+    /** Service's Name in {@link URI} form */
+    public static final URI    SERVICE_URI  = Constants.valueFactory.createURI(SERVICE_NAME);
+
+    /** Stats for object*/
+    protected org.openanzo.services.services.stats.<%=service.getName()%>Stats stats=null;
+    
+    /**
+     * Create a new JMS<%=service.getName()%>Proxy
+     * 
+     */
+    public WS<%=service.getName()%>Proxy() {
+        super();
+        stats=new org.openanzo.services.services.stats.<%=service.getName()%>Stats();
+    }
+    
+    /**
+     * Create a new JMS<%=service.getName()%>Proxy
+     * @param properties configuration properties
+     */
+    public WS<%=service.getName()%>Proxy(java.util.Properties properties) {
+        super(properties);
+        instanceURI = Constants.valueFactory.createURI(SERVICE_NAME + "/" + UUID.randomUUID().toString());
+        stats=new org.openanzo.services.services.stats.<%=service.getName()%>Stats();
+    }
+    
+    public org.openanzo.rdf.URI getURI(){
+    	return SERVICE_URI;
+    }
+    
+    /** Statistics object for this service*/
+    public org.openanzo.services.services.stats.<%=service.getName()%>Stats getStatistics(){
+    	return stats;
+    }
+
+	<%for(Operation operation:JastorUtils.sortByTitle(service.getOperation())){
+
+	Parameter result=null;
+	String resultJavaType=null;
+	String resultDefaultFormat=null;
+	boolean resultHasDefaultFormat=false;
+	String resultSerializer=null;
+	
+	Iterator<Parameter> results=operation.getResult().iterator();
+	if (results.hasNext()){
+		result=results.next();
+		if(result!=null){
+			resultJavaType=(result.getType().getJavaType()!=null)?result.getType().getJavaType():null;
+			resultSerializer=(result.getType().getSerializer()!=null)?result.getType().getSerializer():null;
+			resultDefaultFormat=(result.getType().getDefaultWSFormat()!=null)?result.getType().getDefaultWSFormat().getJavaType():null;
+			resultHasDefaultFormat=result.getType().getDefaultJMSFormat()!=null||result.getType().getDefaultRestFormat()!=null||result.getType().getDefaultWSFormat()!=null;
+		}
+	}
+	Parameter parameters[]=new Parameter[8];
+	String parameterName[]=new String[8];
+	String transportName[]=new String[8];
+	String javaType[]=new String[8];
+	String type[]=new String[8];
+	boolean nullAllowed[]=new boolean[8];
+	String defaultFormat[]=new String[8];
+	boolean hasDefaultFormat[]=new boolean[8];
+	String serializer[]=new String[8];
+	int propertyLocation[]=new int[8];
+	int readerParam=-1;
+	boolean isPrimitive[]=new boolean[8];
+	if(operation.getRequestParameter0()!=null){ parameters[0]=operation.getRequestParameter0();}
+	if(operation.getRequestParameter1()!=null){ parameters[1]=operation.getRequestParameter1();}
+	if(operation.getRequestParameter2()!=null){ parameters[2]=operation.getRequestParameter2();}
+	if(operation.getRequestParameter3()!=null){ parameters[3]=operation.getRequestParameter3();}
+	if(operation.getRequestParameter4()!=null){ parameters[4]=operation.getRequestParameter4();}
+	if(operation.getRequestParameter5()!=null){ parameters[5]=operation.getRequestParameter5();}
+	if(operation.getRequestParameter6()!=null){ parameters[6]=operation.getRequestParameter6();}
+	if(operation.getRequestParameter7()!=null){ parameters[7]=operation.getRequestParameter7();}
+
+	for(int i=0;i<8;i++){
+		if(parameters[i]!=null){
+			parameterName[i]=transportName[i]=parameters[i].getName();
+			if(parameters[i].getType()!=null){
+				type[i]=javaType[i]=parameters[i].getType().getJavaType();	
+				serializer[i]=parameters[i].getType().getSerializer();
+				String location=parameters[i].getParameterLocation();
+				if(location==null){
+					propertyLocation[i]=0;
+				}else if("body".equals(location)){
+					propertyLocation[i]=1;
+				}else if("parameter".equals(location)){
+					propertyLocation[i]=0;
+				}else if("transport".equals(location)){
+					propertyLocation[i]=2;
+				}else if("callbackHandler".equals(location)){
+					propertyLocation[i]=-1;
+				}
+				if(javaType[i]!=null&&("int".equals(javaType[i])||"long".equals(javaType[i])||"boolean".equals(javaType[i]))){
+					isPrimitive[i]=true;
+				}
+			}
+			
+			Boolean nullAllowedBoolean=parameters[i].getNullAllowed();
+			nullAllowed[i]=(nullAllowedBoolean!=null)?nullAllowedBoolean.booleanValue():true;
+			defaultFormat[i]=(parameters[i].getType().getDefaultWSFormat()!=null)?parameters[i].getType().getDefaultWSFormat().getJavaType():null;
+			hasDefaultFormat[i]=parameters[i].getType().getDefaultJMSFormat()!=null||parameters[i].getType().getDefaultRestFormat()!=null||parameters[i].getType().getDefaultWSFormat()!=null;
+			
+		}
+	}
+%>
+	 public <%if(resultJavaType!=null){%><%=resultJavaType%><%}else{%>void<%}%> <%=operation.getName()%>(IOperationContext context<%for(int i=0;i<8;i++){%><%if (parameters[i]!=null){%>,<%=javaType[i]%> <%=parameterName[i]%><%}%><%}%>) throws AnzoException{
+        java.io.StringWriter responseWriter = new java.io.StringWriter();        
+<%
+	for(int i=0;i<8;i++){
+		if(javaType[i]!=null){
+			switch(propertyLocation[i]){
+				case 1:{
+					if(!nullAllowed[i]){%>
+        if(<%=parameterName[i]%>==null){
+             throw new AnzoException(ExceptionConstants.CORE.NULL_PARAMETER,PARAM_<%=org.openanzo.rdf.utils.WikiFormatUtils.formatConstantString(parameterName[i])%>);
+        }
+<%}%>
+        String _requestBody = null;
+<%if(nullAllowed[i]){%>        
+		if(<%=parameterName[i]%>!=null){
+<%}%>
+	    _requestBody= <%=serializer[i]%>.serialize(<%=parameterName[i]%>, <%=defaultFormat[i]%>);
+<%if(nullAllowed[i]){%>        
+		}
+<%}
+					readerParam=i;
+			   		transportName[i]="_requestBody";
+			    	javaType[i]="String";
+				}
+				break;
+				
+			}
+		}
+	}%>
+<%if(resultHasDefaultFormat){%>
+		String resultFormat=<%=resultDefaultFormat%>;
+<%}%>
+<%if(readerParam>-1){%>
+		String <%=parameterName[readerParam]%>Format=<%=defaultFormat[readerParam]%>;
+<%}%>
+        <%=operation.getName()%>(context<%for(int i=0;i<8;i++){%><%if(parameters[i]!=null&&propertyLocation[i]>-1){%>,<%=transportName[i]%><%}%><%if(defaultFormat[i]!=null&&readerParam==i){%>,<%=parameterName[readerParam]%>Format<%}%><%}%>,responseWriter<%if(resultHasDefaultFormat){%>,resultFormat<%}%>);
+<% if(resultSerializer!=null){ %>       
+<%if(resultJavaType!=null){%>
+		return <%=resultSerializer%>.deserialize(responseWriter.toString(),<%if(resultHasDefaultFormat){%>resultFormat<%}else{%>null<%}%><%for(int i=0;i<8;i++){if(parameters[i]!=null&&propertyLocation[i]==-1){%>,<%=parameterName[i]%><%}}%>);
+	 	<%}else{%> 
+        <%=resultSerializer%>.deserialize(responseWriter.toString(),<%if(resultHasDefaultFormat){%>resultFormat<%}else{%>null<%}%><%for(int i=0;i<8;i++){if(parameters[i]!=null&&propertyLocation[i]==-1){%>,<%=parameterName[i]%><%}}%>);
+<%}}%>
+	}
+    
+    public void <%=operation.getName()%>(IOperationContext context<%for(int i=0;i<8;i++){%><%if(parameters[i]!=null&&propertyLocation[i]>-1){%>,<%if (javaType[i]!=null){%><%=javaType[i]%><%}else{%><%=javaType[i]%><%}%> <%=parameterName[i]%><%}%><%if(defaultFormat[i]!=null&&readerParam==i){%>,String <%=parameterName[i]%>Format<%}%><%}%>, java.io.Writer output<%if(resultHasDefaultFormat){%>, String resultFormat<%}%>) throws AnzoException{
+   		long start=0;
+        if (stats.isEnabled()) {
+            start = System.currentTimeMillis();
+            stats.get<%=WikiFormatUtils.capFirstLetter(operation.getName())%>Use().increment();
+        }
+        try{
+<%for(int i=0;i<8;i++){
+		if(parameterName[i]!=null&&!nullAllowed[i]&&javaType[i]!=null&&!isPrimitive[i]){%>
+        if(<%=parameterName[i]%>==null){
+             throw new AnzoException(ExceptionConstants.CORE.NULL_PARAMETER,PARAM_<%=org.openanzo.rdf.utils.WikiFormatUtils.formatConstantString(parameterName[i])%>);
+        }
+<%}%>
+<%}%>	     
+		if (serviceHostName == null) {
+            throw new RuntimeException("Server host name not set.");
+        }
+        // Invoke web service.
+        Call call = WSUtil.createCall(serviceHostName, servicePort, SoapConstants.endpointPath, serviceUser, servicePassword, serviceTimeout);
+        SOAPBodyElement request = new SOAPBodyElement();
+        
+        @SuppressWarnings("unused") // not used by all generated classes
+        org.openanzo.services.serialization.WSMessageWrapper messageWrapper=new org.openanzo.services.serialization.WSMessageWrapper(request);	       		
+        request.setQName(<%=service.getName()%>SoapConstants.<%=org.openanzo.rdf.utils.WikiFormatUtils.capFirstLetter(operation.getName())%>.name);
+        try {
+            SoapSerializationUtils.serializeStringToElement(context.getOperationId(), request.addChildElement(SoapConstants.operationidName));
+<%if(resultHasDefaultFormat){%>
+            SoapSerializationUtils.serializeStringToElement(resultFormat, request.addChildElement(<%=service.getName()%>SoapConstants.<%=org.openanzo.rdf.utils.WikiFormatUtils.capFirstLetter(operation.getName())%>.resultFormatName));
+<%}%> 
+            if (context.getOperationPrincipal() != null && context.getOperationPrincipal().getRunAsUser() != null) {
+                SoapSerializationUtils.serializeStringToElement(context.getOperationPrincipal().getRunAsUser(), request.addChildElement(SoapConstants.runAsName));
+            }
+<%for(int i=0;i<8;i++){ %>
+<%if(defaultFormat[i]!=null){%>
+			SoapSerializationUtils.serializeStringToElement(<%if(readerParam==i){%><%=parameterName[i]%>Format<%}else{%><%=defaultFormat[i]%><%}%>,request.addChildElement(<%=service.getName()%>SoapConstants.<%=org.openanzo.rdf.utils.WikiFormatUtils.capFirstLetter(operation.getName())%>.<%=parameterName[i]%>FormatName));
+<%}%>
+<%if(javaType[i]!=null){
+	switch(propertyLocation[i]){
+		case 0:%>
+			<%if(!isPrimitive[i]&&nullAllowed[i]){%>if(<%=parameterName[i]%>!=null)<%}%><%=serializer[i]%>.serialize(<%=parameterName[i]%>,PARAM_<%=org.openanzo.rdf.utils.WikiFormatUtils.formatConstantString(parameterName[i])%>,<%=(defaultFormat[i]!=null)?defaultFormat[i]:"null"%>,messageWrapper);
+		<%
+		break;
+		case 1:%>
+			SoapSerializationUtils.serializeStringToElement(<%=parameterName[i]%>, request.addChildElement(<%=service.getName()%>SoapConstants.<%=org.openanzo.rdf.utils.WikiFormatUtils.capFirstLetter(operation.getName())%>.<%=parameterName[i]%>Name));
+	        
+<%break;	}%><%}%>
+<%}%>
+        } catch (SOAPException ioe) {
+            throw new AnzoException(ExceptionConstants.IO.SOAP_ERROR, ioe, ioe.getMessage());
+        }
+        
+        SOAPEnvelope envelope = new SOAPEnvelope();
+        envelope.addBodyElement(request);
+        try {
+            call.invoke(envelope);
+            call.getResponseMessage().getSOAPEnvelope().getBodyElements();
+            java.util.Vector<?> belements = call.getResponseMessage().getSOAPEnvelope().getBodyElements();
+            if (belements.size() != 1) {
+                throw new AnzoException( ExceptionConstants.IO.SOAP_ERROR);
+            }
+            SOAPBodyElement el = (SOAPBodyElement) belements.get(0);
+            SOAPElement childElement = el.getChildElement(<%=service.getName()%>SoapConstants.<%=org.openanzo.rdf.utils.WikiFormatUtils.capFirstLetter(operation.getName())%>.resultsQName);
+            if (childElement != null) {
+                String value = SoapSerializationUtils.deserialize(childElement);
+                output.write(value);
+            }
+        } catch (AxisFault e) {
+            throw AnzoAxisFault.createAnzoException(e);
+        } catch (IOException ioe) {
+            throw new AnzoException( ExceptionConstants.IO.WRITE_ERROR, ioe);
+        }
+        }finally{
+       		if (stats.isEnabled()) {
+                stats.get<%=WikiFormatUtils.capFirstLetter(operation.getName())%>Duration().addTime((System.currentTimeMillis() - start));
+            }
+        }
+    }
+<%}%>
+}

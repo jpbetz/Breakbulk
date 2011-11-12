@@ -1,0 +1,59 @@
+K 25
+svn:wc:ra_dav:version-url
+V 105
+/svn/openanzo/!svn/ver/5125/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/impl
+END
+BaseOperationContext.java
+K 25
+svn:wc:ra_dav:version-url
+V 131
+/svn/openanzo/!svn/ver/4527/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/impl/BaseOperationContext.java
+END
+DatasetTracker.java
+K 25
+svn:wc:ra_dav:version-url
+V 125
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/impl/DatasetTracker.java
+END
+ConfiguredCredentials.java
+K 25
+svn:wc:ra_dav:version-url
+V 132
+/svn/openanzo/!svn/ver/4581/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/impl/ConfiguredCredentials.java
+END
+Updates.java
+K 25
+svn:wc:ra_dav:version-url
+V 118
+/svn/openanzo/!svn/ver/4890/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/impl/Updates.java
+END
+UpdateTransaction.java
+K 25
+svn:wc:ra_dav:version-url
+V 128
+/svn/openanzo/!svn/ver/4320/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/impl/UpdateTransaction.java
+END
+BaseAuthenticationService.java
+K 25
+svn:wc:ra_dav:version-url
+V 136
+/svn/openanzo/!svn/ver/5125/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/impl/BaseAuthenticationService.java
+END
+SelectorTracker.java
+K 25
+svn:wc:ra_dav:version-url
+V 126
+/svn/openanzo/!svn/ver/4302/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/impl/SelectorTracker.java
+END
+AskResult.java
+K 25
+svn:wc:ra_dav:version-url
+V 120
+/svn/openanzo/!svn/ver/3769/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/impl/AskResult.java
+END
+Precondition.java
+K 25
+svn:wc:ra_dav:version-url
+V 123
+/svn/openanzo/!svn/ver/3857/openanzo/trunk/org.openanzo.services/src/main/java/org/openanzo/services/impl/Precondition.java
+END

@@ -1,0 +1,8 @@
+PREFIX : <http://example.org/>
+SELECT ?o ?p WHERE { 
+	:s1 :p1 "a" .
+	LET( ?o := "a" ) .
+	LET( ?p := "b" ) .
+	LET( ?o := "a" ) .
+	LET( ?p := "b" ) .
+}

@@ -1,0 +1,17 @@
+K 25
+svn:wc:ra_dav:version-url
+V 112
+/svn/openanzo/!svn/ver/4737/openanzo/trunk/org.openanzo.servlet.sparql/src/main/java/org/openanzo/servlet/sparql
+END
+QueryServlet.java
+K 25
+svn:wc:ra_dav:version-url
+V 130
+/svn/openanzo/!svn/ver/4507/openanzo/trunk/org.openanzo.servlet.sparql/src/main/java/org/openanzo/servlet/sparql/QueryServlet.java
+END
+Activator.java
+K 25
+svn:wc:ra_dav:version-url
+V 127
+/svn/openanzo/!svn/ver/4737/openanzo/trunk/org.openanzo.servlet.sparql/src/main/java/org/openanzo/servlet/sparql/Activator.java
+END
