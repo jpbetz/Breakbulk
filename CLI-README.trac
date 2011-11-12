@@ -1,0 +1,502 @@
+== Anzo Command Line Interface ==
+[[PageOutline(2,,pullout)]]
+
+See [http://www.thefigtrees.net/lee/blog/2008/06/the_open_anzo_command_line_int.html Lee's excellent demonstration video of the Anzo Command Line interface].
+
+The openanzo 3.1.0 client includes a command line interface that reads and writes to anzo repositories and also performs some basic rdf operations.  URI prefixes are tightly integrated into the design, reducing much of the strain usually experienced in direct rdf manipulation.
+
+For example:
+
+{{{
+$ anzo get people:author
+}}}
+
+Returns a named graph in TriG format:
+
+{{{
+@prefix foaf : <http://xmlns.com/foaf/0.1/> .
+@prefix people : <http://openanzo.org/demos/people#> .
+people:arthur {
+	      people:arthur
+	      a foaf:Person ;
+	      foaf:givenname "Arthur" ;
+	      foaf:surname "Uther Pendragon" ;
+...
+}}}
+
+Here's what a SPARQL query command against that same named graph looks like:
+
+{{{
+$ anzo query "SELECT ?given FROM people:author \
+   WHERE { people:author foaf:givenname ?given }"
+}}}
+
+
+Because the anzo Command Line Interface (CLI) reads in a prefix to URI mapping from the user's settings file, it is able to understand prefixed URIs (or [http://www.w3.org/2001/sw/BestPractices/HTML/2005-10-21-curie CURIE]s), a much shorter and easier representation of URIs.  These prefixed URIs can be entered in place of URIs in all command line arguments and sparql queries.  The prefixes are also applied to RDF output, making the data much easier to read.
+
+Okay, on to the feature list.  The main commands available are:
+
+ * get - outputs named graphs stored in the repository
+ * create - adds named graphs to the repository
+ * update - modifies a named graph stored in the repository by specifying exactly what to add and remove
+ * import - adds RDF to the repository, creating named graphs as needed
+ * replace - replaces the contents of a named graph in the repository
+ * remove - removes a named graph from the repository
+
+ * reset - calls the development mode reset command, which clears and re-populates the repositories contents
+
+ * query - executes a SPARQL query against either the repository or a local RDF file
+ * find - executes a quad pattern find against the repository
+
+ * watch - listens to changes to a named graph on the server
+ * call - executes a semantic service provided on the repository
+
+ * convert - converts between the various RDF serialization formats
+ * expand - converts a prefixed URI (CURIE) to an expanded URI
+ * collapse - converts an expanded URI to a prefixed URI
+ * union - unions the statements from multiple RDF files into a single file
+
+== Requirements ==
+
+Java runtime 1.5 or greater is required.
+An anzo repository.  (See http://www.openanzo.org/downloads.html)
+
+== Quick Start ==
+
+To get started quickly:
+
+ 1. Download a 3.1.0 build of the 'Open Anzo Full Distribution'.  (See http://www.openanzo.org/downloads.html)
+ 2. Unzip the install
+ 3. `cd` into openanzo-3.1.0
+ 4. Make sure the `JAVA_HOME` environment variable is pointing to a JDK ('''NOT JUST A JRE''').
+ 5. type `startAnzo.bat` (or `start.sh` for unix)
+ 6. Follow the below instructions for installing the CLI for your OS.
+
+This will run an anzo repository using a transient in memory database.  All data is lost when the repository is stopped, but it's great
+or trying things out since you don't have to do any extra setup.  One can easily change to a persistent database like DB2 later.
+
+== Installing the CLI from an anzo distribution ==
+
+Note:  These instructions are for snapshots or releases of the openanzo-3.1.0 builds.  Developers and contributors, see below install instructions.
+
+==== UNIX style shells ==== 
+
+Open your `.bashrc`, `.profile`, or whatever you use and add a {{{ANZO_CLI_HOME}}} environment variable pointing to the Open Anzo install directory. Also, {{{ANZO_CLI_HOME}}} to the `PATH`.
+Make sure the `JAVA_HOME` environment variable is pointing to a JDK ('''NOT JUST A JRE''').
+
+For bash style shells:
+{{{
+export JAVA_HOME=/usr/java/jdk1.6.0_13
+export ANZO_CLI_HOME=/home/arthur/openanzo-3.1.0-SNAPSHOT
+export PATH=$PATH:$ANZO_CLI_HOME
+}}}
+
+For tcsh style shells:
+{{{
+setenv JAVA_HOME /usr/java/jdk1.6.0_13
+setenv ANZO_CLI_HOME /home/arthur/openanzo-3.1.0-SNAPSHOT
+set path=($ANZO_CLI_HOME $path:q)
+}}}
+
+Now source that `.rc` file (or just close the terminal and open another one) and type `anzo` at a command prompt.
+
+==== Native Windows shells ====
+
+The windows install is similar to the UNIX one. You have to simply add and edit some environemnt variables.
+To edit environment variables in Windows you can right click on "My Computer", select 'properties' -> 'Advanced' -> 'Environment Variables'.
+
+ 1. Add an environment variable called `ANZO_CLI_HOME` whose value is the path to your openanzo installation directory (i.e. `C:\openanzo-3.1.0-SNAPSHOT`).
+ 2. Add the openanzo installation directory (i.e. `C:\openanzo-3.1.0-SNAPSHOT`). to your `PATH` environment variable.
+ 3. Make sure there is a `JAVA_HOME` environment variable pointing to the installation directory of JDK ('''NOT JUST A JRE''').
+ 4. Create a `.anzo` directory in your home directory. Your home directory in Windows is typically at `C:\Documents and Settings\username\`. Use the command line to add this `.anzo` directory.
+ 5. Create a file called `settings.trig` inside your `.anzo` as described in the [#Configuring configuration section]. '''WARNING:''' Watch out for hidden file extensions. The anzo CLI will not find a `settings.trig.txt` file, it must be named `settings.trig`.
+
+==== Windows Cygwin shells ====
+
+(Following the 'Native windows shells' instructions works too.)
+
+Add environment variables much like for a unix install, but make some adjustments for windows based java executables:
+
+Set the {{{ANZO_CLI_HOME}}} variable to a windows style path, but for the {{{PATH}}} variable use a cygpath path (prepend `/cygwin/c`).
+The `JAVA_HOME` environment variable can be a windows style path.
+
+For example:
+{{{
+export JAVA_HOME="c:\Program Files\Java\jdk1.6.0_13"
+export ANZO_CLI_HOME=C:\anzo\openanzo-3.1.0-SNAPSHOT
+export PATH=$PATH:/cygwin/c/anzo/openanzo-3.1.0-SNAPSHOT
+}}}
+
+Also, if your cygwin home directory is different from your windows home directory, you'll need to put your `.anzo/settings.trig` in the windows home directory (typically `C:\Documents and Settings\username`). Use the command line to add the `.anzo` directory since explorer won't let you create folders that start with '.'.
+
+== Install for Openanzo Contributers and Developers ==
+
+NOTE: These installation instructions require an eclipse development workspace containing the openanzo projects.  Everyone else, please see above install instructions.
+
+==== UNIX style shells ==== 
+
+Open your `.bashrc`, `.profile`, or whatever you use and add a {{{WORKSPACE}}} environment variable to the eclipse workspace root.  Also, add the CLI bin directory, which is relative to the {{{WORKSPACE}}}:
+Make sure the `JAVA_HOME` environment variable is pointing to a JDK ('''NOT JUST A JRE''').
+
+For bash style shells:
+{{{
+export JAVA_HOME=/usr/java/jdk1.6.0_13
+export WORKSPACE=/home/arthur/workspaces/trunk
+export PATH=$PATH:$WORKSPACE/org.openanzo.client/cli/bin
+}}}
+
+For tcsh style shells:
+{{{
+setenv JAVA_HOME /usr/java/jdk1.6.0_13
+setenv WORKSPACE /home/arthur/workspaces/trunk
+set path=($WORKSPACE/org.openanzo.client/cli/bin $path:q)
+}}}
+
+Now source that .rc file (or just close the terminal and open another one) and type `anzo` at a command prompt.
+
+==== Native Windows shells ====
+
+The windows install is similar to the UNIX one. You have to simply add and edit some environemnt variables.
+To edit environment variables in Windows you can right click on "My Computer", select 'properties' -> 'Advanced' -> 'Environment Variables'.
+ 1. Add an environment variable called `WORKSPACE` with the value set to the path of your openanzo source workspace.
+ 2. Add the bin directory of the CLI to your to your `PATH` environment variable. For example, `C:\workspaces\trunk\org.openanzo.client\cli\bin`
+ 3. Make sure there is a `JAVA_HOME` environment variable pointing to the installation directory of JDK ('''NOT JUST A JRE''').
+ 4. Create a `.anzo` directory in your home directory. Your home directory in Windows is typically at `C:\Documents and Settings\username\`. Use the command line to add this `.anzo` directory.
+ 5. Create a file called `settings.trig` inside your `.anzo` as described in the [#Configuring configuration section]. '''WARNING:''' Watch out for hidden file extensions. The anzo CLI will not find a `settings.trig.txt` file, it must be named `settings.trig`.
+
+==== Windows Cygwin shells ====
+
+(Following the 'Native windows shells' instructions works too.)
+
+Add environment variables much like for a unix install, but make some adjustments for windows based java executables:
+
+Set the {{{WORKSPACE}}} variable to a windows style path, but for the {{{PATH}}} variable use a cygpath path (prepend '/cygwin/c').
+The `JAVA_HOME` environment variable can be a windows style path.
+
+For example:
+
+{{{
+export JAVA_HOME="c:\Program Files\Java\jdk1.6.0_13"
+export WORKSPACE=c:\devel\workspaces\trunk
+export PATH=$PATH:/cygwin/c/devel/workspaces/trunk/org.openanzo.client/cli/bin
+}}}
+
+Also, if your cygwin home directory is different from your windows home directory, you'll need to put your `.anzo/settings.trig` in the windows home directory (typically `C:\Documents and Settings\username`). Use the command line to add the `.anzo` directory since explorer won't let you create folders that start with '.'.
+
+This is based on Lee's observation:
+{{{
+...for path purposes i needed cygwin style paths 
+(`/cygwin/c/workspace...`) whereas for the classpath 
+arg to my Windows-based java executable I needed 
+windows style paths (`/workspace`).
+
+I changed my `.tcshrc` to set the path separate from `$WORKSPACE` 
+and I'm in business.
+}}}
+
+== Configuring ==
+
+The anzo client is much friendlier once it gets a settings file telling it how to connect to your anzo repository and what URI prefixes you would like to use.
+
+The default location for a settings file is in a `.anzo` directory under your home directory:
+{{{
+~/.anzo/settings.trig
+}}}
+or in Windows
+{{{
+C:\Documents and Settings\username\.anzo\settings.trig
+}}}
+'''WARNING:''' Watch out for hidden file extensions in Windows. The anzo CLI will not find a `settings.trig.txt` file, it must be named `settings.trig`.
+Also, to create a `.anzo` directory in Windows, you need to use the command line since Windows Explorer will not allow you to create a filename that starts with a dot.
+
+A good minimal settings.trig file is:
+{{{
+### standard prefixes
+@prefix foaf      : <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs      : <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc        : <http://purl.org/dc/elements/1.1/> .
+@prefix xsd       : <http://www.w3.org/2001/XMLSchema#> .
+
+#### anzo prefixes:
+@prefix system     : <http://openanzo.org/ontologies/2008/07/System#> .
+@prefix anzo       : <http://openanzo.org/ontologies/2008/07/Anzo#> .
+@prefix cli        : <http://openanzo.org/cli/> .
+
+cli:config {
+    cli:config
+    system:user "sysadmin" ;
+    system:password "123" ;
+    .
+}
+}}}
+
+If you have other favorite prefixes, just add them to the prefix list.
+
+Also, make sure to set the username and password if you have changed user configuration for the server.
+
+The default host and port values are `localhost`, `61616`.  This can be overridden with command line options or by adding them to your `settings.trig`:
+
+{{{
+### standard prefixes
+@prefix foaf      : <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs      : <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc        : <http://purl.org/dc/elements/1.1/> .
+@prefix xsd       : <http://www.w3.org/2001/XMLSchema#> .
+
+#### anzo prefixes:
+@prefix system     : <http://openanzo.org/ontologies/2008/07/System#> .
+@prefix anzo       : <http://openanzo.org/ontologies/2008/07/Anzo#> .
+@prefix cli        : <http://openanzo.org/cli/> .
+
+cli:config {
+    cli:config
+    system:user "sysadmin" ;
+    system:password "123" ;
+    system:port "61618" ;
+    system:host "localhost" ;
+    .
+}
+}}}
+
+=== JVM Options ===
+
+If you'd like to change the JVM options used by the Anzo Command Line Interface, you can set the `ANZO_CLI_OPTS` environment variable.
+For example, to give a larger maximum heap size to the command and have the JVM output version information, you can do something like this:
+
+(in Windows)
+{{{
+set ANZO_CLI_OPTS=-showversion -Xmx1024M
+}}}
+or in unix (bash-like shells):
+{{{
+export ANZO_CLI_OPTS="-showversion -Xmx1024M"
+}}}
+
+== Examples ==
+
+Now that the anzo CLI is installed, try a few commands out:
+
+Create a simple trig file called `arthur.trig`:
+{{{
+@prefix dc        : <http://purl.org/dc/elements/1.1/> .
+@prefix ex        : <http://example.com/> .
+
+ex:graph {
+  ex:arthur dc:title "Arthur Uther Pendragon" .
+}
+}}}
+
+And add this line to your `settings.trig`:
+
+{{{
+@prefix ex        : <http://example.com/> .
+}}}
+
+Okay, now we're ready.  Let's add the arthur graph to the repository:
+
+{{{
+anzo create arthur.trig
+}}}
+
+and read it back in TriX:
+
+{{{
+anzo get -o xml ex:graph
+}}}
+
+we might as well run a query, while we're at it:
+
+{{{
+anzo query "SELECT ?name FROM ex:graph WHERE { ex:arthur dc:title ?name }"
+}}}
+
+Let's add a description.  This can be done from the `arthur.trig` file you created earlier:
+
+{{{
+@prefix dc        : <http://purl.org/dc/elements/1.1/> .
+@prefix ex        : <http://example.com/> .
+
+ex:graph {
+  ex:arthur
+    dc:title "Arthur Uther Pendragon" ;
+    dc:description "King Arthur is a fabled British leader" ;
+  .
+}
+}}}
+
+Did you get the ';'s and '.'s right?  Tricky, those.
+
+Before we update the repository with our new dc:description, open a second terminal and type:
+
+{{{
+anzo watch ex:graph
+}}}
+
+Now go back to your first terminal and type:
+
+{{{
+anzo replace arthur.trig
+}}}
+
+You can see changes made by other users this way also.  Ctrl-C to stop the watch command.
+
+Let's move on and try some simple RDF manipulation.  No repository required for this part:
+
+{{{
+anzo convert arthur.trig arthur.rdf
+cat arthur.rdf
+}}}
+
+Eeew, RDF/XML.
+
+We can also consult the URI prefixes directly:
+
+{{{
+anzo expand dc:title
+}}}
+
+{{{
+anzo collapse http://example.com/arthur
+}}}
+
+And lastly,  we'll run a query directly against a file, no repository involved:
+
+{{{
+anzo query -d arthur.trig "SELECT ?p ?o FROM ex:graph WHERE { ?s ?p ?o }"
+}}}
+
+
+That's a good overview.  Note that many of the commands accept RDF input from STDIN as well as from arguments and there are quite a few options we haven't tried in these examples.  Try `anzo help` and `anzo help <command>` to learn more.
+
+== Tricks and Tips ==
+
+=== Editing ===
+Get a graph from the server and include all your prefixes so you can more easily add statements:
+{{{
+anzo get -c ex:graph > arthur.trig
+}}}
+
+The -c option prints forces all the prefixes to be included from the users settings.  So even if the ex:graph only uses a few, when you go to edit `arthur.trig` now, you will have all your prefixes, not just the ones required to serialize the graph correctly.
+
+
+Create a new file with all your prefixes:
+{{{
+echo "" | anzo convert -c > new-data.trig
+}}}
+Or,
+{{{
+echo "" | anzo convert -c -o rdf > new-ontology.owl
+}}}
+
+This creates a skeleton.  Since the empty string "" is a valid trig graph, this just converts that graph to trig but in doing so uses the -c option to include all your prefixes.  Since you are using convert, you can output a skeleton in any format but trig is still the default input.
+
+=== Query ===
+
+Query multiple RDF files, of various formats:
+{{{
+anzo union -g ex:rt arthur.rdf lancelot.ttl | \
+anzo query -a -s "SELECT ?o WHERE {?s ?p ?o}"
+}}}
+
+Ah, union.  Here we're combining some graphs together via union.  We use the -g option to set a named graph for the the RDF in these files since neither rdf or ttl support named graphs.  The default output of union is trig, so we pass that trig into query, using the -s option to say that the RDF we want to query is from stdin and use the -a option to automatically set the default graph to contain all named graphs (same as adding "...FROM ex:rt..." in this case).
+
+Query all the RDF in the 'roundtable' directory and all it's subdirectories:
+{{{
+find roundtable -type f | \
+   xargs anzo union -g ex:roundtable | \
+   anzo query -s -a "SELECT ?person ?knows WHERE { ?person foaf:knows ?knows }"
+}}}
+
+Okay, break it down.  'find' here will list out all the files in the roundtable directory and it's sub-directories.  'xargs' will pass those file paths to the 'anzo union' command as arguments.  So 'anzo union' will get passed a bunch of file arguments and it will union those rdf files together.  -g means we use th ex:roundtable graph for all RDF file formats that do not support named graphs.  The output of 'anzo union' is trig, which we then query.
+
+=== Development ===
+
+Re-initialize a server.
+
+{{{
+anzo reset --re-initialize
+}}}
+
+This tells the server to reset to it's initial state, removing all existing data and re-reading all initialization files.  This is faster than restarting a development server.
+
+
+Speeding up queries.
+
+Run {{{anzo query}}} with the {{{--query-time}}} option.  This will print the time it took the query to be executed on the server to STDERR.  The time does not include latency between the client and server.  This simple operation makes it much easier to tune a query, one way to tune a query is to save it to a file, and after each adjustment, see how the query is no performing by saving the file and running this command from a terminal:
+
+{{{
+anzo query --query-time -f myquery.rq
+}}}
+
+If you don't need to see the query results, just redirect STDOUT to /dev/null:
+
+{{{
+anzo query --query-time -f myquery.rq > /dev/null
+}}}
+
+
+=== Timeouts ===
+
+The -t option to the cli will set the timeout for command line operations.  The value is the number of seconds to wait for the server to respond.  ie -t 30 will wait 30 seconds for the server to respond. A timeout of "0" denotes an infinite timeout.
+You can also set it via the settings file:
+
+{{{
+### standard prefixes
+@prefix foaf      : <http://xmlns.com/foaf/0.1/> .
+@prefix rdfs      : <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix dc        : <http://purl.org/dc/elements/1.1/> .
+@prefix xsd       : <http://www.w3.org/2001/XMLSchema#> .
+
+#### anzo prefixes:
+@prefix system     : <http://openanzo.org/ontologies/2008/07/System#> .
+@prefix anzo       : <http://openanzo.org/ontologies/2008/07/Anzo#> .
+@prefix cli        : <http://openanzo.org/cli/> .
+
+cli:config {
+    cli:config
+    system:user "sysadmin" ;
+    system:password "123" ;
+    system:timeout  "30";
+    .
+}
+}}}
+
+== Troubleshooting & FAQ ==
+
+All of your most pressing questions...answered.
+
+=== `java.lang.OutOfMemoryError` ===
+
+If you are sending the server a very large graph or many graphs, consider using the `anzo import` command which is designed for large updates. The `anzo create` and other commands is less desirable for large batches of data. The `anzo import` command will be more efficient both on the client and the server.
+
+If you get an `java.lang.OutOfMemoryError` while running the command line interface, you can give it access to more memory
+by setting the `ANZO_CLI_OPTS` environment variable. For example, in Windows:
+{{{
+set ANZO_CLI_OPTS=-Xmx1024M
+}}}
+or in unix (bash-like shells):
+{{{
+export ANZO_CLI_OPTS=-Xmx1024M
+}}}
+
+If it's not the command line interface itself but the Open Anzo server that is running out of memory, then you can give the server access to more memory by setting the `ANZO_OPTS` environment variable. 
+For example, in Windows:
+{{{
+set ANZO_OPTS=-Xmx1024M
+}}}
+or in unix (bash-like shells):
+{{{
+export ANZO_OPTS=-Xmx1024M
+}}}
+
+=== `org.openanzo.exceptions.AnzoException`: No Response from Server for request === 
+
+If you see an exception such as:
+{{{
+org.openanzo.exceptions.AnzoException: ErrorCode[16:16393] [COMBUS_ERROR]
+No Response from Server for request fb09a1e1-f711-4873-a188-aee706f1f2ef.
+}}}
+then the command line interface timed out while waiting for the server to respond to a request.
+
+You can increase the timeout in your `settings.trig` or using a command line option. See the [#Timeouts timeouts] section
+above for more information.
